@@ -125,7 +125,8 @@
       </mj-column>
     </mj-section>
     <mj-spacer height="10px" />
-    <!-- Spotlight -->
+    {{%SPOTLIGHT_SECTIONS%}}
+    <mj-spacer height="10px" />
     <mj-section
       background-color="#eff1f4"
       css-class="border-line"
@@ -133,6 +134,7 @@
       border-radius="5px"
     >
       <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <!-- long stroy short content sections -->
         <mj-text
           padding="16px 12px 10px 12px"
           font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
@@ -150,12 +152,11 @@
               font-weight: 400;
             "
           >
-            Spotlight
+            Long story short
           </h2>
         </mj-text>
-        {{%SPOTLIGHT%}}
+        {{%LONG_STORY_SHORT_SECTIONS%}}
       </mj-column>
     </mj-section>
-    <mj-spacer height="10px" />
   </mj-body>
 </mjml>

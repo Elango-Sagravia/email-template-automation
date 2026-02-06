@@ -1,63 +1,11 @@
-<mj-text
-          padding="10px 12px"
-          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
-          color="#000000"
-        >
-          <h2
-            style="
-              font-size: 24px;
-              line-height: 1.2;
-              font-weight: 400;
-              margin-top: 2px !important;
-            "
-          >
-            US pressures Iran
-          </h2>
-        </mj-text>
-        <mj-image
-          border-radius="10px"
-          padding="10px 12px"
-          width="600px"
-          src="https://www.presidentialsummary.com/email/images/iran-agrees-conditional-nuclear-talks-us-amid-military-pressure.jpg"
-          alt="Iran agrees conditional nuclear talks US amid military pressure"
-          href="https://www.presidentialsummary.com/"
-        />
-        <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
-          <p style="font-size: 16px; line-height: 1.5">
-            <strong>What happened?</strong> Iran has conditionally agreed to
-            <a
-              style="
-                text-decoration: none;
-                border-bottom: 2px solid #4d3060;
-                color: black;
-              "
-              href="https://link.presidentialsummary.com/ps-05-feb-26-spotlight-h1-1-resume-nuclear-negotiations"
-              target="_blank"
-              >resume nuclear negotiations</a
-            >
-            with the US. This marks the first meaningful talks since last
-            summer, when the Trump administration carried out airstrikes on
-            three Iranian nuclear sites. The decision comes as Tehran seeks to
-            prevent the risk of further military escalation. President Masoud
-            Pezeshkian has authorized talks under conditions of “dignity” and
-            absence of threats.
-          </p>
-          <p style="font-size: 16px; line-height: 1.5">
-            <strong>US preparedness:</strong> Washington has moved into a
-            heightened military and diplomatic readiness posture to reinforce
-            leverage ahead of any Iran talks. It has surged assets into the
-            Middle East, including a carrier strike group, additional
-            air-defense systems, and bomber task-force rotations capable of
-            rapid long-range strikes. Meanwhile, officials have publicly kept
-            military options “on the table” to pressure Tehran, while signaling
-            openness to narrowly scoped nuclear negotiations to test
-            de-escalation.
-          </p>
-          <p style="font-size: 16px; line-height: 1.5">
-            <strong>Conditions for engagement:</strong> The Trump administration
-            is reportedly demanding that Iran end all uranium enrichment, accept
-            limits on its ballistic missile programme, and halt support for
-            armed groups in the region. However, Iran's supreme leader has
-            previously refused to abandon its right to enrich uranium.
-          </p>
-        </mj-text>
+<mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    {{%SPOTLIGHT_HEADER%}}
+    {{%SPOTLIGHT_TOPIC%}}
+  </mj-column>
+</mj-section>
