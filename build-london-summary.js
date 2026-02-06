@@ -1,7 +1,7 @@
 /**
  * build-london-summary.js
  * ----------------------
- * v2.3 (Spotlight fixed + image REPLACE_ME + ad insert + What's on)
+ * v2.4 (Spotlight + What's on + Long story short split into 2 cards)
  *
  * - DOCX -> Mammoth HTML
  * - Extract "In this edition" items
@@ -16,10 +16,16 @@
  * - Extract "What’s on" items from H2 "What’s on"
  *     - supports 2 or 3 items
  *     - no dashed divider after last item
+ * - Extract "Long story short" from H2/H3 "Long story short"
+ *     - Each H3 inside it is a category (Politics, Business, Art & Culture, Misc, etc.)
+ *     - Split into 2 MJML cards:
+ *         Card 1: Long story short heading + divider + Politics + Business
+ *         Card 2: Image (first img after Business within LSS) + remaining categories (Art & Culture, Misc...)
  * - Inject into layout placeholders:
  *     {{%IN_THIS_EDITION_TABLE%}}
  *     {{%SPOTLIGHT_SECTION%}}
  *     {{%WHATS_ON_SECTION%}}
+ *     {{%LONG_STORY_SHORT_SECTION%}}
  * - Compile MJML -> HTML
  *
  * Usage:
@@ -55,6 +61,8 @@ const IN_THIS_EDITION_TPL_PATH = path.join(
 const TOKEN_IN_THIS_EDITION = /\{\{\%\s*IN_THIS_EDITION_TABLE\s*\%\}\}/g;
 const TOKEN_SPOTLIGHT_SECTION = /\{\{\%\s*SPOTLIGHT_SECTION\s*\%\}\}/g;
 const TOKEN_WHATS_ON_SECTION = /\{\{\%\s*WHATS_ON_SECTION\s*\%\}\}/g;
+const TOKEN_LONG_STORY_SHORT_SECTION =
+  /\{\{\%\s*LONG_STORY_SHORT_SECTION\s*\%\}\}/g;
 const TOKEN_ROWS = /\{\{\%\s*ROWS\s*\%\}\}/g;
 
 /** -----------------------------
@@ -110,7 +118,16 @@ async function main() {
   );
   const whatsOnMjml = renderWhatsOnLondon(whatsOnItems);
 
-  // 5) Inject into layout
+  // 5) Long story short (split)
+  const lss = extractLongStoryShortLondon(docHtml);
+  console.log("🧩 Long story short split:", {
+    card1Cats: (lss.first || []).map((x) => x.title),
+    card2Cats: (lss.second || []).map((x) => x.title),
+    card2Image: lss.secondImage ? "✅" : "❌",
+  });
+  const lssMjml = renderLongStoryShortLondon(lss);
+
+  // 6) Inject into layout
   const layoutMjml = fs.readFileSync(LAYOUT_PATH, "utf8");
   let finalMjml = layoutMjml;
 
@@ -135,7 +152,14 @@ async function main() {
   }
   finalMjml = finalMjml.replace(TOKEN_WHATS_ON_SECTION, whatsOnMjml);
 
-  // 6) Compile MJML -> HTML
+  if (!TOKEN_LONG_STORY_SHORT_SECTION.test(finalMjml)) {
+    console.warn(
+      "⚠️ Placeholder {{%LONG_STORY_SHORT_SECTION%}} not found in layout.mjml (add it where LSS should appear)",
+    );
+  }
+  finalMjml = finalMjml.replace(TOKEN_LONG_STORY_SHORT_SECTION, lssMjml);
+
+  // 7) Compile MJML -> HTML
   const { html, errors } = mjml2html(finalMjml, {
     validationLevel: "soft",
     filePath: LAYOUT_PATH,
@@ -490,14 +514,6 @@ function renderSpotlightBodyLondon(nodes) {
 
 /** -----------------------------
  * What’s on extraction (London)
- * Strategy (works with your DOCX style):
- * - Find heading "What’s on" (h2/h3)
- * - Then parse items as blocks separated by empty paragraphs
- *   Each item roughly:
- *     Title line
- *     Description line(s)
- *     CTA line (often contains a link, or just text)
- * - Stops at next h2
  * ----------------------------- */
 function extractWhatsOnLondon(html) {
   const $ = cheerio.load(html);
@@ -519,7 +535,7 @@ function extractWhatsOnLondon(html) {
   const items = [];
   let el = marker.next();
 
-  // Collect only paragraphs until next big section (h2)
+  // Collect paragraphs until next h2
   const lines = [];
   while (el && el.length) {
     const tag = (el[0]?.tagName || "").toLowerCase();
@@ -528,11 +544,7 @@ function extractWhatsOnLondon(html) {
     if (tag === "h2" && txt) break;
 
     if (tag === "p") {
-      // store both html + text for links
-      lines.push({
-        text: txt,
-        html: el.html() || "",
-      });
+      lines.push({ text: txt, html: el.html() || "" });
     } else if (tag === "div") {
       const ps = el.children("p");
       if (ps.length) {
@@ -549,7 +561,7 @@ function extractWhatsOnLondon(html) {
     el = el.next();
   }
 
-  // Split into blocks by empty lines
+  // Split by empty lines
   const blocks = [];
   let cur = [];
   for (const ln of lines) {
@@ -562,14 +574,11 @@ function extractWhatsOnLondon(html) {
   }
   if (cur.length) blocks.push(cur);
 
-  // Convert blocks -> items (max 3)
   for (const b of blocks.slice(0, 3)) {
     const title = b[0]?.text || "";
     if (!title) continue;
 
-    // find first link anywhere in block (best guess for CTA URL)
     const url = firstHrefFromHtmlBlock(b.map((x) => x.html).join("\n"));
-
     const ctaLine = b.length >= 2 ? b[b.length - 1].text : "";
     const descLines = b.slice(1, Math.max(1, b.length - 1)).map((x) => x.text);
     const desc = descLines.join(" ");
@@ -684,6 +693,269 @@ function renderWhatsOnLondon(items = []) {
 `.trim();
 
   return [header, blocks, footer].join("\n");
+}
+
+/** -----------------------------
+ * LONG STORY SHORT (London) — SPLIT INTO 2 CARDS
+ *
+ * Card 1: Heading + divider + categories up to Business (inclusive)
+ * Card 2: Image (first <img> after Business inside LSS) + remaining categories
+ * ----------------------------- */
+function extractLongStoryShortLondon(html) {
+  const $ = cheerio.load(html);
+
+  const marker = $("h2, h3")
+    .filter((_, el) => {
+      const t = cleanText($(el).text()).toLowerCase();
+      return (
+        t === "long story short" ||
+        t === "long story short:" ||
+        t.startsWith("long story short")
+      );
+    })
+    .first();
+
+  if (!marker.length) {
+    return { first: [], second: [], secondImage: "" };
+  }
+
+  const categories = [];
+  let current = null;
+
+  let foundBusiness = false;
+  let afterBusinessImage = "";
+
+  let el = marker.next();
+
+  while (el && el.length) {
+    const tag = (el[0]?.tagName || "").toLowerCase();
+    const txt = cleanText(el.text());
+
+    // Stop at next big section heading
+    if (tag === "h2" && txt) break;
+
+    // Capture first image after Business (for card 2)
+    if (tag === "img") {
+      const src = $(el).attr("src") || "";
+      if (foundBusiness && !afterBusinessImage && src) afterBusinessImage = src;
+      el = el.next();
+      continue;
+    }
+
+    // Category heading
+    if (tag === "h3" && txt) {
+      if (current) categories.push(current);
+      current = { title: txt, items: [] };
+
+      if (cleanText(txt).toLowerCase() === "business") {
+        foundBusiness = true;
+      }
+
+      el = el.next();
+      continue;
+    }
+
+    // Ignore content until first h3
+    if (!current) {
+      el = el.next();
+      continue;
+    }
+
+    if (tag === "ul" || tag === "ol") {
+      const items = extractBulletItemsFromListNode($, el);
+      current.items.push(...items);
+      el = el.next();
+      continue;
+    }
+
+    if (tag === "p") {
+      const htmlInner = el.html() || "";
+      if (containsMeaningfulLssLine(htmlInner, txt)) {
+        const itemHtml = sanitizeInlineHtmlLondon(htmlInner);
+        if (!isEmptyRichText(itemHtml)) current.items.push(itemHtml);
+      }
+      el = el.next();
+      continue;
+    }
+
+    if (tag === "div") {
+      const lists = el.children("ul, ol");
+      if (lists.length) {
+        lists.each((_, listEl) => {
+          const items = extractBulletItemsFromListNode($, $(listEl));
+          current.items.push(...items);
+        });
+      } else {
+        const ps = el.children("p");
+        if (ps.length) {
+          ps.each((_, p) => {
+            const $p = $(p);
+            const t = cleanText($p.text());
+            const h = $p.html() || "";
+            if (containsMeaningfulLssLine(h, t)) {
+              const itemHtml = sanitizeInlineHtmlLondon(h);
+              if (!isEmptyRichText(itemHtml)) current.items.push(itemHtml);
+            }
+          });
+        }
+      }
+      el = el.next();
+      continue;
+    }
+
+    el = el.next();
+  }
+
+  if (current) categories.push(current);
+
+  const cleaned = categories
+    .map((c) => ({
+      title: cleanText(c.title || ""),
+      items: (c.items || []).filter(Boolean),
+    }))
+    .filter((c) => c.title && c.items.length);
+
+  if (!cleaned.length) return { first: [], second: [], secondImage: "" };
+
+  const idxBusiness = cleaned.findIndex(
+    (c) => c.title.toLowerCase() === "business",
+  );
+
+  const first = idxBusiness >= 0 ? cleaned.slice(0, idxBusiness + 1) : cleaned;
+  const second = idxBusiness >= 0 ? cleaned.slice(idxBusiness + 1) : [];
+
+  return {
+    first,
+    second,
+    secondImage:
+      (afterBusinessImage || "").trim() ||
+      "https://www.londonsummary.com/email/images/REPLACE_ME.jpg",
+  };
+}
+
+function renderLongStoryShortLondon(data) {
+  const first = data?.first || [];
+  const second = data?.second || [];
+  const secondImage = escapeHtml(
+    data?.secondImage ||
+      "https://www.londonsummary.com/email/images/REPLACE_ME.jpg",
+  );
+
+  if (!first.length && !second.length) return "";
+
+  const card1 = `
+<mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
+  <mj-column background-color="#fff" border-radius="10px" padding="0px">
+    <mj-text padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000">
+      <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">Long story short</h2>
+    </mj-text>
+    <mj-divider border-width="4.8px" border-color="#80011F" width="35px" align="left" padding="0 20px 0px 20px" />
+    <mj-spacer height="30px" />
+
+    ${renderLssCategoryBlocks(first, { firstCategoryPaddingTop: "0px" })}
+
+  </mj-column>
+</mj-section>
+<mj-spacer height="20px" />
+`.trim();
+
+  if (!second.length) return card1;
+
+  const card2 = `
+<mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
+  <mj-column background-color="#fff" border-radius="10px" padding-bottom="20px">
+    <mj-image border-radius="10px 10px 0 0" padding="0" width="600px"
+      src="${secondImage}"
+      alt="REPLACE_ME"
+      href="https://www.londonsummary.com/" />
+    ${renderLssCategoryBlocks(second, { firstCategoryPaddingTop: "20px" })}
+  </mj-column>
+</mj-section>
+<mj-spacer height="20px" />
+`.trim();
+
+  return `${card1}\n${card2}`;
+}
+
+function renderLssCategoryBlocks(categories, opts = {}) {
+  const firstCategoryPaddingTop = opts.firstCategoryPaddingTop ?? "20px";
+
+  return (categories || [])
+    .map((sec, idx) => {
+      const title = escapeHtml(cleanText(sec.title || ""));
+      const isFirst = idx === 0;
+      const padTop = isFirst ? firstCategoryPaddingTop : "20px";
+      const padBottomTable = idx === categories.length - 1 ? "5px" : "0px";
+
+      return `
+<mj-text padding="${padTop} 20px 10px 20px" font-family="Arial" color="#000000">
+  <h3 style="font-size: 20px; line-height: 1.2; font-weight: 700; margin: 0;">${title}</h3>
+</mj-text>
+${renderLssBulletTable(sec.items || [], { paddingTop: "0px", paddingBottom: padBottomTable })}
+`.trim();
+    })
+    .join("\n");
+}
+
+function renderLssBulletTable(items, opts = {}) {
+  const paddingTop = opts.paddingTop ?? "0px";
+  const paddingBottom = opts.paddingBottom ?? "0px";
+
+  const rows = (items || [])
+    .filter(Boolean)
+    .map((html) => {
+      return `
+<tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    ${normalizeDashes(html)}
+  </td>
+</tr>`.trim();
+    })
+    .join("\n");
+
+  if (!rows) return "";
+
+  return `
+<mj-table
+  font-family="Arial"
+  cellpadding="0"
+  cellspacing="0"
+  padding="${paddingTop} 32px ${paddingBottom} 32px"
+  style="width: 100%"
+>
+  ${rows}
+</mj-table>`.trim();
+}
+
+function extractBulletItemsFromListNode($, listNode) {
+  const items = [];
+  listNode.find("li").each((_, li) => {
+    const $li = $(li);
+    const inner = $li.html() || "";
+    const clean = sanitizeInlineHtmlLondon(inner);
+    if (!isEmptyRichText(clean)) items.push(clean);
+  });
+  return items;
+}
+
+function containsMeaningfulLssLine(htmlInner, txt) {
+  const hasLink = /<a\b/i.test(htmlInner || "");
+  const hasText = (txt || "").trim().length > 0;
+  return hasText && (hasLink || (htmlInner || "").length > 0);
 }
 
 /** -----------------------------
