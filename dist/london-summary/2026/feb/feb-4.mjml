@@ -1,149 +1,412 @@
 <mjml>
   <mj-head>
-    <mj-font name="Austin News Text Web" href="https://www.londonsummary.com/fonts/AustinNewsTextWeb.woff2" />
-    <mj-style> .button-style:hover { background-color: #d0dae2 !important; color: rgba(0, 0, 0, 1) !important; /* instead of #000 */ border: 1px solid #d0dae2 !important; cursor: pointer; } .button-style:hover .dot { background-color: rgb(16, 35, 65) !important; color: rgba(0, 0, 0, 1) !important; } /* Apple Mail & iOS */ a[x-apple-data-detectors], a[href^="http"], a[href^="tel"], a[href^="mailto"], a[href^="maps"], .address-block a { color: #000000cc !important; text-decoration: none !important; font-weight: inherit !important; } /* Gmail (removes underline wrapper) */ u + .address-block a { color: #000000cc !important; text-decoration: none !important; } </mj-style>
-    <mj-style inline="inline"> .event-image img { width: 100% !important; height: auto !important; border-radius: 8px; display: block; } </mj-style>
+    <mj-font
+      name="Austin News Text Web"
+      href="https://www.londonsummary.com/fonts/AustinNewsTextWeb.woff2"
+    />
+    <mj-style>
+      .button-style:hover {
+        background-color: #d0dae2 !important;
+        color: rgba(0, 0, 0, 1) !important; /* instead of #000 */
+        border: 1px solid #d0dae2 !important;
+        cursor: pointer;
+      }
+      .button-style:hover .dot {
+        background-color: rgb(16, 35, 65) !important;
+        color: rgba(0, 0, 0, 1) !important;
+      } /* Apple Mail & iOS */
+      a[x-apple-data-detectors],
+      a[href^="http"],
+      a[href^="tel"],
+      a[href^="mailto"],
+      a[href^="maps"],
+      .address-block a {
+        color: #000000cc !important;
+        text-decoration: none !important;
+        font-weight: inherit !important;
+      } /* Gmail (removes underline wrapper) */
+      u + .address-block a {
+        color: #000000cc !important;
+        text-decoration: none !important;
+      }
+    </mj-style>
+    <mj-style inline="inline">
+      .event-image img {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 8px;
+        display: block;
+      }
+    </mj-style>
   </mj-head>
   <mj-body background-color="#f9f8f9">
     <mj-raw>
-      <div style="display: none; max-height: 0px; overflow: hidden">Plus super-yacht insurer sale</div>
-      <!-- Insert &#847;&zwnj;&nbsp; hack after
-      hidden preview text -->
-      <div style="display: none; max-height: 0px;
-      overflow: hidden"> &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; </div>
+      <div style="display: none; max-height: 0px; overflow: hidden">Plus
+      super-yacht insurer sale</div> <!-- Insert &#847;&zwnj;&nbsp; hack after
+      hidden preview text --> <div style="display: none; max-height: 0px;
+      overflow: hidden"> &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; </div>
     </mj-raw>
     <mj-spacer height="15px"></mj-spacer>
     <!-- header -->
-    <mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 1px 1px 1px"
+      border-radius="10px"
+    >
       <mj-column background-color="#ffffff" border-radius="10px" padding="0">
         <!-- Top red strip -->
         <mj-text padding="0">
-          <div style="
+          <div
+            style="
               height: 6px;
               border-top-left-radius: 8px;
               border-top-right-radius: 8px;
               background-color: #80011f;
-            "></div>
+            "
+          ></div>
         </mj-text>
         <!-- View / Advertise Links -->
-        <mj-text align="center" padding="14px 0 28px 0px" color="#000000CC" font-size="11px" font-family="Arial" font-weight="300">
-          <a href="https://www.londonsummary.com/archives/commute-chaos-culture-flex" style="color: #000000cc; text-decoration: underline">View in browser</a> &nbsp;|&nbsp; <a href="https://www.londonsummary.com/advertise" style="color: #000000cc; text-decoration: underline">Advertise</a>
+        <mj-text
+          align="center"
+          padding="14px 0 28px 0px"
+          color="#000000CC"
+          font-size="11px"
+          font-family="Arial"
+          font-weight="300"
+        >
+          <a
+            href="https://www.londonsummary.com/archives/commute-chaos-culture-flex"
+            style="color: #000000cc; text-decoration: underline"
+            >View in browser</a
+          >
+          &nbsp;|&nbsp;
+          <a
+            href="https://www.londonsummary.com/advertise"
+            style="color: #000000cc; text-decoration: underline"
+            >Advertise</a
+          >
         </mj-text>
         <!-- Logo and Date -->
         <mj-section background-color="#ffffff" padding="0px 10px 0px 10px">
           <mj-group width="100%" padding="0px">
             <mj-column width="50%" vertical-align="bottom">
-              <mj-image align="left" width="226px" src="https://www.londonsummary.com/logo-grey.png" href="https://www.londonsummary.com/" alt="London Summary newsletter logo" padding="0px" />
-              <mj-image width="1px" src="https://www.londonsummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%" alt="" />
+              <mj-image
+                align="left"
+                width="226px"
+                src="https://www.londonsummary.com/logo-grey.png"
+                href="https://www.londonsummary.com/"
+                alt="London Summary newsletter logo"
+                padding="0px"
+              />
+              <mj-image
+                width="1px"
+                src="https://www.londonsummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+                alt=""
+              />
             </mj-column>
             <mj-column width="50%" vertical-align="bottom">
-              <mj-text align="right" font-size="16px" font-family="Arial" font-weight="300" color="#00000096" padding="0">Feb 4, Wed • AQI 26 </mj-text>
+              <mj-text
+                align="right"
+                font-size="16px"
+                font-family="Arial"
+                font-weight="300"
+                color="#00000096"
+                padding="0"
+                >Feb 4, Wed • AQI 26
+              </mj-text>
             </mj-column>
           </mj-group>
         </mj-section>
         <!-- Divider line -->
-        <mj-divider border-color="#EBEBEB" border-width="1px" width="100%" padding="7px 20px 0 20px" />
+        <mj-divider
+          border-color="#EBEBEB"
+          border-width="1px"
+          width="100%"
+          padding="7px 20px 0 20px"
+        />
         <!-- In this edition -->
-        <mj-text padding="20px 20px 0px 20px" font-family="Arial" color="#000000" font-size="16px" font-weight="600"> In this edition: </mj-text>
-        <mj-table font-family="Arial" cellpadding="0" cellspacing="0" padding="19px 30px 0px 30px" style="width: 100%">
-          <tr>
-            <td style="
+        <mj-text
+          padding="20px 20px 0px 20px"
+          font-family="Arial"
+          color="#000000"
+          font-size="16px"
+          font-weight="600"
+        >
+          In this edition:
+        </mj-text>
+        <mj-table
+  font-family="Arial"
+  cellpadding="0"
+  cellspacing="0"
+  padding="19px 30px 0px 30px"
+  style="width: 100%"
+>
+  <tr>
+  <td style="
     font-size: 18px;
     width: 20px;
     vertical-align: top;
     padding-right: 8px; padding-bottom: 5px;
   "> → </td>
-            <td style="font-size: 16px; line-height: 24px; padding-bottom: 11px;"> London&#39;s largest theatre ever </td>
-          </tr>
-          <tr>
-            <td style="
+  <td style="font-size: 16px; line-height: 24px; padding-bottom: 11px;">
+    London&#39;s largest theatre ever
+  </td>
+</tr>
+<tr>
+  <td style="
     font-size: 18px;
     width: 20px;
     vertical-align: top;
     padding-right: 8px; padding-bottom: 5px;
   "> → </td>
-            <td style="font-size: 16px; line-height: 24px; padding-bottom: 11px;"> Train derailment </td>
-          </tr>
-          <tr>
-            <td style="
+  <td style="font-size: 16px; line-height: 24px; padding-bottom: 11px;">
+    Train derailment
+  </td>
+</tr>
+<tr>
+  <td style="
     font-size: 18px;
     width: 20px;
     vertical-align: top;
     padding-right: 8px;
   "> → </td>
-            <td style="font-size: 16px; line-height: 1.6;"> BTC tickets on sale </td>
-          </tr>
-        </mj-table>
+  <td style="font-size: 16px; line-height: 1.6;">
+    BTC tickets on sale
+  </td>
+</tr>
+</mj-table>
+
+
         <!-- Join link -->
-        <mj-text padding="17px 20px 20px 20px" font-family="Arial" color="#000000" font-size="16px" line-height="1.5"> Was this email forwarded to you? <a href="https://www.londonsummary.com/" target="_blank" style="
+        <mj-text
+          padding="17px 20px 20px 20px"
+          font-family="Arial"
+          color="#000000"
+          font-size="16px"
+          line-height="1.5"
+        >
+          Was this email forwarded to you?
+          <a
+            href="https://www.londonsummary.com/"
+            target="_blank"
+            style="
               text-decoration: none;
               border-bottom: 2px solid #80011f;
               color: black;
-            "> Join London Summary</a>. </mj-text>
+            "
+          >
+            Join London Summary</a
+          >.
+        </mj-text>
       </mj-column>
     </mj-section>
     <mj-spacer height="20px" />
     <mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
-      <mj-column background-color="#fff" border-radius="10px" padding="0px">
-        <mj-image border-radius="10px 10px 0 0" padding="0" width="600px" src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg" alt="“Do not travel” warning" href="https://www.londonsummary.com/" />
-        <mj-text padding="20px 20px 0px 20px" font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif" color="#000000">
-          <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;"> “Do not travel” warning </h2>
-        </mj-text>
-        <mj-text padding="0px 20px 0px 20px" font-family="Arial" color="#000000">
-          <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
-            <strong>Background: </strong>A Southern <a href="https://link.londonsummary.com/ls-4-feb-26--h1-1-train-derailed" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">train derailed</a> inside Selhurst depot in south-east London, while a separate signalling fault hit the key corridor between London Blackfriars and Norwood Junction just before the morning peak. The timing, on one of the UK’s busiest routes, caused disruption across Southern, Thameslink and Gatwick Express services, with knock-on effects for parts of the London Overground’s Windrush line.
-          </p>
-          <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
-            <strong>What happened: </strong>Two failures at once create a network pile-up. Trains get stuck, routes are blocked or throttled, and crews and rolling stock end up in the wrong places for later services. Govia Thameslink Railway issued a <a href="https://link.londonsummary.com/ls-4-feb-26--h1-2-rare-do-not-travel" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">rare “do not travel</a>” notice to prevent overcrowding and manage safety, then lifted it once limited services and crowd controls were in place. Even after lines reopen, delays and last-minute cancellations can persist until the fleet and staff are rebalanced.
-          </p>
-          <p style="font-size: 16px; line-height: 24px; padding-top: 15px; padding-bottom: 20px; margin: 0;">
-            <strong>Implications: </strong>Expect messy commutes into the evening, especially on Brighton Main Line services. Ticket acceptance on the Underground, buses, Elizabeth line and some local operators helps, but crowding and missed connections still cost time and money. Overground disruption is expected to linger into Thursday lunchtime on affected sections.
-          </p>
-        </mj-text>
-      </mj-column>
+  <mj-column background-color="#fff" border-radius="10px" padding="0px">
+    <mj-image
+      border-radius="10px 10px 0 0"
+      padding="0"
+      width="600px"
+      src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+      alt="“Do not travel” warning"
+      href="https://www.londonsummary.com/"
+    />
+    <mj-text
+      padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">
+        “Do not travel” warning
+      </h2>
+    </mj-text>
+    <mj-text padding="0px 20px 0px 20px" font-family="Arial" color="#000000">
+      <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+  <strong>Background: </strong>A Southern <a href="https://link.londonsummary.com/ls-4-feb-26--h1-1-train-derailed" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">train derailed</a> inside Selhurst depot in south-east London, while a separate signalling fault hit the key corridor between London Blackfriars and Norwood Junction just before the morning peak. The timing, on one of the UK’s busiest routes, caused disruption across Southern, Thameslink and Gatwick Express services, with knock-on effects for parts of the London Overground’s Windrush line.
+</p>
+<p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+  <strong>What happened: </strong>Two failures at once create a network pile-up. Trains get stuck, routes are blocked or throttled, and crews and rolling stock end up in the wrong places for later services. Govia Thameslink Railway issued a <a href="https://link.londonsummary.com/ls-4-feb-26--h1-2-rare-do-not-travel" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">rare “do not travel</a>” notice to prevent overcrowding and manage safety, then lifted it once limited services and crowd controls were in place. Even after lines reopen, delays and last-minute cancellations can persist until the fleet and staff are rebalanced.
+</p>
+<p style="font-size: 16px; line-height: 24px; padding-top: 15px; padding-bottom: 20px; margin: 0;">
+  <strong>Implications: </strong>Expect messy commutes into the evening, especially on Brighton Main Line services. Ticket acceptance on the Underground, buses, Elizabeth line and some local operators helps, but crowding and missed connections still cost time and money. Overground disruption is expected to linger into Thursday lunchtime on affected sections.
+</p>
+    </mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="20px" />
+<mj-section background-color="#eff1f4" css-class="border-line" padding="1px 1px 1px 1px" border-radius="10px">
+  <mj-raw>
+    <a href="https://link.londonsummary.com/ls-4-feb-2026-p-ad-x-4" target="_blank" style="color:black">
+  </mj-raw>
+  <mj-column background-color="#fff" border-radius="10px" padding="0px">
+    <mj-image border-radius="10px 10px 0 0" padding="0px" width="600px"
+      src="https://www.londonsummary.com/email/ad/your-ad-could-be-here.jpg"
+      alt="Advertisement promoting newsletter sponsorship to reach engaged readers" />
+    <mj-text padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000">
+      <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">
+        This could be your business
+      </h2>
+    </mj-text>
+    <mj-text padding="0px 20px 0px 20px" font-family="Arial" color="#000000">
+      <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+        Reach a wide audience of engaged, loyal readers right where they’re paying attention.
+        Our audience is educated, influential, and ready to respond.
+      </p>
+      <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+        Whether you want to drive revenue, build awareness, or launch something fresh,
+        this is your spot. Secure your placement and get in front of the right eyes.
+      </p>
+      <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; padding-bottom: 20px; margin: 0;">
+        <a style="text-decoration: none; border-bottom: 2px solid #80011f; color: black;">
+          <strong>Partner with us</strong>
+        </a>
+      </p>
+    </mj-text>
+  </mj-column>
+  <mj-raw></a></mj-raw>
+</mj-section>
+<mj-spacer height="20px" />
+
+<mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
+  <mj-column background-color="#fff" border-radius="10px" padding="0px">
+    <mj-image
+      border-radius="10px 10px 0 0"
+      padding="0"
+      width="600px"
+      src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+      alt="London’s largest theatre"
+      href="https://www.londonsummary.com/"
+    />
+    <mj-text
+      padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">
+        London’s largest theatre
+      </h2>
+    </mj-text>
+    <mj-text padding="0px 20px 0px 20px" font-family="Arial" color="#000000">
+      <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+  <strong>Background: </strong>Greenwich Council has <a href="https://link.londonsummary.com/ls-4-feb-26--h2-3-approved-plans" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">approved plans </a>for a new 3,000-seat Troubadour theatre on the eastern side of the Greenwich Peninsula in south-east London. Designed as two 1,500-seat auditoriums, it would become London’s largest dedicated theatre by capacity, overtaking the 2,359-seat London Coliseum in the West End.
+</p>
+<p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+  <strong>What next: </strong>Troubadour, which already operates venues in Wembley Park and Canary Wharf, says the new site will expand London’s cultural offer and enable bold, large-scale live productions. Construction is expected to begin in June and take around nine months.
+</p>
+<p style="font-size: 16px; line-height: 24px; padding-top: 15px; padding-bottom: 20px; margin: 0;">
+  <strong>Local representation: </strong>Planning permission is temporary for 10 years, with the land near the cable car station ultimately earmarked for residential towers under the wider masterplan. Local residents’ representatives supported the scheme and urged that school access be included in the conditions. Troubadour says community benefit is a priority, with its trust funded by a 50p per-ticket levy to support workshops and ticket schemes for schools and charities.
+</p>
+    </mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="20px" />
+    
+<mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
+  <mj-column background-color="#fff" border-radius="10px" padding-bottom="7px">
+    <mj-text padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000">
+      <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">What’s on</h2>
+    </mj-text>
+    <mj-divider border-width="4.8px" border-color="#80011F" width="35px" align="left" padding="0 20px 0px 20px" />
+    <mj-spacer height="10px" />
+
+<mj-section padding="5px 10px 0px 10px" padding-bottom="0px !important">
+      <mj-group width="100%" padding="0px !important">
+        <mj-column width="30%" vertical-align="top" padding="0">
+          <mj-image
+            align="left"
+            src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+            alt="Harry Styles tickets now available"
+            padding="0px"
+            border-radius="8px"
+            fluid-on-mobile="true"
+            css-class="event-image"
+            href="https://link.londonsummary.com/ls-4-feb-26-wo-4-12th-june-onwards-tickets-from"
+          />
+        </mj-column>
+        <mj-column width="70%" vertical-align="top">
+          <mj-text padding="0px 15px 0px 15px" font-family="Arial" color="#000000" font-size="16px">
+            <p style="margin-bottom: 7px !important; margin-top: 6px !important; line-height: 16px;">
+              <strong>Harry Styles tickets now available</strong>
+            </p>
+            <p style="line-height: 24px">Harry Styles is set to play a London residency at Wembley Stadium in summer 2026 as part of his Together, Together tour, with multiple dates beginning 12 June 2026 (and a longer run advertised across mid-June to early July), supported by Shania Twain.</p>
+            <p style="margin-bottom: 0px; line-height: 16px">
+              <a
+                style="text-decoration: none; border-bottom: 2px solid #80011f; color: black;"
+                target="_blank"
+                href="https://link.londonsummary.com/ls-4-feb-26-wo-4-12th-june-onwards-tickets-from"
+              >12th June onwards, tickets from £105</a>
+            </p>
+          </mj-text>
+        </mj-column>
+      </mj-group>
     </mj-section>
-    <mj-spacer height="20px" />
-    <mj-section background-color="#eff1f4" css-class="border-line" padding="1px 1px 1px 1px" border-radius="10px">
-      <mj-raw>
-        <a href="https://link.londonsummary.com/ls-4-feb-2026-p-ad-x-4" target="_blank" style="color:black">
-      </mj-raw>
-      <mj-column background-color="#fff" border-radius="10px" padding="0px">
-        <mj-image border-radius="10px 10px 0 0" padding="0px" width="600px" src="https://www.londonsummary.com/email/ad/your-ad-could-be-here.jpg" alt="Advertisement promoting newsletter sponsorship to reach engaged readers" />
-        <mj-text padding="20px 20px 0px 20px" font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif" color="#000000">
-          <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;"> This could be your business </h2>
-        </mj-text>
-        <mj-text padding="0px 20px 0px 20px" font-family="Arial" color="#000000">
-          <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;"> Reach a wide audience of engaged, loyal readers right where they’re paying attention. Our audience is educated, influential, and ready to respond. </p>
-          <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;"> Whether you want to drive revenue, build awareness, or launch something fresh, this is your spot. Secure your placement and get in front of the right eyes. </p>
-          <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; padding-bottom: 20px; margin: 0;">
-            <a style="text-decoration: none; border-bottom: 2px solid #80011f; color: black;">
-              <strong>Partner with us</strong>
-            </a>
-          </p>
-        </mj-text>
-      </mj-column>
-      <mj-raw></a></mj-raw>
+<mj-divider
+      border-style="dashed"
+      border-width="1px"
+      border-color="lightgrey"
+      padding="20px 22px 8px 22px"
+    />
+<mj-section padding="5px 10px 0px 10px" padding-bottom="0px !important">
+      <mj-group width="100%" padding="0px !important">
+        <mj-column width="30%" vertical-align="top" padding="0">
+          <mj-image
+            align="left"
+            src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+            alt="BTS tickets are on saleBTS are scheduled to bring their 2026 world tour (“ARIRANG”) to Tottenham Hotspur Stadium in London for two shows."
+            padding="0px"
+            border-radius="8px"
+            fluid-on-mobile="true"
+            css-class="event-image"
+            href="https://www.viagogo.es/Entradas-Conciertos/Pop-Rock/Asian-Pop/Korean-Pop/BTS-Entradas/E-160262279?backUrl=%2FEntradas-Conciertos%2FPop-Rock%2FAsian-Pop%2FKorean-Pop%2FBTS-Entradas&amp;quantity=2"
+          />
+        </mj-column>
+        <mj-column width="70%" vertical-align="top">
+          <mj-text padding="0px 15px 0px 15px" font-family="Arial" color="#000000" font-size="16px">
+            <p style="margin-bottom: 7px !important; margin-top: 6px !important; line-height: 16px;">
+              <strong>BTS tickets are on saleBTS are scheduled to bring their 2026 world tour (“ARIRANG”) to Tottenham Hotspur Stadium in London for two shows.</strong>
+            </p>
+            <p style="line-height: 24px"></p>
+            <p style="margin-bottom: 0px; line-height: 16px">
+              <a
+                style="text-decoration: none; border-bottom: 2px solid #80011f; color: black;"
+                target="_blank"
+                href="https://www.viagogo.es/Entradas-Conciertos/Pop-Rock/Asian-Pop/Korean-Pop/BTS-Entradas/E-160262279?backUrl=%2FEntradas-Conciertos%2FPop-Rock%2FAsian-Pop%2FKorean-Pop%2FBTS-Entradas&amp;quantity=2"
+              >6 and 7 Jul, tickets starting £300</a>
+            </p>
+          </mj-text>
+        </mj-column>
+      </mj-group>
     </mj-section>
-    <mj-spacer height="20px" />
-    <mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
-      <mj-column background-color="#fff" border-radius="10px" padding="0px">
-        <mj-image border-radius="10px 10px 0 0" padding="0" width="600px" src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg" alt="London’s largest theatre" href="https://www.londonsummary.com/" />
-        <mj-text padding="20px 20px 0px 20px" font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif" color="#000000">
-          <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;"> London’s largest theatre </h2>
-        </mj-text>
-        <mj-text padding="0px 20px 0px 20px" font-family="Arial" color="#000000">
-          <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
-            <strong>Background: </strong>Greenwich Council has <a href="https://link.londonsummary.com/ls-4-feb-26--h2-3-approved-plans" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">approved plans </a>for a new 3,000-seat Troubadour theatre on the eastern side of the Greenwich Peninsula in south-east London. Designed as two 1,500-seat auditoriums, it would become London’s largest dedicated theatre by capacity, overtaking the 2,359-seat London Coliseum in the West End.
-          </p>
-          <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
-            <strong>What next: </strong>Troubadour, which already operates venues in Wembley Park and Canary Wharf, says the new site will expand London’s cultural offer and enable bold, large-scale live productions. Construction is expected to begin in June and take around nine months.
-          </p>
-          <p style="font-size: 16px; line-height: 24px; padding-top: 15px; padding-bottom: 20px; margin: 0;">
-            <strong>Local representation: </strong>Planning permission is temporary for 10 years, with the land near the cable car station ultimately earmarked for residential towers under the wider masterplan. Local residents’ representatives supported the scheme and urged that school access be included in the conditions. Troubadour says community benefit is a priority, with its trust funded by a 50p per-ticket levy to support workshops and ticket schemes for schools and charities.
-          </p>
-        </mj-text>
-      </mj-column>
-    </mj-section>
-    <mj-spacer height="20px" />
-  </mj-body>
-</mjml>
+</mj-column>
+</mj-section>
+<mj-spacer height="20px" />
+  </mj-body></mjml
+>

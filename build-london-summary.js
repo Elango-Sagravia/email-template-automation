@@ -1,14 +1,25 @@
 /**
  * build-london-summary.js
  * ----------------------
- * v2.2 (fixed function mismatch + Spotlight rules + ad insertion)
+ * v2.3 (Spotlight fixed + image REPLACE_ME + ad insert + What's on)
  *
  * - DOCX -> Mammoth HTML
  * - Extract "In this edition" items
  * - Extract Spotlight stories ONLY from:
  *     H2 "Spotlight" -> each H3 after it is a story title
  *     story body = p/ul/ol until next H3 or next H2
- * - Render templates and inject into layout
+ * - Render Spotlight blocks:
+ *     - always include image:
+ *         src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+ *         alt=title
+ *     - insert the AD block between spotlight #1 and spotlight #2
+ * - Extract "What’s on" items from H2 "What’s on"
+ *     - supports 2 or 3 items
+ *     - no dashed divider after last item
+ * - Inject into layout placeholders:
+ *     {{%IN_THIS_EDITION_TABLE%}}
+ *     {{%SPOTLIGHT_SECTION%}}
+ *     {{%WHATS_ON_SECTION%}}
  * - Compile MJML -> HTML
  *
  * Usage:
@@ -16,14 +27,6 @@
  *
  * Requirements:
  *   npm i mjml mammoth cheerio
- *
- * Templates expected:
- *   mjml-template/london-summary/layout.mjml
- *   mjml-template/london-summary/in-this-edition-table.mjml   (has {{%ROWS%}})
- *
- * Layout tokens expected:
- *   {{%IN_THIS_EDITION_TABLE%}}
- *   {{%SPOTLIGHT_SECTION%}}
  */
 
 import fs from "fs";
@@ -51,6 +54,7 @@ const IN_THIS_EDITION_TPL_PATH = path.join(
  * ----------------------------- */
 const TOKEN_IN_THIS_EDITION = /\{\{\%\s*IN_THIS_EDITION_TABLE\s*\%\}\}/g;
 const TOKEN_SPOTLIGHT_SECTION = /\{\{\%\s*SPOTLIGHT_SECTION\s*\%\}\}/g;
+const TOKEN_WHATS_ON_SECTION = /\{\{\%\s*WHATS_ON_SECTION\s*\%\}\}/g;
 const TOKEN_ROWS = /\{\{\%\s*ROWS\s*\%\}\}/g;
 
 /** -----------------------------
@@ -62,8 +66,9 @@ main().catch((e) => {
 });
 
 async function main() {
-  if (!DOCX_PATH)
+  if (!DOCX_PATH) {
     throw new Error('Usage: node build-london-summary.js "<path-to-docx>"');
+  }
 
   if (!fs.existsSync(DOCX_PATH))
     throw new Error(`DOCX not found: ${DOCX_PATH}`);
@@ -87,19 +92,25 @@ async function main() {
   // 2) In this edition
   const editionItems = extractInThisEditionLondon(docHtml);
   console.log("🧩 In this edition:", editionItems);
-
   const inThisEditionMjml = renderInThisEditionFromTemplate(editionItems);
 
-  // 3) Spotlight (H2 Spotlight -> H3 stories)
+  // 3) Spotlight
   const spotlightStories = extractSpotlightLondon(docHtml);
   console.log(
     "🧩 Spotlight stories:",
     spotlightStories.map((s) => s.title),
   );
-
   const spotlightMjml = renderSpotlightLondon(spotlightStories);
 
-  // 4) Inject into layout
+  // 4) What's on
+  const whatsOnItems = extractWhatsOnLondon(docHtml);
+  console.log(
+    "🧩 What’s on items:",
+    whatsOnItems.map((x) => x.title),
+  );
+  const whatsOnMjml = renderWhatsOnLondon(whatsOnItems);
+
+  // 5) Inject into layout
   const layoutMjml = fs.readFileSync(LAYOUT_PATH, "utf8");
   let finalMjml = layoutMjml;
 
@@ -117,7 +128,14 @@ async function main() {
   }
   finalMjml = finalMjml.replace(TOKEN_SPOTLIGHT_SECTION, spotlightMjml);
 
-  // 5) Compile MJML -> HTML
+  if (!TOKEN_WHATS_ON_SECTION.test(finalMjml)) {
+    console.warn(
+      "⚠️ Placeholder {{%WHATS_ON_SECTION%}} not found in layout.mjml (add it where What’s on should appear)",
+    );
+  }
+  finalMjml = finalMjml.replace(TOKEN_WHATS_ON_SECTION, whatsOnMjml);
+
+  // 6) Compile MJML -> HTML
   const { html, errors } = mjml2html(finalMjml, {
     validationLevel: "soft",
     filePath: LAYOUT_PATH,
@@ -268,7 +286,8 @@ function makeEditionRow(text, idx, total) {
 }
 
 /** -----------------------------
- * Spotlight extraction (London) — FIXED RULE
+ * Spotlight extraction (London)
+ * Rule:
  * - Find H2 "Spotlight"
  * - Each H3 = story title
  * - body = p/ul/ol until next H3 or next H2
@@ -323,8 +342,9 @@ function extractSpotlightLondon(html) {
 
 /** -----------------------------
  * Spotlight rendering (London)
- * - Always include image with src ".../REPLACE_ME.jpg"
- * - alt must be title
+ * - Always include image:
+ *   src=".../REPLACE_ME.jpg"
+ *   alt=title
  * - Insert ad between spotlight #1 and #2
  * - Spacer after each block
  * ----------------------------- */
@@ -373,7 +393,6 @@ function renderSpotlightLondon(stories) {
       const titleText = cleanText(s.title || "");
       const title = escapeHtml(titleText);
 
-      // ✅ FIX: use your function name + return shape
       const { bodyHtml } = renderSpotlightBodyLondon(s.nodes || []);
 
       const spotlightBlock = `
@@ -435,6 +454,7 @@ function renderSpotlightBodyLondon(nodes) {
   ${inner}
 </p>`.trim(),
       );
+      continue;
     }
 
     if (tag === "ul" || tag === "ol") {
@@ -466,6 +486,204 @@ function renderSpotlightBodyLondon(nodes) {
   }
 
   return { bodyHtml: parts.join("\n") };
+}
+
+/** -----------------------------
+ * What’s on extraction (London)
+ * Strategy (works with your DOCX style):
+ * - Find heading "What’s on" (h2/h3)
+ * - Then parse items as blocks separated by empty paragraphs
+ *   Each item roughly:
+ *     Title line
+ *     Description line(s)
+ *     CTA line (often contains a link, or just text)
+ * - Stops at next h2
+ * ----------------------------- */
+function extractWhatsOnLondon(html) {
+  const $ = cheerio.load(html);
+
+  const marker = $("h2, h3")
+    .filter((_, el) => {
+      const t = cleanText($(el).text()).toLowerCase();
+      return (
+        t === "what’s on" ||
+        t === "what's on" ||
+        t.startsWith("what’s on") ||
+        t.startsWith("what's on")
+      );
+    })
+    .first();
+
+  if (!marker.length) return [];
+
+  const items = [];
+  let el = marker.next();
+
+  // Collect only paragraphs until next big section (h2)
+  const lines = [];
+  while (el && el.length) {
+    const tag = (el[0]?.tagName || "").toLowerCase();
+    const txt = cleanText(el.text());
+
+    if (tag === "h2" && txt) break;
+
+    if (tag === "p") {
+      // store both html + text for links
+      lines.push({
+        text: txt,
+        html: el.html() || "",
+      });
+    } else if (tag === "div") {
+      const ps = el.children("p");
+      if (ps.length) {
+        ps.each((_, p) => {
+          const $p = $(p);
+          lines.push({
+            text: cleanText($p.text()),
+            html: $p.html() || "",
+          });
+        });
+      }
+    }
+
+    el = el.next();
+  }
+
+  // Split into blocks by empty lines
+  const blocks = [];
+  let cur = [];
+  for (const ln of lines) {
+    if (!ln.text) {
+      if (cur.length) blocks.push(cur);
+      cur = [];
+      continue;
+    }
+    cur.push(ln);
+  }
+  if (cur.length) blocks.push(cur);
+
+  // Convert blocks -> items (max 3)
+  for (const b of blocks.slice(0, 3)) {
+    const title = b[0]?.text || "";
+    if (!title) continue;
+
+    // find first link anywhere in block (best guess for CTA URL)
+    const url = firstHrefFromHtmlBlock(b.map((x) => x.html).join("\n"));
+
+    const ctaLine = b.length >= 2 ? b[b.length - 1].text : "";
+    const descLines = b.slice(1, Math.max(1, b.length - 1)).map((x) => x.text);
+    const desc = descLines.join(" ");
+
+    items.push({
+      img: "https://www.londonsummary.com/email/images/REPLACE_ME.jpg",
+      imgAlt: title,
+      title,
+      desc,
+      ctaText: ctaLine || "Learn more",
+      ctaUrl: url || "https://www.londonsummary.com/",
+    });
+  }
+
+  return items;
+}
+
+function firstHrefFromHtmlBlock(html) {
+  if (!html) return "";
+  const $ = cheerio.load(`<root>${html}</root>`, null, false);
+  const a = $("a").first();
+  return a.length ? a.attr("href") || "" : "";
+}
+
+/**
+ * WHAT'S ON (London) — renderer
+ * - up to 3 items
+ * - no dashed divider after last item
+ */
+function renderWhatsOnLondon(items = []) {
+  const list = (items || []).filter(Boolean);
+  if (!list.length) return "";
+
+  const header = `
+<mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
+  <mj-column background-color="#fff" border-radius="10px" padding-bottom="7px">
+    <mj-text padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000">
+      <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">What’s on</h2>
+    </mj-text>
+    <mj-divider border-width="4.8px" border-color="#80011F" width="35px" align="left" padding="0 20px 0px 20px" />
+    <mj-spacer height="10px" />
+`;
+
+  const usable = list.slice(0, 3);
+
+  const blocks = usable
+    .map((it, idx) => {
+      const isLast = idx === usable.length - 1;
+
+      const img = escapeHtml(it.img || "");
+      const imgAlt = escapeHtml(it.imgAlt || it.title || "");
+      const title = escapeHtml(it.title || "");
+      const desc = escapeHtml(it.desc || "");
+      const ctaText = escapeHtml(it.ctaText || "");
+      const ctaUrl = escapeHtml(it.ctaUrl || "#");
+
+      const story = `
+    <mj-section padding="5px 10px 0px 10px" padding-bottom="0px !important">
+      <mj-group width="100%" padding="0px !important">
+        <mj-column width="30%" vertical-align="top" padding="0">
+          <mj-image
+            align="left"
+            src="${img}"
+            alt="${imgAlt}"
+            padding="0px"
+            border-radius="8px"
+            fluid-on-mobile="true"
+            css-class="event-image"
+            href="${ctaUrl}"
+          />
+        </mj-column>
+        <mj-column width="70%" vertical-align="top">
+          <mj-text padding="0px 15px 0px 15px" font-family="Arial" color="#000000" font-size="16px">
+            <p style="margin-bottom: 7px !important; margin-top: 6px !important; line-height: 16px;">
+              <strong>${title}</strong>
+            </p>
+            <p style="line-height: 24px">${desc}</p>
+            <p style="margin-bottom: 0px; line-height: 16px">
+              <a
+                style="text-decoration: none; border-bottom: 2px solid #80011f; color: black;"
+                target="_blank"
+                href="${ctaUrl}"
+              >${ctaText}</a>
+            </p>
+          </mj-text>
+        </mj-column>
+      </mj-group>
+    </mj-section>
+`.trim();
+
+      const divider = !isLast
+        ? `
+    <mj-divider
+      border-style="dashed"
+      border-width="1px"
+      border-color="lightgrey"
+      padding="20px 22px 8px 22px"
+    />
+`.trim()
+        : "";
+
+      return [story, divider].filter(Boolean).join("\n");
+    })
+    .join("\n");
+
+  const footer = `
+  </mj-column>
+</mj-section>
+<mj-spacer height="20px" />
+`.trim();
+
+  return [header, blocks, footer].join("\n");
 }
 
 /** -----------------------------
