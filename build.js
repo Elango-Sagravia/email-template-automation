@@ -20,6 +20,8 @@
  *   {{%SPOTLIGHT_SECTIONS%}}
  *   {{%LONG_STORY_SHORT_SECTIONS%}}
  *   {{%FOOTER_BANNER%}}
+ *   {{%IMAGE_CREDITS%}}
+ *   {{%PREVIEW_TEXT%}}
  */
 
 import fs from "fs";
@@ -63,8 +65,12 @@ const TOKEN_SPOTLIGHT_TOPIC = /\{\{\%\s*SPOTLIGHT_TOPIC\s*\%\}\}/g;
 const TOKEN_LSS_SECTIONS = /\{\{\%\s*LONG_STORY_SHORT_SECTIONS\s*\%\}\}/g;
 const TOKEN_LSS_SUBTOPIC_BLOCKS = /\{\{\%\s*SUBTOPIC_BLOCKS\s*\%\}\}/g;
 
-// ✅ Footer banner token
+// Footer banner token
 const TOKEN_FOOTER_BANNER = /\{\{\%\s*FOOTER_BANNER\s*\%\}\}/g;
+
+// ✅ New: image credits + preview text tokens
+const TOKEN_IMAGE_CREDITS = /\{\{\%\s*IMAGE_CREDITS\s*\%\}\}/g;
+const TOKEN_PREVIEW_TEXT = /\{\{\%\s*PREVIEW_TEXT\s*\%\}\}/g;
 
 /** -----------------------------
  * MAIN
@@ -131,7 +137,14 @@ async function main() {
   const footerBanner = extractFooterBanner(docHtml);
   console.log("🧩 Footer banner found:", footerBanner ? "YES" : "NO");
 
-  // 6) Inject into layout
+  // 6) Image credits + Preview text
+  const imageCredits = extractSingleParagraphAfterH2(docHtml, "image credits");
+  const previewText = extractSingleParagraphAfterH2(docHtml, "preview text");
+
+  console.log("🧩 Image credits found:", imageCredits ? "YES" : "NO");
+  console.log("🧩 Preview text found:", previewText ? "YES" : "NO");
+
+  // 7) Inject into layout
   const layoutMjml = fs.readFileSync(LAYOUT_PATH, "utf8");
 
   if (!TOKEN_IN_THIS_EDITION.test(layoutMjml)) {
@@ -152,14 +165,22 @@ async function main() {
   if (!TOKEN_FOOTER_BANNER.test(layoutMjml)) {
     console.warn("⚠️ Placeholder {{%FOOTER_BANNER%}} not found in layout.mjml");
   }
+  if (!TOKEN_IMAGE_CREDITS.test(layoutMjml)) {
+    console.warn("⚠️ Placeholder {{%IMAGE_CREDITS%}} not found in layout.mjml");
+  }
+  if (!TOKEN_PREVIEW_TEXT.test(layoutMjml)) {
+    console.warn("⚠️ Placeholder {{%PREVIEW_TEXT%}} not found in layout.mjml");
+  }
 
   const finalMjml = layoutMjml
     .replace(TOKEN_IN_THIS_EDITION, inThisEditionMjml)
     .replace(TOKEN_SPOTLIGHT_SECTIONS, spotlightSectionsMjml)
     .replace(TOKEN_LSS_SECTIONS, lssMjml)
-    .replace(TOKEN_FOOTER_BANNER, footerBanner || "");
+    .replace(TOKEN_FOOTER_BANNER, footerBanner || "")
+    .replace(TOKEN_IMAGE_CREDITS, escapeHtml(imageCredits || ""))
+    .replace(TOKEN_PREVIEW_TEXT, escapeHtml(previewText || ""));
 
-  // 7) Compile MJML -> HTML
+  // 8) Compile MJML -> HTML
   const { html, errors } = mjml2html(finalMjml, {
     validationLevel: "soft",
     filePath: LAYOUT_PATH,
@@ -241,14 +262,6 @@ function makeEditionRow(text) {
 
 /** -----------------------------
  * Spotlight
- * Rules:
- * - Find <h2> == "Spotlight"
- * - Each <h3> after that is a topic title
- * - Topic content = p/ul/ol/img until next h3 or next h2
- * Output:
- * - Multiple <mj-section> blocks
- * - First section includes Spotlight heading, others don't
- * - Always includes image placeholder (Option A)
  * ----------------------------- */
 function extractSpotlightTopics(html) {
   const $ = cheerio.load(html);
@@ -365,7 +378,6 @@ function renderSpotlightTopic(topic) {
   </h2>
 </mj-text>`.trim();
 
-  // Always image placeholder (Option A)
   const imageBlock = `
 <mj-image
   border-radius="10px"
@@ -396,13 +408,6 @@ function renderSpotlightTopic(topic) {
 
 /** -----------------------------
  * Long story short
- * Rules:
- * - Find <h2> == "Long story short"
- * - Each <h3> after that is a subtopic
- * - Subtopic content = p/ul/ol/img until next h3 or next h2
- * Output:
- * - For Science & Tech: ALWAYS include your Gizmo image block after the h3
- * - For other subtopics: include image only if Mammoth found <img>
  * ----------------------------- */
 function extractLongStoryShort(html) {
   const $ = cheerio.load(html);
@@ -494,7 +499,6 @@ function renderLssSubtopic(sub, idx, total) {
   </h3>
 </mj-text>`.trim();
 
-  // ✅ Science & Tech => always include the real Gizmo image (as requested)
   const isScienceTech = rawTitle.toLowerCase() === "science & tech";
 
   const docHasImage = (sub.nodes || []).some(
@@ -507,8 +511,8 @@ function renderLssSubtopic(sub, idx, total) {
   border-radius="10px"
   padding="0px 12px 10px 12px"
   width="600px"
-  src="https://www.presidentialsummary.com/email/images/REPLACE_ME.jpg"
-  alt="${title}"
+  src="https://www.presidentialsummary.com/email/images/gizmo-interactive-app-create-chat-community-discover.jpg"
+  alt="Gizmo app shows create chat community discover interactive features"
   href="https://www.presidentialsummary.com/"
 />`.trim()
     : docHasImage
@@ -564,11 +568,6 @@ function renderLssSubtopic(sub, idx, total) {
 
 /** -----------------------------
  * Footer banner
- * Rules:
- * - Find <h2> == "Footer"
- * - Take subsequent <p> (and <div><p>..) until next <h2> or end
- * - Render inner HTML (no wrapping <p>) for injecting into banner <div>
- * - Rewrite <a> with footer style (white underline)
  * ----------------------------- */
 function extractFooterBanner(html) {
   const $ = cheerio.load(html);
@@ -611,7 +610,6 @@ function renderFooterBannerHtml(nodes) {
     parts.push(inner);
   }
 
-  // Banner content should be a single inline chunk
   return parts.join(" ");
 }
 
@@ -647,7 +645,49 @@ function rewriteFooterAnchors($) {
 }
 
 /** -----------------------------
- * Shared body rendering with link styles, keep strong/em/i, skip empty p
+ * NEW: Extract 1 paragraph after an H2 title
+ * Used for:
+ * - "Image credits" -> fill {{%IMAGE_CREDITS%}}
+ * - "Preview text"  -> fill {{%PREVIEW_TEXT%}}
+ * Rules:
+ * - Find <h2> whose text matches the given title
+ * - Take the first <p> after it (or first <div><p>..)
+ * - Return plain text (no anchors) for safety in those tokens
+ * ----------------------------- */
+function extractSingleParagraphAfterH2(html, h2TitleLower) {
+  const $ = cheerio.load(html);
+
+  const h2 = $("h2")
+    .filter((_, el) => cleanText($(el).text()).toLowerCase() === h2TitleLower)
+    .first();
+
+  if (!h2.length) return "";
+
+  let el = h2.next();
+
+  while (el && el.length) {
+    const tag = (el[0]?.tagName || "").toLowerCase();
+
+    if (tag === "h2") break;
+
+    if (tag === "p") {
+      const txt = cleanText(el.text());
+      return txt;
+    }
+
+    if (tag === "div") {
+      const p = el.find("p").first();
+      if (p.length) return cleanText(p.text());
+    }
+
+    el = el.next();
+  }
+
+  return "";
+}
+
+/** -----------------------------
+ * Shared body rendering
  * ----------------------------- */
 function renderBodyHtml(nodes, { wrapP, pStyle }) {
   const parts = [];
@@ -716,7 +756,6 @@ function rewriteAnchors($) {
   });
 }
 
-// Treat "<strong></strong>" etc as empty
 function isEmptyRichText(html) {
   const $ = cheerio.load(`<root>${html || ""}</root>`, null, false);
   const text = $("root")
@@ -730,7 +769,6 @@ function isEmptyRichText(html) {
  * Utils
  * ----------------------------- */
 function normalizeDashes(s) {
-  // normalize all common dash variants to hyphen-minus
   return (s || "").replace(/\u2010|\u2011|\u2012|\u2013|\u2014|\u2212/g, "-");
 }
 
