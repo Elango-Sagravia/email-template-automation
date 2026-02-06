@@ -64,6 +64,7 @@ const TOKEN_WHATS_ON_SECTION = /\{\{\%\s*WHATS_ON_SECTION\s*\%\}\}/g;
 const TOKEN_LONG_STORY_SHORT_SECTION =
   /\{\{\%\s*LONG_STORY_SHORT_SECTION\s*\%\}\}/g;
 const TOKEN_ROWS = /\{\{\%\s*ROWS\s*\%\}\}/g;
+const TOKEN_DID_YOU_KNOW_SECTION = /\{\{\%\s*DID_YOU_KNOW_SECTION\s*\%\}\}/g;
 
 /** -----------------------------
  * MAIN
@@ -127,6 +128,11 @@ async function main() {
   });
   const lssMjml = renderLongStoryShortLondon(lss);
 
+  // 6) Did you know?
+  const dyk = extractDidYouKnowLondon(docHtml);
+  console.log("🧩 Did you know:", dyk?.text || "(none)");
+  const dykHtml = renderDidYouKnowLondon(dyk);
+
   // 6) Inject into layout
   const layoutMjml = fs.readFileSync(LAYOUT_PATH, "utf8");
   let finalMjml = layoutMjml;
@@ -158,6 +164,14 @@ async function main() {
     );
   }
   finalMjml = finalMjml.replace(TOKEN_LONG_STORY_SHORT_SECTION, lssMjml);
+
+  // Inject into layout
+  if (!TOKEN_DID_YOU_KNOW_SECTION.test(finalMjml)) {
+    console.warn(
+      "⚠️ Placeholder {{%DID_YOU_KNOW_SECTION%}} not found in layout.mjml",
+    );
+  }
+  finalMjml = finalMjml.replace(TOKEN_DID_YOU_KNOW_SECTION, dykHtml);
 
   // 7) Compile MJML -> HTML
   const { html, errors } = mjml2html(finalMjml, {
@@ -382,7 +396,7 @@ function renderSpotlightLondon(stories) {
   </mj-raw>
   <mj-column background-color="#fff" border-radius="10px" padding="0px">
     <mj-image border-radius="10px 10px 0 0" padding="0px" width="600px"
-      src="https://www.londonsummary.com/email/ad/your-ad-could-be-here.jpg"
+      src="https://www.londonsummary.com/email/ad/REPLACE_ME.jpg"
       alt="Advertisement promoting newsletter sponsorship to reach engaged readers" />
     <mj-text padding="20px 20px 0px 20px"
       font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
@@ -1004,6 +1018,63 @@ function normalizeDashes(s) {
 
 function cleanText(s) {
   return normalizeDashes((s || "").replace(/\s+/g, " ").trim());
+}
+
+function extractDidYouKnowLondon(html) {
+  const $ = cheerio.load(html);
+
+  // Find heading "Did you know?"
+  const marker = $("h2, h3, p, div")
+    .filter((_, el) => {
+      const t = cleanText($(el).text()).toLowerCase();
+      return (
+        t === "did you know?" ||
+        t === "did you know" ||
+        t.startsWith("did you know")
+      );
+    })
+    .first();
+
+  if (!marker.length) return null;
+
+  // Next meaningful paragraph after the heading
+  let el = marker.next();
+  while (el && el.length) {
+    const tag = (el[0]?.tagName || "").toLowerCase();
+
+    // stop at next section
+    if ((tag === "h2" || tag === "h3") && cleanText(el.text())) break;
+
+    if (tag === "p") {
+      const inner = sanitizeInlineHtmlLondon(el.html() || "");
+      if (!isEmptyRichText(inner)) {
+        return { html: inner, text: cleanText(el.text()) };
+      }
+    }
+
+    if (tag === "div") {
+      const p = el.children("p").first();
+      if (p.length) {
+        const inner = sanitizeInlineHtmlLondon(p.html() || "");
+        if (!isEmptyRichText(inner)) {
+          return { html: inner, text: cleanText(p.text()) };
+        }
+      }
+    }
+
+    el = el.next();
+  }
+
+  return null;
+}
+
+function renderDidYouKnowLondon(dyk) {
+  if (!dyk?.html) return "";
+
+  // wrap extracted inline HTML into the exact <p> you want
+  return `<p style="font-size: 16px; line-height: 24px; margin: 0 !important">
+    ${dyk.html}
+  </p>`.trim();
 }
 
 function escapeHtml(str) {
