@@ -1,0 +1,8 @@
+# Ignore all MJML templates
+mjml-template/
+
+# Ignore compiled MJML outputs
+dist/**/*.mjml
+
+# (Optional) ignore raw email html outputs
+dist/**/*.html
