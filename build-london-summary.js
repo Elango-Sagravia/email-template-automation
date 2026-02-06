@@ -65,6 +65,8 @@ const TOKEN_LONG_STORY_SHORT_SECTION =
   /\{\{\%\s*LONG_STORY_SHORT_SECTION\s*\%\}\}/g;
 const TOKEN_ROWS = /\{\{\%\s*ROWS\s*\%\}\}/g;
 const TOKEN_DID_YOU_KNOW_SECTION = /\{\{\%\s*DID_YOU_KNOW_SECTION\s*\%\}\}/g;
+const TOKEN_PREVIEW_TEXT = /\{\{\%\s*PREVIEW_TEXT\s*\%\}\}/g;
+const TOKEN_IMAGE_CREDITS = /\{\{\%\s*IMAGE_CREDITS\s*\%\}\}/g;
 
 /** -----------------------------
  * MAIN
@@ -172,6 +174,17 @@ async function main() {
     );
   }
   finalMjml = finalMjml.replace(TOKEN_DID_YOU_KNOW_SECTION, dykHtml);
+
+  // Preview text
+  const preview = extractPreviewTextLondon(docHtml);
+  finalMjml = finalMjml.replace(TOKEN_PREVIEW_TEXT, escapeHtml(preview || ""));
+
+  // Image credits
+  const imageCredits = extractImageCreditsLondon(docHtml);
+  finalMjml = finalMjml.replace(
+    TOKEN_IMAGE_CREDITS,
+    renderImageCreditsLondon(imageCredits),
+  );
 
   // 7) Compile MJML -> HTML
   const { html, errors } = mjml2html(finalMjml, {
@@ -970,6 +983,93 @@ function containsMeaningfulLssLine(htmlInner, txt) {
   const hasLink = /<a\b/i.test(htmlInner || "");
   const hasText = (txt || "").trim().length > 0;
   return hasText && (hasLink || (htmlInner || "").length > 0);
+}
+
+function extractPreviewTextLondon(html) {
+  const $ = cheerio.load(html);
+
+  const marker = $("h1,h2,h3,p,div")
+    .filter((_, el) => {
+      const t = cleanText($(el).text()).toLowerCase();
+      return (
+        t === "preview text" || t === "preview" || t.startsWith("preview text")
+      );
+    })
+    .first();
+
+  if (!marker.length) return "";
+
+  let el = marker.next();
+  while (el && el.length) {
+    const tag = (el[0]?.tagName || "").toLowerCase();
+    const txt = cleanText(el.text());
+
+    if ((tag === "h2" || tag === "h3") && txt) break;
+
+    if (tag === "p" && txt) return txt;
+
+    if (tag === "div") {
+      const p = el.children("p").first();
+      if (p.length) {
+        const t = cleanText(p.text());
+        if (t) return t;
+      }
+    }
+
+    el = el.next();
+  }
+
+  return "";
+}
+
+function extractImageCreditsLondon(html) {
+  const $ = cheerio.load(html);
+
+  const marker = $("h1,h2,h3,p,div")
+    .filter((_, el) => {
+      const t = cleanText($(el).text()).toLowerCase();
+      return (
+        t === "image credits" ||
+        t === "images credits" ||
+        t.startsWith("image credits") ||
+        t.startsWith("images credits")
+      );
+    })
+    .first();
+
+  if (!marker.length) return "";
+
+  let el = marker.next();
+  while (el && el.length) {
+    const tag = (el[0]?.tagName || "").toLowerCase();
+
+    const txt = cleanText(el.text());
+    if ((tag === "h2" || tag === "h3") && txt) break;
+
+    if (tag === "p") {
+      const inner = sanitizeInlineHtmlLondon(el.html() || ""); // keeps your LS link style
+      if (!isEmptyRichText(inner)) return inner;
+    }
+
+    if (tag === "div") {
+      const p = el.children("p").first();
+      if (p.length) {
+        const inner = sanitizeInlineHtmlLondon(p.html() || "");
+        if (!isEmptyRichText(inner)) return inner;
+      }
+    }
+
+    el = el.next();
+  }
+
+  return "";
+}
+
+function renderImageCreditsLondon(htmlOrText) {
+  // This goes inside: <strong>Images credits:</strong> {{%IMAGE_CREDITS%}}
+  // so return inline HTML (no <p>)
+  if (!htmlOrText) return "";
+  return htmlOrText;
 }
 
 /** -----------------------------
