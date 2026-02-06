@@ -408,37 +408,7 @@
 </mj-column>
 </mj-section>
 <mj-spacer height="20px" />
-    <mj-section
-      background-color="#eff1f4"
-      padding="1px 1px 1px 1px"
-      border-radius="10px"
-    >
-      <mj-column background-color="#fff" border-radius="10px" padding="0px">
-        <mj-text
-          padding="20px 20px 0px 20px"
-          font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
-          color="#000000"
-        >
-          <h2
-            style="
-              font-size: 24px;
-              line-height: 1.2;
-              font-weight: 400;
-              margin: 0;
-            "
-          >
-            Long story short
-          </h2>
-        </mj-text>
-        <mj-divider
-          border-width="4.8px"
-          border-color="#80011F"
-          width="35px"
-          align="left"
-          padding="0 20px 0px 20px"
-        />
-        <mj-spacer height="30px" />
-        <mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
+    <mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
   <mj-column background-color="#fff" border-radius="10px" padding="0px">
     <mj-text padding="20px 20px 0px 20px"
       font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
@@ -675,7 +645,85 @@
   </mj-column>
 </mj-section>
 <mj-spacer height="20px" />
+    <mj-spacer height="20px" />
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 1px 1px 1px"
+      border-radius="10px"
+    >
+      <mj-column background-color="#fff" border-radius="10px" padding="0px">
+        <mj-table
+          css-class="new-heading-with-border"
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+          padding="20px 30px 10px 30px"
+        >
+          <tr>
+            <!-- Left flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 50%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 2px solid #80011f">
+                &nbsp;
+              </div>
+            </td>
+            <!-- Center text -->
+            <td
+              valign="middle"
+              style="padding: 0 15px; text-align: center; white-space: nowrap"
+            >
+              <span
+                class="heading-font"
+                style="
+                  font-family:
+                    Austin News Text Web,
+                    TNYAdobeCaslonPro,
+                    &quot;Times New Roman&quot;,
+                    serif;
+                  display: inline-block;
+                  font-weight: 400;
+                  font-size: 24px;
+                  line-height: 1.2;
+                  color: #000000;
+                "
+              >
+                Did you know?</span
+              >
+            </td>
+            <!-- Right flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 50%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 2px solid #80011f">
+                &nbsp;
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+        <mj-text
+          align="center"
+          padding="10px 30px 20px 30px"
+          font-family="Arial"
+          color="#000000"
+        >
+          {{%DID_YOU_KNOW_SECTION%}}
+        </mj-text>
       </mj-column>
     </mj-section>
-  </mj-body></mjml
->
+    <mj-spacer height="20px" /> </mj-body
+></mjml>
