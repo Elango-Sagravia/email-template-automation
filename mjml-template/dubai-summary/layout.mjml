@@ -1,0 +1,203 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      h2,
+      img,
+      p {
+        margin: 0;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+    </mj-style>
+    <!--
+      <mj-font
+      name="Arial"
+      href="https://fonts.googleapis.com/css?family=Arial"
+    />
+    -->
+    <mj-font
+      name="Austin News Text Web"
+      href="https://www.dubaisummary.com/fonts/AustinNewsTextWeb.woff2"
+    />
+    <mj-style>
+      .button-style:hover {
+        background-color: rgb(220, 237, 255) !important;
+        color: rgba(0, 0, 0, 1) !important; /* instead of #000 */
+        border: 1px solid rgb(220, 237, 255) !important;
+        cursor: pointer;
+      }
+      .button-style:hover .dot {
+        background-color: rgb(16, 35, 65) !important;
+        color: rgba(0, 0, 0, 1) !important;
+      }
+    </mj-style>
+    <mj-style>
+      .feedback-btn:hover {
+        opacity: 0.8 !important;
+        transform: scale(1.1) !important;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f9f8f9">
+    <mj-raw>
+      <div style="display: none; max-height: 0px; overflow: hidden">Plus camel
+      milk benchmark</div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden
+      preview text --> <div style="display: none; max-height: 0px; overflow:
+      hidden"> &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj;
+      &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp;
+      &#8199; &shy; </div>
+    </mj-raw>
+    <mj-spacer height="15px"></mj-spacer>
+    <mj-section padding="0px" css-class="blue-header">
+      <mj-column>
+        <mj-text padding="0px">
+          <div
+            style="
+              border-top-left-radius: 3px;
+              border-top-right-radius: 3px;
+              height: 7px;
+              background-color: #eeca66;
+            "
+          ></div>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#102341" padding="0px">
+      <mj-column>
+        <mj-text
+          align="center"
+          padding="14px 15px 0px 15px"
+          color="#FFFFFFCC"
+          font-size="11px"
+          font-family="Arial"
+          font-weight="300"
+        >
+          <!-- view in browser || link to archive -->
+          <a
+            href="https://www.dubaisummary.com/archives/soaking-up-the-future"
+            style="color: #ffffffcc; text-decoration: underline"
+            >View in browser</a
+          >
+          |
+          <a
+            href="https://www.dubaisummary.com/advertise"
+            style="color: #ffffffcc; text-decoration: underline"
+            >Advertise</a
+          >
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#102341" padding="30px 0">
+      <mj-column width="50%" vertical-align="middle">
+        <mj-raw>
+          <table align="center" role="presentation" border="0" cellpadding="0"
+          cellspacing="0"> <tr> <td align="center" style="padding: 0 10px 0
+          10px"> <img src="https://www.dubaisummary.com/email/images/ds-r-1.png"
+          width="50px" style="border-radius: 50%; display: block" /> </td> <td
+          align="center" style="padding: 0 10px 0 0"> <img
+          src="https://www.dubaisummary.com/email/images/ds-r-2.png"
+          width="50px" style="border-radius: 50%; display: block" /> </td> <td
+          align="center" style="padding: 0 10px 0 0"> <img
+          src="https://www.dubaisummary.com/email/images/ds-r-3.png"
+          width="50px" style="border-radius: 50%; display: block" /> </td> </tr>
+          </table>
+        </mj-raw>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#102341" padding="0px 12px 12px 12px">
+      <mj-column>
+        <mj-image
+          align="left"
+          padding="0"
+          css-class="light_img"
+          width="302px"
+          src="https://www.dubaisummary.com/email/images/ds-email-new-logo.png"
+          href="https://www.dubaisummary.com"
+          alt=""
+        />
+        <mj-image
+          width="1px"
+          src="https://www.dubaisummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+          alt=""
+        />
+        <mj-text
+          margin-top="0"
+          font-size="16px"
+          font-family="Arial"
+          font-weight="300"
+          color="#FFFFFF96"
+          padding="2px 0 0 0"
+        >
+          Thursday • Feb 05 • 23°C
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 1px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column
+        background-color="#fff"
+        border-radius="0px 0px 5px 5px"
+        padding="0px"
+      >
+        <mj-spacer height="10px" />
+
+        <mj-text
+          padding="10px 12px 0px 12px"
+          font-family="Arial"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5">
+            <strong>In this edition:</strong>
+          </p>
+        </mj-text>
+        {{%IN_THIS_EDITION_TABLE%}}
+        <mj-text
+          padding="10px 12px 18px 12px"
+          font-family="Arial"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5; margin-bottom: 0px">
+            Was this email forwarded to you?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #102341;
+                color: black;
+              "
+              href="https://link.dubaisummary.com/join-dubai-summary"
+              target="_blank"
+              >Join Dubai Summary</a
+            >.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px" />
+  </mj-body>
+</mjml>
