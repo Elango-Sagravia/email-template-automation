@@ -67,6 +67,95 @@ const TOKEN_FOOTER_BANNER = /\{\{\%\s*FOOTER_BANNER\s*\%\}\}/g;
 const TOKEN_IMAGE_CREDITS = /\{\{\%\s*IMAGE_CREDITS\s*\%\}\}/g;
 const TOKEN_PREVIEW_TEXT = /\{\{\%\s*PREVIEW_TEXT\s*\%\}\}/g;
 
+// ✅ Insert between Spotlight #1 and #2
+const SPOTLIGHT_PRIMARY_AD_MJML = `
+<mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-raw>
+    <a href=""
+    target="_blank" style="color:black">
+  </mj-raw>
+
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-spacer height="14px" />
+
+    <mj-text
+      padding="2px 12px 0px 12px"
+      font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+      color="white"
+    >
+      <h2
+        style="
+          padding-bottom: 8px;
+          color: #4d3060;
+          text-align: left;
+          letter-spacing: 1px;
+          border-bottom: 2px solid #4d3060;
+          font-size: 26px;
+          line-height: 1.2;
+          font-weight: 300;
+        "
+      >
+        This could be your business
+      </h2>
+    </mj-text>
+
+    <mj-spacer height="12px" />
+
+    <mj-image
+      border-radius="10px"
+      padding="10px 12px 14px 12px"
+      width="600px"
+      src="https://www.presidentialsummary.com/email/ad/REPLACE_ME.jpg"
+      alt="Advertise your business to an engaged, influential audience"
+    />
+
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px">
+        Reach a wide audience of engaged, loyal readers right where they’re
+        paying attention. Our audience is educated, influential, and ready
+        to respond.
+      </p>
+      <p style="font-size: 16px; line-height: 24px">
+        Whether you want to drive revenue, build awareness, or launch
+        something fresh, this is your spot. Secure your placement and get in
+        front of the right eyes.
+      </p>
+    </mj-text>
+
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px">
+        <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #4d3060;
+            color: black;
+          "
+        ><strong>Partner with us</strong></a>
+      </p>
+    </mj-text>
+
+    <mj-spacer height="15px" />
+  </mj-column>
+
+  <mj-raw></a></mj-raw>
+</mj-section>
+
+<mj-spacer height="10px" />
+`.trim();
+
 /** -----------------------------
  * MAIN
  * ----------------------------- */
@@ -363,32 +452,44 @@ function renderSpotlightSections(topics) {
   const sectionTpl = fs.readFileSync(SPOTLIGHT_SECTION_TPL_PATH, "utf8");
   const spotlightHeaderBlock = getSpotlightHeaderMjml();
 
-  return topics
-    .map((topic, idx) => {
-      const header =
-        idx === 0 ? spotlightHeaderBlock : '<mj-spacer height="10px" />';
+  const outParts = [];
 
-      const topicMjml = renderSpotlightTopic(topic);
+  topics.forEach((topic, idx) => {
+    const header =
+      idx === 0 ? spotlightHeaderBlock : '<mj-spacer height="10px" />';
 
-      let out = sectionTpl;
+    const topicMjml = renderSpotlightTopic(topic);
 
-      if (!TOKEN_SPOTLIGHT_HEADER.test(out)) {
-        console.warn(
-          "⚠️ {{%SPOTLIGHT_HEADER%}} not found in spotlight.mjml template",
-        );
-      }
-      if (!TOKEN_SPOTLIGHT_TOPIC.test(out)) {
-        console.warn(
-          "⚠️ {{%SPOTLIGHT_TOPIC%}} not found in spotlight.mjml template",
-        );
-      }
+    let out = sectionTpl;
 
-      out = out.replace(TOKEN_SPOTLIGHT_HEADER, header);
-      out = out.replace(TOKEN_SPOTLIGHT_TOPIC, topicMjml);
+    if (!TOKEN_SPOTLIGHT_HEADER.test(out)) {
+      console.warn(
+        "⚠️ {{%SPOTLIGHT_HEADER%}} not found in spotlight.mjml template",
+      );
+    }
+    if (!TOKEN_SPOTLIGHT_TOPIC.test(out)) {
+      console.warn(
+        "⚠️ {{%SPOTLIGHT_TOPIC%}} not found in spotlight.mjml template",
+      );
+    }
 
-      return out.trim();
-    })
-    .join('\n\n<mj-spacer height="10px" />\n\n');
+    out = out.replace(TOKEN_SPOTLIGHT_HEADER, header);
+    out = out.replace(TOKEN_SPOTLIGHT_TOPIC, topicMjml);
+
+    outParts.push(out.trim());
+
+    // ✅ Insert Primary Ad between Spotlight #1 and #2
+    if (idx === 0 && topics.length > 1) {
+      outParts.push(SPOTLIGHT_PRIMARY_AD_MJML);
+    }
+
+    // existing spacing between spotlight blocks (keep)
+    if (idx < topics.length - 1) {
+      outParts.push('<mj-spacer height="10px" />');
+    }
+  });
+
+  return outParts.join("\n\n");
 }
 
 function getSpotlightHeaderMjml() {
