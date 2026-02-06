@@ -156,6 +156,23 @@
           </h2>
         </mj-text>
         {{%LONG_STORY_SHORT_SECTIONS%}}
+        <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#ffffff">
+          <!-- banner -->
+          <div
+            style="
+              background-color: #4d3060;
+              border-radius: 8px;
+              padding: 22px 12px;
+              font-size: 18px;
+              line-height: 1.5;
+              font-weight: 400;
+              text-align: center;
+              color: #ffffff;
+            "
+          >
+            {{%FOOTER_BANNER%}}
+          </div>
+        </mj-text>
       </mj-column>
     </mj-section>
   </mj-body>

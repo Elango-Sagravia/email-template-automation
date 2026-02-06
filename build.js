@@ -1,3 +1,27 @@
+/**
+ * build.js
+ * --------
+ * DOCX -> Mammoth HTML -> extract sections -> render MJML -> compile to HTML
+ *
+ * Usage:
+ *   node build.js "docx/presidential-summary/feb-5.docx"
+ *
+ * Requirements:
+ *   npm i mjml mammoth cheerio
+ *
+ * Templates expected:
+ *   mjml-template/presidential-summary/layout.mjml
+ *   mjml-template/presidential-summary/in-this-edition-table.mjml   (has {{%ROWS%}})
+ *   mjml-template/presidential-summary/spotlight.mjml               (has {{%SPOTLIGHT_HEADER%}} + {{%SPOTLIGHT_TOPIC%}})
+ *   mjml-template/presidential-summary/long-story-short.mjml        (optional, can have {{%SUBTOPIC_BLOCKS%}})
+ *
+ * Layout tokens expected:
+ *   {{%IN_THIS_EDITION_TABLE%}}
+ *   {{%SPOTLIGHT_SECTIONS%}}
+ *   {{%LONG_STORY_SHORT_SECTIONS%}}
+ *   {{%FOOTER_BANNER%}}
+ */
+
 import fs from "fs";
 import path from "path";
 import mammoth from "mammoth";
@@ -19,6 +43,9 @@ const IN_THIS_EDITION_TPL_PATH = path.join(
 );
 const SPOTLIGHT_SECTION_TPL_PATH = path.join(TEMPLATE_DIR, "spotlight.mjml");
 
+// Optional wrapper template for LSS blocks
+const LSS_TPL_PATH = path.join(TEMPLATE_DIR, "long-story-short.mjml");
+
 const DIST_DIR = path.join(ROOT, "dist");
 const OUT_MJML = path.join(DIST_DIR, "email.mjml");
 const OUT_HTML = path.join(DIST_DIR, "email.html");
@@ -29,12 +56,15 @@ const OUT_HTML = path.join(DIST_DIR, "email.html");
 const TOKEN_IN_THIS_EDITION = /\{\{\%\s*IN_THIS_EDITION_TABLE\s*\%\}\}/g;
 const TOKEN_ROWS = /\{\{\%\s*ROWS\s*\%\}\}/g;
 
-// Layout token that will be replaced by multiple spotlight <mj-section> blocks
 const TOKEN_SPOTLIGHT_SECTIONS = /\{\{\%\s*SPOTLIGHT_SECTIONS\s*\%\}\}/g;
-
-// Spotlight section template tokens
 const TOKEN_SPOTLIGHT_HEADER = /\{\{\%\s*SPOTLIGHT_HEADER\s*\%\}\}/g;
 const TOKEN_SPOTLIGHT_TOPIC = /\{\{\%\s*SPOTLIGHT_TOPIC\s*\%\}\}/g;
+
+const TOKEN_LSS_SECTIONS = /\{\{\%\s*LONG_STORY_SHORT_SECTIONS\s*\%\}\}/g;
+const TOKEN_LSS_SUBTOPIC_BLOCKS = /\{\{\%\s*SUBTOPIC_BLOCKS\s*\%\}\}/g;
+
+// ✅ Footer banner token
+const TOKEN_FOOTER_BANNER = /\{\{\%\s*FOOTER_BANNER\s*\%\}\}/g;
 
 /** -----------------------------
  * MAIN
@@ -61,9 +91,17 @@ async function main() {
 
   ensureDir(DIST_DIR);
 
-  // 1) DOCX -> HTML
+  // 1) DOCX -> HTML (include images as <img src="data:...">)
   const buffer = fs.readFileSync(DOCX_PATH);
-  const { value: docHtml } = await mammoth.convertToHtml({ buffer });
+  const { value: docHtml } = await mammoth.convertToHtml(
+    { buffer },
+    {
+      convertImage: mammoth.images.inline(async (image) => {
+        const b64 = await image.read("base64");
+        return { src: `data:${image.contentType};base64,${b64}` };
+      }),
+    },
+  );
 
   // Optional debug:
   // fs.writeFileSync(path.join(DIST_DIR, "doc.html"), docHtml, "utf8");
@@ -71,19 +109,29 @@ async function main() {
   // 2) In this edition
   const editionItems = extractInThisEdition(docHtml);
   const inThisEditionMjml = renderInThisEditionFromTemplate(editionItems);
-
   console.log("🧩 In this edition items:", editionItems);
 
   // 3) Spotlight
   const spotlightTopics = extractSpotlightTopics(docHtml);
   const spotlightSectionsMjml = renderSpotlightSections(spotlightTopics);
-
   console.log(
     "🧩 Spotlight topics:",
     spotlightTopics.map((t) => t.title),
   );
 
-  // 4) Inject into layout
+  // 4) Long story short
+  const lss = extractLongStoryShort(docHtml);
+  const lssMjml = renderLongStoryShortSections(lss);
+  console.log(
+    "🧩 LSS subtopics:",
+    (lss || []).map((s) => s.title),
+  );
+
+  // 5) Footer banner
+  const footerBanner = extractFooterBanner(docHtml);
+  console.log("🧩 Footer banner found:", footerBanner ? "YES" : "NO");
+
+  // 6) Inject into layout
   const layoutMjml = fs.readFileSync(LAYOUT_PATH, "utf8");
 
   if (!TOKEN_IN_THIS_EDITION.test(layoutMjml)) {
@@ -96,12 +144,22 @@ async function main() {
       "⚠️ Placeholder {{%SPOTLIGHT_SECTIONS%}} not found in layout.mjml",
     );
   }
+  if (!TOKEN_LSS_SECTIONS.test(layoutMjml)) {
+    console.warn(
+      "⚠️ Placeholder {{%LONG_STORY_SHORT_SECTIONS%}} not found in layout.mjml",
+    );
+  }
+  if (!TOKEN_FOOTER_BANNER.test(layoutMjml)) {
+    console.warn("⚠️ Placeholder {{%FOOTER_BANNER%}} not found in layout.mjml");
+  }
 
   const finalMjml = layoutMjml
     .replace(TOKEN_IN_THIS_EDITION, inThisEditionMjml)
-    .replace(TOKEN_SPOTLIGHT_SECTIONS, spotlightSectionsMjml);
+    .replace(TOKEN_SPOTLIGHT_SECTIONS, spotlightSectionsMjml)
+    .replace(TOKEN_LSS_SECTIONS, lssMjml)
+    .replace(TOKEN_FOOTER_BANNER, footerBanner || "");
 
-  // 5) Compile MJML -> HTML
+  // 7) Compile MJML -> HTML
   const { html, errors } = mjml2html(finalMjml, {
     validationLevel: "soft",
     filePath: LAYOUT_PATH,
@@ -122,7 +180,7 @@ async function main() {
 }
 
 /** -----------------------------
- * Extract "In this edition" bullets from Mammoth HTML
+ * In this edition
  * ----------------------------- */
 function extractInThisEdition(html) {
   const $ = cheerio.load(html);
@@ -182,11 +240,15 @@ function makeEditionRow(text) {
 }
 
 /** -----------------------------
- * Spotlight extraction
+ * Spotlight
  * Rules:
  * - Find <h2> == "Spotlight"
  * - Each <h3> after that is a topic title
- * - Topic content = all following p/ul/ol/img until next h3 or next h2
+ * - Topic content = p/ul/ol/img until next h3 or next h2
+ * Output:
+ * - Multiple <mj-section> blocks
+ * - First section includes Spotlight heading, others don't
+ * - Always includes image placeholder (Option A)
  * ----------------------------- */
 function extractSpotlightTopics(html) {
   const $ = cheerio.load(html);
@@ -205,7 +267,7 @@ function extractSpotlightTopics(html) {
   while (el && el.length) {
     const tag = (el[0]?.tagName || "").toLowerCase();
 
-    if (tag === "h2") break; // end Spotlight section
+    if (tag === "h2") break;
 
     if (tag === "h3") {
       if (current) topics.push(current);
@@ -235,18 +297,10 @@ function extractSpotlightTopics(html) {
   return topics;
 }
 
-/** -----------------------------
- * Spotlight rendering
- * Output:
- * - multiple <mj-section> blocks
- * - first section includes Spotlight heading
- * - later sections do NOT include Spotlight heading
- * ----------------------------- */
 function renderSpotlightSections(topics) {
   if (!topics?.length) return "";
 
   const sectionTpl = fs.readFileSync(SPOTLIGHT_SECTION_TPL_PATH, "utf8");
-
   const spotlightHeaderBlock = getSpotlightHeaderMjml();
 
   return topics
@@ -256,7 +310,6 @@ function renderSpotlightSections(topics) {
 
       const topicMjml = renderSpotlightTopic(topic);
 
-      // Fill spotlight section template
       let out = sectionTpl;
 
       if (!TOKEN_SPOTLIGHT_HEADER.test(out)) {
@@ -312,7 +365,7 @@ function renderSpotlightTopic(topic) {
   </h2>
 </mj-text>`.trim();
 
-  // ✅ Option A: always include image placeholder
+  // Always image placeholder (Option A)
   const imageBlock = `
 <mj-image
   border-radius="10px"
@@ -323,9 +376,12 @@ function renderSpotlightTopic(topic) {
   href="https://www.presidentialsummary.com/"
 />`.trim();
 
-  // Render content (ignore img tags if any appear)
-  const bodyHtml = renderSpotlightBodyHtml(
+  const bodyHtml = renderBodyHtml(
     topic.nodes.filter((n) => (n[0]?.tagName || "").toLowerCase() !== "img"),
+    {
+      pStyle: "font-size: 16px; line-height: 1.5",
+      wrapP: true,
+    },
   );
 
   const bodyBlock = bodyHtml
@@ -338,7 +394,262 @@ function renderSpotlightTopic(topic) {
   return [titleBlock, imageBlock, bodyBlock].filter(Boolean).join("\n");
 }
 
-function renderSpotlightBodyHtml(nodes) {
+/** -----------------------------
+ * Long story short
+ * Rules:
+ * - Find <h2> == "Long story short"
+ * - Each <h3> after that is a subtopic
+ * - Subtopic content = p/ul/ol/img until next h3 or next h2
+ * Output:
+ * - For Science & Tech: ALWAYS include your Gizmo image block after the h3
+ * - For other subtopics: include image only if Mammoth found <img>
+ * ----------------------------- */
+function extractLongStoryShort(html) {
+  const $ = cheerio.load(html);
+
+  const lssH2 = $("h2")
+    .filter(
+      (_, el) => cleanText($(el).text()).toLowerCase() === "long story short",
+    )
+    .first();
+
+  if (!lssH2.length) return [];
+
+  const sections = [];
+  let current = null;
+
+  let el = lssH2.next();
+
+  while (el && el.length) {
+    const tag = (el[0]?.tagName || "").toLowerCase();
+
+    if (tag === "h2") break;
+
+    if (tag === "h3") {
+      if (current) sections.push(current);
+      current = { title: cleanText($(el).text()), nodes: [] };
+      el = el.next();
+      continue;
+    }
+
+    if (!current) {
+      el = el.next();
+      continue;
+    }
+
+    if (tag === "p" || tag === "ul" || tag === "ol" || tag === "img") {
+      current.nodes.push(el);
+    } else if (tag === "div") {
+      const children = el.children("p, ul, ol, img");
+      if (children.length) {
+        children.each((_, child) => current.nodes.push($(child)));
+      }
+    }
+
+    el = el.next();
+  }
+
+  if (current) sections.push(current);
+  return sections;
+}
+
+function renderLongStoryShortSections(subtopics) {
+  if (!subtopics?.length) return "";
+
+  const blocks = subtopics
+    .map((sub, idx) => renderLssSubtopic(sub, idx, subtopics.length))
+    .filter(Boolean)
+    .join("\n");
+
+  if (fs.existsSync(LSS_TPL_PATH)) {
+    const tpl = fs.readFileSync(LSS_TPL_PATH, "utf8");
+    if (TOKEN_LSS_SUBTOPIC_BLOCKS.test(tpl)) {
+      return tpl.replace(TOKEN_LSS_SUBTOPIC_BLOCKS, blocks);
+    }
+    return `${tpl}\n${blocks}`.trim();
+  }
+
+  return blocks;
+}
+
+function renderLssSubtopic(sub, idx, total) {
+  const rawTitle = cleanText(sub.title);
+  const title = escapeHtml(rawTitle);
+
+  const h3Block = `
+<mj-text
+  padding="${idx === 0 ? "14px 12px 0px 12px" : "0px 12px"}"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: ${idx === 0 ? "1px" : "15px"};
+    "
+  >
+    ${title}
+  </h3>
+</mj-text>`.trim();
+
+  // ✅ Science & Tech => always include the real Gizmo image (as requested)
+  const isScienceTech = rawTitle.toLowerCase() === "science & tech";
+
+  const docHasImage = (sub.nodes || []).some(
+    (n) => (n[0]?.tagName || "").toLowerCase() === "img",
+  );
+
+  const imageBlock = isScienceTech
+    ? `
+<mj-image
+  border-radius="10px"
+  padding="0px 12px 10px 12px"
+  width="600px"
+  src="https://www.presidentialsummary.com/email/images/REPLACE_ME.jpg"
+  alt="${title}"
+  href="https://www.presidentialsummary.com/"
+/>`.trim()
+    : docHasImage
+      ? `
+<mj-image
+  border-radius="10px"
+  padding="0px 12px 10px 12px"
+  width="600px"
+  src="https://www.presidentialsummary.com/email/images/REPLACE_ME.jpg"
+  alt="${title}"
+  href="https://www.presidentialsummary.com/"
+/>`.trim()
+      : "";
+
+  const storyHtml = renderBodyHtml(
+    (sub.nodes || []).filter(
+      (n) => (n[0]?.tagName || "").toLowerCase() !== "img",
+    ),
+    {
+      wrapP: true,
+      pStyle: `
+              font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;
+            `.trim(),
+    },
+  );
+
+  const storiesBlock = storyHtml
+    ? `
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  ${storyHtml}
+</mj-text>`.trim()
+    : "";
+
+  const divider =
+    idx < total - 1
+      ? `
+<mj-divider
+  border-width="1px"
+  border-style="solid"
+  border-color="lightgrey"
+  padding="0px 12px"
+/>`.trim()
+      : "";
+
+  return [h3Block, imageBlock, storiesBlock, divider]
+    .filter(Boolean)
+    .join("\n");
+}
+
+/** -----------------------------
+ * Footer banner
+ * Rules:
+ * - Find <h2> == "Footer"
+ * - Take subsequent <p> (and <div><p>..) until next <h2> or end
+ * - Render inner HTML (no wrapping <p>) for injecting into banner <div>
+ * - Rewrite <a> with footer style (white underline)
+ * ----------------------------- */
+function extractFooterBanner(html) {
+  const $ = cheerio.load(html);
+
+  const footerH2 = $("h2")
+    .filter((_, el) => cleanText($(el).text()).toLowerCase() === "footer")
+    .first();
+
+  if (!footerH2.length) return "";
+
+  const nodes = [];
+  let el = footerH2.next();
+
+  while (el && el.length) {
+    const tag = (el[0]?.tagName || "").toLowerCase();
+
+    if (tag === "h2") break;
+
+    if (tag === "p") {
+      nodes.push(el);
+    } else if (tag === "div") {
+      const children = el.children("p");
+      if (children.length) {
+        children.each((_, child) => nodes.push($(child)));
+      }
+    }
+
+    el = el.next();
+  }
+
+  return renderFooterBannerHtml(nodes);
+}
+
+function renderFooterBannerHtml(nodes) {
+  const parts = [];
+
+  for (const node of nodes) {
+    const inner = sanitizeInlineHtmlFooter(node.html() || "");
+    if (isEmptyRichText(inner)) continue;
+    parts.push(inner);
+  }
+
+  // Banner content should be a single inline chunk
+  return parts.join(" ");
+}
+
+function sanitizeInlineHtmlFooter(html) {
+  const $ = cheerio.load(`<root>${html}</root>`, null, false);
+  rewriteFooterAnchors($);
+
+  const allowed = new Set(["strong", "b", "em", "i", "a", "br"]);
+  $("root")
+    .find("*")
+    .each((_, el) => {
+      const tag = (el.tagName || "").toLowerCase();
+      if (!allowed.has(tag)) {
+        $(el).replaceWith($(el).text());
+      }
+    });
+
+  return normalizeDashes($("root").html()?.trim() || "");
+}
+
+function rewriteFooterAnchors($) {
+  $("a").each((_, a) => {
+    $(a).attr("target", "_blank");
+    $(a).attr(
+      "style",
+      `
+                text-decoration: none;
+                border-bottom: 2px solid #fff;
+                color: white !important;
+              `.trim(),
+    );
+  });
+}
+
+/** -----------------------------
+ * Shared body rendering with link styles, keep strong/em/i, skip empty p
+ * ----------------------------- */
+function renderBodyHtml(nodes, { wrapP, pStyle }) {
   const parts = [];
 
   for (const node of nodes) {
@@ -346,18 +657,19 @@ function renderSpotlightBodyHtml(nodes) {
 
     if (tag === "p") {
       const inner = sanitizeInlineHtml(node.html() || "");
-
-      // ✅ Skip empty paragraphs
       if (isEmptyRichText(inner)) continue;
 
-      parts.push(`<p style="font-size: 16px; line-height: 1.5">${inner}</p>`);
+      if (wrapP) {
+        parts.push(`<p style="${pStyle}">${inner}</p>`);
+      } else {
+        parts.push(inner);
+      }
     } else if (tag === "ul" || tag === "ol") {
       const chunk = cheerio.load("<root></root>", null, false);
       chunk("root").append(node.clone());
       rewriteAnchors(chunk);
 
       let listHtml = chunk("root").children().first().toString();
-
       listHtml = listHtml
         .replace("<ul", '<ul style="margin: 0 0 10px 18px; padding: 0"')
         .replace("<ol", '<ol style="margin: 0 0 10px 18px; padding: 0"')
@@ -366,9 +678,6 @@ function renderSpotlightBodyHtml(nodes) {
           '<li style="font-size: 16px; line-height: 1.5; margin-bottom: 6px;">',
         );
 
-      // also skip empty lists (rare)
-      if (!listHtml.replace(/&nbsp;|\s+/g, "").includes("<li")) continue;
-
       parts.push(listHtml);
     }
   }
@@ -376,10 +685,8 @@ function renderSpotlightBodyHtml(nodes) {
   return parts.join("\n");
 }
 
-/** Keep strong/em/i + rewrite links to your anchor style */
 function sanitizeInlineHtml(html) {
   const $ = cheerio.load(`<root>${html}</root>`, null, false);
-
   rewriteAnchors($);
 
   const allowed = new Set(["strong", "b", "em", "i", "a", "br"]);
@@ -392,7 +699,7 @@ function sanitizeInlineHtml(html) {
       }
     });
 
-  return $("root").html()?.trim() || "";
+  return normalizeDashes($("root").html()?.trim() || "");
 }
 
 function rewriteAnchors($) {
@@ -409,24 +716,31 @@ function rewriteAnchors($) {
   });
 }
 
+// Treat "<strong></strong>" etc as empty
 function isEmptyRichText(html) {
-  const t = (html || "")
-    .replace(/<br\s*\/?>/gi, "")
-    .replace(/&nbsp;/gi, "")
-    .replace(/\s+/g, "")
+  const $ = cheerio.load(`<root>${html || ""}</root>`, null, false);
+  const text = $("root")
+    .text()
+    .replace(/\u00A0/g, " ")
     .trim();
-  return t.length === 0;
+  return text.length === 0;
 }
 
 /** -----------------------------
  * Utils
  * ----------------------------- */
+function normalizeDashes(s) {
+  // normalize all common dash variants to hyphen-minus
+  return (s || "").replace(/\u2010|\u2011|\u2012|\u2013|\u2014|\u2212/g, "-");
+}
+
 function cleanText(s) {
-  return (s || "").replace(/\s+/g, " ").trim();
+  return normalizeDashes((s || "").replace(/\s+/g, " ").trim());
 }
 
 function escapeHtml(str) {
-  return (str || "")
+  str = normalizeDashes(str || "");
+  return str
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
