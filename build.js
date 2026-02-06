@@ -23,11 +23,11 @@ const newsletter = parts[1];
 const builders = {
   "presidential-summary": "build-presidential-summary.js",
   // later:
-  // "geopolitical-summary": "build-geopolitical-summary.js",
-  // "dubai-summary": "build-dubai-summary.js",
-  // "london-summary": "build-london-summary.js",
-  // "singapore-summary": "build-singapore-summary.js",
-  // "saudi-summary": "build-saudi-summary.js",
+  "geopolitical-summary": "build-geopolitical-summary.js",
+  "dubai-summary": "build-dubai-summary.js",
+  "london-summary": "build-london-summary.js",
+  "singapore-summary": "build-singapore-summary.js",
+  "saudi-summary": "build-saudi-summary.js",
 };
 
 const builder = builders[newsletter];

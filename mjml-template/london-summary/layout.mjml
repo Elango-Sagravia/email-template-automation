@@ -1,0 +1,189 @@
+<mjml>
+  <mj-head>
+    <mj-font
+      name="Austin News Text Web"
+      href="https://www.londonsummary.com/fonts/AustinNewsTextWeb.woff2"
+    />
+    <mj-style>
+      .button-style:hover {
+        background-color: #d0dae2 !important;
+        color: rgba(0, 0, 0, 1) !important; /* instead of #000 */
+        border: 1px solid #d0dae2 !important;
+        cursor: pointer;
+      }
+      .button-style:hover .dot {
+        background-color: rgb(16, 35, 65) !important;
+        color: rgba(0, 0, 0, 1) !important;
+      } /* Apple Mail & iOS */
+      a[x-apple-data-detectors],
+      a[href^="http"],
+      a[href^="tel"],
+      a[href^="mailto"],
+      a[href^="maps"],
+      .address-block a {
+        color: #000000cc !important;
+        text-decoration: none !important;
+        font-weight: inherit !important;
+      } /* Gmail (removes underline wrapper) */
+      u + .address-block a {
+        color: #000000cc !important;
+        text-decoration: none !important;
+      }
+    </mj-style>
+    <mj-style inline="inline">
+      .event-image img {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 8px;
+        display: block;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f9f8f9">
+    <mj-raw>
+      <div style="display: none; max-height: 0px; overflow: hidden">Plus
+      super-yacht insurer sale</div> <!-- Insert &#847;&zwnj;&nbsp; hack after
+      hidden preview text --> <div style="display: none; max-height: 0px;
+      overflow: hidden"> &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp;
+      &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp;
+      &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy; </div>
+    </mj-raw>
+    <mj-spacer height="15px"></mj-spacer>
+    <!-- header -->
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 1px 1px 1px"
+      border-radius="10px"
+    >
+      <mj-column background-color="#ffffff" border-radius="10px" padding="0">
+        <!-- Top red strip -->
+        <mj-text padding="0">
+          <div
+            style="
+              height: 6px;
+              border-top-left-radius: 8px;
+              border-top-right-radius: 8px;
+              background-color: #80011f;
+            "
+          ></div>
+        </mj-text>
+        <!-- View / Advertise Links -->
+        <mj-text
+          align="center"
+          padding="14px 0 28px 0px"
+          color="#000000CC"
+          font-size="11px"
+          font-family="Arial"
+          font-weight="300"
+        >
+          <a
+            href="https://www.londonsummary.com/archives/commute-chaos-culture-flex"
+            style="color: #000000cc; text-decoration: underline"
+            >View in browser</a
+          >
+          &nbsp;|&nbsp;
+          <a
+            href="https://www.londonsummary.com/advertise"
+            style="color: #000000cc; text-decoration: underline"
+            >Advertise</a
+          >
+        </mj-text>
+        <!-- Logo and Date -->
+        <mj-section background-color="#ffffff" padding="0px 10px 0px 10px">
+          <mj-group width="100%" padding="0px">
+            <mj-column width="50%" vertical-align="bottom">
+              <mj-image
+                align="left"
+                width="226px"
+                src="https://www.londonsummary.com/logo-grey.png"
+                href="https://www.londonsummary.com/"
+                alt="London Summary newsletter logo"
+                padding="0px"
+              />
+              <mj-image
+                width="1px"
+                src="https://www.londonsummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+                alt=""
+              />
+            </mj-column>
+            <mj-column width="50%" vertical-align="bottom">
+              <mj-text
+                align="right"
+                font-size="16px"
+                font-family="Arial"
+                font-weight="300"
+                color="#00000096"
+                padding="0"
+                >Feb 4, Wed • AQI 26
+              </mj-text>
+            </mj-column>
+          </mj-group>
+        </mj-section>
+        <!-- Divider line -->
+        <mj-divider
+          border-color="#EBEBEB"
+          border-width="1px"
+          width="100%"
+          padding="7px 20px 0 20px"
+        />
+        <!-- In this edition -->
+        <mj-text
+          padding="20px 20px 0px 20px"
+          font-family="Arial"
+          color="#000000"
+          font-size="16px"
+          font-weight="600"
+        >
+          In this edition:
+        </mj-text>
+        {{%IN_THIS_EDITION_TABLE%}}
+
+        <!-- Join link -->
+        <mj-text
+          padding="17px 20px 20px 20px"
+          font-family="Arial"
+          color="#000000"
+          font-size="16px"
+          line-height="1.5"
+        >
+          Was this email forwarded to you?
+          <a
+            href="https://www.londonsummary.com/"
+            target="_blank"
+            style="
+              text-decoration: none;
+              border-bottom: 2px solid #80011f;
+              color: black;
+            "
+          >
+            Join London Summary</a
+          >.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="20px" />
+    {{%SPOTLIGHT_SECTION%}}
+  </mj-body></mjml
+>
