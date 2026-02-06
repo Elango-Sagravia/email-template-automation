@@ -69,6 +69,7 @@ const TOKEN_PREVIEW_TEXT = /\{\{\%\s*PREVIEW_TEXT\s*\%\}\}/g;
 
 // ✅ Insert between Spotlight #1 and #2
 const SPOTLIGHT_PRIMARY_AD_MJML = `
+<mj-spacer height="10px" />
 <mj-section
   background-color="#eff1f4"
   css-class="border-line"
@@ -153,7 +154,7 @@ const SPOTLIGHT_PRIMARY_AD_MJML = `
   <mj-raw></a></mj-raw>
 </mj-section>
 
-<mj-spacer height="10px" />
+
 `.trim();
 
 /** -----------------------------
