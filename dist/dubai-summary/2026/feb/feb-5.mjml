@@ -41,8 +41,9 @@
   </mj-head>
   <mj-body background-color="#f9f8f9">
     <mj-raw>
-      <div style="display: none; max-height: 0px; overflow: hidden">Plus camel
-      milk benchmark</div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden
+      <div style="display: none; max-height: 0px; overflow: hidden">
+
+      Plus camel milk benchmark</div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden
       preview text --> <div style="display: none; max-height: 0px; overflow:
       hidden"> &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
       &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
@@ -97,7 +98,7 @@
         >
           <!-- view in browser || link to archive -->
           <a
-            href="https://www.dubaisummary.com/archives/soaking-up-the-future"
+            href="REPLACE_ME_WITH_ARCHIVE_LINK"
             style="color: #ffffffcc; text-decoration: underline"
             >View in browser</a
           >
@@ -151,7 +152,7 @@
           color="#FFFFFF96"
           padding="2px 0 0 0"
         >
-          Thursday • Feb 05 • 23°C
+          Wednesday • Feb 06 • 24°C
         </mj-text>
       </mj-column>
     </mj-section>
@@ -595,7 +596,7 @@
 <!-- Summary / CTA -->
 <mj-text padding="0px 12px 10px 12px" font-family="Arial" color="#000000">
   <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">Summary → Georges Daoud Marketing Management is looking to hire a conversion sales agent. The job involves calling out prospects, developing relationships with clients, and working leads into live accounts. Graduation and fluency in Malay are required. The job promises a good salary, commissions, training, and visa and relocation benefits.</p>
-<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><a href="https://link.dubaisummary.com/ds-05-feb-26-career-h1-4-register-here" target="_blank" style="text-decoration: none; border-bottom: 2px solid #102341; color: black;"><strong>Register here</strong></a><strong>  </strong></p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong><a href="https://link.dubaisummary.com/ds-05-feb-26-career-h1-4-register-here" target="_blank" style="text-decoration: none; border-bottom: 2px solid #102341; color: black;">Register here</a>  </strong></p>
 </mj-text>
       </mj-column>
     </mj-section>

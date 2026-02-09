@@ -57,6 +57,10 @@ const TOKEN_CAREER_SECTION = /\{\{\%\s*CAREER_SECTION\s*\%\}\}/g;
 const TOKEN_ROWS = /\{\{\%\s*ROWS\s*\%\}\}/g;
 const TOKEN_MEANWHILE_SECTION = /\{\{\%\s*MEANWHILE_SECTION\s*\%\}\}/g;
 const TOKEN_DID_YOU_KNOW_SECTION = /\{\{\%\s*DID_YOU_KNOW_SECTION\s*\%\}\}/g;
+const TOKEN_PREVIEW_TEXT = /\{\{\%\s*PREVIEW_TEXT\s*\%\}\}/g;
+const TOKEN_DAY = /\{\{\%\s*DAY\s*\%\}\}/g;
+const TOKEN_DATE = /\{\{\%\s*DATE\s*\%\}\}/g;
+const TOKEN_TEMPERATURE = /\{\{\%\s*TEMPERATURE\s*\%\}\}/g;
 /** -----------------------------
  * MAIN
  * ----------------------------- */
@@ -95,6 +99,9 @@ async function main() {
       }),
     },
   );
+  // 1.1) Meta fields (Preview text / Day / Date / Temperature)
+  const meta = extractMetaFieldsDubai(docHtml);
+  console.log("🧩 Meta:", meta);
 
   // Optional debug:
   // fs.writeFileSync(path.join(outDir, "doc.html"), docHtml, "utf8");
@@ -141,6 +148,11 @@ async function main() {
 
   // 6) Inject into layout
   let finalMjml = fs.readFileSync(LAYOUT_PATH, "utf8");
+  // Meta injections
+  finalMjml = finalMjml.replace(TOKEN_PREVIEW_TEXT, meta.previewText || "");
+  finalMjml = finalMjml.replace(TOKEN_DAY, meta.day || "");
+  finalMjml = finalMjml.replace(TOKEN_DATE, meta.date || "");
+  finalMjml = finalMjml.replace(TOKEN_TEMPERATURE, meta.temperature || "");
 
   if (!TOKEN_IN_THIS_EDITION.test(finalMjml)) {
     console.warn(
@@ -961,6 +973,70 @@ function renderDidYouKnowDubai(items) {
         `<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">${innerHtml}</p>`,
     )
     .join("\n");
+}
+
+function extractMetaFieldsDubai(html) {
+  const $ = cheerio.load(html);
+
+  const readAfterH2 = (label) => {
+    const h2 = $("h2")
+      .filter(
+        (_, el) =>
+          cleanText($(el).text()).toLowerCase() === label.toLowerCase(),
+      )
+      .first();
+
+    if (!h2.length) return "";
+
+    // find the next paragraph (sometimes Word wraps in divs)
+    let el = h2.next();
+    while (el && el.length) {
+      const tag = (el[0]?.tagName || "").toLowerCase();
+
+      if (tag === "p") {
+        const inner = el.html() || "";
+        // Keep links if they exist + apply DS link styling
+        const safe = sanitizeInlineHtmlDubai(inner);
+        return safe;
+      }
+
+      if (tag === "div") {
+        const p = el.find("p").first();
+        if (p.length) {
+          const inner = p.html() || "";
+          const safe = sanitizeInlineHtmlDubai(inner);
+          return safe;
+        }
+      }
+
+      // stop if another section starts unexpectedly
+      if (tag === "h2") break;
+
+      el = el.next();
+    }
+
+    return "";
+  };
+
+  // Preview can include links; we keep them.
+  const previewText = readAfterH2("Preview text");
+
+  // Day/Date/Temperature should be plain, but we still sanitize in case of links.
+  const day = stripHtmlToText(readAfterH2("Day"));
+  const date = stripHtmlToText(readAfterH2("Date"));
+  const temperature = stripHtmlToText(readAfterH2("Temperature"));
+
+  return {
+    previewText: previewText || "",
+    day: day || "",
+    date: date || "",
+    temperature: temperature || "",
+  };
+}
+
+function stripHtmlToText(html) {
+  const $ = cheerio.load(`<root>${html || ""}</root>`, null, false);
+  return cleanText($("root").text());
 }
 
 /** -----------------------------
