@@ -56,7 +56,7 @@ const TOKEN_WHERE_TO_EAT_SECTION = /\{\{\%\s*WHERE_TO_EAT_SECTION\s*\%\}\}/g;
 const TOKEN_CAREER_SECTION = /\{\{\%\s*CAREER_SECTION\s*\%\}\}/g;
 const TOKEN_ROWS = /\{\{\%\s*ROWS\s*\%\}\}/g;
 const TOKEN_MEANWHILE_SECTION = /\{\{\%\s*MEANWHILE_SECTION\s*\%\}\}/g;
-
+const TOKEN_DID_YOU_KNOW_SECTION = /\{\{\%\s*DID_YOU_KNOW_SECTION\s*\%\}\}/g;
 /** -----------------------------
  * MAIN
  * ----------------------------- */
@@ -134,6 +134,11 @@ async function main() {
   );
   const meanwhileMjml = renderMeanwhileDubai(meanwhileStories);
 
+  // 7) Did you know?
+  const didYouKnowParas = extractDidYouKnowDubai(docHtml);
+  console.log("🧩 Did you know paras:", didYouKnowParas.length);
+  const didYouKnowHtml = renderDidYouKnowDubai(didYouKnowParas);
+
   // 6) Inject into layout
   let finalMjml = fs.readFileSync(LAYOUT_PATH, "utf8");
 
@@ -165,6 +170,13 @@ async function main() {
     console.warn("⚠️ Token {{%MEANWHILE_SECTION%}} not found in layout.mjml");
   }
   finalMjml = finalMjml.replace(TOKEN_MEANWHILE_SECTION, meanwhileMjml);
+
+  if (!TOKEN_DID_YOU_KNOW_SECTION.test(finalMjml)) {
+    console.warn(
+      "⚠️ Token {{%DID_YOU_KNOW_SECTION%}} not found in layout.mjml",
+    );
+  }
+  finalMjml = finalMjml.replace(TOKEN_DID_YOU_KNOW_SECTION, didYouKnowHtml);
 
   // 7) MJML -> HTML
   const { html, errors } = mjml2html(finalMjml, {
@@ -872,6 +884,83 @@ ${divider}
 `.trim();
     })
     .join("\n\n");
+}
+
+function extractDidYouKnowDubai(html) {
+  const $ = cheerio.load(html);
+
+  const h2 = $("h2")
+    .filter(
+      (_, el) => cleanText($(el).text()).toLowerCase() === "did you know?",
+    )
+    .first();
+
+  if (!h2.length) return [];
+
+  const items = [];
+  let el = h2.next();
+
+  while (el && el.length) {
+    const tag = (el[0]?.tagName || "").toLowerCase();
+    const txt = cleanText(el.text());
+
+    if (tag === "h2" && txt) break; // next section
+
+    if (tag === "p") {
+      const inner = el.html() || "";
+      const parsed = parseDidYouKnowParagraph(inner);
+      if (parsed) items.push(parsed);
+    } else if (tag === "div") {
+      const ps = el.children("p");
+      if (ps.length) {
+        ps.each((_, p) => {
+          const inner = $(p).html() || "";
+          const parsed = parseDidYouKnowParagraph(inner);
+          if (parsed) items.push(parsed);
+        });
+      }
+    }
+
+    el = el.next();
+  }
+
+  return items;
+}
+
+function parseDidYouKnowParagraph(htmlInner) {
+  const $ = cheerio.load(`<root>${htmlInner || ""}</root>`, null, false);
+
+  // must have text
+  const rawText = cleanText($("root").text());
+  if (!rawText) return null;
+
+  // apply your DS anchor styling + target=_blank
+  rewriteAnchorsDubai($);
+
+  // allow only safe inline tags
+  const allowed = new Set(["strong", "b", "em", "i", "a", "br"]);
+  $("root")
+    .find("*")
+    .each((_, el) => {
+      const tag = (el.tagName || "").toLowerCase();
+      if (!allowed.has(tag)) $(el).replaceWith($(el).text());
+    });
+
+  const out = normalizeDashes($("root").html()?.trim() || "");
+  if (isEmptyRichText(out)) return null;
+  return out;
+}
+
+function renderDidYouKnowDubai(items) {
+  const list = (items || []).filter(Boolean);
+  if (!list.length) return "";
+
+  return list
+    .map(
+      (innerHtml) =>
+        `<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">${innerHtml}</p>`,
+    )
+    .join("\n");
 }
 
 /** -----------------------------

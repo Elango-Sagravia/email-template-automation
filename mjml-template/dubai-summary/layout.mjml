@@ -41,8 +41,9 @@
   </mj-head>
   <mj-body background-color="#f9f8f9">
     <mj-raw>
-      <div style="display: none; max-height: 0px; overflow: hidden">Plus camel
-      milk benchmark</div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden
+      <div style="display: none; max-height: 0px; overflow: hidden">
+
+      {{%PREVIEW_TEXT%}}</div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden
       preview text --> <div style="display: none; max-height: 0px; overflow:
       hidden"> &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
       &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
@@ -97,7 +98,7 @@
         >
           <!-- view in browser || link to archive -->
           <a
-            href="https://www.dubaisummary.com/archives/soaking-up-the-future"
+            href="REPLACE_ME_WITH_ARCHIVE_LINK"
             style="color: #ffffffcc; text-decoration: underline"
             >View in browser</a
           >
@@ -151,7 +152,7 @@
           color="#FFFFFF96"
           padding="2px 0 0 0"
         >
-          Thursday • Feb 05 • 23°C
+          {{%DAY%}} • {{%DATE%}} • {{%TEMPERATURE%}}
         </mj-text>
       </mj-column>
     </mj-section>
