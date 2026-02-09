@@ -1,0 +1,586 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      h2,
+      img,
+      p {
+        margin: 0;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+    </mj-style>
+    <mj-font
+      name="Roboto+Serif"
+      href="https://fonts.googleapis.com/css2?family=Roboto  +Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+    />
+    <mj-style>
+      .button-style:hover {
+        background-color: #dcedff !important;
+        color: rgba(0, 0, 0, 1) !important; /* instead of #000 */
+        border: 1px solid #dcedff !important;
+        cursor: pointer;
+      }
+      .button-style:hover .dot {
+        background-color: #06266d !important;
+        color: rgba(0, 0, 0, 1) !important;
+      }
+    </mj-style>
+    <mj-style>
+      .feedback-btn:hover {
+        opacity: 0.8 !important;
+        transform: scale(1.1) !important;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f9f8f9">
+    <mj-raw>
+      <div style="display: none; max-height: 0px; overflow: hidden">Plus Somalia slams Israel
+      </div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden preview text -->
+      <div style="display: none; max-height: 0px; overflow: hidden"> &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; </div>
+    </mj-raw>
+    <mj-spacer height="15px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-spacer height="16px" />
+        <mj-image
+          padding="10px 12px 0px 12px"
+          css-class="light_img"
+          width="150px"
+          src="https://www.geopoliticalsummary.com/gp-logo-grey.png"
+          href="https://www.geopoliticalsummary.com"
+          alt=""
+        />
+        <mj-image
+          width="1px"
+          src="https://www.geopoliticalsummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+          alt=""
+        />
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="4px 12px 10px 12px"
+        />
+        <mj-text
+          padding="0px 12px 0px 12px "
+          font-family="Roboto+Serif"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5">
+            <strong>In this edition:</strong>
+          </p>
+        </mj-text>
+        <mj-table
+          font-family="Roboto+Serif"
+          cellpadding="0"
+          cellspacing="0"
+          padding="0px 18px 0px 18px"
+          style="width: 100%"
+        >
+          <mj-table
+  font-family="Roboto+Serif"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 18px 0px 18px"
+  style="width: 100%"
+>
+  <tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+    line-height: 1.6;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6">US knocks on Sahel’s door</td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+    line-height: 1.6;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6">Japan and Portugal election results</td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+    line-height: 1.6;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6">Where is Abkhazia?</td>
+</tr>
+</mj-table>
+
+        </mj-table>
+        <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+          <p style="font-size: 16px; line-height: 1.5">
+            Was this email forwarded to you?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="https://link.geopoliticalsummary.com/gs-stay-informed"
+              target="_blank"
+            >
+              Stay informed</a
+            >.
+          </p>
+        </mj-text>
+        <!-- <mj-divider border-width="1px" border-style="solid" border-color="lightgrey" padding="10px 12px" /> -->
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-section background-color="#eff1f4" padding="1px 0.5px 1px 1px" border-radius="5px">
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-text
+  padding="16px 12px 10px 12px "
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="white"
+>
+  <h2
+    style="
+      padding-bottom: 8px;
+      color: #06266d;
+      text-align: left;
+      border-bottom: 2px solid #06266d;
+      font-size: 26px;
+      line-height: 1.2;
+      font-weight: 300;
+      margin: 0;
+    "
+  >
+    Spotlight
+  </h2>
+</mj-text>
+    <mj-text
+  padding="10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h2
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 500;
+      margin-top: 2px !important;
+      margin: 0;
+    "
+  >
+    Thai election results
+  </h2>
+</mj-text>
+    <mj-image
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+  alt="REPLACE_ME"
+  target="_blank"
+/>
+    <mj-text padding="0px 12px" font-family="Roboto+Serif" color="#A9A7AF">
+  <p style="font-size: 12px; line-height: 1.2; color: #a9a7af; margin: 0;">
+    <i><em>The election was called in December after the coalition led by Anutin collapsed after just three months. Credits: Reuters</em></i>
+  </p>
+</mj-text>
+    <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>The what:</strong> PM Anutin Charnavirakul has claimed victory in <a href="https://www.bbc.com/news/articles/cx2jn4z4eq0o" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">Thailand’s snap general election</a>. With about 90% of ballots counted, his conservative Bhumjaithai Party is projected to secure roughly 194 of 500 seats, far more than any other party but short of an outright majority. The reformist People’s Party fell to second with about 116 seats and signalled it would accept opposition if Anutin forms a coalition.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>The factors:</strong> Anutin Charnavirakul’s victory stemmed from a mix of nationalism, organization, and electoral arithmetic. His Bhumjaithai Party harnessed patriotic sentiment after border tensions with Cambodia, presenting itself as the guardian of the monarchy and military. Populist economic pledges appealed to older and rural voters. Crucially, Anutin secured the backing of influential local figures, giving him a clear edge in constituency-based races.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>The failure:</strong> The much-anticipated “orange wave” behind the reformist People's Party failed to materialize because enthusiasm did not translate into votes. While the party retained strong urban and youth support, it struggled in provincial constituencies dominated by local patronage networks. Its reform-heavy agenda appealed to younger voters but resonated less with older and rural Thais, prioritizing immediate economic relief.</p>
+</mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="10px" />
+<mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-raw>
+    <a href="REPLACE_ME"
+    target="_blank" style="color:black">
+  </mj-raw>
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-spacer height="14px" />
+    <mj-text
+      padding="2px 12px 0px 12px"
+      font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+      color="white"
+    >
+      <h2
+        style="
+          padding-bottom: 8px;
+          color: #06266d;
+          text-align: left;
+          letter-spacing: 1px;
+          border-bottom: 2px solid #06266d;
+          font-size: 26px;
+          line-height: 1.2;
+          font-weight: 300;
+          margin: 0;
+        "
+      >
+        This could be your business
+      </h2>
+    </mj-text>
+    <mj-spacer height="12px" />
+    <mj-image
+      border-radius="10px"
+      padding="10px 12px 14px 12px"
+      width="600px"
+      src="https://www.geopoliticalsummary.com/email/ad/REPLACE_ME.jpg"
+      alt="campaign-x-2"
+    />
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px; margin: 0 0 10px 0;">
+        Reach a wide audience of engaged, loyal readers right where they’re
+        paying attention. Our audience is educated, influential, and ready to
+        respond.
+      </p>
+      <p style="font-size: 16px; line-height: 24px; margin: 0;">
+        Whether you want to drive revenue, build awareness, or launch
+        something fresh, this is your spot. Secure your placement and get in
+        front of the right eyes.
+      </p>
+    </mj-text>
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px; margin: 0;">
+        <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #06266d;
+            color: black;
+          "
+        ><strong>Partner with us</strong></a>
+      </p>
+    </mj-text>
+    <mj-spacer height="15px" />
+  </mj-column>
+  <mj-raw> </a> </mj-raw>
+</mj-section>
+<mj-spacer height="10px" />
+
+<mj-section background-color="#eff1f4" padding="1px 0.5px 1px 1px" border-radius="5px">
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    
+    <mj-text
+  padding="10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h2
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 500;
+      margin-top: 2px !important;
+      margin: 0;
+    "
+  >
+    Manhunt ends
+  </h2>
+</mj-text>
+    
+    
+    <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Summary: Russia extradites suspect in Moscow shooting of senior GRU official, underscoring rising security risks.</strong></p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>The what:</strong> Russian authorities say they have <a href="https://www.dw.com/en/arrest-in-dubai-after-shooting-of-russian-general-fsb/a-75859699" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">detained the suspected gunman</a> who shot senior military officer Vladimir Alekseyev in Moscow. The suspected gunman, named Lyubomir Korba, was detained by police in the UAE before being extradited to Russia. A second suspect has been arrested in Moscow, while a suspected female accomplice is believed to have fled to Ukraine. Investigators say several suspects will be questioned and charged.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>The background:</strong> Alekseyev is a senior Russian military intelligence officer and the Deputy Head of the GRU, one of Russia’s most secretive and powerful security agencies. He has played a central role in intelligence and covert operations linked to Ukraine, Syria, and Russia’s broader confrontation with the West. Alekseyev was awarded the Hero of Russia medal by Vladimir Putin.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>The implications:</strong> The attack shows increasing security risks for Russia’s military leaders. It also fuels tensions as peace talks begin. Since Russia’s war in Ukraine in 2022, several senior Russian officers have been killed or targeted. Some attacks were claimed by Ukrainian military intelligence. However, Kyiv denies any involvement in this situation.</p>
+</mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="10px" />
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #06266d;
+              text-align: left;
+              border-bottom: 2px solid #06266d;
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 300;
+            "
+          >
+            Worldwide
+          </h2>
+        </mj-text>
+        <mj-image
+          border-radius="10px"
+          padding="10px 12px"
+          width="600px"
+          src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+          alt="REPLACE_ME"
+          href="https://www.geopoliticalsummary.com/"
+        />
+        <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+          <p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇯🇵 Japan - Snap elections. </strong>Japan’s ruling Liberal Democratic Party is set to regain a majority in the lower house elections. This marks a big victory for ultraconservative PM Sanae Takaichi. She enjoys support from young people and projects a populist image. Her plans include fiscal stimulus and a stronger defense. A large mandate might allow constitutional changes<strong> </strong>(<a href="https://www.france24.com/en/asia-pacific/20260208-japan-s-ruling-party-regains-lower-house-majority-in-election-media-projections-show" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">Iron lady prevails</a>).
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇸🇦 Saudi Arabia - Invests in Syria. </strong>Saudi Arabia will invest heavily in post-war Syria. This includes a low-cost airline they will co-own, a $1B telecom project, and infrastructure deals for airports and water desalination. This shows Riyadh’s support for Syria’s Islamist-led government as Damascus works to rebuild its economy (<a href="https://www.france24.com/en/middle-east/20260207-saudi-arabia-invest-billions-dollars-syria-including-joint-airline-telecom-project" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">shifting priorities</a>).
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇵🇹 Portugal -  Socialist bags run-off. </strong>Centre-left Socialist António José Seguro clinched Portugal’s presidential runoff, defeating far-right populist André Ventura. With roughly 70% of ballots counted, Seguro led with about 64% of the vote to Ventura’s 36%. This vote tested support for Ventura’s Chega party amid instability from repeated elections and rising debates on immigration and populism<strong> </strong>(<a href="https://www.firstpost.com/world/portugal-presidential-runoff-landslide-win-for-centre-left-candidate-antonio-jose-seguro-13977592.html" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">breaking the mold</a>).
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇸🇴 Somalia - Slams Israel. </strong>Somalia’s president has condemned Israel’s recognition of Somaliland as illegal interference, warning against any Israeli military base in the breakaway region. Israel’s move, the first of its kind, has brought on regional tensions in the Horn of Africa and Red Sea, challenging Somalia’s territorial integrity and raising fears of further instability and geopolitical rivalry (<a href="https://www.aljazeera.com/news/2026/2/8/somalias-mohamud-slams-israels-interference-rejects-base-on-somaliland" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">concerns on the horn</a>).
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇮🇹 Italy- Protestors arrested. </strong>Protests in Milan disrupted the start of the Winter Olympics. Six people were arrested after clashes with police. Demonstrators criticized the Games for their costs, social impact, and environmental issues. Suspected sabotage on northern Italy’s railways also caused delays. Authorities defended the new security laws and labeled the unrest criminal (<a href="https://www.bbc.com/news/articles/cgl5293n5n9o" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">local grievances</a>).
+</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #06266d;
+              text-align: left;
+              border-bottom: 2px solid #06266d;
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 300;
+            "
+          >
+            Foundations
+          </h2>
+        </mj-text>
+        <mj-text
+  padding="10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h2 style="font-size: 24px; line-height: 1.2; font-weight: 500; margin: 0;">
+    Where is Abkhazia?
+  </h2>
+</mj-text>
+<mj-image
+  border="1px solid #00000013"
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+  alt="REPLACE_ME"
+  href="https://www.geopoliticalsummary.com/"
+/>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#A9A7AF">
+  <p style="font-size: 12px; line-height: 1.2; color: #a9a7af; margin: 0;">
+    <i><em>Prior to the separatist rebellion in the early 1990s led by ethnic Abkhaz, ethnic Georgians had made up almost half of Abkhazia’s population. Credits: GlobalPost</em></i>
+  </p>
+</mj-text>
+<mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>The what:</strong> Abkhazia is a <a href="https://www.britannica.com/place/Abkhazia" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">breakaway region of Georgia</a> that declared independence in 1992 after the collapse of the Soviet Union. It functions as a de facto independent state with its government and institutions. Abkhazia borders Russia to the north and Georgia’s Samegrelo region to the east and south. Only a handful of countries recognize it, including Russia and some of its historical allies, such as Syria, Venezuela, Nauru, and Nicaragua. The UN and the rest of the world legally recognize it as part of Georgia.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>The history:</strong> Historically, Abkhazia lay at the crossroads of Greek, Byzantine, and Ottoman influence before being absorbed by the Russian Empire in the 19th century. Under Soviet rule, Abkhazia was first a separate republic, then, in 1931, downgraded to an autonomous republic within Georgia. As the Soviet Union disintegrated, conflict erupted between Abkhaz separatists and Georgian forces in 1992-93. With decisive backing from Russia, Abkhaz forces prevailed, leading to the mass displacement of ethnic Georgians.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>On the ground: </strong>Abkhazia remains politically unstable, with frequent protests and leadership struggles. The economy is fragile, reliant on Russian subsidies, pensions, and tourism from southern Russia. Many ethnic Georgians displaced by the 1992-93 war have not returned, leaving deep demographic scars. Politically, local authorities operate independently but are closely aligned with Moscow</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">Last year, the <a href="https://lossi36.com/2025/02/15/abkhazia-at-the-end-of-a-road-difficult-choices-in-a-contentious-election/" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">country held elections</a> after President Aslan Bzhania resigned following protests against a proposed funding agreement with Russia, which many locals viewed as threatening Abkhazia's autonomy. The region's future is uncertain, as it remains caught between its pursuit of sovereignty and reliance on Russia.</p>
+</mj-text>
+        <!-- footer-->
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="10px 12px"
+        />
+        <mj-spacer height="10px" />
+        <mj-text
+          padding="3px 12px 0px 12px"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Send us your feedback at
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="mailto:readers@geopoliticalsummary.com"
+              target="_blank"
+              >readers@geopoliticalsummary.com</a
+            >.
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Interested in connecting with curious, informed readers?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="https://www.geopoliticalsummary.com/advertise#advertise-form"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+          <!-- <p style="color: #000; font-size: 10px; line-height: 1.7">
+           "A note from Affirm Payment options through Affirm are subject to an eligibility check and are provided by these lending partners: <a style="text-decoration: none; border-bottom: 2px solid #06266D; color: black;"
+href="https://www.affirm.com/lenders" target="_blank"
+>affirm.com/lenders</a>. Options depend on your purchase amount, and a down payment may be required. CA residents: Loans by Affirm Loan Services, LLC are made or arranged pursuant to a California Financing Law license. For licenses and disclosures, see <a style="text-decoration: none; border-bottom: 2px solid #06266D; color: black;"
+href="https://www.affirm.com/licenses" target="_blank"
+>affirm.com/licenses</a>."
+          </p> -->
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="https://www.geopoliticalsummary.com/unsubscribewithfeedback?unique_id=%unique_id%&campaign_id=%campaign_id%"
+              target="_blank"
+              >Unsubscribe</a
+            >
+            from this email.
+          </p>
+        </mj-text>
+
+        <mj-text
+          padding="10px 12px 4px 12px"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          <p
+            style="
+              margin-top: 0px;
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 1.5;
+            "
+          >
+            30 <span>N</span> <span>Gould</span>
+            <span>St, Ste N, Sheridan, WY 82801, United States</span>
+          </p>
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 1.5;
+              margin-bottom: 14px;
+            "
+          >
+            Copyright © 2026 House of Summary, All rights reserved.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="15px"></mj-spacer>
+  </mj-body>
+</mjml>
