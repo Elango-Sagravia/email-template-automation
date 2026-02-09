@@ -199,5 +199,111 @@
       </mj-column>
     </mj-section>
     <mj-spacer height="10px" />
+    {{%SPOTLIGHT_SECTION%}}
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-table
+          css-class="new-heading-with-border"
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+          padding="16px 0px 12px 0px"
+        >
+          <tr>
+            <!-- Left flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 14%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 4px solid #eeca66">
+                &nbsp;
+              </div>
+            </td>
+            <!-- Center text -->
+            <td
+              valign="middle"
+              style="padding: 0 8px; text-align: center; white-space: nowrap"
+            >
+              <span
+                style="
+                  display: inline-block;
+                  font-weight: 900;
+                  font-size: 15px;
+                  line-height: 1.2;
+                  font-family: Arial, sans-serif;
+                  color: #000000;
+                  text-transform: uppercase;
+                "
+              >
+                What’s happening?</span
+              >
+            </td>
+            <!-- Right flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 100%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 4px solid #eeca66">
+                &nbsp;
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+        <mj-text
+          padding="10px 12px"
+          font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+          color="#000000"
+        >
+          <h2 style="font-size: 24px; line-height: 1.5; font-weight: 400">
+            Event
+          </h2>
+        </mj-text>
+        <mj-image
+          border-radius="10px"
+          padding="6px 12px 10px 12px"
+          width="600px"
+          href="https://link.dubaisummary.com/ds-05-02-2026-events-rewind-fest-dxb"
+          src="https://www.dubaisummary.com/email/images/rewind-fest-dxb-2026-retro-music-festival-dubai-event.jpg"
+          alt="Rewind Fest DXB 2026 retro music festival Dubai event"
+          target="_blank"
+        />
+        <mj-text
+          padding="0px 12px 0px 12px"
+          font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+          color="#000000"
+        >
+          <h2
+            style="
+              font-size: 24px;
+              line-height: 1.5;
+              font-weight: 400;
+              margin-top: 2px !important;
+            "
+          >
+            Where to eat?
+          </h2>
+        </mj-text>
+        <mj-text padding="10px 12px" font-family="Arial" color="#000000">
+          {{%WHERE_TO_EAT_SECTION%}}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px"></mj-spacer>
   </mj-body>
 </mjml>

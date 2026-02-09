@@ -236,5 +236,268 @@
         </mj-text>
       </mj-column>
     </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section background-color="#eff1f4" padding="1px 0.5px 1px 1px" border-radius="5px">
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-table
+  css-class="new-heading-with-border"
+  cellpadding="0"
+  cellspacing="0"
+  width="100%"
+  padding="16px 0px 12px 0px"
+>
+  <tr>
+    <td valign="middle" style="width: 12%; font-size: 0; line-height: 0; padding: 0px; mso-line-height-rule: exactly;">
+      <div style="height: 0px; border-top: 4px solid #eeca66">&nbsp;</div>
+    </td>
+    <td valign="middle" style="padding: 0 8px; text-align: center; white-space: nowrap">
+      <span style="display: inline-block; font-weight: 900; font-size: 15px; line-height: 1.2; font-family: Arial, sans-serif; color: #000000; text-transform: uppercase;">
+        Spotlight
+      </span>
+    </td>
+    <td valign="middle" style="width: 100%; font-size: 0; line-height: 0; padding: 0px; mso-line-height-rule: exactly;">
+      <div style="height: 0px; border-top: 4px solid #eeca66">&nbsp;</div>
+    </td>
+  </tr>
+</mj-table>
+
+    <mj-text
+      padding="10px 12px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">
+        Built to absorb
+      </h2>
+    </mj-text>
+
+    <mj-text padding="10px 12px 16px 12px" font-family="Arial" color="#000000">
+      <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Summary: Dubai adopts the sponge city model in partnership with Shenzhen to boost water resilience and sustainability.</strong></p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">Dubai is formally moving toward adopting the <a href="https://link.dubaisummary.com/ds-05-feb-26-spotlight-h1-1-sponge-city-model" target="_blank" style="text-decoration: none; border-bottom: 2px solid #102341; color: black;">“sponge city” model</a>. It is an urban-planning approach pioneered in China that rethinks how cities handle rainwater, flooding, and water reuse. In this system, instead of runoff overwhelming the drainage system, the city absorbs and reuses water through permeable surfaces, greenery, and underground storage. This reduces flooding and eases pressure on infrastructure.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">Dubai Municipality has signed an MoU with the Urban Planning and Design Institute of Shenzhen (UPDIS) during the World Governments Summit 2026. The MoU establishes a cooperation framework focused on smart, low-carbon urban planning, knowledge transfer from Shenzhen’s sponge city experience, and the joint development of planning tools tailored to Dubai.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0;">The sponge city initiative is part of a broader urban transformation. Under the MoU, Dubai will collaborate on transit-oriented and compact urbanism, AI-driven planning, big-data-enabled smart water management, 5G-enabled infrastructure, and low-carbon city design. Together, these efforts aim to improve climate resilience, water efficiency, and long-term urban sustainability.</p>
+    </mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="10px" />
+<mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-raw>
+    <a href="https://link.dubaisummary.com/REPLACE_ME"
+    target="_blank" style="color:black">
+  </mj-raw>
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-spacer height="14px" />
+    <mj-text padding="2px 12px 0px 12px" font-family="Arial" color="#000000">
+      <p style="font-size: 12px; line-height: 1.2">
+        <i>Brand in residence: Washmen</i>
+      </p>
+    </mj-text>
+    <mj-text
+      padding="2px 12px 0px 12px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="white"
+    >
+      <h2
+        style="
+          padding-bottom: 8px;
+          color: #102341;
+          text-align: left;
+          border-bottom: 2px solid #102341;
+          font-size: 26px;
+          line-height: 1.2;
+          font-weight: 300;
+          margin: 0;
+        "
+      >
+        Laundry, dry cleaning, shoe & bag restoration
+      </h2>
+    </mj-text>
+    <mj-spacer height="12px" />
+    <mj-image
+      border-radius="10px"
+      padding="10px 12px 14px 12px"
+      width="600px"
+      src="https://www.dubaisummary.com/email/ad/REPLACE_ME.jpg"
+      alt="REPLACE_ME"
+    />
+    <mj-text padding="10px 12px 0px 12px" font-family="Arial" color="#000000">
+      <p style="font-size: 16px; line-height: 24px; margin: 0 0 10px 0;">
+        Dubai moves fast. Your laundry should not slow you down.
+        <a style="text-decoration: none; border-bottom: 2px solid #102341; color: black;">
+          Washmen
+        </a>
+        collects, cleans, and delivers with hotel-grade care. Free delivery the next day!
+      </p>
+    </mj-text>
+    <mj-text padding="0px 12px 10px 12px" font-family="Arial" color="#000000">
+      <p style="font-size: 16px; line-height: 24px; margin: 0;">
+        <a style="text-decoration: none; border-bottom: 2px solid #102341; color: black;">
+          <strong>Download the app</strong>
+        </a>
+      </p>
+    </mj-text>
+    <mj-spacer height="6px" />
+  </mj-column>
+  <mj-raw></a></mj-raw>
+</mj-section>
+<mj-spacer height="10px" />
+
+<mj-section background-color="#eff1f4" padding="1px 0.5px 1px 1px" border-radius="5px">
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    
+
+    <mj-text
+      padding="16px 12px 0px 12px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">
+        Precision meets neurology
+      </h2>
+    </mj-text>
+
+    <mj-text padding="10px 12px 16px 12px" font-family="Arial" color="#000000">
+      <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Summary: UAE records first robotic-assisted epilepsy procedure, advancing precision, safety, and personalised neurological care.</strong></p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">Cleveland Clinic Abu Dhabi has carried out the UAE’s first <a href="https://link.dubaisummary.com/ds-05-feb-26-spotlight-h2-2-robotic-assisted-stereoelectroencephalography" target="_blank" style="text-decoration: none; border-bottom: 2px solid #102341; color: black;">robotic-assisted stereoelectroencephalography</a> (SEEG) procedure. Building on its earlier national first with non-robotic SEEG, the hospital has integrated robotic guidance to place intracranial electrodes with precision. This method reduces patient discomfort, accelerates recovery, and enables more precise surgical decision-making.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">Hospital leadership emphasised that the milestone reflects a broader commitment to patient-centred neurological innovation. The procedure, led by Dr. Roser and comprising a team of specialists, including Dr. Tanmoy Maiti, Dr. Mohamad Ayman Haykal, and Dr. Eugene Achi, reinforces Cleveland Clinic Abu Dhabi as the first Level 4 Epilepsy Centre in the UAE and a leader in advanced neurodiagnostics.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0;"><strong>What is SEEG?</strong> Stereoelectroencephalography (SEEG) is a minimally invasive procedure used to identify where epileptic seizures originate in the brain. Thin electrodes are precisely implanted into targeted deep brain areas to record electrical activity over time. SEEG is especially used in drug-resistant epilepsy when non-invasive tests cannot clearly localise the seizure focus.</p>
+    </mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-table
+          css-class="new-heading-with-border"
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+          padding="16px 0px 12px 0px"
+        >
+          <tr>
+            <!-- Left flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 14%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 4px solid #eeca66">
+                &nbsp;
+              </div>
+            </td>
+            <!-- Center text -->
+            <td
+              valign="middle"
+              style="padding: 0 8px; text-align: center; white-space: nowrap"
+            >
+              <span
+                style="
+                  display: inline-block;
+                  font-weight: 900;
+                  font-size: 15px;
+                  line-height: 1.2;
+                  font-family: Arial, sans-serif;
+                  color: #000000;
+                  text-transform: uppercase;
+                "
+              >
+                What’s happening?</span
+              >
+            </td>
+            <!-- Right flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 100%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 4px solid #eeca66">
+                &nbsp;
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+        <mj-text
+          padding="10px 12px"
+          font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+          color="#000000"
+        >
+          <h2 style="font-size: 24px; line-height: 1.5; font-weight: 400">
+            Event
+          </h2>
+        </mj-text>
+        <mj-image
+          border-radius="10px"
+          padding="6px 12px 10px 12px"
+          width="600px"
+          href="https://link.dubaisummary.com/ds-05-02-2026-events-rewind-fest-dxb"
+          src="https://www.dubaisummary.com/email/images/rewind-fest-dxb-2026-retro-music-festival-dubai-event.jpg"
+          alt="Rewind Fest DXB 2026 retro music festival Dubai event"
+          target="_blank"
+        />
+        <mj-text
+          padding="0px 12px 0px 12px"
+          font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+          color="#000000"
+        >
+          <h2
+            style="
+              font-size: 24px;
+              line-height: 1.5;
+              font-weight: 400;
+              margin-top: 2px !important;
+            "
+          >
+            Where to eat?
+          </h2>
+        </mj-text>
+        <mj-text padding="10px 12px" font-family="Arial" color="#000000">
+          <p style="font-size: 16px; line-height: 1.5">
+            <strong
+              ><a
+                style="
+                  text-decoration: none;
+                  border-bottom: 2px solid #102341;
+                  color: black;
+                "
+                href="https://link.dubaisummary.com/ds-05-feb-26-event-h1-3-royal-china"
+                target="_blank"
+                >Royal China</a
+              ></strong
+            >
+            → Located in DIFC, Royal China provides Cantonese and Chinese food,
+            specialising in dim sum, Peking duck, seafood, and other traditional
+            dishes in a modern interior with oriental touch and comfortable
+            seating. The place also has a bar and outdoor dining. It is an ideal
+            spot for business lunches, family dinners, and even casual meals.
+          </p>
+          <p style="font-size: 16px; line-height: 1.5">
+            <i
+              ><strong>Pro tip:</strong> Taste their signature dim sum platter
+              to get the most value.</i
+            >
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px"></mj-spacer>
   </mj-body>
 </mjml>
