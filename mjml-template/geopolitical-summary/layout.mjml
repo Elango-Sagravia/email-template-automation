@@ -1,0 +1,298 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      h2,
+      img,
+      p {
+        margin: 0;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+    </mj-style>
+    <mj-font
+      name="Roboto+Serif"
+      href="https://fonts.googleapis.com/css2?family=Roboto  +Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+    />
+    <mj-style>
+      .button-style:hover {
+        background-color: #dcedff !important;
+        color: rgba(0, 0, 0, 1) !important; /* instead of #000 */
+        border: 1px solid #dcedff !important;
+        cursor: pointer;
+      }
+      .button-style:hover .dot {
+        background-color: #06266d !important;
+        color: rgba(0, 0, 0, 1) !important;
+      }
+    </mj-style>
+    <mj-style>
+      .feedback-btn:hover {
+        opacity: 0.8 !important;
+        transform: scale(1.1) !important;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f9f8f9">
+    <mj-raw>
+      <div style="display: none; max-height: 0px; overflow: hidden">{{%PREVIEW_TEXT%}}
+      </div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden preview text -->
+      <div style="display: none; max-height: 0px; overflow: hidden"> &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; </div>
+    </mj-raw>
+    <mj-spacer height="15px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-spacer height="16px" />
+        <mj-image
+          padding="10px 12px 0px 12px"
+          css-class="light_img"
+          width="150px"
+          src="https://www.geopoliticalsummary.com/gp-logo-grey.png"
+          href="https://www.geopoliticalsummary.com"
+          alt=""
+        />
+        <mj-image
+          width="1px"
+          src="https://www.geopoliticalsummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+          alt=""
+        />
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="4px 12px 10px 12px"
+        />
+        <mj-text
+          padding="0px 12px 0px 12px "
+          font-family="Roboto+Serif"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5">
+            <strong>In this edition:</strong>
+          </p>
+        </mj-text>
+        <mj-table
+          font-family="Roboto+Serif"
+          cellpadding="0"
+          cellspacing="0"
+          padding="0px 18px 0px 18px"
+          style="width: 100%"
+        >
+          {{%IN_THIS_EDITION_TABLE%}}
+        </mj-table>
+        <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+          <p style="font-size: 16px; line-height: 1.5">
+            Was this email forwarded to you?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="https://link.geopoliticalsummary.com/gs-stay-informed"
+              target="_blank"
+            >
+              Stay informed</a
+            >.
+          </p>
+        </mj-text>
+        <!-- <mj-divider border-width="1px" border-style="solid" border-color="lightgrey" padding="10px 12px" /> -->
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      {{%SPOTLIGHT_SECTION%}}
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #06266d;
+              text-align: left;
+              border-bottom: 2px solid #06266d;
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 300;
+            "
+          >
+            Worldwide
+          </h2>
+        </mj-text>
+        <mj-image
+          border-radius="10px"
+          padding="10px 12px"
+          width="600px"
+          src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+          alt="REPLACE_ME"
+          href="https://www.geopoliticalsummary.com/"
+        />
+        <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+          {{%WORLDWIDE_SECTION%}}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #06266d;
+              text-align: left;
+              border-bottom: 2px solid #06266d;
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 300;
+            "
+          >
+            Foundations
+          </h2>
+        </mj-text>
+        {{%FOUNDATIONS_SECTION%}}
+        <!-- footer-->
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="10px 12px"
+        />
+        <mj-spacer height="10px" />
+        <mj-text
+          padding="3px 12px 0px 12px"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Send us your feedback at
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="mailto:readers@geopoliticalsummary.com"
+              target="_blank"
+              >readers@geopoliticalsummary.com</a
+            >.
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Interested in connecting with curious, informed readers?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="https://www.geopoliticalsummary.com/advertise#advertise-form"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+          <!-- <p style="color: #000; font-size: 10px; line-height: 1.7">
+           "A note from Affirm Payment options through Affirm are subject to an eligibility check and are provided by these lending partners: <a style="text-decoration: none; border-bottom: 2px solid #06266D; color: black;"
+href="https://www.affirm.com/lenders" target="_blank"
+>affirm.com/lenders</a>. Options depend on your purchase amount, and a down payment may be required. CA residents: Loans by Affirm Loan Services, LLC are made or arranged pursuant to a California Financing Law license. For licenses and disclosures, see <a style="text-decoration: none; border-bottom: 2px solid #06266D; color: black;"
+href="https://www.affirm.com/licenses" target="_blank"
+>affirm.com/licenses</a>."
+          </p> -->
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="https://www.geopoliticalsummary.com/unsubscribewithfeedback?unique_id=%unique_id%&campaign_id=%campaign_id%"
+              target="_blank"
+              >Unsubscribe</a
+            >
+            from this email.
+          </p>
+        </mj-text>
+
+        <mj-text
+          padding="10px 12px 4px 12px"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          <p
+            style="
+              margin-top: 0px;
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 1.5;
+            "
+          >
+            30 <span>N</span> <span>Gould</span>
+            <span>St, Ste N, Sheridan, WY 82801, United States</span>
+          </p>
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 1.5;
+              margin-bottom: 14px;
+            "
+          >
+            Copyright © 2026 House of Summary, All rights reserved.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="15px"></mj-spacer>
+  </mj-body>
+</mjml>

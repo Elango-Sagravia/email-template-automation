@@ -1,6 +1,3 @@
-# Ignore all MJML templates
-mjml-template/
-
 # Ignore compiled MJML outputs
 dist/**/*.mjml
 
