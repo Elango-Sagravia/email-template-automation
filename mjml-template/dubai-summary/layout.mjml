@@ -278,9 +278,9 @@
           border-radius="10px"
           padding="6px 12px 10px 12px"
           width="600px"
-          href="https://link.dubaisummary.com/ds-05-02-2026-events-rewind-fest-dxb"
-          src="https://www.dubaisummary.com/email/images/rewind-fest-dxb-2026-retro-music-festival-dubai-event.jpg"
-          alt="Rewind Fest DXB 2026 retro music festival Dubai event"
+          href=""
+          src="https://www.dubaisummary.com/email/images/REPLACE_ME.jpg"
+          alt="REPLACE_ME"
           target="_blank"
         />
         <mj-text
@@ -305,5 +305,356 @@
       </mj-column>
     </mj-section>
     <mj-spacer height="10px"></mj-spacer>
+    <mj-section background-color="#eff1f4" padding="1px" border-radius="5px">
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <!-- Heading with Lines -->
+        <mj-table
+          css-class="new-heading-with-border"
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+          padding="16px 0px 12px 0px"
+        >
+          <tr>
+            <!-- Left flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 10%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 4px solid #eeca66">
+                &nbsp;
+              </div>
+            </td>
+            <!-- Center text -->
+            <td
+              valign="middle"
+              style="padding: 0 8px; text-align: center; white-space: nowrap"
+            >
+              <span
+                style="
+                  display: inline-block;
+                  font-weight: 900;
+                  font-size: 15px;
+                  line-height: 1.2;
+                  font-family: Arial, sans-serif;
+                  color: #000000;
+                  text-transform: uppercase;
+                "
+              >
+                Career</span
+              >
+            </td>
+            <!-- Right flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 100%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 4px solid #eeca66">
+                &nbsp;
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+        {{%CAREER_SECTION%}}
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-table
+          css-class="new-heading-with-border"
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+          padding="16px 0px 12px 0px"
+        >
+          <tr>
+            <!-- Left flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 11%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 4px solid #eeca66">
+                &nbsp;
+              </div>
+            </td>
+            <!-- Center text -->
+            <td
+              valign="middle"
+              style="padding: 0 8px; text-align: center; white-space: nowrap"
+            >
+              <span
+                style="
+                  display: inline-block;
+                  font-weight: 900;
+                  font-size: 15px;
+                  line-height: 1.2;
+                  font-family: Arial, sans-serif;
+                  color: #000000;
+                  text-transform: uppercase;
+                "
+              >
+                Meanwhile</span
+              >
+            </td>
+            <!-- Right flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 100%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 4px solid #eeca66">
+                &nbsp;
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+        {{%MEANWHILE_SECTION%}}
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <!-- <mj-text align="center" padding="0px">
+          <div style="display: flex; align-items: center; text-align: center;">
+            <div style="flex: 1; height: 3px; background-color: #EECA66;"></div>
+            <span style="padding: 20px 10px; font-weight: 700; font-size: 15px; font-family: Arial, sans-serif; color: #000; text-transform: uppercase;"> DID YOU KNOW? </span>
+            <div style="flex: 6; height: 3px; background-color: #EECA66;"></div>
+          </div>
+        </mj-text> -->
+        <mj-table
+          css-class="new-heading-with-border"
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+          padding="16px 0px 12px 0px"
+        >
+          <tr>
+            <!-- Left flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 11%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 4px solid #eeca66">
+                &nbsp;
+              </div>
+            </td>
+            <!-- Center text -->
+            <td
+              valign="middle"
+              style="padding: 0 8px; text-align: center; white-space: nowrap"
+            >
+              <span
+                style="
+                  display: inline-block;
+                  font-weight: 900;
+                  font-size: 15px;
+                  line-height: 1.2;
+                  font-family: Arial, sans-serif;
+                  color: #000000;
+                  text-transform: uppercase;
+                "
+              >
+                DID YOU KNOW?</span
+              >
+            </td>
+            <!-- Right flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 100%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 4px solid #eeca66">
+                &nbsp;
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+        <mj-text padding="10px 12px" font-family="Arial" color="#000000">
+          {{%DID_YOU_KNOW_SECTION%}}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section padding="0px" border-radius="4px" background-color="#102341">
+      <mj-column padding="0px">
+        <!-- Yellow curved top bar -->
+        <mj-text padding="0px">
+          <div
+            style="
+              border-top-left-radius: 3px;
+              border-top-right-radius: 3px;
+              height: 7px;
+              background-color: #eeca66;
+            "
+          ></div>
+        </mj-text>
+        <!-- Logo and intro text -->
+        <mj-image
+          align="left"
+          padding="40px 12px 35px 12px"
+          css-class="light_img"
+          width="206px"
+          src="https://www.dubaisummary.com/email/images/ds-email-new-logo.png"
+          href="https://www.dubaisummary.com"
+          alt=""
+        />
+        <mj-text
+          padding="0px 12px 0px 12px"
+          font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+          color="#ffffff"
+        >
+          <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400">
+            The pulse of Dubai.
+          </h2>
+        </mj-text>
+        <mj-text
+          padding="0px 12px 0px 12px"
+          font-family="Arial"
+          font-weight="400"
+          color="#ffffff"
+        >
+          <!-- <p style="font-size: 15px; line-height: 1.5; padding-top: 10px">
+            This edition of <strong>Dubai Summary</strong> was produced by our
+            editorial team. Our mission is to bring you clear, engaging updates
+            on Dubai’s news, business, culture, and daily living. Quick, clear,
+            and always relevant, we make sure you see Dubai the way it really
+            is: dynamic, ambitious, and full of surprises.
+          </p> -->
+          <p style="font-size: 15px; line-height: 1.5; padding-top: 10px">
+            This edition of <strong>Dubai Summary</strong> was produced by our
+            editorial team. Our mission is to bring you clear, engaging updates
+            on Dubai’s news, business, culture, and daily living. Quick, clear,
+            and always relevant, we make sure you see Dubai the way it really
+            is: dynamic, ambitious, and full of surprises.
+          </p>
+        </mj-text>
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="#FFFFFF80"
+          padding="15px 12px 35px 12px"
+        />
+        <!-- Footer content -->
+        <mj-text
+          padding="0px 12px 0px 12px"
+          font-family="Arial"
+          color="#ffffff"
+          font-weight="400"
+        >
+          <p style="font-size: 12px; line-height: 2">
+            Send us your feedback at
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #fff;
+                color: #fff !important;
+              "
+              href="mailto:readers@dubaisummary.com"
+              target="_blank"
+              >readers@dubaisummary.com</a
+            >.
+          </p>
+          <p style="font-size: 12px; line-height: 2">
+            Interested in connecting with curious, informed readers?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #fff;
+                color: #fff !important;
+              "
+              href="https://www.dubaisummary.com/advertise"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+          <p style="font-size: 12px; line-height: 2">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #fff;
+                color: #fff !important;
+              "
+              href="https://www.dubaisummary.com/unsubscribewithfeedback?unique_id=%unique_id%&campaign_id=%campaign_id%"
+              target="_blank"
+              >Unsubscribe</a
+            >
+            from this email.
+          </p>
+        </mj-text>
+
+        <mj-text
+          padding="10px 12px 40px 12px"
+          font-family="Arial"
+          font-weight="400"
+        >
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #ffffffc9;
+              line-height: 1.5;
+              margin: 0;
+            "
+          >
+            S8, Level 2, Building 3, Dubai Design District, Dubai
+          </p>
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #ffffffc9;
+              line-height: 1.5;
+              margin: 0;
+            "
+          >
+            Copyright © 2026 Summary Media FZ-LLC, All rights reserved.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="15px" />
   </mj-body>
 </mjml>

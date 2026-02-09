@@ -1,24 +1,29 @@
 /**
- * build-dubai-summary.js
- * ---------------------
- * v1.1 (In this edition + Spotlight + Did you know)
- *
- * - DOCX -> Mammoth HTML
- * - Extract:
- *   - "In this edition" items
- *   - Spotlight stories (Spotlight heading -> multiple story titles + body)
- *   - "Did you know?" line
- * - Inject into layout placeholders:
+ * build-dubai-summary.js (v1.3)
+ * ----------------------------
+ * ✅ DOCX -> Mammoth HTML
+ * ✅ Extract:
+ *   1) In this edition
+ *   2) Spotlight (H2 "Spotlight" -> each H3 story)
+ *      - Spotlight heading only for the 1st spotlight card
+ *      - Insert AD block after spotlight #1
+ *   3) Event -> "Where to eat?" (H2 "Event" -> H3 "Where to eat?" -> paragraphs until next H2)
+ *   4) Career (H2 "Career" -> H3 title -> next 3 paragraphs = tags -> rest until next H2 = summary/cta paragraphs)
+ * ✅ Inject into layout placeholders:
  *   {{%IN_THIS_EDITION_TABLE%}}
  *   {{%SPOTLIGHT_SECTION%}}
- *   {{%DID_YOU_KNOW_SECTION%}}
- * - Compile MJML -> HTML
+ *   {{%WHERE_TO_EAT_SECTION%}}
+ *   {{%CAREER_SECTION%}}
+ * ✅ Compile MJML -> HTML
  *
  * Usage:
  *   node build-dubai-summary.js "docx/dubai-summary/2026/feb/feb-5.docx"
  *
  * Requirements:
  *   npm i mjml mammoth cheerio
+ *
+ * Notes:
+ * - This file is built to match the content structure in your Feb-5 DOCX.  [oai_citation:0‡feb-5.docx](sediment://file_00000000ff247230b4f85e822568d7ac)
  */
 
 import fs from "fs";
@@ -47,8 +52,10 @@ const IN_THIS_EDITION_TPL_PATH = path.join(
  * ----------------------------- */
 const TOKEN_IN_THIS_EDITION = /\{\{\%\s*IN_THIS_EDITION_TABLE\s*\%\}\}/g;
 const TOKEN_SPOTLIGHT_SECTION = /\{\{\%\s*SPOTLIGHT_SECTION\s*\%\}\}/g;
-const TOKEN_DID_YOU_KNOW_SECTION = /\{\{\%\s*DID_YOU_KNOW_SECTION\s*\%\}\}/g;
+const TOKEN_WHERE_TO_EAT_SECTION = /\{\{\%\s*WHERE_TO_EAT_SECTION\s*\%\}\}/g;
+const TOKEN_CAREER_SECTION = /\{\{\%\s*CAREER_SECTION\s*\%\}\}/g;
 const TOKEN_ROWS = /\{\{\%\s*ROWS\s*\%\}\}/g;
+const TOKEN_MEANWHILE_SECTION = /\{\{\%\s*MEANWHILE_SECTION\s*\%\}\}/g;
 
 /** -----------------------------
  * MAIN
@@ -82,7 +89,6 @@ async function main() {
   const { value: docHtml } = await mammoth.convertToHtml(
     { buffer },
     {
-      // keep if you ever embed images in docx; harmless otherwise
       convertImage: mammoth.images.inline(async (image) => {
         const b64 = await image.read("base64");
         return { src: `data:${image.contentType};base64,${b64}` };
@@ -106,14 +112,30 @@ async function main() {
   );
   const spotlightMjml = renderSpotlightDubai(spotlightStories);
 
-  // 4) Did you know
-  const didYouKnow = extractDidYouKnowDubai(docHtml);
-  console.log("🧩 Did you know:", didYouKnow);
-  const didYouKnowHtml = renderDidYouKnowDubai(didYouKnow);
+  // 4) Event -> Where to eat?
+  const whereToEatItems = extractWhereToEatDubai(docHtml);
+  console.log("🧩 Where to eat items:", whereToEatItems.length);
+  const whereToEatHtml = renderWhereToEatDubai(whereToEatItems);
 
-  // 5) Inject into layout
-  const layoutMjml = fs.readFileSync(LAYOUT_PATH, "utf8");
-  let finalMjml = layoutMjml;
+  // 5) Career
+  const career = extractCareerDubai(docHtml);
+  console.log("🧩 Career:", {
+    title: career?.title || "",
+    tags: (career?.tags || []).length,
+    body: (career?.body || []).length,
+  });
+  const careerMjml = renderCareerDubai(career);
+
+  // 6) Meanwhile
+  const meanwhileStories = extractMeanwhileDubai(docHtml);
+  console.log(
+    "🧩 Meanwhile stories:",
+    meanwhileStories.map((s) => s.title),
+  );
+  const meanwhileMjml = renderMeanwhileDubai(meanwhileStories);
+
+  // 6) Inject into layout
+  let finalMjml = fs.readFileSync(LAYOUT_PATH, "utf8");
 
   if (!TOKEN_IN_THIS_EDITION.test(finalMjml)) {
     console.warn(
@@ -127,14 +149,24 @@ async function main() {
   }
   finalMjml = finalMjml.replace(TOKEN_SPOTLIGHT_SECTION, spotlightMjml);
 
-  if (!TOKEN_DID_YOU_KNOW_SECTION.test(finalMjml)) {
+  if (!TOKEN_WHERE_TO_EAT_SECTION.test(finalMjml)) {
     console.warn(
-      "⚠️ Token {{%DID_YOU_KNOW_SECTION%}} not found in layout.mjml",
+      "⚠️ Token {{%WHERE_TO_EAT_SECTION%}} not found in layout.mjml",
     );
   }
-  finalMjml = finalMjml.replace(TOKEN_DID_YOU_KNOW_SECTION, didYouKnowHtml);
+  finalMjml = finalMjml.replace(TOKEN_WHERE_TO_EAT_SECTION, whereToEatHtml);
 
-  // 6) MJML -> HTML
+  if (!TOKEN_CAREER_SECTION.test(finalMjml)) {
+    console.warn("⚠️ Token {{%CAREER_SECTION%}} not found in layout.mjml");
+  }
+  finalMjml = finalMjml.replace(TOKEN_CAREER_SECTION, careerMjml);
+
+  if (!TOKEN_MEANWHILE_SECTION.test(finalMjml)) {
+    console.warn("⚠️ Token {{%MEANWHILE_SECTION%}} not found in layout.mjml");
+  }
+  finalMjml = finalMjml.replace(TOKEN_MEANWHILE_SECTION, meanwhileMjml);
+
+  // 7) MJML -> HTML
   const { html, errors } = mjml2html(finalMjml, {
     validationLevel: "soft",
     filePath: LAYOUT_PATH,
@@ -209,7 +241,7 @@ function extractInThisEditionDubai(html) {
       .filter(Boolean);
   }
 
-  // Case 2: Paragraph lines after marker
+  // Case 2: paragraphs after marker until next H2
   const items = [];
   let el = marker.next();
 
@@ -218,15 +250,13 @@ function extractInThisEditionDubai(html) {
     const txt = cleanText(el.text());
     const lower = txt.toLowerCase();
 
-    // stop at next big section
     if (tag === "h2" && txt) break;
-    if (tag === "h3" && txt) break;
-    if (tag === "p" && lower === "spotlight") break;
+    if (tag === "h2" && lower === "spotlight") break;
 
     if (tag === "p") {
       if (!txt) break;
 
-      // skip weekday/date-ish line
+      // Skip weekday/date-ish line (optional)
       if (
         /(monday|tuesday|wednesday|thursday|friday|saturday|sunday)\b/i.test(
           txt,
@@ -249,7 +279,7 @@ function extractInThisEditionDubai(html) {
     el = el.next();
   }
 
-  return Array.from(new Set(items)).filter(Boolean);
+  return items.filter(Boolean);
 }
 
 function renderInThisEditionFromTemplate(items) {
@@ -285,103 +315,42 @@ function makeEditionRow(text) {
 }
 
 /** -----------------------------
- * Spotlight (Dubai)
- * Goal:
- * - Find "Spotlight"
- * - Extract multiple stories:
- *   title: heading-ish line after spotlight OR later headings
- *   body: paragraphs until next title or next big section (Event/Career/Meanwhile/Did you know)
- * - Render:
- *   - Include the Spotlight heading table ONLY for story #1
+ * Spotlight extraction (Dubai)
  * ----------------------------- */
 function extractSpotlightDubai(html) {
   const $ = cheerio.load(html);
 
-  const marker = $("p, h2, h3")
+  const spotH2 = $("h2")
     .filter((_, el) => cleanText($(el).text()).toLowerCase() === "spotlight")
     .first();
 
-  if (!marker.length) return [];
-
-  const STOP_SECTIONS = new Set([
-    "event",
-    "career",
-    "meanwhile",
-    "did you know?",
-    "did you know",
-    "fact:",
-    "fact",
-  ]);
+  if (!spotH2.length) return [];
 
   const stories = [];
   let current = null;
-
-  let el = marker.next();
-
-  // helper: start a story
-  const startStory = (title) => {
-    if (current && current.title && current.nodes.length) stories.push(current);
-    current = { title: title || "", nodes: [] };
-  };
-
-  // First story title is usually the next non-empty line after "Spotlight"
-  // could be <h2>/<h3> or a <p> line (Word style varies)
-  while (el && el.length) {
-    const tag = (el[0]?.tagName || "").toLowerCase();
-    const txt = cleanText(el.text());
-    const lower = txt.toLowerCase();
-
-    if (!txt) {
-      el = el.next();
-      continue;
-    }
-
-    // Stop if we immediately hit another major section
-    if ((tag === "h2" || tag === "h3") && STOP_SECTIONS.has(lower)) break;
-    if (tag === "p" && STOP_SECTIONS.has(lower)) break;
-
-    // If it's a heading or looks like a heading line, treat as title
-    if (tag === "h2" || tag === "h3" || looksLikeTitleLine(el)) {
-      startStory(txt);
-      el = el.next();
-      break;
-    }
-
-    // fallback: if it's just text, use it as title anyway
-    startStory(txt);
-    el = el.next();
-    break;
-  }
+  let el = spotH2.next();
 
   while (el && el.length) {
     const tag = (el[0]?.tagName || "").toLowerCase();
     const txt = cleanText(el.text());
-    const lower = txt.toLowerCase();
 
     // stop at next big section
-    if ((tag === "h2" || tag === "h3") && txt && STOP_SECTIONS.has(lower))
-      break;
-    if (tag === "p" && txt && STOP_SECTIONS.has(lower)) break;
+    if (tag === "h2" && txt) break;
 
-    // new story title (often plain line between spotlight stories)
-    if (txt && (tag === "h2" || tag === "h3" || looksLikeTitleLine(el))) {
-      startStory(txt);
+    if (tag === "h3" && txt) {
+      if (current) stories.push(current);
+      current = { title: txt, nodes: [] };
       el = el.next();
       continue;
     }
 
-    // collect body nodes
+    // ignore content before first h3
     if (!current) {
       el = el.next();
       continue;
     }
 
     if (tag === "p" || tag === "ul" || tag === "ol") {
-      // ignore very short “Spotlight” repeats or empty
-      if (tag === "p" && !txt) {
-        el = el.next();
-        continue;
-      }
       current.nodes.push(el);
     } else if (tag === "div") {
       const children = el.children("p, ul, ol");
@@ -391,34 +360,16 @@ function extractSpotlightDubai(html) {
     el = el.next();
   }
 
-  if (current && current.title && current.nodes.length) stories.push(current);
+  if (current) stories.push(current);
 
-  // cleanup: remove titles that are actually stop headings
-  return stories
-    .map((s) => ({
-      title: cleanText(s.title || ""),
-      nodes: s.nodes || [],
-    }))
-    .filter((s) => s.title && !STOP_SECTIONS.has(s.title.toLowerCase()));
+  return stories.filter((s) => s.title && (s.nodes?.length || 0) > 0);
 }
 
-function looksLikeTitleLine($el) {
-  // If Word bolded the title, Mammoth often outputs: <p><strong>Title</strong></p>
-  const html = ($el.html?.() || "").trim().toLowerCase();
-  const txt = cleanText($el.text?.() || "");
-  if (!txt) return false;
-
-  const strongOnly =
-    html.startsWith("<strong>") &&
-    html.endsWith("</strong>") &&
-    txt.length <= 80;
-
-  // Also treat short-ish lines as titles if they don't end with a period
-  const shortNoPeriod = txt.length <= 60 && !/[.!?]$/.test(txt);
-
-  return strongOnly || shortNoPeriod;
-}
-
+/** -----------------------------
+ * Spotlight renderer (Dubai)
+ * - Spotlight heading only on first spotlight card
+ * - Insert ad block after spotlight #1
+ * ----------------------------- */
 function renderSpotlightDubai(stories) {
   if (!stories?.length) return "";
 
@@ -430,13 +381,13 @@ function renderSpotlightDubai(stories) {
   border-radius="5px"
 >
   <mj-raw>
-    <a href="https://link.dubaisummary.com/REPLACE_ME"
+    <a href="https://link.dubaisummary.com/ds-5-feb-2026-p-ad-d5-1"
     target="_blank" style="color:black">
   </mj-raw>
   <mj-column background-color="#fff" border-radius="5px" padding="0px">
     <mj-spacer height="14px" />
     <mj-text padding="2px 12px 0px 12px" font-family="Arial" color="#000000">
-      <p style="font-size: 12px; line-height: 1.2">
+      <p style="font-size: 12px; line-height: 1.2; margin: 0;">
         <i>Brand in residence: Washmen</i>
       </p>
     </mj-text>
@@ -457,7 +408,7 @@ function renderSpotlightDubai(stories) {
           margin: 0;
         "
       >
-        Laundry, dry cleaning, shoe & bag restoration
+        Laundry, dry cleaning, shoe &amp; bag restoration
       </h2>
     </mj-text>
     <mj-spacer height="12px" />
@@ -466,7 +417,7 @@ function renderSpotlightDubai(stories) {
       padding="10px 12px 14px 12px"
       width="600px"
       src="https://www.dubaisummary.com/email/ad/REPLACE_ME.jpg"
-      alt="REPLACE_ME"
+      alt="Washmen laundry, dry cleaning, and restoration service in Dubai"
     />
     <mj-text padding="10px 12px 0px 12px" font-family="Arial" color="#000000">
       <p style="font-size: 16px; line-height: 24px; margin: 0 0 10px 0;">
@@ -515,12 +466,11 @@ function renderSpotlightDubai(stories) {
 </mj-table>
 `.trim();
 
-  return stories
-    .map((s, idx) => {
-      const title = escapeHtml(cleanText(s.title || ""));
-      const bodyHtml = renderSpotlightBodyDubai(s.nodes || []);
+  const blocks = stories.map((s, idx) => {
+    const title = escapeHtml(cleanText(s.title || ""));
+    const bodyHtml = renderSpotlightBodyDubai(s.nodes || []);
 
-      const spotlightBlock = `
+    const spotlightBlock = `
 <mj-section background-color="#eff1f4" padding="1px 0.5px 1px 1px" border-radius="5px">
   <mj-column background-color="#fff" border-radius="5px" padding="0px">
     ${idx === 0 ? SPOTLIGHT_HEADING : ""}
@@ -543,14 +493,13 @@ function renderSpotlightDubai(stories) {
 <mj-spacer height="10px" />
 `.trim();
 
-      // ✅ Insert AD after first spotlight
-      if (idx === 0 && stories.length > 1) {
-        return `${spotlightBlock}\n${AD_BLOCK}`;
-      }
+    // insert ad AFTER spotlight #1
+    if (idx === 0 && stories.length > 1)
+      return `${spotlightBlock}\n${AD_BLOCK}`;
+    return spotlightBlock;
+  });
 
-      return spotlightBlock;
-    })
-    .join("\n\n");
+  return blocks.join("\n\n");
 }
 
 function renderSpotlightBodyDubai(nodes) {
@@ -560,27 +509,12 @@ function renderSpotlightBodyDubai(nodes) {
     const tag = (node[0]?.tagName || "").toLowerCase();
 
     if (tag === "p") {
-      const txt = cleanText(node.text() || "");
-      if (!txt) continue;
-
-      // If paragraph starts with "Summary:" make it bold like your sample
-      const isSummary = /^summary\s*:/i.test(txt);
-
       const inner = sanitizeInlineHtmlDubai(node.html() || "");
-
       if (isEmptyRichText(inner)) continue;
 
-      if (isSummary) {
-        parts.push(
-          `<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>${escapeHtml(
-            txt,
-          )}</strong></p>`,
-        );
-      } else {
-        parts.push(
-          `<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">${inner}</p>`,
-        );
-      }
+      parts.push(
+        `<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">${inner}</p>`,
+      );
       continue;
     }
 
@@ -602,73 +536,346 @@ function renderSpotlightBodyDubai(nodes) {
     }
   }
 
-  // remove extra bottom margin on last paragraph
-  if (parts.length) {
-    parts[parts.length - 1] = parts[parts.length - 1].replace(
-      /margin:\s*0\s*0\s*10px\s*0;/g,
-      "margin: 0;",
-    );
-  }
-
   return parts.join("\n");
 }
 
 /** -----------------------------
- * Did you know? (Dubai)
+ * Event -> Where to eat? (Dubai)
  * ----------------------------- */
-function extractDidYouKnowDubai(html) {
+function extractWhereToEatDubai(html) {
   const $ = cheerio.load(html);
 
-  const marker = $("p, h2, h3")
-    .filter((_, el) => {
-      const t = cleanText($(el).text()).toLowerCase();
-      return t === "did you know?" || t === "did you know";
-    })
+  const eventH2 = $("h2")
+    .filter((_, el) => cleanText($(el).text()).toLowerCase() === "event")
     .first();
 
-  if (!marker.length) return "";
+  if (!eventH2.length) return [];
 
-  const lines = [];
-  let el = marker.next();
+  // find H3 "Where to eat?"
+  let whereH3 = null;
+  let el = eventH2.next();
 
   while (el && el.length) {
     const tag = (el[0]?.tagName || "").toLowerCase();
     const txt = cleanText(el.text());
 
-    // stop at next heading or end
-    if ((tag === "h2" || tag === "h3") && txt) break;
-
-    if (tag === "p") {
-      if (!txt) break;
-      lines.push(txt);
-    } else if (tag === "div") {
-      const ps = el.children("p");
-      if (ps.length) {
-        ps.each((_, p) => {
-          const t = cleanText($(p).text());
-          if (t) lines.push(t);
-        });
-      }
+    if (tag === "h2" && txt) break;
+    if (tag === "h3" && txt && txt.toLowerCase() === "where to eat?") {
+      whereH3 = el;
+      break;
     }
-
-    // usually only one paragraph; stop after first non-empty chunk
-    if (lines.length) break;
 
     el = el.next();
   }
 
-  return lines.join(" ").trim();
+  if (!whereH3) return [];
+
+  const items = [];
+  el = whereH3.next();
+
+  while (el && el.length) {
+    const tag = (el[0]?.tagName || "").toLowerCase();
+    const txt = cleanText(el.text());
+
+    if (tag === "h2" && txt) break;
+
+    if (tag === "p") {
+      const htmlInner = el.html() || "";
+      const item = parseWhereToEatParagraph(htmlInner);
+      if (item) items.push(item);
+    } else if (tag === "div") {
+      const ps = el.children("p");
+      if (ps.length) {
+        ps.each((_, p) => {
+          const h = $(p).html() || "";
+          const item = parseWhereToEatParagraph(h);
+          if (item) items.push(item);
+        });
+      }
+    }
+
+    el = el.next();
+  }
+
+  return items;
 }
 
-function renderDidYouKnowDubai(text) {
-  const safe = escapeHtml(cleanText(text || ""));
-  if (!safe) return "";
-  // Your layout already centers this mj-text, so return a clean paragraph
-  return `<p style="font-size: 16px; line-height: 1.5; margin: 0;">${safe}</p>`;
+function parseWhereToEatParagraph(htmlInner) {
+  const $ = cheerio.load(`<root>${htmlInner || ""}</root>`, null, false);
+
+  const rawText = cleanText($("root").text());
+  if (!rawText) return null;
+
+  rewriteAnchorsDubai($);
+
+  // wrap first link as <strong>restaurant</strong>
+  const firstA = $("a").first();
+  if (firstA.length) {
+    const parentTag = (firstA.parent()[0]?.tagName || "").toLowerCase();
+    if (parentTag !== "strong" && parentTag !== "b")
+      firstA.wrap("<strong></strong>");
+  }
+
+  // allow only safe inline tags
+  const allowed = new Set(["strong", "b", "em", "i", "a", "br"]);
+  $("root")
+    .find("*")
+    .each((_, el) => {
+      const tag = (el.tagName || "").toLowerCase();
+      if (!allowed.has(tag)) $(el).replaceWith($(el).text());
+    });
+
+  // normalize arrow spacing
+  const out = normalizeDashes($("root").html()?.trim() || "")
+    .replace(/\s*-\s*>/g, " → ")
+    .replace(/\s*→\s*/g, " → ");
+
+  if (isEmptyRichText(out)) return null;
+  return out;
+}
+
+function renderWhereToEatDubai(items) {
+  const list = (items || []).filter(Boolean);
+  if (!list.length) return "";
+
+  return list
+    .map(
+      (innerHtml) =>
+        `<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">${innerHtml}</p>`,
+    )
+    .join("\n");
 }
 
 /** -----------------------------
- * Inline HTML sanitizer + anchors (Dubai styles)
+ * Career (Dubai)
+ * Rule:
+ * - Find H2 "Career"
+ * - Next H3 = job title
+ * - Next 3 paragraphs = tags
+ * - Remaining paragraphs until next H2 = body (summary + cta, etc.)
+ * ----------------------------- */
+function extractCareerDubai(html) {
+  const $ = cheerio.load(html);
+
+  const careerH2 = $("h2")
+    .filter((_, el) => cleanText($(el).text()).toLowerCase() === "career")
+    .first();
+
+  if (!careerH2.length) return { title: "", tags: [], body: [] };
+
+  // find first H3 after Career
+  let title = "";
+  let el = careerH2.next();
+
+  while (el && el.length) {
+    const tag = (el[0]?.tagName || "").toLowerCase();
+    const txt = cleanText(el.text());
+    if (tag === "h2" && txt) break;
+
+    if (tag === "h3" && txt) {
+      title = txt;
+      el = el.next();
+      break;
+    }
+
+    el = el.next();
+  }
+
+  if (!title) return { title: "", tags: [], body: [] };
+
+  // collect paragraphs until next H2
+  const paras = [];
+  while (el && el.length) {
+    const tag = (el[0]?.tagName || "").toLowerCase();
+    const txt = cleanText(el.text());
+
+    if (tag === "h2" && txt) break;
+
+    if (tag === "p") {
+      const h = el.html() || "";
+      const cleaned = sanitizeInlineHtmlDubai(h);
+      if (!isEmptyRichText(cleaned)) paras.push(cleaned);
+    } else if (tag === "div") {
+      const ps = el.children("p");
+      if (ps.length) {
+        ps.each((_, p) => {
+          const h = $(p).html() || "";
+          const cleaned = sanitizeInlineHtmlDubai(h);
+          if (!isEmptyRichText(cleaned)) paras.push(cleaned);
+        });
+      }
+    }
+
+    el = el.next();
+  }
+
+  const tags = paras
+    .slice(0, 3)
+    .map((x) => cleanText(stripHtml(x)))
+    .filter(Boolean);
+  const body = paras.slice(3);
+
+  return { title: cleanText(title), tags, body };
+}
+
+function renderCareerDubai(data) {
+  const title = escapeHtml(cleanText(data?.title || ""));
+  const tags = (data?.tags || []).filter(Boolean);
+  const body = (data?.body || []).filter(Boolean);
+
+  if (!title) return "";
+
+  const titleBlock = `
+<!-- Job Title -->
+<mj-text
+  padding="10px 12px"
+  font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+  color="#000000"
+>
+  <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">
+    ${title}
+  </h2>
+</mj-text>`.trim();
+
+  const tagSpan = (t) =>
+    `
+<span
+  style="
+    display: inline-block;
+    background-color: #eef2f9;
+    padding: 6px 9px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+  "
+>${escapeHtml(cleanText(t))}</span>`.trim();
+
+  const tagsBlock = tags.length
+    ? `
+<!-- Tags -->
+<mj-text padding="20px 12px" font-family="Arial, regular">
+  ${tags.map(tagSpan).join("\n")}
+</mj-text>`.trim()
+    : "";
+
+  const bodyBlock = body.length
+    ? `
+<!-- Summary / CTA -->
+<mj-text padding="0px 12px 10px 12px" font-family="Arial" color="#000000">
+  ${body
+    .map((inner) => {
+      // keep as-is (already sanitized inline HTML), just wrap in <p> with your style
+      return `<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">${inner}</p>`;
+    })
+    .join("\n")}
+</mj-text>`.trim()
+    : "";
+
+  return [titleBlock, tagsBlock, bodyBlock].filter(Boolean).join("\n\n");
+}
+
+function extractMeanwhileDubai(html) {
+  const $ = cheerio.load(html);
+
+  const h2 = $("h2")
+    .filter((_, el) => cleanText($(el).text()).toLowerCase() === "meanwhile")
+    .first();
+
+  if (!h2.length) return [];
+
+  const stories = [];
+  let current = null;
+  let el = h2.next();
+
+  while (el && el.length) {
+    const tag = (el[0]?.tagName || "").toLowerCase();
+    const txt = cleanText(el.text());
+
+    // stop when next big section starts
+    if (tag === "h2" && txt) break;
+
+    // each H3 starts a new story
+    if (tag === "h3" && txt) {
+      if (current) stories.push(current);
+      current = { title: txt, nodes: [] };
+      el = el.next();
+      continue;
+    }
+
+    if (!current) {
+      el = el.next();
+      continue;
+    }
+
+    // collect paragraph content
+    if (tag === "p") {
+      current.nodes.push(el);
+    } else if (tag === "div") {
+      const ps = el.children("p");
+      if (ps.length) ps.each((_, p) => current.nodes.push($(p)));
+    }
+
+    el = el.next();
+  }
+
+  if (current) stories.push(current);
+
+  return stories.filter((s) => s.title && (s.nodes?.length || 0) > 0);
+}
+
+function renderMeanwhileDubai(stories) {
+  const list = (stories || []).filter(Boolean);
+  if (!list.length) return "";
+
+  return list
+    .map((s, idx) => {
+      const title = escapeHtml(cleanText(s.title || ""));
+      const body = (s.nodes || [])
+        .map((p) => {
+          const inner = sanitizeInlineHtmlDubai(p.html() || "");
+          if (isEmptyRichText(inner)) return "";
+          return `<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">${inner}</p>`;
+        })
+        .filter(Boolean)
+        .join("\n");
+
+      const divider =
+        idx === list.length - 1
+          ? ""
+          : `
+<mj-divider
+  border-style="dashed"
+  border-width="1px"
+  border-color="lightgrey"
+  padding="0px 12px 4px 12px"
+/>`.trim();
+
+      return `
+<mj-text
+  padding="10px 12px"
+  font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+  color="#000000"
+>
+  <h2 style="font-size: 24px; line-height: 1.5; font-weight: 400; margin: 0;">
+    ${title}
+  </h2>
+</mj-text>
+
+<mj-text padding="10px 12px" font-family="Arial" color="#000000">
+  ${body}
+</mj-text>
+
+${divider}
+`.trim();
+    })
+    .join("\n\n");
+}
+
+/** -----------------------------
+ * Inline sanitizer + anchors (Dubai styles)
  * ----------------------------- */
 function rewriteAnchorsDubai($) {
   $("a").each((_, a) => {
@@ -681,7 +888,7 @@ function rewriteAnchorsDubai($) {
 }
 
 function sanitizeInlineHtmlDubai(html) {
-  const $ = cheerio.load(`<root>${html}</root>`, null, false);
+  const $ = cheerio.load(`<root>${html || ""}</root>`, null, false);
   rewriteAnchorsDubai($);
 
   const allowed = new Set(["strong", "b", "em", "i", "a", "br"]);
@@ -702,6 +909,11 @@ function isEmptyRichText(html) {
     .replace(/\u00A0/g, " ")
     .trim();
   return text.length === 0;
+}
+
+function stripHtml(html) {
+  const $ = cheerio.load(`<root>${html || ""}</root>`, null, false);
+  return $("root").text();
 }
 
 /** -----------------------------
