@@ -49,6 +49,7 @@ const TOKEN_ROWS = /\{\{\%\s*ROWS\s*\%\}\}/g;
 const TOKEN_WORLDWIDE_SECTION = /\{\{\%\s*WORLDWIDE_SECTION\s*\%\}\}/g;
 const TOKEN_FOUNDATIONS_SECTION = /\{\{\%\s*FOUNDATIONS_SECTION\s*\%\}\}/g;
 const TOKEN_PREVIEW_TEXT = /\{\{\%\s*PREVIEW_TEXT\s*\%\}\}/g;
+const TOKEN_ANALYSIS_SECTION = /\{\{\%\s*ANALYSIS_SECTION\s*\%\}\}/g;
 
 /** -----------------------------
  * MAIN
@@ -102,6 +103,10 @@ async function main() {
   );
   const spotlightMjml = renderSpotlightGS(spotlightStories);
 
+  const analysisItems = extractAnalysisGS(docHtml);
+  const analysisHtml = renderAnalysisGS(analysisItems);
+  console.log("🧩 Analysis items:", analysisItems.length);
+
   // ✅ 4) Worldwide (compute BEFORE replace)
   const worldwideItems = extractWorldwideGS(docHtml);
   const worldwideHtml = renderWorldwideGS(worldwideItems);
@@ -144,6 +149,11 @@ async function main() {
     console.warn("⚠️ Token {{%FOUNDATIONS_SECTION%}} not found in layout.mjml");
   }
   finalMjml = finalMjml.replace(TOKEN_FOUNDATIONS_SECTION, foundationsMjml);
+
+  if (!hasToken(TOKEN_ANALYSIS_SECTION, finalMjml)) {
+    console.warn("⚠️ Token {{%ANALYSIS_SECTION%}} not found in layout.mjml");
+  }
+  finalMjml = finalMjml.replace(TOKEN_ANALYSIS_SECTION, analysisHtml || "");
 
   // 5) MJML -> HTML
   const { html, errors } = mjml2html(finalMjml, {
@@ -921,6 +931,113 @@ function extractPreviewTextGS(html) {
   // Preserve inline formatting + links (and apply your link style)
   const inner = sanitizeInlineHtmlGS(p.html() || "");
   return inner;
+}
+
+function extractAnalysisGS(html) {
+  const $ = cheerio.load(html);
+
+  const h2 = $("h2")
+    .filter((_, el) => cleanText($(el).text()).toLowerCase() === "analysis")
+    .first();
+
+  if (!h2.length) return [];
+
+  const items = [];
+  let current = null;
+  let el = h2.next();
+
+  while (el && el.length) {
+    const tag = (el[0]?.tagName || "").toLowerCase();
+    const txt = cleanText(el.text());
+
+    // stop when next section starts
+    if (tag === "h2" && txt) break;
+
+    // each H3 is a new analysis story
+    if (tag === "h3" && txt) {
+      if (current) items.push(current);
+      current = { title: txt, nodes: [] };
+      el = el.next();
+      continue;
+    }
+
+    if (!current) {
+      el = el.next();
+      continue;
+    }
+
+    if (tag === "p" || tag === "ul" || tag === "ol" || tag === "img") {
+      current.nodes.push(el);
+    } else if (tag === "div") {
+      const children = el.children("p, ul, ol, img");
+      if (children.length) children.each((_, c) => current.nodes.push($(c)));
+    }
+
+    el = el.next();
+  }
+
+  if (current) items.push(current);
+
+  return items.filter((x) => x.title);
+}
+
+function renderAnalysisGS(items) {
+  if (!items?.length) return "";
+
+  return items
+    .map((item) => {
+      const title = escapeHtml(cleanText(item.title || ""));
+      const parsed = parseAnalysisNodesGS(item.nodes || []);
+
+      const titleHtml = `
+<h2 style="font-size: 24px; line-height: 1.2; font-weight: 500; margin: 0;">
+  ${title}
+</h2>`.trim();
+
+      return `
+${titleHtml}
+${parsed.bodyHtml}
+`.trim();
+    })
+    .join("\n\n");
+}
+
+function parseAnalysisNodesGS(nodes) {
+  const seq = (nodes || []).filter(Boolean);
+  const bodyParts = [];
+
+  for (const node of seq) {
+    const tag = (node[0]?.tagName || "").toLowerCase();
+
+    if (tag === "p") {
+      const inner = sanitizeInlineHtmlGS(node.html() || "");
+      if (isEmptyRichText(inner)) continue;
+
+      bodyParts.push(
+        `<p style="font-size: 16px; line-height: 1.5; margin: 10px 0 0 0;">${inner}</p>`,
+      );
+      continue;
+    }
+
+    if (tag === "ul" || tag === "ol") {
+      const chunk = cheerio.load("<root></root>", null, false);
+      chunk("root").append(node.clone());
+      rewriteAnchorsGS(chunk);
+
+      let listHtml = chunk("root").children().first().toString();
+      listHtml = listHtml
+        .replace("<ul", '<ul style="margin: 10px 0 0 18px; padding: 0"')
+        .replace("<ol", '<ol style="margin: 10px 0 0 18px; padding: 0"')
+        .replace(
+          /<li>/g,
+          '<li style="font-size: 16px; line-height: 1.5; margin-bottom: 6px;">',
+        );
+
+      bodyParts.push(listHtml);
+    }
+  }
+
+  return { bodyHtml: bodyParts.join("\n") };
 }
 /** -----------------------------
  * Inline sanitizer + anchors (GS styles)

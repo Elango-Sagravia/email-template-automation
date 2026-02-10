@@ -365,6 +365,48 @@
               font-weight: 300;
             "
           >
+            Analysis
+          </h2>
+        </mj-text>
+        <mj-text
+          padding="10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="#000000"
+        >
+          <h2 style="font-size: 24px; line-height: 1.2; font-weight: 500; margin: 0;">
+  Migrants pressed to fight
+</h2>
+<p style="font-size: 16px; line-height: 1.5; margin: 10px 0 0 0;"><strong>Summary: Russia pressures detained Central Asian migrants to join its war in exchange for freedom.</strong></p>
+<p style="font-size: 16px; line-height: 1.5; margin: 10px 0 0 0;"><strong>The what: </strong>Russia has broadened recruitment for its war in Ukraine to include <a href="https://www.rferl.org/a/russia-ukraine-central-asia-kyrgyzstan-women/33671384.html" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">foreign nationals from Central Asia</a>. This includes detainees, prisoners, and migrant workers. Some women are also being recruited, mainly for support roles, but their numbers remain unclear. Individual cases reveal that young migrants in legal detention may be offered military service as an alternative to long prison sentences.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 10px 0 0 0;"><strong>The methods: </strong>Recruitment mainly occurs in prisons and detention centers. Officials offer contracts that include compensation, sentence reductions, or early release upon completion of service. Authorities say participation is voluntary. However, families, lawyers, and rights groups report that pressure, a lack of information, and harsh conditions can influence decisions. Women are often told they will take non-combat roles, but results can differ.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 10px 0 0 0;"><strong>The dilemma:</strong> This places significant pressure on Central Asian governments. Migrants in Russia have minimal legal protections and strong economic reasons to enlist. Meanwhile, their home countries usually ban participation in foreign wars. This puts individuals in a tough spot, forcing them to choose between imprisonment, military service, or the risk of prosecution if they return home.</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #06266d;
+              text-align: left;
+              border-bottom: 2px solid #06266d;
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 300;
+            "
+          >
             Worldwide
           </h2>
         </mj-text>
