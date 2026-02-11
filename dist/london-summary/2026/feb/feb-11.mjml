@@ -1,0 +1,928 @@
+<mjml>
+  <mj-head>
+    <mj-font
+      name="Austin News Text Web"
+      href="https://www.londonsummary.com/fonts/AustinNewsTextWeb.woff2"
+    />
+    <mj-style>
+      .button-style:hover {
+        background-color: #d0dae2 !important;
+        color: rgba(0, 0, 0, 1) !important; /* instead of #000 */
+        border: 1px solid #d0dae2 !important;
+        cursor: pointer;
+      }
+      .button-style:hover .dot {
+        background-color: rgb(16, 35, 65) !important;
+        color: rgba(0, 0, 0, 1) !important;
+      } /* Apple Mail & iOS */
+      a[x-apple-data-detectors],
+      a[href^="http"],
+      a[href^="tel"],
+      a[href^="mailto"],
+      a[href^="maps"],
+      .address-block a {
+        color: #000000cc !important;
+        text-decoration: none !important;
+        font-weight: inherit !important;
+      } /* Gmail (removes underline wrapper) */
+      u + .address-block a {
+        color: #000000cc !important;
+        text-decoration: none !important;
+      }
+    </mj-style>
+    <mj-style inline="inline">
+      .event-image img {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 8px;
+        display: block;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f9f8f9">
+    <mj-raw>
+      <div style="display: none; max-height: 0px; overflow: hidden">
+      Plus London’s Michelin Stars</div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden
+      preview text --> <div style="display: none; max-height: 0px; overflow:
+      hidden"> &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj;
+      &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp;
+      &#8199; &shy; </div>
+    </mj-raw>
+    <mj-spacer height="15px"></mj-spacer>
+    <!-- header -->
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 1px 1px 1px"
+      border-radius="10px"
+    >
+      <mj-column background-color="#ffffff" border-radius="10px" padding="0">
+        <!-- Top red strip -->
+        <mj-text padding="0">
+          <div
+            style="
+              height: 6px;
+              border-top-left-radius: 8px;
+              border-top-right-radius: 8px;
+              background-color: #80011f;
+            "
+          ></div>
+        </mj-text>
+        <!-- View / Advertise Links -->
+        <mj-text
+          align="center"
+          padding="14px 0 28px 0px"
+          color="#000000CC"
+          font-size="11px"
+          font-family="Arial"
+          font-weight="300"
+        >
+          <a
+            href="https://www.londonsummary.com/archives/commute-chaos-culture-flex"
+            style="color: #000000cc; text-decoration: underline"
+            >View in browser</a
+          >
+          &nbsp;|&nbsp;
+          <a
+            href="https://www.londonsummary.com/advertise"
+            style="color: #000000cc; text-decoration: underline"
+            >Advertise</a
+          >
+        </mj-text>
+        <!-- Logo and Date -->
+        <mj-section background-color="#ffffff" padding="0px 10px 0px 10px">
+          <mj-group width="100%" padding="0px">
+            <mj-column width="50%" vertical-align="bottom">
+              <mj-image
+                align="left"
+                width="226px"
+                src="https://www.londonsummary.com/logo-grey.png"
+                href="https://www.londonsummary.com/"
+                alt="London Summary newsletter logo"
+                padding="0px"
+              />
+              <mj-image
+                width="1px"
+                src="https://www.londonsummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+                alt=""
+              />
+            </mj-column>
+            <mj-column width="50%" vertical-align="bottom">
+              <mj-text
+                align="right"
+                font-size="16px"
+                font-family="Arial"
+                font-weight="300"
+                color="#00000096"
+                padding="0"
+                >Feb 4, Wed • AQI 26
+              </mj-text>
+            </mj-column>
+          </mj-group>
+        </mj-section>
+        <!-- Divider line -->
+        <mj-divider
+          border-color="#EBEBEB"
+          border-width="1px"
+          width="100%"
+          padding="7px 20px 0 20px"
+        />
+        <!-- In this edition -->
+        <mj-text
+          padding="20px 20px 0px 20px"
+          font-family="Arial"
+          color="#000000"
+          font-size="16px"
+          font-weight="600"
+        >
+          In this edition:
+        </mj-text>
+        <mj-table
+  font-family="Arial"
+  cellpadding="0"
+  cellspacing="0"
+  padding="19px 30px 0px 30px"
+  style="width: 100%"
+>
+  <tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px; padding-bottom: 5px;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 24px; padding-bottom: 11px;">
+    Liverpool Street Revamp
+  </td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px; padding-bottom: 5px;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 24px; padding-bottom: 11px;">
+    Activist’s come to LSE
+  </td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6;">
+    DIY Valentines
+  </td>
+</tr>
+</mj-table>
+
+
+        <!-- Join link -->
+        <mj-text
+          padding="17px 20px 20px 20px"
+          font-family="Arial"
+          color="#000000"
+          font-size="16px"
+          line-height="1.5"
+        >
+          Was this email forwarded to you?
+          <a
+            href="https://www.londonsummary.com/"
+            target="_blank"
+            style="
+              text-decoration: none;
+              border-bottom: 2px solid #80011f;
+              color: black;
+            "
+          >
+            Join London Summary</a
+          >.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="20px" />
+    <mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
+  <mj-column background-color="#fff" border-radius="10px" padding="0px">
+    <mj-image
+      border-radius="10px 10px 0 0"
+      padding="0"
+      width="600px"
+      src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+      alt="Liverpool Street revamp gets green light"
+      href="https://www.londonsummary.com/"
+    />
+    <mj-text
+      padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">
+        Liverpool Street revamp gets green light
+      </h2>
+    </mj-text>
+    <mj-text padding="0px 20px 0px 20px" font-family="Arial" color="#000000">
+      <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+  <strong>What happened:</strong> The City of London has approved Network Rail’s £1.2bn <a href="https://www.theguardian.com/artanddesign/2023/may/13/liverpool-street-station-london-redevelopment-on-the-wrong-track-herzog-and-de-meuron-sellar" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">redevelopment</a> (<a href="https://news.cityoflondon.gov.uk/city-of-london-approves-major-redevelopment-of-britains-busiest-station-in-boost-for-growth/" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">artist impression</a>) of London Liverpool Street, the UK’s busiest station. The plan includes a mixed-use 97m tower built above the concourse, plus major station upgrades. A planning application was first filed in 2023, then revised after thousands of objections, with new plans unveiled in November and further tweaks in April.
+</p>
+<p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+  <strong>Why it matters:</strong> Liverpool Street is a Grade II-listed heritage site, so the approval sets a precedent for how aggressively London will “build up” over historic transport hubs. Supporters argue it is essential capacity planning, Network Rail says concourse capacity will rise 76%, with better passenger flow, more lifts and escalators, and step-free access to all platforms and the Underground. Critics, including the Victorian Society, call it a disfiguring office-led scheme that demolishes listed buildings and harms a conservation area.
+</p>
+<p style="font-size: 16px; line-height: 24px; padding-top: 15px; padding-bottom: 20px; margin: 0;">
+  <strong>Criticism: </strong>Campaigners will now look to the mayor of London and potentially the secretary of state for further intervention. Passenger demand is forecast to hit 158 million annually, so delivery timelines and disruption management will matter.
+</p>
+    </mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="20px" />
+<mj-section background-color="#eff1f4" css-class="border-line" padding="1px 1px 1px 1px" border-radius="10px">
+  <mj-raw>
+    <a href="https://link.londonsummary.com/ls-4-feb-2026-p-ad-x-4" target="_blank" style="color:black">
+  </mj-raw>
+  <mj-column background-color="#fff" border-radius="10px" padding="0px">
+    <mj-image border-radius="10px 10px 0 0" padding="0px" width="600px"
+      src="https://www.londonsummary.com/email/ad/REPLACE_ME.jpg"
+      alt="Advertisement promoting newsletter sponsorship to reach engaged readers" />
+    <mj-text padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000">
+      <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">
+        This could be your business
+      </h2>
+    </mj-text>
+    <mj-text padding="0px 20px 0px 20px" font-family="Arial" color="#000000">
+      <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+        Reach a wide audience of engaged, loyal readers right where they’re paying attention.
+        Our audience is educated, influential, and ready to respond.
+      </p>
+      <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+        Whether you want to drive revenue, build awareness, or launch something fresh,
+        this is your spot. Secure your placement and get in front of the right eyes.
+      </p>
+      <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; padding-bottom: 20px; margin: 0;">
+        <a style="text-decoration: none; border-bottom: 2px solid #80011f; color: black;">
+          <strong>Partner with us</strong>
+        </a>
+      </p>
+    </mj-text>
+  </mj-column>
+  <mj-raw></a></mj-raw>
+</mj-section>
+<mj-spacer height="20px" />
+
+<mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
+  <mj-column background-color="#fff" border-radius="10px" padding="0px">
+    <mj-image
+      border-radius="10px 10px 0 0"
+      padding="0"
+      width="600px"
+      src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+      alt="Mega office deals roar back"
+      href="https://www.londonsummary.com/"
+    />
+    <mj-text
+      padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">
+        Mega office deals roar back
+      </h2>
+    </mj-text>
+    <mj-text padding="0px 20px 0px 20px" font-family="Arial" color="#000000">
+      <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+  <strong>What happened: </strong>London’s office market rebounded in 2025, with big lettings and investment deals returning as “return to office” momentum strengthened, and interest rates eased.
+</p>
+<p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+  <strong>Highlight deals:</strong>
+</p>
+<ul style="margin: 12px 0 0 18px; padding: 0"><li style="font-size: 16px; line-height: 1.5; margin-bottom: 6px;">CoStar counted 14 new lettings above 100,000 sq ft, double 2024, and net absorption of just under 4 million sq ft, the best occupancy gain since 2018.</li><li style="font-size: 16px; line-height: 1.5; margin-bottom: 6px;">On the investment side, there were 19 office transactions over £100m, up 73% year on year, plus eight £200m-plus deals, up from one in 2024.</li><li style="font-size: 16px; line-height: 1.5; margin-bottom: 6px;">Landmark sales included Hayfin buying 70 St Mary Axe for £330m (5.5% yield) and Royal London paying £250m for 1 Newman Street (4.5% yield).</li></ul>
+<p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+  <strong>Why it matters: </strong>A tighter construction pipeline and improving lending conditions are pushing prime rents higher, with £200/sq ft increasingly normal in the West End and £150/sq ft in the City.
+</p>
+<p style="font-size: 16px; line-height: 24px; padding-top: 15px; padding-bottom: 20px; margin: 0;">
+  <strong>What to watch:</strong> More action in older towers via refurbishments, not new builds, as high costs and tougher planning slow fresh supply.
+</p>
+    </mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="20px" />
+    
+<mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
+  <mj-column background-color="#fff" border-radius="10px" padding-bottom="7px">
+    <mj-text padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000">
+      <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">What’s on</h2>
+    </mj-text>
+    <mj-divider border-width="4.8px" border-color="#80011F" width="35px" align="left" padding="0 20px 0px 20px" />
+    <mj-spacer height="10px" />
+
+<mj-section padding="5px 10px 0px 10px" padding-bottom="0px !important">
+      <mj-group width="100%" padding="0px !important">
+        <mj-column width="30%" vertical-align="top" padding="0">
+          <mj-image
+            align="left"
+            src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+            alt="Lucian Freud drawings"
+            padding="0px"
+            border-radius="8px"
+            fluid-on-mobile="true"
+            css-class="event-image"
+            href="https://www.npg.org.uk/whatson/exhibitions/2026/lucian-freud-drawing-into-painting"
+          />
+        </mj-column>
+        <mj-column width="70%" vertical-align="top">
+          <mj-text padding="0px 15px 0px 15px" font-family="Arial" color="#000000" font-size="16px">
+            <p style="margin-bottom: 7px !important; margin-top: 6px !important; line-height: 16px;">
+              <strong>Lucian Freud drawings</strong>
+            </p>
+            <p style="line-height: 24px">Tickets are live for NPG’s Lucian Freud drawings show, featuring never-before-seen works. 12 Feb to 4 May 2026, tickets starting £23 DIY Valentines London&#39;s go-to-destination to pick up artwork on a budget, whilst supporting emerging talent.</p>
+            <p style="margin-bottom: 0px; line-height: 16px">
+              <a
+                style="text-decoration: none; border-bottom: 2px solid #80011f; color: black;"
+                target="_blank"
+                href="https://www.npg.org.uk/whatson/exhibitions/2026/lucian-freud-drawing-into-painting"
+              >From Feb 14, £3.20</a>
+            </p>
+          </mj-text>
+        </mj-column>
+      </mj-group>
+    </mj-section>
+</mj-column>
+</mj-section>
+<mj-spacer height="20px" />
+    <mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
+  <mj-column background-color="#fff" border-radius="10px" padding="0px">
+    <mj-text padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000">
+      <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">Long story short</h2>
+    </mj-text>
+    <mj-divider border-width="4.8px" border-color="#80011F" width="35px" align="left" padding="0 20px 0px 20px" />
+    <mj-spacer height="30px" />
+
+    <mj-text padding="0px 20px 10px 20px" font-family="Arial" color="#000000">
+  <h3 style="font-size: 20px; line-height: 1.2; font-weight: 700; margin: 0;">Politics &amp; Crown</h3>
+</mj-text>
+<mj-table
+  font-family="Arial"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 32px 0px 32px"
+  style="width: 100%"
+>
+  <tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://www.theguardian.com/politics/live/2026/feb/11/pmqs-keir-starmer-kemi-badenoch-labour-matthew-doyle-peter-mandelson-latest-news-updates" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">Downing Street refused to say whether Labour peer Matthew Doyle could lose his peerage </a>after allegations he failed to disclose campaigning for someone charged with sex offences. No 10 said it won’t “get ahead” of Labour’s internal investigation and claimed there’s no precedent for withdrawing a peerage after it’s announced. Ministers say they plan legislation to allow peerages to be removed for misconduct, initially aimed at Peter Mandelson.
+  </td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://apnews.com/article/epstein-andrew-king-charles-iii-07cb587ce6468d80df268781f1a44e71" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">King Charles III is distancing himself more from his brother Andrew as new Epstein-related documents emerge</a>. Since October, Charles has stripped Andrew of the “prince” title, removed him from Royal Lodge, and publicly backed Epstein’s victims. After Thames Valley Police said it was assessing fresh allegations, Buckingham Palace made the rare move of saying it would cooperate if approached, aiming to contain the fallout to Andrew and protect the monarchy.
+  </td>
+</tr>
+</mj-table>
+<mj-text padding="20px 20px 10px 20px" font-family="Arial" color="#000000">
+  <h3 style="font-size: 20px; line-height: 1.2; font-weight: 700; margin: 0;">Business</h3>
+</mj-text>
+<mj-table
+  font-family="Arial"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 32px 5px 32px"
+  style="width: 100%"
+>
+  <tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://www.theguardian.com/business/2026/feb/11/activist-investor-elliott-builds-up-stake-in-london-stock-exchange-group" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">Activist American hedge fud Elliott Management has built a “significant” stake in London Stock Exchange Group and is pressuring for performance improvements, </a>potentially including a new share buyback. LSEG shares jumped up to 6% on the news, despite being down over 35% in the past year amid worries about fewer listings and AI disrupting its data business. LSEG says it’s in active dialogue with investors.
+  </td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://www.businesstimes.com.sg/companies-markets/banking-finance/uk-fintech-funding-fell-21-last-year-hitting-lowest-2020" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">UK fintech funding fell 21% last year to about US$11bn, the lowest since 2020</a>, with 418 deals versus 527 in 2024, per KPMG (using PitchBook data). Revolut’s ~US$4bn raise at a US$75bn valuation made up a big share. The UK still out-raised several regions combined, but lagged the US. Globally, fintech funding rose to US$116bn, with M&amp;A jumping.
+  </td>
+</tr>
+</mj-table>
+
+  </mj-column>
+</mj-section>
+<mj-spacer height="20px" />
+<mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
+  <mj-column background-color="#fff" border-radius="10px" padding-bottom="20px">
+    <mj-image border-radius="10px 10px 0 0" padding="0" width="600px"
+      src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+      alt="REPLACE_ME"
+      href="https://www.londonsummary.com/" />
+    <mj-text padding="20px 20px 10px 20px" font-family="Arial" color="#000000">
+  <h3 style="font-size: 20px; line-height: 1.2; font-weight: 700; margin: 0;">Art &amp; culture</h3>
+</mj-text>
+<mj-table
+  font-family="Arial"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 32px 0px 32px"
+  style="width: 100%"
+>
+  <tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <br><a href="https://www.ucl.ac.uk/news/2026/feb/ucl-celebrates-200-years-landmark-year-begins" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">UCL celebrates turning 200. </a>Founded in 1826 as “The London University” and renamed in 1836, it pushed against the Oxbridge model early, opening doors across class and creed. In 1878 it admitted women across most faculties, then helped invent modern student life with an officially recognised union. Its hospital partnership shaped European anaesthesia, endured wartime damage, and treated 7/7 victims.
+  </td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://www.theguardian.com/uk-news/2026/feb/10/actor-noel-clarke-arrested-over-allegation-of-attempted-in-2007?utm_source=chatgpt.com" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">Noel Clarke has been arrested by the Metropolitan Police on suspicion of attempted rape, </a>exposure, and sexual assault by touching, linked to an alleged 2007 incident in London involving a woman in her 20s. Police also questioned him about a separate voyeurism allegation from 2013. He has been bailed while the investigation continues.
+  </td>
+</tr>
+</mj-table>
+<mj-text padding="20px 20px 10px 20px" font-family="Arial" color="#000000">
+  <h3 style="font-size: 20px; line-height: 1.2; font-weight: 700; margin: 0;">Misc</h3>
+</mj-text>
+<mj-table
+  font-family="Arial"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 32px 5px 32px"
+  style="width: 100%"
+>
+  <tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://news.sky.com/story/speed-limit-blamed-as-london-tops-list-of-worlds-slowest-capitals-for-driving-13496924" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">London tops list of world's slowest capitals for driving</a>
+  </td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://secretldn.com/london-michelin-guide-restaurants-guide/" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">Comprehensive guide to all of London's Michelin-star restaurants</a><br>
+  </td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://secretldn.com/shard-light-up-valentines-day/" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">The Shard will light up this weekend for Valentine’s Day</a>
+  </td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://secretldn.com/top-news/" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">Britain's ugliest building is now a historic monument</a>
+  </td>
+</tr>
+</mj-table>
+  </mj-column>
+</mj-section>
+<mj-spacer height="20px" />
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 1px 1px 1px"
+      border-radius="10px"
+    >
+      <mj-column background-color="#fff" border-radius="10px" padding="0px">
+        <mj-table
+          css-class="new-heading-with-border"
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+          padding="20px 30px 10px 30px"
+        >
+          <tr>
+            <!-- Left flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 50%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 2px solid #80011f">
+                &nbsp;
+              </div>
+            </td>
+            <!-- Center text -->
+            <td
+              valign="middle"
+              style="padding: 0 15px; text-align: center; white-space: nowrap"
+            >
+              <span
+                class="heading-font"
+                style="
+                  font-family:
+                    Austin News Text Web,
+                    TNYAdobeCaslonPro,
+                    &quot;Times New Roman&quot;,
+                    serif;
+                  display: inline-block;
+                  font-weight: 400;
+                  font-size: 24px;
+                  line-height: 1.2;
+                  color: #000000;
+                "
+              >
+                Did you know?</span
+              >
+            </td>
+            <!-- Right flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 50%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 2px solid #80011f">
+                &nbsp;
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+        <mj-text
+          align="center"
+          padding="10px 30px 20px 30px"
+          font-family="Arial"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 24px; margin: 0 !important">
+    <strong>There are fake “</strong><a href="https://www.mylondon.news/news/transport/beautiful-house-hiding-london-underground-29829111" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;"><strong>townhouses</strong></a><strong>” that are actually just a wall: 23-24 Leinster Gardens hide gaps in the Underground line.  </strong><br>
+  </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="20px" />
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 1px 1px 1px"
+      border-radius="10px"
+    >
+      <mj-column background-color="#ffffff" border-radius="10px" padding="0">
+        <!-- Top red strip -->
+        <mj-text padding="0">
+          <div
+            style="
+              height: 6px;
+              border-top-left-radius: 8px;
+              border-top-right-radius: 8px;
+              background-color: #80011f;
+            "
+          ></div>
+        </mj-text>
+        <!-- Logo and Date -->
+        <mj-spacer height="40px" />
+        <mj-image
+          align="left"
+          width="159px"
+          src="https://www.londonsummary.com/logo-grey.png"
+          href="https://www.londonsummary.com/"
+          alt="London Summary newsletter logo"
+          padding="0px 20px"
+        />
+        <mj-text
+          padding="18px 20px 0px 20px"
+          font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+          color="#000000"
+        >
+          <h2
+            style="
+              font-size: 24px;
+              line-height: 1.2;
+              font-weight: 400;
+              margin: 0;
+            "
+          >
+            The pulse of London.
+          </h2>
+        </mj-text>
+        <mj-text
+          padding="10px 20px 0px 20px"
+          font-family="Arial"
+          font-weight="400"
+          color="#000"
+        >
+          <p style="font-size: 15px; line-height: 1.4; margin: 0 !important">
+            This edition was produced by our editorial team and meets the
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #80011f;
+                color: black;
+              "
+              href="https://www.houseofsummary.com/"
+              target="_blank"
+              >House of Summary standards</a
+            >: accuracy, consistency, high quality, readers first, respect for
+            time, and objectivity.
+          </p>
+        </mj-text>
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="#00000080"
+          padding="20px 20px 35px 20px"
+          width="100%"
+        />
+        <!-- Footer content -->
+        <mj-text
+          padding="0px 20px 0px 20px"
+          font-family="Arial"
+          color="#00000099"
+          font-weight="400"
+        >
+          <p
+            style="
+              font-size: 10px;
+              line-height: normal;
+              margin-top: 0 !important;
+              margin-bottom: 0px !important;
+            "
+          >
+            <strong>Images credits:</strong> The Associated Press, The Guardian, National Portrait Gallery, The Postal Museum, London.gov.uk, Historic UK, Ian Visits, City of London Corporation, Wikipedia
+          </p>
+        </mj-text>
+        <mj-text
+          padding="20px 20px 0px 20px"
+          font-family="Arial"
+          color="#000"
+          font-weight="400"
+        >
+          <p
+            style="
+              font-size: 12px;
+              line-height: normal;
+              margin-top: 0;
+              margin-bottom: 5px !important;
+            "
+          >
+            Send us your feedback at
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #80011f;
+                color: #000 !important;
+              "
+              href="mailto:readers@londonsummary.com"
+              target="_blank"
+              >readers@londonsummary.com</a
+            >.
+          </p>
+          <p
+            style="
+              font-size: 12px;
+              line-height: normal;
+              margin-top: 0;
+              margin-bottom: 5px !important;
+            "
+          >
+            Interested in connecting with curious, informed readers?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #80011f;
+                color: #000 !important;
+              "
+              href="https://www.londonsummary.com/advertise"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+          <p
+            style="
+              font-size: 12px;
+              line-height: normal;
+              margin-top: 0;
+              margin-bottom: 0 !important;
+            "
+          >
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #80011f;
+                color: #000 !important;
+              "
+              href="https://www.londonsummary.com/unsubscribewithfeedback?unique_id=%unique_id%&campaign_id=%campaign_id%"
+              target="_blank"
+              >Unsubscribe</a
+            >
+            from this email.
+          </p>
+        </mj-text>
+        <!-- old icons -->
+        <mj-social
+          font-size="15px"
+          mode="horizontal"
+          padding="30px 0"
+          margin="0"
+        >
+          <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://www.facebook.com/Londonsummary/ "
+            src="https://www.londonsummary.com/email/images/fb.png"
+          />
+          <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://x.com/TheLondonSum"
+            src="https://www.londonsummary.com/email/images/x.png"
+          />
+          <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://www.instagram.com/londonsummary/"
+            src="https://www.londonsummary.com/email/images/insta.png"
+          />
+          <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://www.linkedin.com/showcase/london-summary"
+            src="https://www.londonsummary.com/email/images/ln.png"
+          />
+          <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://www.threads.com/@londonsummary"
+            src="https://www.londonsummary.com/email/images/threads.png"
+          />
+        </mj-social>
+        <mj-text
+          padding="0px 12px 0px 12px"
+          font-family="Arial"
+          font-weight="400"
+        >
+          <p
+            class="address-block"
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #000000cc !important;
+              line-height: normal;
+              margin-top: 0 !important;
+              margin-bottom: 5px !important;
+            "
+          >
+            <span style="color: inherit !important">
+              30 N Gould St, Ste N, Sheridan, WY 82801, United States
+            </span>
+          </p>
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #000000cc;
+              line-height: normal;
+              margin-top: 0 !important;
+              margin-bottom: 0 !important;
+            "
+          >
+            Copyright © 2026 House of Summary LLC, All rights reserved.
+          </p>
+        </mj-text>
+        <mj-spacer height="32px" />
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="15px" /> </mj-body
+></mjml>

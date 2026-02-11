@@ -1,0 +1,647 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      h2,
+      img,
+      p {
+        margin: 0;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+    </mj-style>
+    <!-- <mj-font name="Roboto+Serif" href="https://fonts.googleapis.com/css?family=Roboto+Serif" /> -->
+    <mj-font
+      name="Roboto+Serif"
+      href="https://fonts.googleapis.com/css2?faily=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+    />
+    <mj-style>
+      .button-style:hover {
+        background-color: #dcedff !important;
+        color: rgba(0, 0, 0, 1) !important; /* instead of #000 */
+        border: 1px solid #dcedff !important;
+        cursor: pointer;
+      }
+      .button-style:hover .dot {
+        background-color: #4d3060 !important;
+        color: rgba(0, 0, 0, 1) !important;
+      }
+    </mj-style>
+    <mj-style>
+      .feedback-btn:hover {
+        opacity: 0.8 !important;
+        transform: scale(1.1) !important;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f9f8f9">
+    <mj-raw>
+      <div style="display: none; max-height: 0px; overflow: hidden">
+      Plus Facebook&#39;s AI feature </div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden
+      preview text --> <div style="display: none; max-height: 0px; overflow:
+      hidden"> &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj;
+      &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp;
+      &#8199; &shy; </div>
+    </mj-raw>
+    <mj-spacer height="15px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-spacer height="16px" />
+        <mj-image
+          padding="10px 12px 6px 12px"
+          css-class="light_img"
+          width="150px"
+          src="https://www.presidentialsummary.com/logo.png"
+          href="https://www.presidentialsummary.com"
+          alt=""
+        />
+        <mj-image
+          width="1px"
+          src="https://www.presidentialsummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+          alt=""
+        />
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="0px 12px 10px 12px"
+        />
+        <mj-text
+          padding="0px 12px 0px 12px "
+          font-family="Roboto+Serif"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5">
+            <strong>In this edition:</strong>
+          </p>
+        </mj-text>
+        <mj-table
+  font-family="Roboto+Serif"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 18px 0px 18px"
+  style="width: 100%"
+>
+  <tr>
+    <td style="
+                font-size: 18px;
+                width: 20px;
+                vertical-align: top;
+                padding-right: 8px;
+                line-height: 1.6;
+              "> → </td>
+    <td style="font-size: 16px; line-height: 1.6">Google ICE compliance</td>
+  </tr>
+<tr>
+    <td style="
+                font-size: 18px;
+                width: 20px;
+                vertical-align: top;
+                padding-right: 8px;
+                line-height: 1.6;
+              "> → </td>
+    <td style="font-size: 16px; line-height: 1.6">Indonesia sends troops to Gaza</td>
+  </tr>
+<tr>
+    <td style="
+                font-size: 18px;
+                width: 20px;
+                vertical-align: top;
+                padding-right: 8px;
+                line-height: 1.6;
+              "> → </td>
+    <td style="font-size: 16px; line-height: 1.6">Paramount sweetens bid</td>
+  </tr>
+</mj-table>
+
+        <mj-text
+          padding="10px 12px 17px 12px"
+          font-family="Roboto+Serif"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5; margin-bottom: 0px">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="https://link.presidentialsummary.com/ps-advertise"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+        </mj-text>
+        <!-- <mj-divider border-width="1px" border-style="solid" border-color="lightgrey" padding="10px 12px" /> -->
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-text
+  padding="16px 12px 10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="white"
+>
+  <h2
+    style="
+      padding-bottom: 8px;
+      color: #4d3060;
+      text-align: left;
+      border-bottom: 2px solid #4d3060;
+
+      font-size: 26px;
+      line-height: 1.2;
+      font-weight: 400;
+    "
+  >
+    Spotlight
+  </h2>
+</mj-text>
+    <mj-text padding="10px 12px" font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;" color="#000000">
+  <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin-top: 2px !important;">
+    US-Canada bridge tensions
+  </h2>
+</mj-text>
+<mj-image
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.presidentialsummary.com/email/images/REPLACE_ME.jpg"
+  alt="US-Canada bridge tensions"
+  href="https://www.presidentialsummary.com/"
+/>
+<mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5"><strong>What happened?</strong> President Trump threatened to block the <a href="https://time.com/7377319/trump-threatens-canada-ontario-michigan-bridge/" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Gordie Howe International Bridge</a>, a 1.5-mile bridge connecting Detroit and Windsor, Ontario. He demanded that Canada turn over at least half of the bridge's ownership and agree to other unspecified demands as the rift between Washington and Ottawa deepens. The publicly owned bridge, shared by Canada and Michigan, is nearly complete and designated as an official US port of entry.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>Criticism:</strong> Trump accused Canada of treating the US unfairly and argued Washington should share in the economic benefits of the bridge. He also claimed Canada controls the project and that no American steel was used, calling it disadvantageous to US interests. Canadian PM Mark Carney rejected those assertions, pointing to the 2012 <a href="https://www.mulroneyinstitute.ca/node/4621" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Canada-Michigan Crossing Agreement</a>, which establishes joint public ownership and confirms the use of both US and Canadian labor and steel.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>History: </strong>The bridge, which spans the Detroit River and is named after late Canadian hockey legend Gordie Howe, who played for the Detroit Red Wings. Construction began in 2018, and its estimated expense is $4.73B. The organization developing the bridge, the Windsor-Detroit Bridge Authority, is a Canadian federal Crown corporation, wholly owned by the government.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong><em>Fact: </em></strong><em>On Jan 30, the US Department of Homeland Security declared that the bridge would serve as an official port of entry and would save travelers $12.7M annually.</em></p>
+</mj-text>
+  </mj-column>
+</mj-section>
+
+<mj-spacer height="10px" />
+<mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-raw>
+    <a href=""
+    target="_blank" style="color:black">
+  </mj-raw>
+
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-spacer height="14px" />
+
+    <mj-text
+      padding="2px 12px 0px 12px"
+      font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+      color="white"
+    >
+      <h2
+        style="
+          padding-bottom: 8px;
+          color: #4d3060;
+          text-align: left;
+          letter-spacing: 1px;
+          border-bottom: 2px solid #4d3060;
+          font-size: 26px;
+          line-height: 1.2;
+          font-weight: 300;
+        "
+      >
+        This could be your business
+      </h2>
+    </mj-text>
+
+    <mj-spacer height="12px" />
+
+    <mj-image
+      border-radius="10px"
+      padding="10px 12px 14px 12px"
+      width="600px"
+      src="https://www.presidentialsummary.com/email/ad/REPLACE_ME.jpg"
+      alt="Advertise your business to an engaged, influential audience"
+    />
+
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px">
+        Reach a wide audience of engaged, loyal readers right where they’re
+        paying attention. Our audience is educated, influential, and ready
+        to respond.
+      </p>
+      <p style="font-size: 16px; line-height: 24px">
+        Whether you want to drive revenue, build awareness, or launch
+        something fresh, this is your spot. Secure your placement and get in
+        front of the right eyes.
+      </p>
+    </mj-text>
+
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px">
+        <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #4d3060;
+            color: black;
+          "
+        ><strong>Partner with us</strong></a>
+      </p>
+    </mj-text>
+
+    <mj-spacer height="15px" />
+  </mj-column>
+
+  <mj-raw></a></mj-raw>
+</mj-section>
+
+<mj-spacer height="10px" />
+
+<mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-spacer height="10px" />
+    <mj-text padding="10px 12px" font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;" color="#000000">
+  <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin-top: 2px !important;">
+    Google shares personal data
+  </h2>
+</mj-text>
+<mj-image
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.presidentialsummary.com/email/images/REPLACE_ME.jpg"
+  alt="Google shares personal data"
+  href="https://www.presidentialsummary.com/"
+/>
+<mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5"><strong>What happened?</strong> Google complied with a subpoena from Immigration and Customs Enforcement (ICE) <a href="https://theintercept.com/2026/02/10/google-ice-subpoena-student-journalist/" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">seeking extensive personal data</a> on student activist and journalist Amandla Thomas-Johnson. The request stemmed from his brief attendance at a pro-Palestinian protest in 2024 while studying at Cornell University in NY. Google shared IP addresses, mobile numbers, subscriber information, and bank account details associated with his account.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>Criticism:</strong> The US government is reportedly using a controversial legal tool, an administrative subpoena, to compel tech companies to hand over private user data. These requests have targeted individuals critical of the Trump administration, including anonymous Instagram accounts that share information about ICE raids, as well as people who publicly protest or criticize Trump and his policies. It is believed that ICE may be seeking this information to identify, monitor, and potentially detain those individuals.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>Argument: </strong>Administrative subpoenas allow federal agencies request user information without court approval. While they cannot access email content or search histories, they can demand metadata and identifying details to unmask account holders. Companies are not legally required to comply, but Google says its privacy policy permits data sharing in response to enforceable government requests.</p>
+</mj-text>
+  </mj-column>
+</mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <!-- long stroy short content sections -->
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #4d3060;
+              text-align: left;
+              border-bottom: 2px solid #4d3060;
+
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 400;
+            "
+          >
+            Long story short
+          </h2>
+        </mj-text>
+        <mj-text
+  padding="14px 12px 0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 1px;
+    "
+  >
+    Global Affairs
+  </h3>
+</mj-text>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Indonesia is preparing to send up to 8,000 troops to Gaza to be part of a peacekeeping force under Trump’s second phase of his peace plan.</strong> This marks the first outside force on the territory since 1967. The plan has a mandate from the UN Security Council to establish an International Stabilization Force, which will help secure border areas in Gaza and ensure the territory's demilitarisation, including the disarmament of Hamas (<a href="https://www.bbc.com/news/articles/cvgjwpx9j2do" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">phase II</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Zimbabwe’s cabinet approved draft legislation to extend President Emmerson Mnangagwa's term until 2030. </strong>Under the proposal, presidents would be chosen by MPs rather than in a direct vote and could serve a maximum of two seven-year terms. Public consultations would be held before the bill heads to parliament for debate, where both chambers are dominated by the ruling Zanu-PF party (<a href="https://www.jacarandafm.com/news/news/zimbabwe-cabinet-agrees-extend-presidents-term/" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">constitutional changes)</a>.</p>
+</mj-text>
+<mj-divider
+  border-width="1px"
+  border-style="solid"
+  border-color="lightgrey"
+  padding="0px 12px"
+/>
+<mj-text
+  padding="0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 15px;
+    "
+  >
+    Business &amp; Markets
+  </h3>
+</mj-text>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Vega Security raised $120M in a Series B round to redefine the traditional security detection and response model.</strong> The two-year-old startup, valued at $700M, aims to replace legacy SIEM systems like Splunk by running AI-native threat detection directly in cloud services and data lakes. Vega says its decentralized approach reduces expenses and complexity (<a href="https://techcrunch.com/2026/02/10/vega-raises-120m-series-b-to-rethink-how-enterprises-detect-cyber-threats/" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">security revamp</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Paramount Skydance enhanced its $108.4B bid for Warner Bros Discovery by offering a 25-cent-per-share quarterly ticking fee</strong> <strong>from 2027 if the agreement is delayed. </strong>It also agreed to cover WBD’s $2.8B breakup fee owed to Netflix. The move counters Netflix's pursuit of Warner Bros. studios, franchises like DC and "Game of Thrones," and networks including CNN. Paramount also boosted regulatory progress and financing guarantees (<a href="https://www.cnbctv18.com/business/paramount-sweetens-offer-for-warner-bros-shareholders-in-hostile-takeover-fight-ws-l-19847190.htm" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">sweetened proposal</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>The US Federal Aviation Administration expects Canada to announce Gulfstream certifications </strong>for some business jets that have been delayed for years. The move follows a dispute that escalated after President Trump threatened to decertify Bombardier planes and impose tariffs. Aviation experts cautioned against politicizing aircraft certification, warning of broader risks to global aviation norms <a href="https://www.theglobeandmail.com/business/article-us-faa-head-says-canada-will-certify-gulfstream-jets/" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">(jet dispute eases</a>).</p>
+</mj-text>
+<mj-divider
+  border-width="1px"
+  border-style="solid"
+  border-color="lightgrey"
+  padding="0px 12px"
+/>
+<mj-text
+  padding="0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 15px;
+    "
+  >
+    Science &amp; Tech
+  </h3>
+</mj-text>
+<mj-image
+  border-radius="10px"
+  padding="0px 12px 10px 12px"
+  width="600px"
+  src="https://www.presidentialsummary.com/email/images/REPLACE_ME.jpg"
+  alt="Science &amp; Tech"
+  href="https://www.presidentialsummary.com/"
+/>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Facebook rolled out a fresh AI-powered feature aimed at boosting creative expression.</strong> The updates include animated profile pictures and a “Restyle” tool that lets users transform Stories and Memories into anime, ethereal, glowy styles, or custom moods, lighting, and backdrops via text prompts. Additionally, text posts support animated backgrounds such as falling leaves or ocean waves (<a href="https://techcrunch.com/2026/02/10/facebook-adds-new-ai-features-animated-profile-photos-and-backgrounds-for-text-posts/" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">fresh update</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Researchers at the University of Geneva found that tumors can reprogram neutrophils (typically infection-fighting immune cells) into cancer-promoting agents.</strong> Once inside the tumor microenvironment, neutrophils begin producing the chemokine CCL3, which fuels tumor growth. By selectively disabling CCL3, scientists showed neutrophils stopped supporting cancer, identifying the molecule as a potential marker of tumor progression across multiple cancer types (<a href="https://www.sciencedaily.com/releases/2026/02/260210040604.htm" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">cancer’s immune switch</a>).</p>
+</mj-text>
+<mj-divider
+  border-width="1px"
+  border-style="solid"
+  border-color="lightgrey"
+  padding="0px 12px"
+/>
+<mj-text
+  padding="0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 15px;
+    "
+  >
+    Whatnot
+  </h3>
+</mj-text>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">Suspect detained in Nancy Guthrie kidnapping after FBI releases surveillance footage (<a href="https://apnews.com/article/savannah-guthrie-mom-missing-arizona-b765fed6b9669441383b75860263ac99" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Arizona kidnapping update</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">Buddhist monks complete a 15-week peace march from Texas to Washington (<a href="https://www.npr.org/2026/02/10/g-s1-109416/buddhist-monks-finish-walk-for-peace" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">walk for peace</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">Spotify hits a record 751M monthly users, thanks to Wrapped (<a href="https://www.bbc.com/news/articles/cwy8lg9lkj3o" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">user milestone</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">Czech skaters face criticism for using AI-generated music at the Olympics (<a href="https://people.com/czech-figure-skaters-face-backlash-for-using-ai-generated-music-in-olympic-routine-11903604" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">AI music backlash</a>).</p>
+</mj-text>
+
+        <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#ffffff">
+          <!-- banner -->
+          <div
+            style="
+              background-color: #4d3060;
+              border-radius: 8px;
+              padding: 22px 12px;
+              font-size: 18px;
+              line-height: 1.5;
+              font-weight: 400;
+              text-align: center;
+              color: #ffffff;
+            "
+          >
+            On this day in 2011, Egyptian President Hosni Mubarak <a href="https://www.bbc.com/news/world-middle-east-12433045" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #fff;
+                color: white !important;">stepped down</a> after nearly 30 years in power, following mass demonstrations that were part of the pro-democracy uprisings known as the <a href="https://www.history.com/articles/arab-spring" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #fff;
+                color: white !important;">Arab Spring</a>.
+          </div>
+        </mj-text>
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="10px 12px"
+        />
+        <mj-spacer height="10px" />
+        <mj-text
+          padding="2px 12px 0px 12px"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          <p style="color: #000; font-size: 10px; line-height: 2">
+            <strong>Image credits:</strong> Reuters, Google, Facebook
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Send us your feedback at
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="mailto:readers@presidentialsummary.com"
+              target="_blank"
+              >readers@presidentialsummary.com</a
+            >.
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Interested in connecting with curious, informed readers?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="https://www.presidentialsummary.com/advertise#advertise-form"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="https://www.presidentialsummary.com/unsubscribewithfeedback?unique_id=%unique_id%&campaign_id=%campaign_id%"
+              target="_blank"
+              >Unsubscribe</a
+            >
+            from this email.
+          </p>
+        </mj-text>
+
+        <mj-text padding="10px 12px" font-family="Arial, Helvetica, sans-serif">
+          <p
+            style="
+              margin-top: 0px;
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 1.5;
+            "
+          >
+            30 <span>N</span> <span>Gould</span>
+            <span>St, Ste N, Sheridan, WY 82801, United States</span>
+          </p>
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 0;
+              margin-bottom: 14px;
+            "
+          >
+            Copyright © 2026 House of Summary, All rights reserved.
+          </p>
+        </mj-text>
+        <mj-spacer height="10px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="15px"></mj-spacer>
+  </mj-body>
+</mjml>

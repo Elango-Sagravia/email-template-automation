@@ -1,0 +1,623 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      h2,
+      img,
+      p {
+        margin: 0;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+    </mj-style>
+    <mj-font
+      name="Roboto+Serif"
+      href="https://fonts.googleapis.com/css2?family=Roboto  +Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+    />
+    <mj-style>
+      .button-style:hover {
+        background-color: #dcedff !important;
+        color: rgba(0, 0, 0, 1) !important; /* instead of #000 */
+        border: 1px solid #dcedff !important;
+        cursor: pointer;
+      }
+      .button-style:hover .dot {
+        background-color: #06266d !important;
+        color: rgba(0, 0, 0, 1) !important;
+      }
+    </mj-style>
+    <mj-style>
+      .feedback-btn:hover {
+        opacity: 0.8 !important;
+        transform: scale(1.1) !important;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f9f8f9">
+    <mj-raw>
+      <div style="display: none; max-height: 0px; overflow: hidden">
+      </div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden preview text -->
+      <div style="display: none; max-height: 0px; overflow: hidden"> &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; </div>
+    </mj-raw>
+    <mj-spacer height="15px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-spacer height="16px" />
+        <mj-image
+          padding="10px 12px 0px 12px"
+          css-class="light_img"
+          width="150px"
+          src="https://www.geopoliticalsummary.com/gp-logo-grey.png"
+          href="https://www.geopoliticalsummary.com"
+          alt=""
+        />
+        <mj-image
+          width="1px"
+          src="https://www.geopoliticalsummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+          alt=""
+        />
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="4px 12px 10px 12px"
+        />
+        <mj-text
+          padding="0px 12px 0px 12px "
+          font-family="Roboto+Serif"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5">
+            <strong>In this edition:</strong>
+          </p>
+        </mj-text>
+        <mj-table
+          font-family="Roboto+Serif"
+          cellpadding="0"
+          cellspacing="0"
+          padding="0px 18px 0px 18px"
+          style="width: 100%"
+        >
+          <mj-table
+  font-family="Roboto+Serif"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 18px 0px 18px"
+  style="width: 100%"
+>
+  <tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+    line-height: 1.6;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6">Ukraine’s special agreement</td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+    line-height: 1.6;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6">Somalia bolsters alliances</td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+    line-height: 1.6;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6">Why did Russia sell Alaska?</td>
+</tr>
+</mj-table>
+
+        </mj-table>
+        <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+          <p style="font-size: 16px; line-height: 1.5">
+            Was this email forwarded to you?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="https://link.geopoliticalsummary.com/gs-stay-informed"
+              target="_blank"
+            >
+              Stay informed</a
+            >.
+          </p>
+        </mj-text>
+        <!-- <mj-divider border-width="1px" border-style="solid" border-color="lightgrey" padding="10px 12px" /> -->
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-section background-color="#eff1f4" padding="1px 0.5px 1px 1px" border-radius="5px">
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-text
+  padding="16px 12px 10px 12px "
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="white"
+>
+  <h2
+    style="
+      padding-bottom: 8px;
+      color: #06266d;
+      text-align: left;
+      border-bottom: 2px solid #06266d;
+      font-size: 26px;
+      line-height: 1.2;
+      font-weight: 300;
+      margin: 0;
+    "
+  >
+    Spotlight
+  </h2>
+</mj-text>
+    <mj-text
+  padding="10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h2
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 500;
+      margin-top: 2px !important;
+      margin: 0;
+    "
+  >
+    Bridge ownership showdown
+  </h2>
+</mj-text>
+    <mj-image
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+  alt="REPLACE_ME"
+  target="_blank"
+/>
+    <mj-text padding="0px 12px" font-family="Roboto+Serif" color="#A9A7AF">
+  <p style="font-size: 12px; line-height: 1.2; color: #a9a7af; margin: 0;">
+    <i><em>PM Mark Carney said on Tuesday he had a "positive" conversation with Trump, reminding him Canada paid for the bridge. Credits: Washington Post</em></i>
+  </p>
+</mj-text>
+    <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>The what:</strong> President Trump has threatened to <a href="https://www.bbc.com/news/articles/cpw052pkvl0o" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">block the Gordie Howe International Bridge</a>, a $4.7B infrastructure project connecting Windsor, Ontario, and Detroit, Michigan. Following a call with Canadian PM Mark Carney, Trump demanded the US own at least half the bridge, share operational authority, receive toll revenues and economic benefits, and delay its opening until “fully compensated.”</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>The why:</strong> Amid broader US-Canada trade tensions, including dairy tariffs and concerns over Canada’s engagement with China, Trump portrays the bridge as part of an unfair cross-border arrangement. Although Canada financed the project and controls toll revenues, Trump is reframing it as a sovereignty and compensation issue, demanding shared authority and economic participation to strengthen US leverage.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>The big picture:</strong> The threat shows a transactional view of international relations. It treats critical infrastructure as a tool for leverage. The Detroit-Windsor corridor handles roughly a quarter of the US-Canada goods trade, and the Gordie Howe International Bridge is expected to strengthen this critical auto and manufacturing supply chain link. For Canada, the bridge strengthens strategic autonomy by funding and controlling key trade infrastructure, rather than relying on privately owned crossings such as the Ambassador Bridge.</p>
+</mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="10px" />
+<mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-raw>
+    <a href="REPLACE_ME"
+    target="_blank" style="color:black">
+  </mj-raw>
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-spacer height="14px" />
+    <mj-text
+      padding="2px 12px 0px 12px"
+      font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+      color="white"
+    >
+      <h2
+        style="
+          padding-bottom: 8px;
+          color: #06266d;
+          text-align: left;
+          letter-spacing: 1px;
+          border-bottom: 2px solid #06266d;
+          font-size: 26px;
+          line-height: 1.2;
+          font-weight: 300;
+          margin: 0;
+        "
+      >
+        This could be your business
+      </h2>
+    </mj-text>
+    <mj-spacer height="12px" />
+    <mj-image
+      border-radius="10px"
+      padding="10px 12px 14px 12px"
+      width="600px"
+      src="https://www.geopoliticalsummary.com/email/ad/REPLACE_ME.jpg"
+      alt="campaign-x-2"
+    />
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px; margin: 0 0 10px 0;">
+        Reach a wide audience of engaged, loyal readers right where they’re
+        paying attention. Our audience is educated, influential, and ready to
+        respond.
+      </p>
+      <p style="font-size: 16px; line-height: 24px; margin: 0;">
+        Whether you want to drive revenue, build awareness, or launch
+        something fresh, this is your spot. Secure your placement and get in
+        front of the right eyes.
+      </p>
+    </mj-text>
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px; margin: 0;">
+        <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #06266d;
+            color: black;
+          "
+        ><strong>Partner with us</strong></a>
+      </p>
+    </mj-text>
+    <mj-spacer height="15px" />
+  </mj-column>
+  <mj-raw> </a> </mj-raw>
+</mj-section>
+<mj-spacer height="10px" />
+
+<mj-section background-color="#eff1f4" padding="1px 0.5px 1px 1px" border-radius="5px">
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    
+    <mj-text
+  padding="10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h2
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 500;
+      margin-top: 2px !important;
+      margin: 0;
+    "
+  >
+    Cricket meets geopolitics
+  </h2>
+</mj-text>
+    
+    
+    <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Summary: India-Pakistan T20 showdown reinstated after boycott, ICC row, and high-level diplomatic call.</strong></p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>The what:</strong> Cricket’s most politically charged fixture, India vs Pakistan, is back on at the T20 World Cup after <a href="https://www.dw.com/en/cricket-india-pakistan-t20-world-cup-clash-back-on-after-boycott-ends/a-75887991" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">Pakistan reversed its boycott decision</a>. The February 15 match in Colombo was thrown into doubt after Pakistan boycotted in protest of the ICC’s handling of Bangladesh’s withdrawal. However, a call between Pakistan PM Shehbaz Sharif and Sri Lankan President Anura Kumara Dissanayake proved decisive, after which Pakistan directed its team to participate “in the spirit of cricket.”</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>The why: </strong>The latest dispute was triggered after Bangladesh withdrew from matches in India over security concerns. The ICC substituted Bangladesh with Scotland and later ruled that no sanctions would be imposed, a move Pakistan denounced as inconsistent and unjust. The Pakistan Cricket Board responded by boycotting its marquee group match against India. Given the match’s commercial stakes and political symbolism, the dispute rapidly evolved into a diplomatic and governance flashpoint.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>The big picture:</strong> Had Pakistan refused to play, it could have disrupted media rights revenues, sponsorship payouts, and ICC funding distributions tied to marquee fixtures. It may also have strained Pakistan’s relationship with the International Cricket Council, risking diplomatic isolation within cricket’s governance structure. Such a move could have further complicated ties with the Board of Control for Cricket in India, whose commercial dominance significantly influences ICC scheduling, revenue models, and institutional decision-making.</p>
+</mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="10px" />
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #06266d;
+              text-align: left;
+              border-bottom: 2px solid #06266d;
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 300;
+            "
+          >
+            Analysis
+          </h2>
+        </mj-text>
+        <mj-text
+          padding="10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="#000000"
+        >
+          <h2 style="font-size: 24px; line-height: 1.2; font-weight: 500; margin: 0;">
+  Ukraine’s special agreement
+</h2>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #06266d;
+              text-align: left;
+              border-bottom: 2px solid #06266d;
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 300;
+            "
+          >
+            Worldwide
+          </h2>
+        </mj-text>
+        <mj-image
+          border-radius="10px"
+          padding="10px 12px"
+          width="600px"
+          src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+          alt="REPLACE_ME"
+          href="https://www.geopoliticalsummary.com/"
+        />
+        <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+          <p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇸🇴 Somalia - Bolsters alliances. </strong>Somalia has signed a “military cooperation” agreement with Saudi Arabia and Qatar. This is to counter the impact of Israel's recognition of Somaliland. Somalia sees this as a threat to its sovereignty. It fears an Israeli military base could emerge in the breakaway region. At the same time, Somalia’s break with the UAE underscores widening Gulf rivalries spilling into the Horn of Africa (<a href="https://www.aljazeera.com/news/2026/2/10/somalia-saudi-arabia-sign-agreement-on-military-cooperation" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">making new friends</a>).
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇫🇷 France - Epstein inquiry denied.</strong> French leaders are blocking calls for a parliamentary inquiry into Jeffrey Epstein’s ties in France. They argue this issue belongs in the courts. This stance follows President Macron’s attempt to distance France from the scandal. Meanwhile, former minister Jack Lang on Saturday resigned from his longtime post as head of the Arab World Institute (IMA) in Paris over his links to Epstein (<a href="https://www.france24.com/en/americas/20260210-france-epstein-inquiry-macron-says-scandal-mainly-concerns-usa" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">Epstein goes global</a>).
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇧🇩</strong> <strong>Bangladesh - Deploys guards. </strong>Bangladesh is gearing up for national elections with tight security. Over 157,000 police and 100,000 other forces are on duty. This vote comes after a mass uprising that ousted Sheikh Hasina in 2024, amid ongoing political turmoil. Authorities have flagged more than 24,000 polling centers as high- or moderate-risk. Recent clashes have killed hundreds and injured many ( <a href="https://www.france24.com/en/live-news/20260210-bangladesh-police-deploy-to-guard-risky-polling-centres" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">election preparation</a>).
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇦🇲 Armenia - Vance visit. </strong>JD Vance visited Armenia, where he met PM Nikol Pashinyan. They signed a Section 123 nuclear cooperation agreement. This supports the peaceful use of US nuclear technology while boosting Armenian energy security and diversifying its energy sources. The visit shows Washington’s rising interest in the South Caucasus  (<a href="https://news.am/eng/news/929632.html" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">US-Armenian relations</a>).
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇺🇦 Ukraine - Olympic helmet controversy</strong>. The IOC has banned Ukrainian skeleton racer Vladyslav Heraskevych from wearing a helmet that honors athletes killed in the war with Russia. They cited rules against political statements. Ukraine argued the helmet was non-political. As a compromise, Heraskevych can wear a black armband (<a href="https://www.dw.com/en/ioc-bars-ukrainian-skeleton-racer-vladyslav-heraskevych-from-wearing-memorial-helmet-at-olympics/a-75893507" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">sports meets geopolitics again</a>).
+</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #06266d;
+              text-align: left;
+              border-bottom: 2px solid #06266d;
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 300;
+            "
+          >
+            Foundations
+          </h2>
+        </mj-text>
+        <mj-text
+  padding="10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h2 style="font-size: 24px; line-height: 1.2; font-weight: 500; margin: 0;">
+    Why did Russia sell Alaska?
+  </h2>
+</mj-text>
+<mj-image
+  border="1px solid #00000013"
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+  alt="REPLACE_ME"
+  href="https://www.geopoliticalsummary.com/"
+/>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#A9A7AF">
+  <p style="font-size: 12px; line-height: 1.2; color: #a9a7af; margin: 0;">
+    <i><em>This treasury warrant, issued on August 1, 1868, at the Sub-Treasury Building at 26 Wall Street, New York, New York, transferred $7.2M to the Russian Minister to the US. Credits: US Treasury</em></i>
+  </p>
+</mj-text>
+<mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>The agreement</strong>: Russia <a href="https://www.aljazeera.com/news/2025/8/15/why-did-russia-sell-alaska-to-the-united-states" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">sold Alaska to the US</a> on March 30, 1867, for $7.2M. The treaty was negotiated by US Secretary of State William H. Seward and Russian envoy Eduard de Stoeckl. The US Senate ratified the Treaty of Cession on April 9, 1867, and the formal transfer occurred on October 18 in Sitka. At the time, critics derided it as “Seward’s Folly,” questioning the value of the remote territory.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>The why:</strong> Russia sold Alaska primarily because it was strategically vulnerable and economically underperforming. Alaska was remote, expensive to administer, and difficult to defend, especially against Britain, whose forces were entrenched in Canada. If war broke out, Russia risked losing the territory without compensation. At the same time, the once-lucrative fur trade was declining. Selling Alaska to the US allowed Russia to monetize the asset while strengthening ties with a potential counterweight to British power in North America.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>On the ground:</strong> By the early 1900s, Alaska’s economy expanded beyond gold into fishing and copper mining. The 1968 Prudhoe Bay oil discovery transformed the state. Oil revenues fund public services and the Permanent Fund Dividend, enabling no state gains or sales tax. Tourism complements resource extraction, cementing Alaska’s economic evolution.</p>
+</mj-text>
+        <!-- footer-->
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="10px 12px"
+        />
+        <mj-spacer height="10px" />
+        <mj-text
+          padding="3px 12px 0px 12px"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Send us your feedback at
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="mailto:readers@geopoliticalsummary.com"
+              target="_blank"
+              >readers@geopoliticalsummary.com</a
+            >.
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Interested in connecting with curious, informed readers?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="https://www.geopoliticalsummary.com/advertise#advertise-form"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+          <!-- <p style="color: #000; font-size: 10px; line-height: 1.7">
+           "A note from Affirm Payment options through Affirm are subject to an eligibility check and are provided by these lending partners: <a style="text-decoration: none; border-bottom: 2px solid #06266D; color: black;"
+      href="https://www.affirm.com/lenders" target="_blank"
+      >affirm.com/lenders</a>. Options depend on your purchase amount, and a down payment may be required. CA residents: Loans by Affirm Loan Services, LLC are made or arranged pursuant to a California Financing Law license. For licenses and disclosures, see <a style="text-decoration: none; border-bottom: 2px solid #06266D; color: black;"
+      href="https://www.affirm.com/licenses" target="_blank"
+      >affirm.com/licenses</a>."
+                </p> -->
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="https://www.geopoliticalsummary.com/unsubscribewithfeedback?unique_id=%unique_id%&campaign_id=%campaign_id%"
+              target="_blank"
+              >Unsubscribe</a
+            >
+            from this email.
+          </p>
+        </mj-text>
+
+        <mj-text
+          padding="10px 12px 4px 12px"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          <p
+            style="
+              margin-top: 0px;
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 1.5;
+            "
+          >
+            30 <span>N</span> <span>Gould</span>
+            <span>St, Ste N, Sheridan, WY 82801, United States</span>
+          </p>
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 1.5;
+              margin-bottom: 14px;
+            "
+          >
+            Copyright © 2026 House of Summary, All rights reserved.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="15px"></mj-spacer>
+  </mj-body>
+</mjml>
