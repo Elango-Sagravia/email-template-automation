@@ -1,0 +1,645 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      h2,
+      img,
+      p {
+        margin: 0;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+    </mj-style>
+    <!-- <mj-font name="Roboto+Serif" href="https://fonts.googleapis.com/css?family=Roboto+Serif" /> -->
+    <mj-font
+      name="Roboto+Serif"
+      href="https://fonts.googleapis.com/css2?faily=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+    />
+    <mj-style>
+      .button-style:hover {
+        background-color: #dcedff !important;
+        color: rgba(0, 0, 0, 1) !important; /* instead of #000 */
+        border: 1px solid #dcedff !important;
+        cursor: pointer;
+      }
+      .button-style:hover .dot {
+        background-color: #4d3060 !important;
+        color: rgba(0, 0, 0, 1) !important;
+      }
+    </mj-style>
+    <mj-style>
+      .feedback-btn:hover {
+        opacity: 0.8 !important;
+        transform: scale(1.1) !important;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f9f8f9">
+    <mj-raw>
+      <div style="display: none; max-height: 0px; overflow: hidden">
+      Plus Musk restructures xAI </div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden
+      preview text --> <div style="display: none; max-height: 0px; overflow:
+      hidden"> &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj;
+      &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp;
+      &#8199; &shy; </div>
+    </mj-raw>
+    <mj-spacer height="15px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-spacer height="16px" />
+        <mj-image
+          padding="10px 12px 6px 12px"
+          css-class="light_img"
+          width="150px"
+          src="https://www.presidentialsummary.com/logo.png"
+          href="https://www.presidentialsummary.com"
+          alt=""
+        />
+        <mj-image
+          width="1px"
+          src="https://www.presidentialsummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+          alt=""
+        />
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="0px 12px 10px 12px"
+        />
+        <mj-text
+          padding="0px 12px 0px 12px "
+          font-family="Roboto+Serif"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5">
+            <strong>In this edition:</strong>
+          </p>
+        </mj-text>
+        <mj-table
+  font-family="Roboto+Serif"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 18px 0px 18px"
+  style="width: 100%"
+>
+  <tr>
+    <td style="
+                font-size: 18px;
+                width: 20px;
+                vertical-align: top;
+                padding-right: 8px;
+                line-height: 1.6;
+              "> → </td>
+    <td style="font-size: 16px; line-height: 1.6">TikTok data concerns</td>
+  </tr>
+<tr>
+    <td style="
+                font-size: 18px;
+                width: 20px;
+                vertical-align: top;
+                padding-right: 8px;
+                line-height: 1.6;
+              "> → </td>
+    <td style="font-size: 16px; line-height: 1.6">Canada tariff vote</td>
+  </tr>
+<tr>
+    <td style="
+                font-size: 18px;
+                width: 20px;
+                vertical-align: top;
+                padding-right: 8px;
+                line-height: 1.6;
+              "> → </td>
+    <td style="font-size: 16px; line-height: 1.6">Olympic curling stones</td>
+  </tr>
+</mj-table>
+
+        <mj-text
+          padding="10px 12px 17px 12px"
+          font-family="Roboto+Serif"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5; margin-bottom: 0px">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="https://link.presidentialsummary.com/ps-advertise"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+        </mj-text>
+        <!-- <mj-divider border-width="1px" border-style="solid" border-color="lightgrey" padding="10px 12px" /> -->
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-text
+  padding="16px 12px 10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="white"
+>
+  <h2
+    style="
+      padding-bottom: 8px;
+      color: #4d3060;
+      text-align: left;
+      border-bottom: 2px solid #4d3060;
+
+      font-size: 26px;
+      line-height: 1.2;
+      font-weight: 400;
+    "
+  >
+    Spotlight
+  </h2>
+</mj-text>
+    <mj-text padding="10px 12px" font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;" color="#000000">
+  <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin-top: 2px !important;">
+    Tumbler Ridge tragedy
+  </h2>
+</mj-text>
+<mj-image
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.presidentialsummary.com/email/images/REPLACE_ME.jpg"
+  alt="Tumbler Ridge tragedy"
+  href="https://www.presidentialsummary.com/"
+/>
+<mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5"><strong>What happened?</strong> Eight people were killed in a <a href="https://www.bbc.com/news/articles/ce8w95knp55o" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">mass shooting in Tumbler Ridge</a>, British Columbia. Police said the suspect first killed their mother and 11-year-old step-brother at home, then went to Tumbler Ridge Secondary School and opened fire around 1:30 pm local time. Six people, a teacher and five students aged 12 to 13, were killed at the school, and at least 25 others were injured. Police arrived within minutes and found the suspect dead from a self-inflicted gunshot wound.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>Suspect details:</strong> Jesse Van Rootselaar, 18, was a former student at Tumbler Ridge Secondary School who dropped out 4 years ago. Born biologically male, the suspect began transitioning to female six years prior. Police visited the family home multiple times over recent years for mental health issues, most recently contacting Van Rootselaar last year. Officials added that the suspect previously held a valid gun licence, which had since expired. The motive for the attack is not yet known.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>Renewed school safety: </strong>Educators say regular lockdown drills and close coordination with police remain central to preparedness. Security experts stress the need for repeated training and emerging AI-enabled surveillance tools to detect weapons early. Officials also highlight the importance of post-crisis support, as communities grapple with the emotional aftermath of such violence.</p>
+<p style="font-size: 16px; line-height: 1.5"><em>Read more about Canada's gun ownership laws </em><a href="https://www.bbc.com/news/articles/cwy8eyz4ee0o" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;"><em>here</em></a><em>. </em></p>
+</mj-text>
+  </mj-column>
+</mj-section>
+
+<mj-spacer height="10px" />
+<mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-raw>
+    <a href=""
+    target="_blank" style="color:black">
+  </mj-raw>
+
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-spacer height="14px" />
+
+    <mj-text
+      padding="2px 12px 0px 12px"
+      font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+      color="white"
+    >
+      <h2
+        style="
+          padding-bottom: 8px;
+          color: #4d3060;
+          text-align: left;
+          letter-spacing: 1px;
+          border-bottom: 2px solid #4d3060;
+          font-size: 26px;
+          line-height: 1.2;
+          font-weight: 300;
+        "
+      >
+        This could be your business
+      </h2>
+    </mj-text>
+
+    <mj-spacer height="12px" />
+
+    <mj-image
+      border-radius="10px"
+      padding="10px 12px 14px 12px"
+      width="600px"
+      src="https://www.presidentialsummary.com/email/ad/REPLACE_ME.jpg"
+      alt="Advertise your business to an engaged, influential audience"
+    />
+
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px">
+        Reach a wide audience of engaged, loyal readers right where they’re
+        paying attention. Our audience is educated, influential, and ready
+        to respond.
+      </p>
+      <p style="font-size: 16px; line-height: 24px">
+        Whether you want to drive revenue, build awareness, or launch
+        something fresh, this is your spot. Secure your placement and get in
+        front of the right eyes.
+      </p>
+    </mj-text>
+
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px">
+        <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #4d3060;
+            color: black;
+          "
+        ><strong>Partner with us</strong></a>
+      </p>
+    </mj-text>
+
+    <mj-spacer height="15px" />
+  </mj-column>
+
+  <mj-raw></a></mj-raw>
+</mj-section>
+
+<mj-spacer height="10px" />
+
+<mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-spacer height="10px" />
+    <mj-text padding="10px 12px" font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;" color="#000000">
+  <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin-top: 2px !important;">
+    TikTok data concerns
+  </h2>
+</mj-text>
+<mj-image
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.presidentialsummary.com/email/images/REPLACE_ME.jpg"
+  alt="TikTok data concerns"
+  href="https://www.presidentialsummary.com/"
+/>
+<mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5"><strong>What happened? </strong>TikTok has expanded the <a href="https://www.bbc.com/future/article/20260210-tiktok-is-tracking-you-even-if-you-dont-use-the-app-heres-how-to-stop-it" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">capabilities of its advertising “pixel,”</a> a tracking tool embedded on external websites that monitors user activity beyond the app itself. The updated pixel collects more detailed behavioural and personal data, including sensitive information. Crucially, this tracking can affect individuals who do not have a TikTok account, as websites automatically transmit visitor data.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>How does it work?</strong> When a page loads, the pixel sends TikTok data on clicks, forms, views, and purchases. The updated version can also intercept data that websites send to third-party platforms, such as Google, capturing identifiers such as email addresses or browsing behaviour. This allows TikTok to link ad views to off-platform activity, refine user profiles, and improve ad targeting. Because the pixel operates for all site visitors, data collection occurs regardless of whether an individual has a TikTok account.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>What are the safeguards?</strong> To reduce exposure to TikTok’s tracking pixel, privacy experts suggest using a privacy-focused browser. Installing reputable extensions such as uBlock Origin or Privacy Badger adds an additional layer of protection by preventing ad tracking pixels from loading. Users are also advised to clear cookies regularly and avoid reusing the same email across multiple sites. Those with a TikTok account can disable personalised ads and clear off-platform activity data within privacy settings.</p>
+</mj-text>
+  </mj-column>
+</mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <!-- long stroy short content sections -->
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #4d3060;
+              text-align: left;
+              border-bottom: 2px solid #4d3060;
+
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 400;
+            "
+          >
+            Long story short
+          </h2>
+        </mj-text>
+        <mj-text
+  padding="14px 12px 0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 1px;
+    "
+  >
+    Global Affairs
+  </h3>
+</mj-text>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>The Norwegian Nobel Committee has condemned Iran over reports of the violent arrest and alleged mistreatment of Nobel Peace Prize laureate Narges Mohammadi.</strong> The Committee said Mohammadi was detained by security agents on 12 December 2025 while attending a funeral. It called for an immediate end to her alleged abuse and demanded her release (<a href="https://www.nobelpeaceprize.org/press/press-releases/the-norwegian-nobel-committee-calls-on-iran-to-end-cruel-abuse-and-free-narges-mohammadi-immediately" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Nobel Laureate detained</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>The US House voted 219-211 to oppose President Trump’s tariffs on Canada, marking a rare bipartisan rebuke of his trade policies.</strong> Six Republicans joined Democrats to back the resolution that seeks to end the national emergency Trump declared to impose the tariffs. The resolution next heads to the Republican-led Senate and would require Trump’s approval, which is unlikely (<a href="https://www.bbc.com/news/articles/clyz2142e77o" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">tariffs rebuffed</a>).</p>
+</mj-text>
+<mj-divider
+  border-width="1px"
+  border-style="solid"
+  border-color="lightgrey"
+  padding="0px 12px"
+/>
+<mj-text
+  padding="0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 15px;
+    "
+  >
+    Business &amp; Markets
+  </h3>
+</mj-text>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Elon Musk reorganized xAI into four divisions after merging the AI startup with SpaceX in a deal valued at $1.25T. </strong>The restructuring, which follows co-founder departures, aims to accelerate execution as the company prepares for a potential IPO. New leadership will oversee core AI development and automation initiatives (<a href="https://www.msn.com/en-us/money/companies/musk-reorganizes-xai-after-spacex-merger-and-ahead-of-blockbuster-ipo/ar-AA1Wa5FE?ocid=finance-verthp-feeds" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Musk restructures xAI</a>),</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Applied Materials will pay $252M to settle US Commerce Department allegations that it illegally exported chipmaking equipment to China’s SMIC,</strong> despite export restrictions. Authorities said the company shipped ion implanters via South Korea without required licenses in 56 instances during 2021-2022 (<a href="https://economictimes.indiatimes.com/tech/technology/applied-materials-to-pay-252-million-over-illegal-exports-to-china/articleshow/128236866.cms?from=mdr" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">chip export settlement</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Russia has moved to fully block Meta-owned WhatsApp, promoting a state-backed rival, MAX, amid accusations of user surveillance. </strong>WhatsApp calls it a push for a "state-owned surveillance app" and vows to keep users connected. Kremlin demands Meta comply with local laws for any return, escalating controls post-2022 Ukraine invasion (<a href="https://www.theguardian.com/world/2026/feb/12/russia-attempt-block-whatsapp-meta-says" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Russia blocks WhatsApp</a>).</p>
+</mj-text>
+<mj-divider
+  border-width="1px"
+  border-style="solid"
+  border-color="lightgrey"
+  padding="0px 12px"
+/>
+<mj-text
+  padding="0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 15px;
+    "
+  >
+    Science &amp; Tech
+  </h3>
+</mj-text>
+<mj-image
+  border-radius="10px"
+  padding="0px 12px 10px 12px"
+  width="600px"
+  src="https://www.presidentialsummary.com/email/images/REPLACE_ME.jpg"
+  alt="Science &amp; Tech"
+  href="https://www.presidentialsummary.com/"
+/>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>All Olympic curling stones hail from Ailsa Craig, a tiny uninhabited Scottish island. </strong>Handcrafted by Kays of Scotland, the stones are made from 60-Mn-year-old granite with a fine-grained, dense structure and rare sodium-iron minerals, such as arfvedsonite.  The stone’s resilience resists chipping, while its low porosity enables smooth gliding and consistent curl on pebbled ice, qualities unmatched by other granites or synthetic alternatives (<a href="https://www.cnn.com/2026/02/11/science/curling-stones-science-winter-olympics" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">curling’s secret granite</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Google released the first Android 17 beta, introducing a continuous Canary channel that replaces traditional developer previews.</strong> The approach provides developers with earlier access to approved APIs and over-the-air updates, enabling faster testing and integration. Android 17 also brings efficiency upgrades, enhanced camera APIs, improved large-screen app support, and better Wi-Fi capabilities, with platform stability targeted for March ahead of a Q2 2026 launch (<a href="https://techcrunch.com/2026/02/11/google-releases-the-first-beta-of-android-17-adopts-a-continous-developer-release-plan/" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Android 17 beta</a>).</p>
+</mj-text>
+<mj-divider
+  border-width="1px"
+  border-style="solid"
+  border-color="lightgrey"
+  padding="0px 12px"
+/>
+<mj-text
+  padding="0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 15px;
+    "
+  >
+    Whatnot
+  </h3>
+</mj-text>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">Meta begins construction of a $10B data center in Indiana to boost AI capabilities (<a href="https://about.fb.com/news/2026/02/metas-new-data-center-lebanon-indiana-marks-milestone-ai-investment/" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Meta data hub</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">Amazon Pharmacy to expand same-day delivery to nearly 4,500 US cities (<a href="https://www.aboutamazon.com/news/retail/amazon-pharmacy-same-day-delivery-medication-expansion" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Amazon health boost</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">NHL players will compete in the Milan Cortina Olympics after 12 years (<a href="https://www.cnn.com/2026/02/11/sport/nhl-returns-winter-olympics" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">NHL Olympic Return</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">Epstein survivor calls on Buckingham Palace to search Andrew's files (<a href="https://www.bbc.com/news/articles/cvg5ww8lq9zo" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Palace under pressure</a>).</p>
+</mj-text>
+
+        <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#ffffff">
+          <!-- banner -->
+          <div
+            style="
+              background-color: #4d3060;
+              border-radius: 8px;
+              padding: 22px 12px;
+              font-size: 18px;
+              line-height: 1.5;
+              font-weight: 400;
+              text-align: center;
+              color: #ffffff;
+            "
+          >
+            On this day in 1909, the National Association for the Advancement of Colored People (<a href="https://www.britannica.com/topic/National-Association-for-the-Advancement-of-Colored-People" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #fff;
+                color: white !important;">NAACP</a>) was founded. It was created to end segregation and discrimination, oppose racism, and secure constitutional rights for African Americans.
+          </div>
+        </mj-text>
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="10px 12px"
+        />
+        <mj-spacer height="10px" />
+        <mj-text
+          padding="2px 12px 0px 12px"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          <p style="color: #000; font-size: 10px; line-height: 2">
+            <strong>Image credits:</strong> CNN, Adobe Suite, LA Times
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Send us your feedback at
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="mailto:readers@presidentialsummary.com"
+              target="_blank"
+              >readers@presidentialsummary.com</a
+            >.
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Interested in connecting with curious, informed readers?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="https://www.presidentialsummary.com/advertise#advertise-form"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="https://www.presidentialsummary.com/unsubscribewithfeedback?unique_id=%unique_id%&campaign_id=%campaign_id%"
+              target="_blank"
+              >Unsubscribe</a
+            >
+            from this email.
+          </p>
+        </mj-text>
+
+        <mj-text padding="10px 12px" font-family="Arial, Helvetica, sans-serif">
+          <p
+            style="
+              margin-top: 0px;
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 1.5;
+            "
+          >
+            30 <span>N</span> <span>Gould</span>
+            <span>St, Ste N, Sheridan, WY 82801, United States</span>
+          </p>
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 0;
+              margin-bottom: 14px;
+            "
+          >
+            Copyright © 2026 House of Summary, All rights reserved.
+          </p>
+        </mj-text>
+        <mj-spacer height="10px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="15px"></mj-spacer>
+  </mj-body>
+</mjml>
