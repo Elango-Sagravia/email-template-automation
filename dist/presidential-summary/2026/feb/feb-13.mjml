@@ -1,0 +1,649 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      h2,
+      img,
+      p {
+        margin: 0;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+    </mj-style>
+    <!-- <mj-font name="Roboto+Serif" href="https://fonts.googleapis.com/css?family=Roboto+Serif" /> -->
+    <mj-font
+      name="Roboto+Serif"
+      href="https://fonts.googleapis.com/css2?faily=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+    />
+    <mj-style>
+      .button-style:hover {
+        background-color: #dcedff !important;
+        color: rgba(0, 0, 0, 1) !important; /* instead of #000 */
+        border: 1px solid #dcedff !important;
+        cursor: pointer;
+      }
+      .button-style:hover .dot {
+        background-color: #4d3060 !important;
+        color: rgba(0, 0, 0, 1) !important;
+      }
+    </mj-style>
+    <mj-style>
+      .feedback-btn:hover {
+        opacity: 0.8 !important;
+        transform: scale(1.1) !important;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f9f8f9">
+    <mj-raw>
+      <div style="display: none; max-height: 0px; overflow: hidden">
+      Plus Switzerland population cap </div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden
+      preview text --> <div style="display: none; max-height: 0px; overflow:
+      hidden"> &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj;
+      &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp;
+      &#8199; &shy; </div>
+    </mj-raw>
+    <mj-spacer height="15px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-spacer height="16px" />
+        <mj-image
+          padding="10px 12px 6px 12px"
+          css-class="light_img"
+          width="150px"
+          src="https://www.presidentialsummary.com/logo.png"
+          href="https://www.presidentialsummary.com"
+          alt=""
+        />
+        <mj-image
+          width="1px"
+          src="https://www.presidentialsummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+          alt=""
+        />
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="0px 12px 10px 12px"
+        />
+        <mj-text
+          padding="0px 12px 0px 12px "
+          font-family="Roboto+Serif"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5">
+            <strong>In this edition:</strong>
+          </p>
+        </mj-text>
+        <mj-table
+  font-family="Roboto+Serif"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 18px 0px 18px"
+  style="width: 100%"
+>
+  <tr>
+    <td style="
+                font-size: 18px;
+                width: 20px;
+                vertical-align: top;
+                padding-right: 8px;
+                line-height: 1.6;
+              "> → </td>
+    <td style="font-size: 16px; line-height: 1.6">Olympic controversy</td>
+  </tr>
+<tr>
+    <td style="
+                font-size: 18px;
+                width: 20px;
+                vertical-align: top;
+                padding-right: 8px;
+                line-height: 1.6;
+              "> → </td>
+    <td style="font-size: 16px; line-height: 1.6">US-Taiwan trade tariff</td>
+  </tr>
+<tr>
+    <td style="
+                font-size: 18px;
+                width: 20px;
+                vertical-align: top;
+                padding-right: 8px;
+                line-height: 1.6;
+              "> → </td>
+    <td style="font-size: 16px; line-height: 1.6">Protein rejuvenates brain aging</td>
+  </tr>
+</mj-table>
+
+        <mj-text
+          padding="10px 12px 17px 12px"
+          font-family="Roboto+Serif"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5; margin-bottom: 0px">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="https://link.presidentialsummary.com/ps-advertise"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+        </mj-text>
+        <!-- <mj-divider border-width="1px" border-style="solid" border-color="lightgrey" padding="10px 12px" /> -->
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-text
+  padding="16px 12px 10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="white"
+>
+  <h2
+    style="
+      padding-bottom: 8px;
+      color: #4d3060;
+      text-align: left;
+      border-bottom: 2px solid #4d3060;
+
+      font-size: 26px;
+      line-height: 1.2;
+      font-weight: 400;
+    "
+  >
+    Spotlight
+  </h2>
+</mj-text>
+    <mj-text padding="10px 12px" font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;" color="#000000">
+  <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin-top: 2px !important;">
+    Federal enforcement withdrawal
+  </h2>
+</mj-text>
+<mj-image
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.presidentialsummary.com/email/images/REPLACE_ME.jpg"
+  alt="Federal enforcement withdrawal"
+  href="https://www.presidentialsummary.com/"
+/>
+<mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5"><strong>What happened?</strong> The Trump administration has ended “<a href="https://apnews.com/article/minnesota-metro-surge-ice-523d18d5d75c81cbf9f24c602f1884ff" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Operation Metro Surge</a>,” a months-long immigration crackdown across Minneapolis-St. Paul and the surrounding Minnesota communities. Border czar Tom Homan announced an immediate drawdown of roughly 700 officers. The operation triggered mass protests, economic disruption, and two fatal shootings of US citizens (Renee Good and Alex Pretti) during encounters with federal agents.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>Operation Metro Surge:</strong> It was a large-scale federal immigration enforcement campaign launched in December by the Trump administration. Officials said the operations aimed to deport those with removal orders, target alleged offenders, and curb “sanctuary state” protections in Minnesota. The administration wanted to curb public benefits fraud and reassert federal immigration authority.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>Governor warns:</strong> Minnesota Gov. Tim Walz urged residents to stay vigilant as federal immigration officers begin withdrawing, sharply criticizing the Trump administration for what he called an unconstitutional assault on the state. Walz proposed a $10M relief package for affected businesses and pressed Washington to fund recovery, saying authorities cannot “break things” and walk away without accountability.</p>
+</mj-text>
+  </mj-column>
+</mj-section>
+
+<mj-spacer height="10px" />
+<mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-raw>
+    <a href=""
+    target="_blank" style="color:black">
+  </mj-raw>
+
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-spacer height="14px" />
+
+    <mj-text
+      padding="2px 12px 0px 12px"
+      font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+      color="white"
+    >
+      <h2
+        style="
+          padding-bottom: 8px;
+          color: #4d3060;
+          text-align: left;
+          letter-spacing: 1px;
+          border-bottom: 2px solid #4d3060;
+          font-size: 26px;
+          line-height: 1.2;
+          font-weight: 300;
+        "
+      >
+        This could be your business
+      </h2>
+    </mj-text>
+
+    <mj-spacer height="12px" />
+
+    <mj-image
+      border-radius="10px"
+      padding="10px 12px 14px 12px"
+      width="600px"
+      src="https://www.presidentialsummary.com/email/ad/REPLACE_ME.jpg"
+      alt="Advertise your business to an engaged, influential audience"
+    />
+
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px">
+        Reach a wide audience of engaged, loyal readers right where they’re
+        paying attention. Our audience is educated, influential, and ready
+        to respond.
+      </p>
+      <p style="font-size: 16px; line-height: 24px">
+        Whether you want to drive revenue, build awareness, or launch
+        something fresh, this is your spot. Secure your placement and get in
+        front of the right eyes.
+      </p>
+    </mj-text>
+
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px">
+        <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #4d3060;
+            color: black;
+          "
+        ><strong>Partner with us</strong></a>
+      </p>
+    </mj-text>
+
+    <mj-spacer height="15px" />
+  </mj-column>
+
+  <mj-raw></a></mj-raw>
+</mj-section>
+
+<mj-spacer height="10px" />
+
+<mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-spacer height="10px" />
+    <mj-text padding="10px 12px" font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;" color="#000000">
+  <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin-top: 2px !important;">
+    Olympic controversy
+  </h2>
+</mj-text>
+<mj-image
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.presidentialsummary.com/email/images/REPLACE_ME.jpg"
+  alt="Olympic controversy"
+  href="https://www.presidentialsummary.com/"
+/>
+<mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5"><strong>What happened?</strong> US ice dancing duo Madison Chock and Evan Bates bagged silver after their free dance at the Olympics, missing out on gold by just 1.43 points. Entering as three-time reigning world champions, they were narrowly edged out by France’s Laurence Fournier Beaudry and Guillaume Cizeron. However, the result drew <a href="https://www.nbcnews.com/sports/olympics/chock-bates-scoring-controversy-french-judge-winter-olympics-rcna258736" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">scrutiny over judging discrepancies</a>, particularly from a French judge who heavily favored the home team.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>Controversy: </strong>In the ice dance event, skaters perform two distinct routines across two days: the rhythm dance and the free dance. In the rhythm dance, most judges kept the teams within a narrow margin, but a French judge scored the French team 5.74 points ahead of Chock and Bates, a margin far wider than the others. Similar gaps appeared in the free dance, where the same judge gave the French pair a 7.71-point edge. The International Skating Union defended the scoring as fair, with many dubbing the situation ‘SkateGate 2.0.’</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>Infamous SkateGate scandal:</strong> The Salt Lake City scandal was one of the <a href="https://people.com/sports/olympics-figure-skating-pairs-scandal-salt-lake-city-2002/" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">biggest judging controversies</a> in Olympic history. At the 2002 Winter Olympics, the pairs event erupted after Russia’s Elena Berezhnaya and Anton Sikharulidze triumphed over Canada’s Jamie Salé and David Pelletier despite a visible error. French judge Marie-Reine Le Gougne later admitted political pressure influenced her vote. The scandal prompted the overhaul of figure skating’s Code of Points to limit the impact of individual judges.</p>
+</mj-text>
+  </mj-column>
+</mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <!-- long stroy short content sections -->
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #4d3060;
+              text-align: left;
+              border-bottom: 2px solid #4d3060;
+
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 400;
+            "
+          >
+            Long story short
+          </h2>
+        </mj-text>
+        <mj-text
+  padding="14px 12px 0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 1px;
+    "
+  >
+    Global Affairs
+  </h3>
+</mj-text>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Switzerland will hold a vote on a right-wing party’s proposal to restrict the nation’s population to 10Mn.</strong>  If the vote gets approved, the government would have to refuse entry to newcomers, including asylum seekers and family reunifications, once the population reaches 9.5Mn. And when it reached 10Mn, the government would be forced to end its free-movement agreement with the EU, which is Switzerland’s largest trading partner (<a href="https://www.dw.com/en/switzerland-swiss-population-cap-limit-referendum/a-75941387" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">population cap</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Indonesia plans to turn its vast archipelago into a network of emergency runways for its fighter jets.</strong> This move is set to strengthen the operational readiness of the Indonesian Air Force (IAF). Having emergency runway entry across all 38 provinces would strengthen Indonesia’s strike capability and make it harder for an adversary to target the air force (<a href="https://edition.cnn.com/2026/02/12/asia/indonesia-freeways-fighter-jet-runways-intl-hnk-ml" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">freeways as runways)</a>.</p>
+</mj-text>
+<mj-divider
+  border-width="1px"
+  border-style="solid"
+  border-color="lightgrey"
+  padding="0px 12px"
+/>
+<mj-text
+  padding="0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 15px;
+    "
+  >
+    Business &amp; Markets
+  </h3>
+</mj-text>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Anthropic has raised $30B in a fresh funding round, more than doubling its valuation to $380B.</strong> Anthropic has further deepened its push for business agreements with products like Claude Cowork AI agent, which executes computer tasks for white-collar workers. Backed by Google and Amazon, the company is also expanding AI agents and pledging $20M to support AI regulation (<a href="https://www.businesstimes.com.sg/companies-markets/telcos-media-tech/anthropic-clinches-us380-billion-valuation-after-us30-billion-funding-round" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">AI funding frenzy</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>US officials signed a final reciprocal trade agreement lowering the general tariff on Taiwanese goods from 20% to 15%.</strong> In return, Taiwan committed to boost purchases of US goods from 2025 through 2029, including $44.4B of liquefied natural gas and crude oil, $15.2B of civil aircraft and engines, $25.2B of power grid equipment and generators, and marine and steelmaking equipment (<a href="https://www.aljazeera.com/economy/2026/2/13/us-and-taiwan-sign-pivotal-deal-to-cut-trade-tariffs" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">strategic trade swap</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>A US court blocked a 2024 rule that would have expanded merger disclosure requirements,</strong> ruling that the FTC exceeded its statutory authority and failed to demonstrate that the rule’s regulatory benefits justified its compliance costs. The rule required more detailed disclosures to the FTC and the Department of Justice to strengthen oversight of merger reviews (<a href="https://www.msn.com/en-us/money/companies/us-court-blocks-expanded-merger-disclosure-rule/ar-AA1WfXDr?ocid=finance-verthp-feeds#:~:text=Feb%2012%20(Reuters)%20%2D%20A,the%20Federal%20Trade%20Commission's%20authority." target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">merger rule overturned</a>).</p>
+</mj-text>
+<mj-divider
+  border-width="1px"
+  border-style="solid"
+  border-color="lightgrey"
+  padding="0px 12px"
+/>
+<mj-text
+  padding="0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 15px;
+    "
+  >
+    Science &amp; Tech
+  </h3>
+</mj-text>
+<mj-image
+  border-radius="10px"
+  padding="0px 12px 10px 12px"
+  width="600px"
+  src="https://www.presidentialsummary.com/email/images/REPLACE_ME.jpg"
+  alt="Science &amp; Tech"
+  href="https://www.presidentialsummary.com/"
+/>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Sony launched the WF-1000XM6 TWS earphones globally, with dual processors, including the QN3e.</strong> It boasts a 25% improvement in ANC via the HD Noise Canceling Processor QN3e and four microphones, plus enhanced calling quality with AI beamforming and bone conduction sensors. Key features include dual processors for 32-bit audio, revamped driver for deep bass, Hi-Res Wireless, 360 Reality Audio, Gemini support, IPX4 rating, and a 11% slimmer design (<a href="https://www.gadgets360.com/audio/news/sony-wf1000xm6-price-launch-sale-features-specifications-10997189" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">smarter Sony Buds</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Scientists at the National University of Singapore have identified DMTF1 as a key regulator of aging neural stem cells.</strong> Restoring the protein revives cells’ ability to regenerate. Using genome-binding and transcriptome analyses, researchers showed DMTF1 activates helper genes Arid2 and Ss18, which unpack DNA for growth genes and switch on growth pathways, potentially opening avenues to counter age-related cognitive decline (<a href="https://www.sciencedaily.com/releases/2026/02/260212025620.htm" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">stem cell revival</a>).</p>
+</mj-text>
+<mj-divider
+  border-width="1px"
+  border-style="solid"
+  border-color="lightgrey"
+  padding="0px 12px"
+/>
+<mj-text
+  padding="0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 15px;
+    "
+  >
+    Whatnot
+  </h3>
+</mj-text>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">Deadly avian influenza outbreak confirmed in Antarctica for the first time (<a href="https://www.sciencedaily.com/releases/2026/02/260211073029.htm" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">H5N1 bird flu</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">Pinterest reports higher monthly searches than ChatGPT (<a href="https://techcrunch.com/2026/02/12/amid-disappointing-earnings-pinterest-claims-it-sees-more-searches-than-chatgpt/" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">search rivalry</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">Taylor Swift urges the US government to block “Swift Home” trademark filing (<a href="https://www.bbc.com/news/articles/cr5lmg9l1y7o" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">trademark dispute</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">Astronomers identify an Earth-like planet possibly colder than Mars (<a href="https://www.sciencedaily.com/releases/2026/02/260212025607.htm" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">frozen Earth twin</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">President Trump revokes a landmark finding that greenhouse gases threaten public health (<a href="https://www.bbc.com/news/articles/cn0zdd7yl4vo" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">climate rollback</a>).</p>
+</mj-text>
+
+        <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#ffffff">
+          <!-- banner -->
+          <div
+            style="
+              background-color: #4d3060;
+              border-radius: 8px;
+              padding: 22px 12px;
+              font-size: 18px;
+              line-height: 1.5;
+              font-weight: 400;
+              text-align: center;
+              color: #ffffff;
+            "
+          >
+            
+          </div>
+        </mj-text>
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="10px 12px"
+        />
+        <mj-spacer height="10px" />
+        <mj-text
+          padding="2px 12px 0px 12px"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          <p style="color: #000; font-size: 10px; line-height: 2">
+            <strong>Image credits:</strong> AP Photo, AP Photo, LifeHacker
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Send us your feedback at
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="mailto:readers@presidentialsummary.com"
+              target="_blank"
+              >readers@presidentialsummary.com</a
+            >.
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Interested in connecting with curious, informed readers?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="https://www.presidentialsummary.com/advertise#advertise-form"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="https://www.presidentialsummary.com/unsubscribewithfeedback?unique_id=%unique_id%&campaign_id=%campaign_id%"
+              target="_blank"
+              >Unsubscribe</a
+            >
+            from this email.
+          </p>
+        </mj-text>
+
+        <mj-text padding="10px 12px" font-family="Arial, Helvetica, sans-serif">
+          <p
+            style="
+              margin-top: 0px;
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 1.5;
+            "
+          >
+            30 <span>N</span> <span>Gould</span>
+            <span>St, Ste N, Sheridan, WY 82801, United States</span>
+          </p>
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 0;
+              margin-bottom: 14px;
+            "
+          >
+            Copyright © 2026 House of Summary, All rights reserved.
+          </p>
+        </mj-text>
+        <mj-spacer height="10px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="15px"></mj-spacer>
+  </mj-body>
+</mjml>
