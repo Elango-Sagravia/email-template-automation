@@ -1,5 +1,5 @@
 /**
- * build-dubai-summary.js (v1.3)
+ * build-dubai-summary.js (v1.4)
  * ----------------------------
  * ✅ DOCX -> Mammoth HTML
  * ✅ Extract:
@@ -7,23 +7,28 @@
  *   2) Spotlight (H2 "Spotlight" -> each H3 story)
  *      - Spotlight heading only for the 1st spotlight card
  *      - Insert AD block after spotlight #1
- *   3) Event -> "Where to eat?" (H2 "Event" -> H3 "Where to eat?" -> paragraphs until next H2)
- *   4) Career (H2 "Career" -> H3 title -> next 3 paragraphs = tags -> rest until next H2 = summary/cta paragraphs)
+ *   3) Events (H2 "Events" -> repeated rows: image + title + desc + link)
+ *      - Insert dotted divider between rows
+ *      - Stop at H3 "Where to eat?" or next H2
+ *   4) Where to eat? (H3 "Where to eat?" -> first image + paragraphs until next H2)
+ *   5) Career (H2 "Career" -> H3 title -> next 3 paragraphs = tags -> rest until next H2 = summary/cta)
+ *   6) Meanwhile (H2 "Meanwhile" -> each H3 story)
+ *   7) Did you know? (H2 "Did you know?" -> paragraphs)
  * ✅ Inject into layout placeholders:
  *   {{%IN_THIS_EDITION_TABLE%}}
  *   {{%SPOTLIGHT_SECTION%}}
+ *   {{%EVENTS_SECTION%}}
+ *   {{%WHERE_TO_EAT_IMAGE_SRC%}}
+ *   {{%WHERE_TO_EAT_IMAGE_ALT%}}
+ *   {{%WHERE_TO_EAT_IMAGE_HREF%}}
  *   {{%WHERE_TO_EAT_SECTION%}}
  *   {{%CAREER_SECTION%}}
+ *   {{%MEANWHILE_SECTION%}}
+ *   {{%DID_YOU_KNOW_SECTION%}}
  * ✅ Compile MJML -> HTML
- *
- * Usage:
- *   node build-dubai-summary.js "docx/dubai-summary/2026/feb/feb-5.docx"
  *
  * Requirements:
  *   npm i mjml mammoth cheerio
- *
- * Notes:
- * - This file is built to match the content structure in your Feb-5 DOCX.  [oai_citation:0‡feb-5.docx](sediment://file_00000000ff247230b4f85e822568d7ac)
  */
 
 import fs from "fs";
@@ -52,15 +57,28 @@ const IN_THIS_EDITION_TPL_PATH = path.join(
  * ----------------------------- */
 const TOKEN_IN_THIS_EDITION = /\{\{\%\s*IN_THIS_EDITION_TABLE\s*\%\}\}/g;
 const TOKEN_SPOTLIGHT_SECTION = /\{\{\%\s*SPOTLIGHT_SECTION\s*\%\}\}/g;
+
+const TOKEN_EVENTS_SECTION = /\{\{\%\s*EVENTS_SECTION\s*\%\}\}/g;
+
 const TOKEN_WHERE_TO_EAT_SECTION = /\{\{\%\s*WHERE_TO_EAT_SECTION\s*\%\}\}/g;
+const TOKEN_WHERE_TO_EAT_IMAGE_SRC =
+  /\{\{\%\s*WHERE_TO_EAT_IMAGE_SRC\s*\%\}\}/g;
+const TOKEN_WHERE_TO_EAT_IMAGE_ALT =
+  /\{\{\%\s*WHERE_TO_EAT_IMAGE_ALT\s*\%\}\}/g;
+const TOKEN_WHERE_TO_EAT_IMAGE_HREF =
+  /\{\{\%\s*WHERE_TO_EAT_IMAGE_HREF\s*\%\}\}/g;
+
 const TOKEN_CAREER_SECTION = /\{\{\%\s*CAREER_SECTION\s*\%\}\}/g;
 const TOKEN_ROWS = /\{\{\%\s*ROWS\s*\%\}\}/g;
+
 const TOKEN_MEANWHILE_SECTION = /\{\{\%\s*MEANWHILE_SECTION\s*\%\}\}/g;
 const TOKEN_DID_YOU_KNOW_SECTION = /\{\{\%\s*DID_YOU_KNOW_SECTION\s*\%\}\}/g;
+
 const TOKEN_PREVIEW_TEXT = /\{\{\%\s*PREVIEW_TEXT\s*\%\}\}/g;
 const TOKEN_DAY = /\{\{\%\s*DAY\s*\%\}\}/g;
 const TOKEN_DATE = /\{\{\%\s*DATE\s*\%\}\}/g;
 const TOKEN_TEMPERATURE = /\{\{\%\s*TEMPERATURE\s*\%\}\}/g;
+
 /** -----------------------------
  * MAIN
  * ----------------------------- */
@@ -72,7 +90,7 @@ main().catch((e) => {
 async function main() {
   if (!DOCX_PATH) {
     throw new Error(
-      'Usage: node build-dubai-summary.js "docx/dubai-summary/2026/feb/feb-5.docx"',
+      'Usage: node build-dubai-summary.js "docx/dubai-summary/2026/mar/mar-4.docx"',
     );
   }
 
@@ -99,12 +117,10 @@ async function main() {
       }),
     },
   );
-  // 1.1) Meta fields (Preview text / Day / Date / Temperature)
+
+  // 1.1) Meta fields
   const meta = extractMetaFieldsDubai(docHtml);
   console.log("🧩 Meta:", meta);
-
-  // Optional debug:
-  // fs.writeFileSync(path.join(outDir, "doc.html"), docHtml, "utf8");
 
   // 2) In this edition
   const editionItems = extractInThisEditionDubai(docHtml);
@@ -119,12 +135,23 @@ async function main() {
   );
   const spotlightMjml = renderSpotlightDubai(spotlightStories);
 
-  // 4) Event -> Where to eat?
-  const whereToEatItems = extractWhereToEatDubai(docHtml);
-  console.log("🧩 Where to eat items:", whereToEatItems.length);
-  const whereToEatHtml = renderWhereToEatDubai(whereToEatItems);
+  // 4) Events rows (new)
+  const events = extractEventsDubai(docHtml);
+  console.log(
+    "🧩 Events:",
+    events.map((e) => e.title),
+  );
+  const eventsMjml = renderEventsDubai(events);
 
-  // 5) Career
+  // 5) Where to eat? (image + paragraphs)
+  const whereToEat = extractWhereToEatDubai(docHtml);
+  console.log("🧩 Where to eat:", {
+    img: Boolean(whereToEat?.imageSrc),
+    paras: whereToEat?.items?.length || 0,
+  });
+  const whereToEatHtml = renderWhereToEatDubai(whereToEat.items || []);
+
+  // 6) Career
   const career = extractCareerDubai(docHtml);
   console.log("🧩 Career:", {
     title: career?.title || "",
@@ -133,7 +160,7 @@ async function main() {
   });
   const careerMjml = renderCareerDubai(career);
 
-  // 6) Meanwhile
+  // 7) Meanwhile
   const meanwhileStories = extractMeanwhileDubai(docHtml);
   console.log(
     "🧩 Meanwhile stories:",
@@ -141,19 +168,21 @@ async function main() {
   );
   const meanwhileMjml = renderMeanwhileDubai(meanwhileStories);
 
-  // 7) Did you know?
+  // 8) Did you know?
   const didYouKnowParas = extractDidYouKnowDubai(docHtml);
   console.log("🧩 Did you know paras:", didYouKnowParas.length);
   const didYouKnowHtml = renderDidYouKnowDubai(didYouKnowParas);
 
-  // 6) Inject into layout
+  // 9) Inject into layout
   let finalMjml = fs.readFileSync(LAYOUT_PATH, "utf8");
+
   // Meta injections
   finalMjml = finalMjml.replace(TOKEN_PREVIEW_TEXT, meta.previewText || "");
   finalMjml = finalMjml.replace(TOKEN_DAY, meta.day || "");
   finalMjml = finalMjml.replace(TOKEN_DATE, meta.date || "");
   finalMjml = finalMjml.replace(TOKEN_TEMPERATURE, meta.temperature || "");
 
+  // In this edition
   if (!TOKEN_IN_THIS_EDITION.test(finalMjml)) {
     console.warn(
       "⚠️ Token {{%IN_THIS_EDITION_TABLE%}} not found in layout.mjml",
@@ -161,11 +190,33 @@ async function main() {
   }
   finalMjml = finalMjml.replace(TOKEN_IN_THIS_EDITION, inThisEditionMjml);
 
+  // Spotlight
   if (!TOKEN_SPOTLIGHT_SECTION.test(finalMjml)) {
     console.warn("⚠️ Token {{%SPOTLIGHT_SECTION%}} not found in layout.mjml");
   }
   finalMjml = finalMjml.replace(TOKEN_SPOTLIGHT_SECTION, spotlightMjml);
 
+  // Events (new)
+  if (!TOKEN_EVENTS_SECTION.test(finalMjml)) {
+    console.warn("⚠️ Token {{%EVENTS_SECTION%}} not found in layout.mjml");
+  }
+  finalMjml = finalMjml.replace(TOKEN_EVENTS_SECTION, eventsMjml);
+
+  // Where to eat image tokens (new)
+  finalMjml = finalMjml.replace(
+    TOKEN_WHERE_TO_EAT_IMAGE_SRC,
+    whereToEat.imageSrc || "",
+  );
+  finalMjml = finalMjml.replace(
+    TOKEN_WHERE_TO_EAT_IMAGE_ALT,
+    whereToEat.imageAlt || "",
+  );
+  finalMjml = finalMjml.replace(
+    TOKEN_WHERE_TO_EAT_IMAGE_HREF,
+    whereToEat.imageHref || "",
+  );
+
+  // Where to eat body
   if (!TOKEN_WHERE_TO_EAT_SECTION.test(finalMjml)) {
     console.warn(
       "⚠️ Token {{%WHERE_TO_EAT_SECTION%}} not found in layout.mjml",
@@ -173,16 +224,19 @@ async function main() {
   }
   finalMjml = finalMjml.replace(TOKEN_WHERE_TO_EAT_SECTION, whereToEatHtml);
 
+  // Career
   if (!TOKEN_CAREER_SECTION.test(finalMjml)) {
     console.warn("⚠️ Token {{%CAREER_SECTION%}} not found in layout.mjml");
   }
   finalMjml = finalMjml.replace(TOKEN_CAREER_SECTION, careerMjml);
 
+  // Meanwhile
   if (!TOKEN_MEANWHILE_SECTION.test(finalMjml)) {
     console.warn("⚠️ Token {{%MEANWHILE_SECTION%}} not found in layout.mjml");
   }
   finalMjml = finalMjml.replace(TOKEN_MEANWHILE_SECTION, meanwhileMjml);
 
+  // Did you know
   if (!TOKEN_DID_YOU_KNOW_SECTION.test(finalMjml)) {
     console.warn(
       "⚠️ Token {{%DID_YOU_KNOW_SECTION%}} not found in layout.mjml",
@@ -190,7 +244,7 @@ async function main() {
   }
   finalMjml = finalMjml.replace(TOKEN_DID_YOU_KNOW_SECTION, didYouKnowHtml);
 
-  // 7) MJML -> HTML
+  // 10) MJML -> HTML
   const { html, errors } = mjml2html(finalMjml, {
     validationLevel: "soft",
     filePath: LAYOUT_PATH,
@@ -391,8 +445,6 @@ function extractSpotlightDubai(html) {
 
 /** -----------------------------
  * Spotlight renderer (Dubai)
- * - Spotlight heading only on first spotlight card
- * - Insert ad block after spotlight #1
  * ----------------------------- */
 function renderSpotlightDubai(stories) {
   if (!stories?.length) return "";
@@ -508,6 +560,15 @@ function renderSpotlightDubai(stories) {
         ${title}
       </h2>
     </mj-text>
+    <mj-image
+          border-radius="10px"
+          padding="10px 12px"
+          width="600px"
+          src="https://www.dubaisummary.com/email/images/REPLACE_ME.jpg"
+          alt="REPLACE_ME"
+          href="https://www.dubaisummary.com/"
+          target="_blank"
+        />
 
     <mj-text padding="10px 12px 16px 12px" font-family="Arial" color="#000000">
       ${bodyHtml}
@@ -517,7 +578,6 @@ function renderSpotlightDubai(stories) {
 <mj-spacer height="10px" />
 `.trim();
 
-    // insert ad AFTER spotlight #1
     if (idx === 0 && stories.length > 1)
       return `${spotlightBlock}\n${AD_BLOCK}`;
     return spotlightBlock;
@@ -564,20 +624,215 @@ function renderSpotlightBodyDubai(nodes) {
 }
 
 /** -----------------------------
- * Event -> Where to eat? (Dubai)
+ * Events extraction (NEW)
+ * H2 "Events" -> rows until H3 "Where to eat?" or next H2
+ * Each row: image, title, desc, link
+ * ----------------------------- */
+function extractEventsDubai(html) {
+  const $ = cheerio.load(html);
+
+  const eventsH2 = $("h2")
+    .filter((_, el) => cleanText($(el).text()).toLowerCase() === "events")
+    .first();
+
+  if (!eventsH2.length) return [];
+
+  const blocks = [];
+  let el = eventsH2.next();
+
+  const isStop = (node) => {
+    const tag = (node?.[0]?.tagName || "").toLowerCase();
+    const txt = cleanText(node.text());
+
+    if (tag === "h2" && txt) return true;
+    if (tag === "h3" && txt && txt.toLowerCase() === "where to eat?")
+      return true;
+    return false;
+  };
+
+  while (el && el.length) {
+    if (isStop(el)) break;
+
+    const tag = (el[0]?.tagName || "").toLowerCase();
+
+    if (tag === "p" || tag === "img") {
+      blocks.push(el);
+    } else if (tag === "div") {
+      el.children("p, img").each((_, c) => blocks.push($(c)));
+    }
+
+    el = el.next();
+  }
+
+  const rows = [];
+  let i = 0;
+
+  const readNextNonEmptyP = () => {
+    while (i < blocks.length) {
+      const b = blocks[i];
+      const tag = (b[0]?.tagName || "").toLowerCase();
+      i++;
+
+      if (tag !== "p") continue;
+
+      const t = cleanText(b.text());
+      if (!t) continue;
+      return b;
+    }
+    return null;
+  };
+
+  const readOptionalImg = () => {
+    if (i >= blocks.length) return null;
+    const b = blocks[i];
+    const tag = (b[0]?.tagName || "").toLowerCase();
+    if (tag !== "img") return null;
+    i++;
+    return b;
+  };
+
+  while (i < blocks.length) {
+    const imgNode = readOptionalImg();
+
+    const titleP = readNextNonEmptyP();
+    if (!titleP) break;
+
+    const descP = readNextNonEmptyP();
+    const linkP = readNextNonEmptyP();
+
+    const title = cleanText(titleP.text());
+    const descHtml = descP ? sanitizeInlineHtmlDubai(descP.html() || "") : "";
+    const linkHtmlRaw = linkP ? linkP.html() || "" : "";
+
+    let linkHref = "";
+    let linkText = "";
+
+    if (linkP) {
+      const $$ = cheerio.load(`<root>${linkHtmlRaw}</root>`, null, false);
+      rewriteAnchorsDubai($$);
+      const a = $$("a").first();
+      if (a.length) {
+        linkHref = a.attr("href") || "";
+        linkText = cleanText(a.text());
+      } else {
+        linkText = cleanText($$("root").text());
+      }
+    }
+
+    let imageSrc = "";
+    let imageAlt = "";
+    if (imgNode) {
+      imageSrc = imgNode.attr("src") || "";
+      imageAlt = imgNode.attr("alt") || "";
+    }
+
+    if (!title) continue;
+
+    rows.push({
+      imageSrc,
+      imageAlt,
+      title,
+      descHtml,
+      linkHref,
+      linkText,
+    });
+  }
+
+  return rows;
+}
+
+/** -----------------------------
+ * Events renderer (NEW)
+ * Output MJML safe inside your existing mj-column:
+ * Use mj-table for 30/70 layout, mj-divider for dotted lines
+ * ----------------------------- */
+function renderEventsDubai(events) {
+  const list = (events || []).filter((e) => e && cleanText(e.title));
+  if (!list.length) return "";
+
+  const PLACEHOLDER =
+    "https://www.dubaisummary.com/email/images/event-placeholder.jpg";
+
+  return list
+    .map((e, idx) => {
+      const title = escapeHtml(cleanText(e.title || ""));
+      const desc = e.descHtml || "";
+      const href = e.linkHref ? escapeHtml(e.linkHref) : "";
+      const linkText = escapeHtml(cleanText(e.linkText || ""));
+      const imgSrc = e.imageSrc ? escapeHtml(e.imageSrc) : PLACEHOLDER;
+      const imgAlt = escapeHtml(e.imageAlt || "Event image");
+
+      const linkLine = href
+        ? `<a target="_blank" href="${href}" style="text-decoration: none; border-bottom: 2px solid #102341; color: black;">${linkText}</a>`
+        : linkText;
+
+      const imgCell = `
+<td width="30%" valign="top" style="padding:0;">
+  ${href ? `<a href="${href}" target="_blank">` : ""}
+  <img
+    src="https://www.dubaisummary.com/email/images/REPLACE_ME.jpg"
+    alt="REPLACE_ME"
+    width="170"
+    style="display:block;width:100%;max-width:170px;border-radius:8px;"
+  />
+  ${href ? `</a>` : ""}
+</td>`;
+
+      return `
+<mj-table padding="${idx === 0 ? "0px 12px 0px 12px" : "5px 12px 0px 12px"}" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+${imgCell}
+
+<td width="70%" valign="top" style="padding:0 0 0 15px;font-family:Arial,sans-serif;color:#000;">
+
+<p style="margin-bottom:7px;margin-top:6px;line-height:16px;font-size:16px;">
+<strong>${title}</strong>
+</p>
+
+${
+  !isEmptyRichText(desc)
+    ? `<p style="margin:0 0 10px 0;line-height:24px;font-size:16px;">${desc}</p>`
+    : ""
+}
+
+${
+  linkLine
+    ? `<p style="margin:0;line-height:24px;font-size:16px;">${linkLine}</p>`
+    : ""
+}
+
+</td>
+</tr>
+</mj-table>
+
+<mj-divider
+  border-style="dashed"
+  border-width="1px"
+  border-color="lightgrey"
+  padding="20px 22px 8px 22px"
+/>
+`;
+    })
+    .join("\n");
+}
+
+/** -----------------------------
+ * Where to eat? extraction (UPDATED)
+ * H3 "Where to eat?" -> first image + paragraphs
  * ----------------------------- */
 function extractWhereToEatDubai(html) {
   const $ = cheerio.load(html);
 
-  const eventH2 = $("h2")
-    .filter((_, el) => cleanText($(el).text()).toLowerCase() === "event")
+  const eventsH2 = $("h2")
+    .filter((_, el) => cleanText($(el).text()).toLowerCase() === "events")
     .first();
 
-  if (!eventH2.length) return [];
+  if (!eventsH2.length)
+    return { imageSrc: "", imageAlt: "", imageHref: "", items: [] };
 
-  // find H3 "Where to eat?"
+  // Find H3 "Where to eat?"
   let whereH3 = null;
-  let el = eventH2.next();
+  let el = eventsH2.next();
 
   while (el && el.length) {
     const tag = (el[0]?.tagName || "").toLowerCase();
@@ -592,7 +847,11 @@ function extractWhereToEatDubai(html) {
     el = el.next();
   }
 
-  if (!whereH3) return [];
+  if (!whereH3) return { imageSrc: "", imageAlt: "", imageHref: "", items: [] };
+
+  let imageSrc = "";
+  let imageAlt = "";
+  let imageHref = "";
 
   const items = [];
   el = whereH3.next();
@@ -603,10 +862,36 @@ function extractWhereToEatDubai(html) {
 
     if (tag === "h2" && txt) break;
 
+    // capture FIRST image (direct img or inside a wrapper)
+    if (!imageSrc) {
+      if (tag === "img") {
+        imageSrc = el.attr("src") || "";
+        imageAlt = el.attr("alt") || "";
+        el = el.next();
+        continue;
+      }
+
+      if (tag === "div") {
+        const img = el.find("img").first();
+        if (img.length) {
+          imageSrc = img.attr("src") || "";
+          imageAlt = img.attr("alt") || "";
+        }
+      }
+    }
+
+    // paragraphs -> items
     if (tag === "p") {
       const htmlInner = el.html() || "";
       const item = parseWhereToEatParagraph(htmlInner);
       if (item) items.push(item);
+
+      // infer image href from first anchor if not set
+      if (!imageHref) {
+        const $$ = cheerio.load(`<root>${htmlInner}</root>`, null, false);
+        const a = $$("a").first();
+        if (a.length) imageHref = a.attr("href") || "";
+      }
     } else if (tag === "div") {
       const ps = el.children("p");
       if (ps.length) {
@@ -614,6 +899,12 @@ function extractWhereToEatDubai(html) {
           const h = $(p).html() || "";
           const item = parseWhereToEatParagraph(h);
           if (item) items.push(item);
+
+          if (!imageHref) {
+            const $$ = cheerio.load(`<root>${h}</root>`, null, false);
+            const a = $$("a").first();
+            if (a.length) imageHref = a.attr("href") || "";
+          }
         });
       }
     }
@@ -621,7 +912,25 @@ function extractWhereToEatDubai(html) {
     el = el.next();
   }
 
-  return items;
+  // If the image was wrapped in a link in Mammoth HTML, try to capture it:
+  // (Sometimes the image node becomes <p><a><img/></a></p> or similar.)
+  // Best effort: if imageHref still empty, search around whereH3 for the first <a><img>.
+  if (imageSrc && !imageHref) {
+    let scan = whereH3.next();
+    for (let k = 0; k < 8 && scan && scan.length; k++) {
+      const aimg = scan.find("a img").first();
+      if (aimg.length) {
+        const a = aimg.parent("a");
+        if (a.length) {
+          imageHref = a.attr("href") || "";
+          break;
+        }
+      }
+      scan = scan.next();
+    }
+  }
+
+  return { imageSrc, imageAlt, imageHref, items };
 }
 
 function parseWhereToEatParagraph(htmlInner) {
@@ -649,7 +958,6 @@ function parseWhereToEatParagraph(htmlInner) {
       if (!allowed.has(tag)) $(el).replaceWith($(el).text());
     });
 
-  // normalize arrow spacing
   const out = normalizeDashes($("root").html()?.trim() || "")
     .replace(/\s*-\s*>/g, " → ")
     .replace(/\s*→\s*/g, " → ");
@@ -672,11 +980,6 @@ function renderWhereToEatDubai(items) {
 
 /** -----------------------------
  * Career (Dubai)
- * Rule:
- * - Find H2 "Career"
- * - Next H3 = job title
- * - Next 3 paragraphs = tags
- * - Remaining paragraphs until next H2 = body (summary + cta, etc.)
  * ----------------------------- */
 function extractCareerDubai(html) {
   const $ = cheerio.load(html);
@@ -687,7 +990,6 @@ function extractCareerDubai(html) {
 
   if (!careerH2.length) return { title: "", tags: [], body: [] };
 
-  // find first H3 after Career
   let title = "";
   let el = careerH2.next();
 
@@ -707,12 +1009,10 @@ function extractCareerDubai(html) {
 
   if (!title) return { title: "", tags: [], body: [] };
 
-  // collect paragraphs until next H2
   const paras = [];
   while (el && el.length) {
     const tag = (el[0]?.tagName || "").toLowerCase();
     const txt = cleanText(el.text());
-
     if (tag === "h2" && txt) break;
 
     if (tag === "p") {
@@ -791,7 +1091,6 @@ function renderCareerDubai(data) {
 <mj-text padding="0px 12px 10px 12px" font-family="Arial" color="#000000">
   ${body
     .map((inner) => {
-      // keep as-is (already sanitized inline HTML), just wrap in <p> with your style
       return `<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">${inner}</p>`;
     })
     .join("\n")}
@@ -801,6 +1100,9 @@ function renderCareerDubai(data) {
   return [titleBlock, tagsBlock, bodyBlock].filter(Boolean).join("\n\n");
 }
 
+/** -----------------------------
+ * Meanwhile (Dubai)
+ * ----------------------------- */
 function extractMeanwhileDubai(html) {
   const $ = cheerio.load(html);
 
@@ -818,10 +1120,8 @@ function extractMeanwhileDubai(html) {
     const tag = (el[0]?.tagName || "").toLowerCase();
     const txt = cleanText(el.text());
 
-    // stop when next big section starts
     if (tag === "h2" && txt) break;
 
-    // each H3 starts a new story
     if (tag === "h3" && txt) {
       if (current) stories.push(current);
       current = { title: txt, nodes: [] };
@@ -834,7 +1134,6 @@ function extractMeanwhileDubai(html) {
       continue;
     }
 
-    // collect paragraph content
     if (tag === "p") {
       current.nodes.push(el);
     } else if (tag === "div") {
@@ -898,6 +1197,9 @@ ${divider}
     .join("\n\n");
 }
 
+/** -----------------------------
+ * Did you know? (Dubai)
+ * ----------------------------- */
 function extractDidYouKnowDubai(html) {
   const $ = cheerio.load(html);
 
@@ -916,7 +1218,7 @@ function extractDidYouKnowDubai(html) {
     const tag = (el[0]?.tagName || "").toLowerCase();
     const txt = cleanText(el.text());
 
-    if (tag === "h2" && txt) break; // next section
+    if (tag === "h2" && txt) break;
 
     if (tag === "p") {
       const inner = el.html() || "";
@@ -942,14 +1244,11 @@ function extractDidYouKnowDubai(html) {
 function parseDidYouKnowParagraph(htmlInner) {
   const $ = cheerio.load(`<root>${htmlInner || ""}</root>`, null, false);
 
-  // must have text
   const rawText = cleanText($("root").text());
   if (!rawText) return null;
 
-  // apply your DS anchor styling + target=_blank
   rewriteAnchorsDubai($);
 
-  // allow only safe inline tags
   const allowed = new Set(["strong", "b", "em", "i", "a", "br"]);
   $("root")
     .find("*")
@@ -975,6 +1274,9 @@ function renderDidYouKnowDubai(items) {
     .join("\n");
 }
 
+/** -----------------------------
+ * Meta fields (Dubai)
+ * ----------------------------- */
 function extractMetaFieldsDubai(html) {
   const $ = cheerio.load(html);
 
@@ -988,14 +1290,12 @@ function extractMetaFieldsDubai(html) {
 
     if (!h2.length) return "";
 
-    // find the next paragraph (sometimes Word wraps in divs)
     let el = h2.next();
     while (el && el.length) {
       const tag = (el[0]?.tagName || "").toLowerCase();
 
       if (tag === "p") {
         const inner = el.html() || "";
-        // Keep links if they exist + apply DS link styling
         const safe = sanitizeInlineHtmlDubai(inner);
         return safe;
       }
@@ -1009,7 +1309,6 @@ function extractMetaFieldsDubai(html) {
         }
       }
 
-      // stop if another section starts unexpectedly
       if (tag === "h2") break;
 
       el = el.next();
@@ -1018,10 +1317,7 @@ function extractMetaFieldsDubai(html) {
     return "";
   };
 
-  // Preview can include links; we keep them.
   const previewText = readAfterH2("Preview text");
-
-  // Day/Date/Temperature should be plain, but we still sanitize in case of links.
   const day = stripHtmlToText(readAfterH2("Day"));
   const date = stripHtmlToText(readAfterH2("Date"));
   const temperature = stripHtmlToText(readAfterH2("Temperature"));

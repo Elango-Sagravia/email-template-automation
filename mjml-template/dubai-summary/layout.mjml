@@ -203,6 +203,92 @@
     {{%SPOTLIGHT_SECTION%}}
     <mj-section
       background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-raw>
+        <a href="https://link.dubaisummary.com/REPLACE_ME" target="_blank"
+        style="color:black">
+      </mj-raw>
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-spacer height="10px" />
+        <mj-text
+          padding="2px 12px 8px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="#000000"
+        >
+          <h2
+            style="
+              font-size: 24px;
+              line-height: 1.2;
+              font-weight: 500;
+              margin-top: 2px !important;
+              margin: 0;
+            "
+          >
+            Executive AI edge
+          </h2>
+        </mj-text>
+        <mj-spacer height="0px" />
+        <mj-image
+          border-radius="10px"
+          padding="10px 12px 4px 12px"
+          width="600px"
+          src="https://www.dubaisummary.com/email/ad/REPLACE_ME.jpg"
+          alt="REPLACE_ME"
+        />
+        <mj-text
+          padding="10px 12px 0px 12px"
+          font-family="Arial"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 24px; margin: 0 0 10px 0">
+            <strong>What's happening?</strong> The Deep View is a free,
+            five-minute daily AI newsletter. It distills the most important
+            developments in artificial intelligence into concise, actionable
+            insights. It covers major breakthroughs, policy shifts, and how
+            companies like Google and Meta are applying AI to transform
+            business.
+          </p>
+          <p style="font-size: 16px; line-height: 24px; margin: 0 0 10px 0">
+            <strong>About the company:</strong> The Deep View is a daily AI
+            newsletter serving 750,000+ readers across companies like Google,
+            Meta, Microsoft, and Andreessen Horowitz (a16z). It delivers clear,
+            in-depth analysis on AI’s real-world impact while maintaining strict
+            editorial independence and transparent brand partnerships.
+          </p>
+          <p style="font-size: 16px; line-height: 24px; margin: 0">
+            <strong>Advantages:</strong> An AI newsletter filters noise, tracks
+            policy and product shifts, highlights competitive moves, and
+            translates technical breakthroughs into business impact. This will
+            help decision-makers stay informed without constant monitoring of
+            fragmented sources.
+          </p>
+        </mj-text>
+        <mj-text
+          padding="10px 12px 8px 12px"
+          font-family="Arial"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 24px; margin: 0">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #102341;
+                color: black;
+              "
+              ><strong>Learn more</strong></a
+            >
+          </p>
+        </mj-text>
+        <mj-spacer height="12px" />
+      </mj-column>
+      <mj-raw> </a> </mj-raw>
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
       padding="1px 0.5px 1px 1px"
       border-radius="5px"
     >
@@ -272,18 +358,11 @@
           color="#000000"
         >
           <h2 style="font-size: 24px; line-height: 1.5; font-weight: 400">
-            Event
+            Events
           </h2>
         </mj-text>
-        <mj-image
-          border-radius="10px"
-          padding="6px 12px 10px 12px"
-          width="600px"
-          href=""
-          src="https://www.dubaisummary.com/email/images/REPLACE_ME.jpg"
-          alt="REPLACE_ME"
-          target="_blank"
-        />
+        {{%EVENTS_SECTION%}}
+
         <mj-text
           padding="0px 12px 0px 12px"
           font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
@@ -300,6 +379,15 @@
             Where to eat?
           </h2>
         </mj-text>
+        <mj-image
+          border-radius="10px"
+          padding="6px 12px 10px 12px"
+          width="600px"
+          href=""
+          src="https://www.dubaisummary.com/email/images/REPLACE_ME.jpg"
+          alt="REPLACE_ME"
+          target="_blank"
+        />
         <mj-text padding="10px 12px" font-family="Arial" color="#000000">
           {{%WHERE_TO_EAT_SECTION%}}
         </mj-text>
