@@ -67,7 +67,9 @@ const TOKEN_ROWS = /\{\{\%\s*ROWS\s*\%\}\}/g;
 const TOKEN_DID_YOU_KNOW_SECTION = /\{\{\%\s*DID_YOU_KNOW_SECTION\s*\%\}\}/g;
 const TOKEN_PREVIEW_TEXT = /\{\{\%\s*PREVIEW_TEXT\s*\%\}\}/g;
 const TOKEN_IMAGE_CREDITS = /\{\{\%\s*IMAGE_CREDITS\s*\%\}\}/g;
-
+const TOKEN_DAY = /\{\{\%\s*DAY\s*\%\}\}/g;
+const TOKEN_DATE = /\{\{\%\s*DATE\s*\%\}\}/g;
+const TOKEN_AQI = /\{\{\%\s*AQI\s*\%\}\}/g;
 /** -----------------------------
  * MAIN
  * ----------------------------- */
@@ -139,6 +141,14 @@ async function main() {
   const layoutMjml = fs.readFileSync(LAYOUT_PATH, "utf8");
   let finalMjml = layoutMjml;
 
+  const meta = extractMetaFieldsLondon(docHtml);
+  console.log("🧩 Meta:", meta);
+
+  finalMjml = finalMjml.replace(TOKEN_PREVIEW_TEXT, meta.previewText || "");
+  finalMjml = finalMjml.replace(TOKEN_DAY, meta.day || "");
+  finalMjml = finalMjml.replace(TOKEN_DATE, meta.date || "");
+  finalMjml = finalMjml.replace(TOKEN_AQI, meta.aqi || "");
+
   if (!TOKEN_IN_THIS_EDITION.test(finalMjml)) {
     console.warn(
       "⚠️ Placeholder {{%IN_THIS_EDITION_TABLE%}} not found in layout.mjml",
@@ -174,10 +184,6 @@ async function main() {
     );
   }
   finalMjml = finalMjml.replace(TOKEN_DID_YOU_KNOW_SECTION, dykHtml);
-
-  // Preview text
-  const preview = extractPreviewTextLondon(docHtml);
-  finalMjml = finalMjml.replace(TOKEN_PREVIEW_TEXT, escapeHtml(preview || ""));
 
   // Image credits
   const imageCredits = extractImageCreditsLondon(docHtml);
@@ -232,6 +238,55 @@ function computeOutPaths(docxPath) {
     outMjmlPath: path.join(outDir, `${base}.mjml`),
     outHtmlPath: path.join(outDir, `${base}.html`),
   };
+}
+
+function extractMetaFieldsLondon(html) {
+  const $ = cheerio.load(html);
+
+  const readAfterHeading = (label) => {
+    const heading = $("h2, h3")
+      .filter(
+        (_, el) =>
+          cleanText($(el).text()).toLowerCase() === label.toLowerCase(),
+      )
+      .first();
+
+    if (!heading.length) return "";
+
+    let el = heading.next();
+    while (el && el.length) {
+      const tag = (el[0]?.tagName || "").toLowerCase();
+
+      if (tag === "p") return sanitizeInlineHtmlLondon(el.html() || "");
+
+      if (tag === "div") {
+        const p = el.find("p").first();
+        if (p.length) return sanitizeInlineHtmlLondon(p.html() || "");
+      }
+
+      if (tag === "h2" || tag === "h3") break;
+      el = el.next();
+    }
+
+    return "";
+  };
+
+  const previewText = readAfterHeading("Preview text");
+  const day = stripHtmlToText(readAfterHeading("Day"));
+  const date = stripHtmlToText(readAfterHeading("Date"));
+  const aqi = stripHtmlToText(readAfterHeading("AQI"));
+
+  return {
+    previewText: previewText || "",
+    day: day || "",
+    date: date || "",
+    aqi: aqi || "",
+  };
+}
+
+function stripHtmlToText(html) {
+  const $ = cheerio.load(`<root>${html || ""}</root>`, null, false);
+  return cleanText($("root").text());
 }
 
 /** -----------------------------
@@ -714,6 +769,7 @@ function renderWhatsOnLondon(items = []) {
     .join("\n");
 
   const footer = `
+  <mj-spacer height="20px" />
   </mj-column>
 </mj-section>
 <mj-spacer height="20px" />

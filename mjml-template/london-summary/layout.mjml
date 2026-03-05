@@ -136,7 +136,7 @@
                 font-weight="300"
                 color="#00000096"
                 padding="0"
-                >Feb 4, Wed • AQI 26
+                >{{%DAY%}}, {{%DATE%}} • AQI {{%AQI%}}
               </mj-text>
             </mj-column>
           </mj-group>
