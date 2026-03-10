@@ -1,0 +1,608 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      h2,
+      img,
+      p {
+        margin: 0;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+    </mj-style>
+    <mj-font
+      name="Roboto+Serif"
+      href="https://fonts.googleapis.com/css2?family=Roboto  +Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+    />
+    <mj-style>
+      .button-style:hover {
+        background-color: #dcedff !important;
+        color: rgba(0, 0, 0, 1) !important; /* instead of #000 */
+        border: 1px solid #dcedff !important;
+        cursor: pointer;
+      }
+      .button-style:hover .dot {
+        background-color: #06266d !important;
+        color: rgba(0, 0, 0, 1) !important;
+      }
+    </mj-style>
+    <mj-style>
+      .feedback-btn:hover {
+        opacity: 0.8 !important;
+        transform: scale(1.1) !important;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f9f8f9">
+    <mj-raw>
+      <div style="display: none; max-height: 0px; overflow: hidden">Plus Kenya budget shock
+      </div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden preview text -->
+      <div style="display: none; max-height: 0px; overflow: hidden"> &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; </div>
+    </mj-raw>
+    <mj-spacer height="15px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-spacer height="16px" />
+        <mj-image
+          padding="10px 12px 0px 12px"
+          css-class="light_img"
+          width="150px"
+          src="https://www.geopoliticalsummary.com/gp-logo-grey.png"
+          href="https://www.geopoliticalsummary.com"
+          alt=""
+        />
+        <mj-image
+          width="1px"
+          src="https://www.geopoliticalsummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+          alt=""
+        />
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="4px 12px 10px 12px"
+        />
+        <mj-text
+          padding="0px 12px 0px 12px "
+          font-family="Roboto+Serif"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5">
+            <strong>In this edition:</strong>
+          </p>
+        </mj-text>
+        <mj-table
+          font-family="Roboto+Serif"
+          cellpadding="0"
+          cellspacing="0"
+          padding="0px 18px 0px 18px"
+          style="width: 100%"
+        >
+          <mj-table
+  font-family="Roboto+Serif"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 18px 0px 18px"
+  style="width: 100%"
+>
+  <tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+    line-height: 1.6;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6">Kenya budget shock</td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+    line-height: 1.6;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6">War hits FIFA qualification</td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+    line-height: 1.6;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6">What is a frozen conflict?</td>
+</tr>
+</mj-table>
+
+        </mj-table>
+        <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+          <p style="font-size: 16px; line-height: 1.5">
+            Was this email forwarded to you?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="https://link.geopoliticalsummary.com/gs-stay-informed"
+              target="_blank"
+            >
+              Stay informed</a
+            >.
+          </p>
+        </mj-text>
+        <!-- <mj-divider border-width="1px" border-style="solid" border-color="lightgrey" padding="10px 12px" /> -->
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-section background-color="#eff1f4" padding="1px 0.5px 1px 1px" border-radius="5px">
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-text
+  padding="16px 12px 10px 12px "
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="white"
+>
+  <h2
+    style="
+      padding-bottom: 8px;
+      color: #06266d;
+      text-align: left;
+      border-bottom: 2px solid #06266d;
+      font-size: 26px;
+      line-height: 1.2;
+      font-weight: 300;
+      margin: 0;
+    "
+  >
+    Spotlight
+  </h2>
+</mj-text>
+    <mj-text
+  padding="10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h2
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 500;
+      margin-top: 2px !important;
+      margin: 0;
+    "
+  >
+    Trump calms markets
+  </h2>
+</mj-text>
+    <mj-image
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+  alt="REPLACE_ME"
+  target="_blank"
+/>
+    
+    <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>What happened?</strong> Global oil prices dropped sharply after President Trump said the<a href="https://www.bbc.com/news/articles/cx2jxe382pwo" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;"> conflict with Iran could end “very soon,”</a> easing fears of prolonged war. Brent Crude, which had surged near $120 per barrel amid escalating tensions and airstrikes, fell to around $93 during trading. Markets responded positively, with global equities rebounding, including the FTSE 100, which rose at the open.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>What did Trump say?</strong> Speaking at a press conference in Florida, Trump said the war was “pretty much complete” and suggested the main objective had already been achieved. However, he issued a strong warning to Iran not to disrupt shipping through the Strait of Hormuz. He said that if Iran blocks or interferes with oil flows in the strait, the US would respond with force “twenty times harder” than previous strikes.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Big picture:</strong> Comments from President Trump temporarily eased markets, but volatility is likely to persist. Even speculation about escalation can send prices sharply higher, affecting inflation, fuel expenses, and economic growth worldwide. The conflict demonstrates how geopolitical risks, energy security, and global stability remain tightly interconnected.</p>
+</mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="10px" />
+<mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-raw>
+    <a href="REPLACE_ME"
+    target="_blank" style="color:black">
+  </mj-raw>
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-spacer height="14px" />
+    <mj-text
+      padding="2px 12px 0px 12px"
+      font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+      color="white"
+    >
+      <h2
+        style="
+          padding-bottom: 8px;
+          color: #06266d;
+          text-align: left;
+          letter-spacing: 1px;
+          border-bottom: 2px solid #06266d;
+          font-size: 26px;
+          line-height: 1.2;
+          font-weight: 300;
+          margin: 0;
+        "
+      >
+        This could be your business
+      </h2>
+    </mj-text>
+    <mj-spacer height="12px" />
+    <mj-image
+      border-radius="10px"
+      padding="10px 12px 14px 12px"
+      width="600px"
+      src="https://www.geopoliticalsummary.com/email/ad/REPLACE_ME.jpg"
+      alt="campaign-x-2"
+    />
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px; margin: 0 0 10px 0;">
+        Reach a wide audience of engaged, loyal readers right where they’re
+        paying attention. Our audience is educated, influential, and ready to
+        respond.
+      </p>
+      <p style="font-size: 16px; line-height: 24px; margin: 0;">
+        Whether you want to drive revenue, build awareness, or launch
+        something fresh, this is your spot. Secure your placement and get in
+        front of the right eyes.
+      </p>
+    </mj-text>
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px; margin: 0;">
+        <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #06266d;
+            color: black;
+          "
+        ><strong>Partner with us</strong></a>
+      </p>
+    </mj-text>
+    <mj-spacer height="15px" />
+  </mj-column>
+  <mj-raw> </a> </mj-raw>
+</mj-section>
+<mj-spacer height="10px" />
+
+<mj-section background-color="#eff1f4" padding="1px 0.5px 1px 1px" border-radius="5px">
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    
+    <mj-text
+  padding="10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h2
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 500;
+      margin-top: 2px !important;
+      margin: 0;
+    "
+  >
+    Kenya budget shock
+  </h2>
+</mj-text>
+    
+    
+    <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Summary: Kenya’s State House budget doubles, sparking debate over spending priorities and transparency.   </strong></p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>What happened? </strong>Kenya’s State House budget has come under scrutiny after <a href="https://www.dw.com/en/why-kenyas-massive-state-house-budget-raises-eyebrows/a-76274407" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">supplementary estimates increased its allocation</a> to about Sh16.9B ($130M), nearly double the original Sh8.6B ($66M). Kenya’s State House budget funds State Lodges, presidential administration, travel and hospitality, and benefits for former leaders. Supplementary estimates increased the allocation to cover operational shortfalls and ongoing government activities.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Criticisms:</strong> Economists say the allocation appears excessive given the country’s rising public liabilities, pressure on government revenues, and shortages in essential sectors such as healthcare, education, and drought relief. Some analysts also question transparency, warning that minimal disclosure makes it difficult to track how the funds are actually used. Others claim the State House may be spending beyond what Parliament originally approved.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Big picture:</strong> The debate over Kenya’s State House budget reflects broader concerns about fiscal discipline and government priorities. The issue highlights a broader challenge for developing economies: balancing public spending with economic needs while avoiding perceptions of excess in government leadership.</p>
+</mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="10px" />
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #06266d;
+              text-align: left;
+              border-bottom: 2px solid #06266d;
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 300;
+            "
+          >
+            Analysis
+          </h2>
+        </mj-text>
+        <mj-text
+          padding="10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="#000000"
+        >
+          <h2 style="font-size: 24px; line-height: 1.2; font-weight: 500; margin: 0;">
+  War hits FIFA qualification
+</h2>
+<p style="font-size: 16px; line-height: 1.5; margin: 10px 0 0 0;"><strong>Summary: War disruption threatens Iraq’s historic World Cup qualification chance after forty years.</strong></p>
+<p style="font-size: 16px; line-height: 1.5; margin: 10px 0 0 0;"><strong>What’s happening?</strong> Iraq’s men’s national football team faces uncertainty about its chances of <a href="https://edition.cnn.com/2026/03/10/sport/iran-iraq-fifa-world-cup-berth" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">qualifying for the 2026 FIFA World Cup</a> amid regional conflict, which is disrupting travel plans. The team is scheduled to play the winner of a playoff between Bolivia and Suriname in Monterrey, Mexico, on March 31 for a spot in the tournament. However, the war in neighboring Iran has led to the closure of Iraqi airspace, preventing most players and staff from leaving the country.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 10px 0 0 0;"><strong>Demand:</strong> The Iraq Football Association (IFA) has formally asked FIFA to postpone the playoff qualifier. Around 60% of the squad remains stranded in Iraq, while some support staff are stuck in other countries due to disrupted flights and visa complications. Iraq’s coach, Graham Arnold, says delaying the game would give the team a fair possibility to travel, regroup, and properly prepare for a crucial match.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 10px 0 0 0;"><strong>Big picture:</strong> The war is threatening Iraq’s possibility of qualifying for the World Cup for the first time in 40 years. This crisis also places FIFA in a difficult position, balancing fairness to competing teams with extraordinary circumstances caused by war. The situation highlights how external crises can jeopardize years of sporting progress and deny teams a rare possibility to compete on football’s biggest stage.</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #06266d;
+              text-align: left;
+              border-bottom: 2px solid #06266d;
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 300;
+            "
+          >
+            Worldwide
+          </h2>
+        </mj-text>
+        <mj-image
+          border-radius="10px"
+          padding="10px 12px"
+          width="600px"
+          src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+          alt="REPLACE_ME"
+          href="https://www.geopoliticalsummary.com/"
+        />
+        <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+          <p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇮🇳 India - No price hike.</strong> India’s government has decided not to raise petrol and diesel retail prices despite global crude oil prices rising above $100 per barrel. Officials say the policy aims to protect consumers and prevent inflation from rising sharply. State-owned oil companies, which dominate India’s fuel retail market, are expected to absorb temporary losses amid surging international prices (<a href="https://indianexpress.com/article/business/no-petrol-diesel-price-hike-despite-crude-oil-100-lpg-govt-sources-10573184/" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">waiting game</a>).
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇩🇪 Germany - Exports dropped.</strong> Germany’s exports fell more than expected in January, highlighting continued weakness in Europe’s largest economy. Exports declined 2.3% month-on-month to €130.5B, slightly worse than analysts’ forecasts of a 2% drop. The decline was mainly driven by sharp reductions in shipments to China and other EU countries. Exports to China dropped by more than 13%, while exports to EU nations fell by nearly 5% (<a href="https://www.france24.com/en/live-news/20260310-german-exports-drop-in-setback-to-fragile-recovery" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">no hope</a>).
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇱🇧 Lebanon - White Phosphorous shelling.</strong> Human Rights Watch has accused Israel of unlawfully using white phosphorus munitions over residential areas in the southern Lebanese town of Yohmor. White phosphorus is typically used for smoke screens or illumination, but can also behave as an incendiary weapon, causing severe burns and fires. The Israeli military said it could not confirm the alleged use and maintained that its policy prohibits deploying such munitions (<a href="https://www.france24.com/en/middle-east/20260309-hrw-accuses-israel-white-phosphorus-lebanon" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">learn more</a>).
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇧🇪 Belgium - Synagogue blast.</strong> An explosion struck a synagogue in the Belgian city of Liège, damaging the building but causing no injuries. Authorities have described the incident as an antisemitic attack targeting the Jewish community. Belgian Interior Minister Bernard Quintin condemned the explosion as a “despicable” measure and said security around Jewish sites would be strengthened. The exact cause of the explosion remains unclear (<a href="https://edition.cnn.com/2026/03/09/europe/belgian-synagogue-blast-intl" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">what is happening</a>).
+</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #06266d;
+              text-align: left;
+              border-bottom: 2px solid #06266d;
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 300;
+            "
+          >
+            Foundations
+          </h2>
+        </mj-text>
+        <mj-text
+  padding="10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h2 style="font-size: 24px; line-height: 1.2; font-weight: 500; margin: 0;">
+    What is a frozen conflict?
+  </h2>
+</mj-text>
+<mj-image
+  border="1px solid #00000013"
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+  alt="REPLACE_ME"
+  href="https://www.geopoliticalsummary.com/"
+/>
+
+<mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>What is it?</strong> A frozen conflict occurs when active fighting has stopped, but no peace agreement has been reached, leaving the dispute unresolved. This happens when the deeper issues, such as sovereignty, borders, governance, and national identity, remain unsettled. While a <a href="https://www.teseopress.com/pazvisionesestrategiasluchas/chapter/frozen-conflicts-a-concept-describing-the-realities-between-2/" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">frozen conflict could lead to sporadic violence</a>, a full-scale war will not occur. These conflicts create prolonged instability, hinder economic development, and compromise protections for human rights.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Impact:</strong> Frozen conflicts often arise from ceasefires, armistices, or external interventions that halt violence without achieving a long-term political resolution. It can lead to the creation of unrecognized entities or states. These territory ends up being controlled by breakaway regions or de facto authorities that lack international recognition but maintain their own political or military structures. Foreign powers often play influential roles, either as peacekeepers or as supporters of one side, further complicating resolution.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Examples:</strong> The frozen conflicts in Transnistria in Moldova, Abkhazia, and South Ossetia in Georgia stem from post-Soviet disputes. Russia serves as a guarantor state, as its involvement in these conflicts has prevented Georgia and Moldova from drifting toward Western institutions. The Korean Peninsula is another classic case in which a technical state of war still exists.</p>
+</mj-text>
+        <!-- footer-->
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="10px 12px"
+        />
+        <mj-spacer height="10px" />
+        <mj-text
+          padding="3px 12px 0px 12px"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Send us your feedback at
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="mailto:readers@geopoliticalsummary.com"
+              target="_blank"
+              >readers@geopoliticalsummary.com</a
+            >.
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Interested in connecting with curious, informed readers?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="https://www.geopoliticalsummary.com/advertise#advertise-form"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+          <!-- <p style="color: #000; font-size: 10px; line-height: 1.7">
+           "A note from Affirm Payment options through Affirm are subject to an eligibility check and are provided by these lending partners: <a style="text-decoration: none; border-bottom: 2px solid #06266D; color: black;"
+      href="https://www.affirm.com/lenders" target="_blank"
+      >affirm.com/lenders</a>. Options depend on your purchase amount, and a down payment may be required. CA residents: Loans by Affirm Loan Services, LLC are made or arranged pursuant to a California Financing Law license. For licenses and disclosures, see <a style="text-decoration: none; border-bottom: 2px solid #06266D; color: black;"
+      href="https://www.affirm.com/licenses" target="_blank"
+      >affirm.com/licenses</a>."
+                </p> -->
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="https://www.geopoliticalsummary.com/unsubscribewithfeedback?unique_id=%unique_id%&campaign_id=%campaign_id%"
+              target="_blank"
+              >Unsubscribe</a
+            >
+            from this email.
+          </p>
+        </mj-text>
+
+        <mj-text
+          padding="10px 12px 4px 12px"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          <p
+            style="
+              margin-top: 0px;
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 1.5;
+            "
+          >
+            30 <span>N</span> <span>Gould</span>
+            <span>St, Ste N, Sheridan, WY 82801, United States</span>
+          </p>
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 1.5;
+              margin-bottom: 14px;
+            "
+          >
+            Copyright © 2026 House of Summary, All rights reserved.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="15px"></mj-spacer>
+  </mj-body>
+</mjml>

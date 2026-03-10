@@ -1,0 +1,625 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      h2,
+      img,
+      p {
+        margin: 0;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+    </mj-style>
+    <!-- <mj-font name="Roboto+Serif" href="https://fonts.googleapis.com/css?family=Roboto+Serif" /> -->
+    <mj-font
+      name="Roboto+Serif"
+      href="https://fonts.googleapis.com/css2?faily=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+    />
+    <mj-style>
+      .button-style:hover {
+        background-color: #dcedff !important;
+        color: rgba(0, 0, 0, 1) !important; /* instead of #000 */
+        border: 1px solid #dcedff !important;
+        cursor: pointer;
+      }
+      .button-style:hover .dot {
+        background-color: #4d3060 !important;
+        color: rgba(0, 0, 0, 1) !important;
+      }
+    </mj-style>
+    <mj-style>
+      .feedback-btn:hover {
+        opacity: 0.8 !important;
+        transform: scale(1.1) !important;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f9f8f9">
+    <mj-raw>
+      <div style="display: none; max-height: 0px; overflow: hidden">
+      Plus migrant amnesty scheme </div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden
+      preview text --> <div style="display: none; max-height: 0px; overflow:
+      hidden"> &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj;
+      &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp;
+      &#8199; &shy; </div>
+    </mj-raw>
+    <mj-spacer height="15px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-spacer height="16px" />
+        <mj-image
+          padding="10px 12px 6px 12px"
+          css-class="light_img"
+          width="150px"
+          src="https://www.presidentialsummary.com/logo.png"
+          href="https://www.presidentialsummary.com"
+          alt=""
+        />
+        <mj-image
+          width="1px"
+          src="https://www.presidentialsummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+          alt=""
+        />
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="0px 12px 10px 12px"
+        />
+        <mj-text
+          padding="0px 12px 0px 12px "
+          font-family="Roboto+Serif"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5">
+            <strong>In this edition:</strong>
+          </p>
+        </mj-text>
+        <mj-table
+  font-family="Roboto+Serif"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 18px 0px 18px"
+  style="width: 100%"
+>
+  <tr>
+    <td style="
+                font-size: 18px;
+                width: 20px;
+                vertical-align: top;
+                padding-right: 8px;
+                line-height: 1.6;
+              "> → </td>
+    <td style="font-size: 16px; line-height: 1.6">Gen Z revival</td>
+  </tr>
+<tr>
+    <td style="
+                font-size: 18px;
+                width: 20px;
+                vertical-align: top;
+                padding-right: 8px;
+                line-height: 1.6;
+              "> → </td>
+    <td style="font-size: 16px; line-height: 1.6">US-Japan tech plant</td>
+  </tr>
+<tr>
+    <td style="
+                font-size: 18px;
+                width: 20px;
+                vertical-align: top;
+                padding-right: 8px;
+                line-height: 1.6;
+              "> → </td>
+    <td style="font-size: 16px; line-height: 1.6">iPhone Fold render</td>
+  </tr>
+</mj-table>
+
+        <mj-text
+          padding="10px 12px 17px 12px"
+          font-family="Roboto+Serif"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5; margin-bottom: 0px">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="https://link.presidentialsummary.com/ps-advertise"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+        </mj-text>
+        <!-- <mj-divider border-width="1px" border-style="solid" border-color="lightgrey" padding="10px 12px" /> -->
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-text
+  padding="16px 12px 10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="white"
+>
+  <h2
+    style="
+      padding-bottom: 8px;
+      color: #4d3060;
+      text-align: left;
+      border-bottom: 2px solid #4d3060;
+
+      font-size: 26px;
+      line-height: 1.2;
+      font-weight: 400;
+    "
+  >
+    Spotlight
+  </h2>
+</mj-text>
+    <mj-text padding="10px 12px" font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;" color="#000000">
+  <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin-top: 2px !important;">
+    Mojtaba takes power
+  </h2>
+</mj-text>
+<mj-image
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.presidentialsummary.com/email/images/REPLACE_ME.jpg"
+  alt="Mojtaba takes power"
+  href="https://www.presidentialsummary.com/"
+/>
+<mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5"><strong>What happened?</strong> Iran’s regime has named <a href="https://www.bbc.com/news/articles/c78xxg05w0zo" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Mojtaba Khamenei the Islamic Republic’s supreme leader</a>, succeeding his father, Ayatollah Ali Khamenei. Iran's Revolutionary Guard issued a statement expressing support, as did the Iran-backed Lebanese militant group Hezbollah. Some observe this shift as an attempt to elevate his religious standing and present him as a credible leader.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>Mojtaba’s background:</strong> Born in the northeastern city of Mashhad, Mojtaba is the second of Khamenei's six children. At age 17, Mojtaba served in the military for several short periods during the Iran-Iraq War. Unlike his father, the 56-year-old has largely kept a low profile. He has never held government office, nor given public speeches or interviews. Mojtaba remains a mid-ranking cleric, which could pose an obstacle to his ascension to the supreme leadership.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>Criticism: </strong>For years, there have been rumours that Mojtaba held considerable influence behind the scenes in Iran. His name surfaced during the 2005 election that brought Mahmoud Ahmadinejad to power and the <a href="https://www.aljazeera.com/opinions/2013/6/12/what-happened-to-the-green-movement-in-iran" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">2009 Green Movement protests</a>, when reformists accused him of wielding quiet power. Expected to uphold hardline policies amid economic woes, his untested leadership and recent "Ayatollah" elevation spark debate over legitimacy.</p>
+</mj-text>
+  </mj-column>
+</mj-section>
+
+<mj-spacer height="10px" />
+<mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-raw>
+    <a href=""
+    target="_blank" style="color:black">
+  </mj-raw>
+
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-spacer height="14px" />
+
+    <mj-text
+      padding="2px 12px 0px 12px"
+      font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+      color="white"
+    >
+      <h2
+        style="
+          padding-bottom: 8px;
+          color: #4d3060;
+          text-align: left;
+          letter-spacing: 1px;
+          border-bottom: 2px solid #4d3060;
+          font-size: 26px;
+          line-height: 1.2;
+          font-weight: 300;
+        "
+      >
+        This could be your business
+      </h2>
+    </mj-text>
+
+    <mj-spacer height="12px" />
+
+    <mj-image
+      border-radius="10px"
+      padding="10px 12px 14px 12px"
+      width="600px"
+      src="https://www.presidentialsummary.com/email/ad/REPLACE_ME.jpg"
+      alt="Advertise your business to an engaged, influential audience"
+    />
+
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px">
+        Reach a wide audience of engaged, loyal readers right where they’re
+        paying attention. Our audience is educated, influential, and ready
+        to respond.
+      </p>
+      <p style="font-size: 16px; line-height: 24px">
+        Whether you want to drive revenue, build awareness, or launch
+        something fresh, this is your spot. Secure your placement and get in
+        front of the right eyes.
+      </p>
+    </mj-text>
+
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px">
+        <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #4d3060;
+            color: black;
+          "
+        ><strong>Partner with us</strong></a>
+      </p>
+    </mj-text>
+
+    <mj-spacer height="15px" />
+  </mj-column>
+
+  <mj-raw></a></mj-raw>
+</mj-section>
+
+<mj-spacer height="10px" />
+
+<mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-spacer height="10px" />
+    <mj-text padding="10px 12px" font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;" color="#000000">
+  <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin-top: 2px !important;">
+    Modern church appeal
+  </h2>
+</mj-text>
+<mj-image
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.presidentialsummary.com/email/images/REPLACE_ME.jpg"
+  alt="Modern church appeal"
+  href="https://www.presidentialsummary.com/"
+/>
+<mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5"><strong>What’s happening?</strong> North Point Community Church's "The Living Room" (TLR) in Atlanta has achieved what many denominations struggle with: <a href="https://edition.cnn.com/2026/03/08/us/atlanta-north-point-church-gen-z" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">transforming Gen Z into fervent churchgoers</a>. The event resembles a concert, with live bands, dramatic lighting, and large crowds, but its aim is spiritual connection. The ministry has built a following of young people through relatable sermons, contemporary worship, and an emphasis on community.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>Challenges: </strong>Reaching Gen Z remains difficult for most churches. Surveys show younger Americans are less religious than previous generations and often wary of institutions they perceive as judgmental or outdated. Traditional congregations, particularly mainline Protestant churches, have seen membership decline sharply. Experts say attracting young worshippers requires consistent engagement, meaningful community, and addressing issues such as identity, relationships, and social anxiety.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>Big picture:</strong> This move highlights a changing religious landscape in the US. While many denominations face shrinking congregations, some non-denominational megachurches are adapting by prioritizing small groups, mentorship, and outreach beyond church walls. Leaders say the approach focuses on practical faith and personal transformation rather than formal religious tradition.</p>
+</mj-text>
+  </mj-column>
+</mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <!-- long stroy short content sections -->
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #4d3060;
+              text-align: left;
+              border-bottom: 2px solid #4d3060;
+
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 400;
+            "
+          >
+            Long story short
+          </h2>
+        </mj-text>
+        <mj-text
+  padding="14px 12px 0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 1px;
+    "
+  >
+    Global Affairs
+  </h3>
+</mj-text>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Spain's government has launched a migrant amnesty scheme to legalize up to 500,000 undocumented residents.</strong> The scheme will grant a renewable one-year residency visa to eligible applicants who can prove at least 5 months of residence and no criminal record. The government says the move is both humanitarian and economic. However, critics warn it could encourage more irregular migration (<a href="https://www.bbc.com/news/articles/crk8rdz5131o" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Spain’s migrant amnesty</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>A major fire engulfed a historic four-storey building near Glasgow Central railway station, causing a partial collapse and disrupting rail services.</strong> Around 18 fire appliances and specialist crews battled the blaze for hours, with thick smoke and flames visible across the area. No casualties were reported. Authorities urged the public to avoid the site as services at Scotland’s busiest station were suspended (<a href="https://edition.cnn.com/2026/03/08/europe/scotland-fire-glasgow-central-station-hnk-intl" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Glasgow blaze</a>).</p>
+</mj-text>
+<mj-divider
+  border-width="1px"
+  border-style="solid"
+  border-color="lightgrey"
+  padding="0px 12px"
+/>
+<mj-text
+  padding="0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 15px;
+    "
+  >
+    Business &amp; Markets
+  </h3>
+</mj-text>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>The US and Japan are exploring a partnership with Japan Display to build a $13B factory in the US as part of Tokyo's $550B investment package.</strong> Aimed at countering China's dominance in displays critical to military tech, the plan boosted Japan Display's share price by 80% amid its decade-long losses from OLED shifts and competition (<a href="https://finance.yahoo.com/news/us-japan-may-partner-japan-032154987.html" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">tech alliance</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Nintendo sued the US government seeking refunds on tariffs imposed via President Trump's IEEPA executive orders.</strong> The move follows a Supreme Court ruling that deemed the tariffs unlawful, despite the collection of over $200B in revenue from imports. Over 1,000 firms have filed similar claims. Trump hiked rates to 15% post-ruling, prompting suits from 24 states (<a href="https://techcrunch.com/2026/03/06/nintendo-sues-the-u-s-government-for-a-refund-on-tariffs/" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Nintendo sues the US</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Global oil prices surged above $100 a barrel as escalating conflict involving Iran, Israel, and the US raised fears of prolonged disruption to shipments</strong> through the Strait of Hormuz. Analysts warn that continued disruption could drive oil prices toward $150. Markets reacted sharply, with stock indices falling across Asia and Europe and energy prices jumping (<a href="https://www.bbc.com/news/articles/c79542n0grwo" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Hormuz shock</a>).</p>
+</mj-text>
+<mj-divider
+  border-width="1px"
+  border-style="solid"
+  border-color="lightgrey"
+  padding="0px 12px"
+/>
+<mj-text
+  padding="0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 15px;
+    "
+  >
+    Science &amp; Tech
+  </h3>
+</mj-text>
+<mj-image
+  border-radius="10px"
+  padding="0px 12px 10px 12px"
+  width="600px"
+  src="https://www.presidentialsummary.com/email/images/REPLACE_ME.jpg"
+  alt="Science &amp; Tech"
+  href="https://www.presidentialsummary.com/"
+/>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">Tech reviewer Sonny Dickson leaked the purported CAD renders of Apple's rumoured foldable smartphone, the iPhone Fold. The book-style foldable device appears to feature a 7.8-inch inner display and a 5.3-inch cover screen, with hole-punch cameras on both displays. The design shows a dual rear camera setup in a pill-shaped module, a USB-C port, and side buttons similar to recent iPhone models. Reports indicate the phone could run on Apple’s upcoming A20 Pro chip, built on a 2nm process (<a href="https://www.gadgets360.com/mobiles/news/apple-iphone-fold-design-spotted-render-specifications-features-11188996" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">iPhone folds</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Scientists visualize how ketamine rewires key brain receptors to rapidly relieve treatment-resistant depression (TRD), using advanced PET brain scans.</strong> It triggers dynamic, region-specific AMPAR changes (increasing density in some cortical areas, reducing it in reward regions like the habenula) directly correlating with symptom relief in 34 TRD patients. This is the first direct evidence of ketamine’s antidepressant mechanism in humans (<a href="https://www.sciencedaily.com/releases/2026/03/260307213234.htm" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">depression treatment</a>).</p>
+</mj-text>
+<mj-divider
+  border-width="1px"
+  border-style="solid"
+  border-color="lightgrey"
+  padding="0px 12px"
+/>
+<mj-text
+  padding="0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 15px;
+    "
+  >
+    Whatnot
+  </h3>
+</mj-text>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">Scientists say satellite imaging could transform how aging bridges are monitored worldwide (<a href="https://www.sciencedaily.com/releases/2026/03/260307213350.htm" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">aging alert</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">Norwegian police investigate explosion at US embassy in Oslo as possible terrorism (<a href="https://www.bbc.com/news/articles/c5yjegg892lo" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">embassy blast</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">Princess Eugenie steps down as patron of anti-slavery charity (<a href="https://www.theguardian.com/news/2026/mar/08/princess-eugenie-daughter-of-prince-andrew-steps-down-as-patron-of-anti-slavery-charity" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">see why</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">The Alps lost its vultures, and then it got them back (<a href="https://www.bbc.com/future/article/20260305-how-vultures-returned-from-alpine-extinction" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">wildlife comeback</a>).</p>
+</mj-text>
+
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="10px 12px"
+        />
+        <mj-spacer height="10px" />
+        <mj-text
+          padding="2px 12px 0px 12px"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          <p style="color: #000; font-size: 10px; line-height: 2">
+            <strong>Image credits:</strong> AP Photo, North Point Ministries, Sonny Dickson
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Send us your feedback at
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="mailto:readers@presidentialsummary.com"
+              target="_blank"
+              >readers@presidentialsummary.com</a
+            >.
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Interested in connecting with curious, informed readers?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="https://www.presidentialsummary.com/advertise#advertise-form"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="https://www.presidentialsummary.com/unsubscribewithfeedback?unique_id=%unique_id%&campaign_id=%campaign_id%"
+              target="_blank"
+              >Unsubscribe</a
+            >
+            from this email.
+          </p>
+        </mj-text>
+
+        <mj-text padding="10px 12px" font-family="Arial, Helvetica, sans-serif">
+          <p
+            style="
+              margin-top: 0px;
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 1.5;
+            "
+          >
+            30 <span>N</span> <span>Gould</span>
+            <span>St, Ste N, Sheridan, WY 82801, United States</span>
+          </p>
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 0;
+              margin-bottom: 14px;
+            "
+          >
+            Copyright © 2026 House of Summary, All rights reserved.
+          </p>
+        </mj-text>
+        <mj-spacer height="10px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="15px"></mj-spacer>
+  </mj-body>
+</mjml>
