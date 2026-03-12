@@ -1,0 +1,609 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      h2,
+      img,
+      p {
+        margin: 0;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+    </mj-style>
+    <mj-font
+      name="Roboto+Serif"
+      href="https://fonts.googleapis.com/css2?family=Roboto  +Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+    />
+    <mj-style>
+      .button-style:hover {
+        background-color: #dcedff !important;
+        color: rgba(0, 0, 0, 1) !important; /* instead of #000 */
+        border: 1px solid #dcedff !important;
+        cursor: pointer;
+      }
+      .button-style:hover .dot {
+        background-color: #06266d !important;
+        color: rgba(0, 0, 0, 1) !important;
+      }
+    </mj-style>
+    <mj-style>
+      .feedback-btn:hover {
+        opacity: 0.8 !important;
+        transform: scale(1.1) !important;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f9f8f9">
+    <mj-raw>
+      <div style="display: none; max-height: 0px; overflow: hidden">Plus hate speech tracker
+      </div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden preview text -->
+      <div style="display: none; max-height: 0px; overflow: hidden"> &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; </div>
+    </mj-raw>
+    <mj-spacer height="15px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-spacer height="16px" />
+        <mj-image
+          padding="10px 12px 0px 12px"
+          css-class="light_img"
+          width="150px"
+          src="https://www.geopoliticalsummary.com/gp-logo-grey.png"
+          href="https://www.geopoliticalsummary.com"
+          alt=""
+        />
+        <mj-image
+          width="1px"
+          src="https://www.geopoliticalsummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+          alt=""
+        />
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="4px 12px 10px 12px"
+        />
+        <mj-text
+          padding="0px 12px 0px 12px "
+          font-family="Roboto+Serif"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5">
+            <strong>In this edition:</strong>
+          </p>
+        </mj-text>
+        <mj-table
+          font-family="Roboto+Serif"
+          cellpadding="0"
+          cellspacing="0"
+          padding="0px 18px 0px 18px"
+          style="width: 100%"
+        >
+          <mj-table
+  font-family="Roboto+Serif"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 18px 0px 18px"
+  style="width: 100%"
+>
+  <tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+    line-height: 1.6;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6">Orbán war gamble</td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+    line-height: 1.6;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6">Drone warfare era</td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+    line-height: 1.6;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6">Hate speech tracker</td>
+</tr>
+</mj-table>
+
+        </mj-table>
+        <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+          <p style="font-size: 16px; line-height: 1.5">
+            Was this email forwarded to you?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="https://link.geopoliticalsummary.com/gs-stay-informed"
+              target="_blank"
+            >
+              Stay informed</a
+            >.
+          </p>
+        </mj-text>
+        <!-- <mj-divider border-width="1px" border-style="solid" border-color="lightgrey" padding="10px 12px" /> -->
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-section background-color="#eff1f4" padding="1px 0.5px 1px 1px" border-radius="5px">
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-text
+  padding="16px 12px 10px 12px "
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="white"
+>
+  <h2
+    style="
+      padding-bottom: 8px;
+      color: #06266d;
+      text-align: left;
+      border-bottom: 2px solid #06266d;
+      font-size: 26px;
+      line-height: 1.2;
+      font-weight: 300;
+      margin: 0;
+    "
+  >
+    Spotlight
+  </h2>
+</mj-text>
+    <mj-text
+  padding="10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h2
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 500;
+      margin-top: 2px !important;
+      margin: 0;
+    "
+  >
+    Reserves vs. reality
+  </h2>
+</mj-text>
+    <mj-image
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+  alt="REPLACE_ME"
+  target="_blank"
+/>
+    
+    <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>What’s happening?</strong> The International Energy Agency (IEA) and its 32 member countries have agreed to <a href="https://www.euronews.com/business/2026/03/11/germany-and-japan-to-tap-oil-reserves-as-iea-and-g7-weigh-record-release" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">release 400Mn barrels of oil</a> from strategic reserves. The release, more than double the size of the emergency release following the Russian invasion of Ukraine, is intended to offset shortages, calm market fears, and reduce surging fuel values. Implementation timelines will vary by country depending on their national reserve policies.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>United G7:</strong> The G7 nations presented a united political front in response to the oil market disruption caused by the Iran war. During emergency discussions, leaders emphasized the need to stabilize global energy markets by increasing production and avoiding export restrictions. This political backing helped pave the way for the IEA’s decision to release the oil reserve.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Meanwhile:</strong> Brent crude rose <a href="https://www.bbc.com/news/articles/c1w5141vx53o" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">more than 9% to exceed $100 per barrel</a>, reflecting persistent fears of supply disruption. The spike comes as tensions escalated in the Strait of Hormuz, where Iran has intensified attacks on shipping. Despite the historic reserve release, traders remain concerned that prolonged conflict and restricted shipping through the key oil corridor could keep global energy values elevated.</p>
+</mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="10px" />
+<mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-raw>
+    <a href="REPLACE_ME"
+    target="_blank" style="color:black">
+  </mj-raw>
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-spacer height="14px" />
+    <mj-text
+      padding="2px 12px 0px 12px"
+      font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+      color="white"
+    >
+      <h2
+        style="
+          padding-bottom: 8px;
+          color: #06266d;
+          text-align: left;
+          letter-spacing: 1px;
+          border-bottom: 2px solid #06266d;
+          font-size: 26px;
+          line-height: 1.2;
+          font-weight: 300;
+          margin: 0;
+        "
+      >
+        This could be your business
+      </h2>
+    </mj-text>
+    <mj-spacer height="12px" />
+    <mj-image
+      border-radius="10px"
+      padding="10px 12px 14px 12px"
+      width="600px"
+      src="https://www.geopoliticalsummary.com/email/ad/REPLACE_ME.jpg"
+      alt="campaign-x-2"
+    />
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px; margin: 0 0 10px 0;">
+        Reach a wide audience of engaged, loyal readers right where they’re
+        paying attention. Our audience is educated, influential, and ready to
+        respond.
+      </p>
+      <p style="font-size: 16px; line-height: 24px; margin: 0;">
+        Whether you want to drive revenue, build awareness, or launch
+        something fresh, this is your spot. Secure your placement and get in
+        front of the right eyes.
+      </p>
+    </mj-text>
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px; margin: 0;">
+        <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #06266d;
+            color: black;
+          "
+        ><strong>Partner with us</strong></a>
+      </p>
+    </mj-text>
+    <mj-spacer height="15px" />
+  </mj-column>
+  <mj-raw> </a> </mj-raw>
+</mj-section>
+<mj-spacer height="10px" />
+
+<mj-section background-color="#eff1f4" padding="1px 0.5px 1px 1px" border-radius="5px">
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    
+    <mj-text
+  padding="10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h2
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 500;
+      margin-top: 2px !important;
+      margin: 0;
+    "
+  >
+    Orbán war gamble
+  </h2>
+</mj-text>
+    
+    
+    <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Summary: Hungary-Ukraine tensions escalate as Orbán frames election around war, energy, and security.</strong></p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>What’s happening?</strong> Tensions have escalated between Hungary and Ukraine ahead of Hungary’s parliamentary election. The government of Viktor Orbán accuses Kyiv of <a href="https://www.bbc.com/news/articles/crm8rxwyyz8o" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">attempting to undermine his re-election</a> through threats, sabotage, and disruptions to oil delivery via the Druzhba pipeline. The dispute intensified after Russian drone strikes damaged infrastructure near the pipeline, halting oil deliveries to Hungary.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Ukraine’s stance:</strong> Ukraine has strongly rejected accusations from Viktor Orbán's government. Officials say the disruption to oil delivery through the Druzhba pipeline was caused by damage from Russian drone strikes near the Brody oil hub. Ukrainian leaders have also accused Budapest of fueling anti-Ukraine rhetoric to influence domestic politics ahead of the election.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>On the ground:</strong> Polls show that Viktor Orbán’s Fidesz Party is trailing the opposition Tisza Party. Across Hungary, government messaging frames the election as a choice between “peace” under Fidesz and the risk of war if opposition leader Péter Magyar wins. Billboards and campaign materials link Magyar with Volodymyr Zelenskyy and accuse the opposition of supporting pro-war policies in the EU.</p>
+</mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="10px" />
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #06266d;
+              text-align: left;
+              border-bottom: 2px solid #06266d;
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 300;
+            "
+          >
+            Analysis
+          </h2>
+        </mj-text>
+        <mj-text
+          padding="10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="#000000"
+        >
+          <h2 style="font-size: 24px; line-height: 1.2; font-weight: 500; margin: 0;">
+  Drone warfare era
+</h2>
+<p style="font-size: 16px; line-height: 1.5; margin: 10px 0 0 0;"><strong>Summary: Iran’s drone-heavy retaliation signals shift toward mass, low-cost drone warfare globally.     </strong></p>
+<p style="font-size: 16px; line-height: 1.5; margin: 10px 0 0 0;"><strong>What’s happening?</strong> Iran launched a large-scale retaliatory air campaign after the US-Israeli strikes under Operation Epic Fury killed Supreme Leader Ayatollah Ali Khamenei. The strikes primarily targeted Gulf Cooperation Council (GCC) states and relied heavily on mass waves of one-way attack drones, particularly Shahed-series systems, supported by ballistic and cruise missiles. Data shows that <a href="https://www.csis.org/analysis/unpacking-irans-drone-campaign-gulf-early-lessons-future-drone-warfare" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">drones made up roughly 71% of all recorded strikes</a>.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 10px 0 0 0;"><strong>Implications:</strong> Ukraine’s experience demonstrates that defending against mass drone attacks requires a scalable, layered approach. The US must prioritize low-cost interceptor drones to counter mass drone attacks while preserving high-end missiles for advanced threats. Effective defense also requires integration into doctrine, specialized counter-UAS units, strong sensor-fusion systems, resilient communications, onboard AI, and rapid iteration of tactics and technology.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 10px 0 0 0;"><strong>Big picture:</strong> Mass, low-cost drones are becoming central tools for sustained military pressure. This model favors actors with strong production capacity and adaptable operational doctrine. For militaries like the US, the challenge is adapting defenses to this reality.</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #06266d;
+              text-align: left;
+              border-bottom: 2px solid #06266d;
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 300;
+            "
+          >
+            Worldwide
+          </h2>
+        </mj-text>
+        <mj-image
+          border-radius="10px"
+          padding="10px 12px"
+          width="600px"
+          src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+          alt="REPLACE_ME"
+          href="https://www.geopoliticalsummary.com/"
+        />
+        <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+          <p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇮🇱 Israel - Double tap strike.</strong> Israel has intensified large-scale airstrikes across Lebanon, including Beirut and southern regions, killing more than a dozen people. One strike in the Ramlet al-Baida seafront area, killed eight people and injured 31. Additional attacks across southern Lebanon and towns near Beirut have raised the death toll from Israeli strikes since late February to more than 630 (<a href="https://www.aljazeera.com/news/2026/3/12/israeli-double-tap-strike-hits-displaced-on-beirut-seafront-kills-eight" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">double trouble</a>).
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇮🇷 Iran - Conditions to end the war</strong>. Iranian President Masoud Pezeshkian has outlined Tehran’s conditions for ending the ongoing conflict. He stated that any resolution must recognize Iran’s rights, include reparations for damages, and provide firm international guarantees against future attacks. The proposal was shared publicly on social media and reiterated in calls with leaders of Russia and Pakistan as part of Iran’s diplomatic outreach (<a href="https://www.firstpost.com/world/iran-sets-three-conditions-to-end-war-with-us-and-israel-demands-rights-recognition-and-reparations-13988544.html" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">rules of disengagement</a>).
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇪🇸 Spain - Hate speech tracker</strong>. PM Pedro Sánchez has announced a government-backed tool called “Hodio” designed to track and measure hate speech across major social media platforms. The system will analyze the presence, spread, and evolution of harmful content using academic criteria and publish reports every six months ranking platforms based on how effectively they address hate speech. The project will be managed by Spain’s Observatory of Racism and Xenophobia (<a href="https://www.france24.com/en/live-news/20260311-spain-to-deploy-tool-to-track-social-media-hate-speech" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">AI against speech</a>).
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇨🇱 Chile - President Sworn in</strong>. José Antonio Kast has been sworn in as Chile’s president, marking the country’s political shift to the right since the dictatorship of Augusto Pinochet. In his inaugural address, Kast pledged sweeping reforms to address what he called national “emergencies” in security, immigration, health, and employment. Kast also ordered government audits to assess the state of public institutions after the previous administration (<a href="https://www.france24.com/en/americas/20260312-chile-marks-sharp-turn-to-the-right-as-new-hardline-president-vows-sweeping-reforms" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">take right</a>).
+</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #06266d;
+              text-align: left;
+              border-bottom: 2px solid #06266d;
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 300;
+            "
+          >
+            Foundations
+          </h2>
+        </mj-text>
+        <mj-text
+  padding="10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h2 style="font-size: 24px; line-height: 1.2; font-weight: 500; margin: 0;">
+    What is the domino theory?
+  </h2>
+</mj-text>
+<mj-image
+  border="1px solid #00000013"
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+  alt="REPLACE_ME"
+  href="https://www.geopoliticalsummary.com/"
+/>
+
+<mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>What is it?</strong> The domino theory is a concept from the Cold War that said if one nation fell to communism, nearby countries would too, similar to dominoes. Former US President Dwight D. Eisenhower first cited the idea as the “<a href="https://link.geopoliticalsummary.com/gs-21-oct-25-foundations-h1-14-falling-domino-principle?source=website" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">falling domino principle</a>” in 1954. There was the concern that if Vietnam could turn communist, then other Asian countries would quickly follow suit.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Impact:</strong> This theory was used to justify military measures, alliances, and aid programs that were geared towards stopping the spread of communism. The theory’s credibility was later challenged as critics argued that it oversimplified local dynamics and exaggerated the cohesion among communist movements.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">For example, after the Vietnam War, a couple of communist movements grew stronger in Asia, such as Cambodia and Laos, but many others did not fall to communism.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Big picture:</strong> The domino theory illustrates how fear of different ideas influenced international relations. The theory led to expensive and controversial measures to keep the global balance, which weren't always justified. The outcome of the Vietnam War showed the weakness of the theory.</p>
+</mj-text>
+        <!-- footer-->
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="10px 12px"
+        />
+        <mj-spacer height="10px" />
+        <mj-text
+          padding="3px 12px 0px 12px"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Send us your feedback at
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="mailto:readers@geopoliticalsummary.com"
+              target="_blank"
+              >readers@geopoliticalsummary.com</a
+            >.
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Interested in connecting with curious, informed readers?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="https://www.geopoliticalsummary.com/advertise#advertise-form"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+          <!-- <p style="color: #000; font-size: 10px; line-height: 1.7">
+           "A note from Affirm Payment options through Affirm are subject to an eligibility check and are provided by these lending partners: <a style="text-decoration: none; border-bottom: 2px solid #06266D; color: black;"
+      href="https://www.affirm.com/lenders" target="_blank"
+      >affirm.com/lenders</a>. Options depend on your purchase amount, and a down payment may be required. CA residents: Loans by Affirm Loan Services, LLC are made or arranged pursuant to a California Financing Law license. For licenses and disclosures, see <a style="text-decoration: none; border-bottom: 2px solid #06266D; color: black;"
+      href="https://www.affirm.com/licenses" target="_blank"
+      >affirm.com/licenses</a>."
+                </p> -->
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="https://www.geopoliticalsummary.com/unsubscribewithfeedback?unique_id=%unique_id%&campaign_id=%campaign_id%"
+              target="_blank"
+              >Unsubscribe</a
+            >
+            from this email.
+          </p>
+        </mj-text>
+
+        <mj-text
+          padding="10px 12px 4px 12px"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          <p
+            style="
+              margin-top: 0px;
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 1.5;
+            "
+          >
+            30 <span>N</span> <span>Gould</span>
+            <span>St, Ste N, Sheridan, WY 82801, United States</span>
+          </p>
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 1.5;
+              margin-bottom: 14px;
+            "
+          >
+            Copyright © 2026 House of Summary, All rights reserved.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="15px"></mj-spacer>
+  </mj-body>
+</mjml>
