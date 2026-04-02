@@ -78,6 +78,7 @@ const TOKEN_PREVIEW_TEXT = /\{\{\%\s*PREVIEW_TEXT\s*\%\}\}/g;
 const TOKEN_DAY = /\{\{\%\s*DAY\s*\%\}\}/g;
 const TOKEN_DATE = /\{\{\%\s*DATE\s*\%\}\}/g;
 const TOKEN_TEMPERATURE = /\{\{\%\s*TEMPERATURE\s*\%\}\}/g;
+const TOKEN_IMAGE_CREDITS = /\{\{\%\s*IMAGE_CREDITS\s*\%\}\}/g;
 
 /** -----------------------------
  * MAIN
@@ -173,6 +174,9 @@ async function main() {
   console.log("🧩 Did you know paras:", didYouKnowParas.length);
   const didYouKnowHtml = renderDidYouKnowDubai(didYouKnowParas);
 
+  const imageCreditsHtml = extractImageCreditsDS(docHtml);
+  console.log("🧩 Image credits:", cleanText(imageCreditsHtml));
+
   // 9) Inject into layout
   let finalMjml = fs.readFileSync(LAYOUT_PATH, "utf8");
 
@@ -243,6 +247,11 @@ async function main() {
     );
   }
   finalMjml = finalMjml.replace(TOKEN_DID_YOU_KNOW_SECTION, didYouKnowHtml);
+
+  if (!hasToken(TOKEN_IMAGE_CREDITS, finalMjml)) {
+    console.warn("⚠️ Token {{%IMAGE_CREDITS%}} not found in layout.mjml");
+  }
+  finalMjml = finalMjml.replace(TOKEN_IMAGE_CREDITS, imageCreditsHtml || "");
 
   // 10) MJML -> HTML
   const { html, errors } = mjml2html(finalMjml, {
@@ -449,74 +458,8 @@ function extractSpotlightDubai(html) {
 function renderSpotlightDubai(stories) {
   if (!stories?.length) return "";
 
-  const AD_BLOCK = `
-<mj-section
-  background-color="#eff1f4"
-  css-class="border-line"
-  padding="1px 0.5px 1px 1px"
-  border-radius="5px"
->
-  <mj-raw>
-    <a href="https://link.dubaisummary.com/ds-5-feb-2026-p-ad-d5-1"
-    target="_blank" style="color:black">
-  </mj-raw>
-  <mj-column background-color="#fff" border-radius="5px" padding="0px">
-    <mj-spacer height="14px" />
-    <mj-text padding="2px 12px 0px 12px" font-family="Arial" color="#000000">
-      <p style="font-size: 12px; line-height: 1.2; margin: 0;">
-        <i>Brand in residence: Washmen</i>
-      </p>
-    </mj-text>
-    <mj-text
-      padding="2px 12px 0px 12px"
-      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
-      color="white"
-    >
-      <h2
-        style="
-          padding-bottom: 8px;
-          color: #102341;
-          text-align: left;
-          border-bottom: 2px solid #102341;
-          font-size: 26px;
-          line-height: 1.2;
-          font-weight: 300;
-          margin: 0;
-        "
-      >
-        Laundry, dry cleaning, shoe &amp; bag restoration
-      </h2>
-    </mj-text>
-    <mj-spacer height="12px" />
-    <mj-image
-      border-radius="10px"
-      padding="10px 12px 14px 12px"
-      width="600px"
-      src="https://www.dubaisummary.com/email/ad/REPLACE_ME.jpg"
-      alt="Washmen laundry, dry cleaning, and restoration service in Dubai"
-    />
-    <mj-text padding="10px 12px 0px 12px" font-family="Arial" color="#000000">
-      <p style="font-size: 16px; line-height: 24px; margin: 0 0 10px 0;">
-        Dubai moves fast. Your laundry should not slow you down.
-        <a style="text-decoration: none; border-bottom: 2px solid #102341; color: black;">
-          Washmen
-        </a>
-        collects, cleans, and delivers with hotel-grade care. Free delivery the next day!
-      </p>
-    </mj-text>
-    <mj-text padding="0px 12px 10px 12px" font-family="Arial" color="#000000">
-      <p style="font-size: 16px; line-height: 24px; margin: 0;">
-        <a style="text-decoration: none; border-bottom: 2px solid #102341; color: black;">
-          <strong>Download the app</strong>
-        </a>
-      </p>
-    </mj-text>
-    <mj-spacer height="6px" />
-  </mj-column>
-  <mj-raw></a></mj-raw>
-</mj-section>
-<mj-spacer height="10px" />
-`.trim();
+  const AD_BLOCK =
+    `<!--primary ad --><mj-section background-color="#EFF1F4" css-class="border-line" padding="1px 0.5px 1px 1px" border-radius="5px" > <mj-raw> <a href="https://link.dubaisummary.com/ds-1-apr-2026-p-ad-lt" target="_blank" style="color:black"> </mj-raw> <mj-column background-color="#fff" border-radius="5px" padding="0px"> <mj-spacer height="10px" /> <mj-text padding="2px 12px 8px 12px" font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;" color="#000000" > <h2 style=" font-size: 24px; line-height: 1.2; font-weight: 500; margin-top: 2px !important; margin: 0; " > What your credit report may be hiding </h2> </mj-text> <mj-spacer height="0px" /> <mj-image border-radius="10px" padding="10px 12px 4px 12px" width="600px" src="https://www.geopoliticalsummary.com/email/ad/1-apr-2026-p-ad-lt.jpg" alt="campaign - lt" /> <mj-text padding="10px 12px 0px 12px" font-family="Roboto+Serif" color="#000000" > <p style="font-size: 16px; line-height: 24px; margin: 0 0 10px 0"> <strong>Credit check:</strong> Your credit score does not always tell the full story. Errors, outdated information, or negative marks on your credit report can quietly affect borrowing costs, approvals, and financial options without you fully realizing it. </p> <p style="font-size: 16px; line-height: 24px; margin: 0 0 10px 0"> <strong>Why it matters:</strong> Lexington Law offers a free credit assessment designed to help people understand what may be affecting their credit. The idea is simple. Before making any big financial move, it helps to know what is actually on your report and what could be holding you back. </p> <p style="font-size: 16px; line-height: 24px; margin: 0"> <strong>What you get:</strong> For readers who want a clearer picture of their credit without jumping straight into a commitment, this is an easy first step. The positioning is practical and low-friction, with the added credibility of coming from a law firm rather than just another credit tool. </p> </mj-text> <mj-text padding="10px 12px 8px 12px" font-family="Roboto+Serif" color="#000000" > <p style="font-size: 16px; line-height: 24px; margin: 0"> <a style=" text-decoration: none; border-bottom: 2px solid #102341; color: black; " ><strong >Credit assessment from Lexington Law, on the house for Summary readers</strong ></a > </p> </mj-text> <mj-spacer height="12px" /> </mj-column> <mj-raw> </a> </mj-raw> </mj-section><!--primary ad -->`.trim();
 
   const SPOTLIGHT_HEADING = `
 <mj-table
@@ -578,9 +521,10 @@ function renderSpotlightDubai(stories) {
 <mj-spacer height="10px" />
 `.trim();
 
-    if (idx === 0 && stories.length > 1)
-      return `${spotlightBlock}\n${AD_BLOCK}`;
-    return spotlightBlock;
+    // if (idx === 0 && stories.length > 1)
+    //   return `${spotlightBlock}\n${AD_BLOCK}`;
+    // return spotlightBlock;
+    return `${spotlightBlock}\n${AD_BLOCK}`;
   });
 
   return blocks.join("\n\n");
@@ -823,38 +767,22 @@ ${
 function extractWhereToEatDubai(html) {
   const $ = cheerio.load(html);
 
-  const eventsH2 = $("h2")
-    .filter((_, el) => cleanText($(el).text()).toLowerCase() === "events")
+  const whereH2 = $("h2")
+    .filter(
+      (_, el) => cleanText($(el).text()).toLowerCase() === "where to eat?",
+    )
     .first();
 
-  if (!eventsH2.length)
+  if (!whereH2.length) {
     return { imageSrc: "", imageAlt: "", imageHref: "", items: [] };
-
-  // Find H3 "Where to eat?"
-  let whereH3 = null;
-  let el = eventsH2.next();
-
-  while (el && el.length) {
-    const tag = (el[0]?.tagName || "").toLowerCase();
-    const txt = cleanText(el.text());
-
-    if (tag === "h2" && txt) break;
-    if (tag === "h3" && txt && txt.toLowerCase() === "where to eat?") {
-      whereH3 = el;
-      break;
-    }
-
-    el = el.next();
   }
-
-  if (!whereH3) return { imageSrc: "", imageAlt: "", imageHref: "", items: [] };
 
   let imageSrc = "";
   let imageAlt = "";
   let imageHref = "";
 
   const items = [];
-  el = whereH3.next();
+  let el = whereH2.next();
 
   while (el && el.length) {
     const tag = (el[0]?.tagName || "").toLowerCase();
@@ -862,7 +790,6 @@ function extractWhereToEatDubai(html) {
 
     if (tag === "h2" && txt) break;
 
-    // capture FIRST image (direct img or inside a wrapper)
     if (!imageSrc) {
       if (tag === "img") {
         imageSrc = el.attr("src") || "";
@@ -871,39 +798,78 @@ function extractWhereToEatDubai(html) {
         continue;
       }
 
+      if (tag === "p") {
+        const img = el.find("img").first();
+        if (img.length) {
+          imageSrc = img.attr("src") || "";
+          imageAlt = img.attr("alt") || "";
+
+          const linkedImg = el.find("a img").first();
+          if (linkedImg.length) {
+            const a = linkedImg.parent("a");
+            if (a.length) imageHref = a.attr("href") || "";
+          }
+
+          el = el.next();
+          continue;
+        }
+      }
+
       if (tag === "div") {
         const img = el.find("img").first();
         if (img.length) {
           imageSrc = img.attr("src") || "";
           imageAlt = img.attr("alt") || "";
+
+          const linkedImg = el.find("a img").first();
+          if (linkedImg.length) {
+            const a = linkedImg.parent("a");
+            if (a.length) imageHref = a.attr("href") || "";
+          }
         }
       }
     }
 
-    // paragraphs -> items
     if (tag === "p") {
       const htmlInner = el.html() || "";
-      const item = parseWhereToEatParagraph(htmlInner);
-      if (item) items.push(item);
 
-      // infer image href from first anchor if not set
+      const hasOnlyImage =
+        el.find("img").length > 0 && cleanText(el.text()).length === 0;
+
+      if (!hasOnlyImage) {
+        const item = parseWhereToEatParagraph(htmlInner);
+        if (item) items.push(item);
+      }
+
       if (!imageHref) {
         const $$ = cheerio.load(`<root>${htmlInner}</root>`, null, false);
         const a = $$("a").first();
-        if (a.length) imageHref = a.attr("href") || "";
+        if (a.length && $$("img").length === 0) {
+          imageHref = a.attr("href") || "";
+        }
       }
     } else if (tag === "div") {
       const ps = el.children("p");
       if (ps.length) {
         ps.each((_, p) => {
-          const h = $(p).html() || "";
-          const item = parseWhereToEatParagraph(h);
-          if (item) items.push(item);
+          const pNode = $(p);
+          const h = pNode.html() || "";
+
+          const hasOnlyImage =
+            pNode.find("img").length > 0 &&
+            cleanText(pNode.text()).length === 0;
+
+          if (!hasOnlyImage) {
+            const item = parseWhereToEatParagraph(h);
+            if (item) items.push(item);
+          }
 
           if (!imageHref) {
             const $$ = cheerio.load(`<root>${h}</root>`, null, false);
             const a = $$("a").first();
-            if (a.length) imageHref = a.attr("href") || "";
+            if (a.length && $$("img").length === 0) {
+              imageHref = a.attr("href") || "";
+            }
           }
         });
       }
@@ -912,25 +878,77 @@ function extractWhereToEatDubai(html) {
     el = el.next();
   }
 
-  // If the image was wrapped in a link in Mammoth HTML, try to capture it:
-  // (Sometimes the image node becomes <p><a><img/></a></p> or similar.)
-  // Best effort: if imageHref still empty, search around whereH3 for the first <a><img>.
-  if (imageSrc && !imageHref) {
-    let scan = whereH3.next();
-    for (let k = 0; k < 8 && scan && scan.length; k++) {
-      const aimg = scan.find("a img").first();
-      if (aimg.length) {
-        const a = aimg.parent("a");
-        if (a.length) {
-          imageHref = a.attr("href") || "";
-          break;
+  return { imageSrc, imageAlt, imageHref, items };
+}
+
+function extractImageCreditsDS(html) {
+  const $ = cheerio.load(html);
+
+  const h2 = $("h2")
+    .filter(
+      (_, el) => cleanText($(el).text()).toLowerCase() === "image credits",
+    )
+    .first();
+
+  if (!h2.length) return "";
+
+  const parts = [];
+  let el = h2.next();
+
+  while (el && el.length) {
+    const tag = (el[0]?.tagName || "").toLowerCase();
+    const txt = cleanText(el.text());
+
+    if (tag === "h2" && txt) break;
+
+    if (tag === "p") {
+      const inner = sanitizeInlineHtmlDubai(el.html() || "");
+      if (!isEmptyRichText(inner)) parts.push(inner);
+    } else if (tag === "ul" || tag === "ol") {
+      const chunk = cheerio.load("<root></root>", null, false);
+      chunk("root").append(el.clone());
+      rewriteAnchorsDubai(chunk);
+
+      let listHtml = chunk("root").children().first().toString();
+      listHtml = listHtml
+        .replace("<ul", '<ul style="margin: 0; padding-left: 18px;"')
+        .replace("<ol", '<ol style="margin: 0; padding-left: 18px;"')
+        .replace(
+          /<li>/g,
+          '<li style="font-size: 10px; line-height: 2; margin-bottom: 2px;">',
+        );
+
+      parts.push(listHtml);
+    } else if (tag === "div") {
+      el.children("p, ul, ol").each((_, child) => {
+        const childTag = (child.tagName || "").toLowerCase();
+
+        if (childTag === "p") {
+          const inner = sanitizeInlineHtmlDubai($(child).html() || "");
+          if (!isEmptyRichText(inner)) parts.push(inner);
+        } else if (childTag === "ul" || childTag === "ol") {
+          const chunk = cheerio.load("<root></root>", null, false);
+          chunk("root").append($(child).clone());
+          rewriteAnchorsDubai(chunk);
+
+          let listHtml = chunk("root").children().first().toString();
+          listHtml = listHtml
+            .replace("<ul", '<ul style="margin: 0; padding-left: 18px;"')
+            .replace("<ol", '<ol style="margin: 0; padding-left: 18px;"')
+            .replace(
+              /<li>/g,
+              '<li style="font-size: 10px; line-height: 2; margin-bottom: 2px;">',
+            );
+
+          parts.push(listHtml);
         }
-      }
-      scan = scan.next();
+      });
     }
+
+    el = el.next();
   }
 
-  return { imageSrc, imageAlt, imageHref, items };
+  return parts.join(" ");
 }
 
 function parseWhereToEatParagraph(htmlInner) {
@@ -1176,7 +1194,8 @@ function renderMeanwhileDubai(stories) {
   padding="0px 12px 4px 12px"
 />`.trim();
 
-      return `
+      return `${idx === 0 ? `<mj-image border-radius="10px" padding="10px 12px" width="600px" src="https://www.dubaisummary.com/email/images/REPLACE_ME.jpg" alt="REPLACE_ME" href="https://www.dubaisummary.com/" target="_blank" />` : ""}
+      
 <mj-text
   padding="10px 12px"
   font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
@@ -1400,4 +1419,9 @@ function escapeHtml(str) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
+}
+
+function hasToken(re, str) {
+  re.lastIndex = 0;
+  return re.test(str);
 }
