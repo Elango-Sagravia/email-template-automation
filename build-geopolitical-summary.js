@@ -50,6 +50,7 @@ const TOKEN_WORLDWIDE_SECTION = /\{\{\%\s*WORLDWIDE_SECTION\s*\%\}\}/g;
 const TOKEN_FOUNDATIONS_SECTION = /\{\{\%\s*FOUNDATIONS_SECTION\s*\%\}\}/g;
 const TOKEN_PREVIEW_TEXT = /\{\{\%\s*PREVIEW_TEXT\s*\%\}\}/g;
 const TOKEN_ANALYSIS_SECTION = /\{\{\%\s*ANALYSIS_SECTION\s*\%\}\}/g;
+const TOKEN_IMAGE_CREDITS = /\{\{\%\s*IMAGE_CREDITS\s*\%\}\}/g;
 
 /** -----------------------------
  * MAIN
@@ -120,6 +121,9 @@ async function main() {
   const previewTextHtml = extractPreviewTextGS(docHtml);
   console.log("🧩 Preview text:", cleanText(previewTextHtml));
 
+  const imageCreditsHtml = extractImageCreditsGS(docHtml);
+  console.log("🧩 Image credits:", cleanText(imageCreditsHtml));
+
   // ✅ Inject into layout
   let finalMjml = fs.readFileSync(LAYOUT_PATH, "utf8");
 
@@ -154,6 +158,11 @@ async function main() {
     console.warn("⚠️ Token {{%ANALYSIS_SECTION%}} not found in layout.mjml");
   }
   finalMjml = finalMjml.replace(TOKEN_ANALYSIS_SECTION, analysisHtml || "");
+
+  if (!hasToken(TOKEN_IMAGE_CREDITS, finalMjml)) {
+    console.warn("⚠️ Token {{%IMAGE_CREDITS%}} not found in layout.mjml");
+  }
+  finalMjml = finalMjml.replace(TOKEN_IMAGE_CREDITS, imageCreditsHtml || "");
 
   // 5) MJML -> HTML
   const { html, errors } = mjml2html(finalMjml, {
@@ -496,6 +505,7 @@ function renderSpotlightGS(stories) {
   src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
   alt="REPLACE_ME"
   target="_blank"
+  href="https://www.geopoliticalsummary.com/"
 />
 `.trim()
       : "";
@@ -989,14 +999,23 @@ function renderAnalysisGS(items) {
       const title = escapeHtml(cleanText(item.title || ""));
       const parsed = parseAnalysisNodesGS(item.nodes || []);
 
-      const titleHtml = `
+      const titleHtml =
+        `<mj-text padding="10px 12px" font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;" color="#000000">
 <h2 style="font-size: 24px; line-height: 1.2; font-weight: 500; margin: 0;">
   ${title}
-</h2>`.trim();
+</h2></mj-text><mj-image
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+  alt="REPLACE_ME"
+  target="_blank"
+  href="https://www.geopoliticalsummary.com/"
+/>`.trim();
 
       return `
 ${titleHtml}
-${parsed.bodyHtml}
+<mj-text padding="0px 12px 20px 12px" font-family="Roboto+Serif" color="#000000">${parsed.bodyHtml}</mj-text>
 `.trim();
     })
     .join("\n\n");
@@ -1038,6 +1057,77 @@ function parseAnalysisNodesGS(nodes) {
   }
 
   return { bodyHtml: bodyParts.join("\n") };
+}
+
+function extractImageCreditsGS(html) {
+  const $ = cheerio.load(html);
+
+  const h2 = $("h2")
+    .filter(
+      (_, el) => cleanText($(el).text()).toLowerCase() === "image credits",
+    )
+    .first();
+
+  if (!h2.length) return "";
+
+  const parts = [];
+  let el = h2.next();
+
+  while (el && el.length) {
+    const tag = (el[0]?.tagName || "").toLowerCase();
+    const txt = cleanText(el.text());
+
+    // stop at next section
+    if (tag === "h2" && txt) break;
+
+    if (tag === "p") {
+      const inner = sanitizeInlineHtmlGS(el.html() || "");
+      if (!isEmptyRichText(inner)) parts.push(inner);
+    } else if (tag === "ul" || tag === "ol") {
+      const chunk = cheerio.load("<root></root>", null, false);
+      chunk("root").append(el.clone());
+      rewriteAnchorsGS(chunk);
+
+      let listHtml = chunk("root").children().first().toString();
+      listHtml = listHtml
+        .replace("<ul", '<ul style="margin: 0; padding-left: 18px;"')
+        .replace("<ol", '<ol style="margin: 0; padding-left: 18px;"')
+        .replace(
+          /<li>/g,
+          '<li style="font-size: 10px; line-height: 2; margin-bottom: 2px;">',
+        );
+
+      parts.push(listHtml);
+    } else if (tag === "div") {
+      el.children("p, ul, ol").each((_, child) => {
+        const childTag = (child.tagName || "").toLowerCase();
+
+        if (childTag === "p") {
+          const inner = sanitizeInlineHtmlGS($(child).html() || "");
+          if (!isEmptyRichText(inner)) parts.push(inner);
+        } else if (childTag === "ul" || childTag === "ol") {
+          const chunk = cheerio.load("<root></root>", null, false);
+          chunk("root").append($(child).clone());
+          rewriteAnchorsGS(chunk);
+
+          let listHtml = chunk("root").children().first().toString();
+          listHtml = listHtml
+            .replace("<ul", '<ul style="margin: 0; padding-left: 18px;"')
+            .replace("<ol", '<ol style="margin: 0; padding-left: 18px;"')
+            .replace(
+              /<li>/g,
+              '<li style="font-size: 10px; line-height: 2; margin-bottom: 2px;">',
+            );
+
+          parts.push(listHtml);
+        }
+      });
+    }
+
+    el = el.next();
+  }
+
+  return parts.join(" ");
 }
 /** -----------------------------
  * Inline sanitizer + anchors (GS styles)
