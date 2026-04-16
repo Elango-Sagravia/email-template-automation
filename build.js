@@ -25,6 +25,9 @@ const builders = {
   // later:
   "geopolitical-summary": "build-geopolitical-summary.js",
   "dubai-summary": "build-dubai-summary.js",
+  "dubai-events": "build-dubai-events.js",
+  "london-events": "build-london-events.js",
+  "singapore-events": "build-singapore-events.js",
   "london-summary": "build-london-summary.js",
   "singapore-summary": "build-singapore-summary.js",
   "saudi-summary": "build-saudi-summary.js",
