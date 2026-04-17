@@ -1,0 +1,872 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      h2,
+      img,
+      p {
+        margin: 0;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+    </mj-style>
+    <!--
+      <mj-font
+      name="Arial"
+      href="https://fonts.googleapis.com/css?family=Arial"
+    />
+    -->
+    <mj-font
+      name="Austin News Text Web"
+      href="https://www.dubaisummary.com/fonts/AustinNewsTextWeb.woff2"
+    />
+    <mj-style>
+      .button-style:hover {
+        background-color: rgb(220, 237, 255) !important;
+        color: rgba(0, 0, 0, 1) !important; /* instead of #000 */
+        border: 1px solid rgb(220, 237, 255) !important;
+        cursor: pointer;
+      }
+      .button-style:hover .dot {
+        background-color: rgb(16, 35, 65) !important;
+        color: rgba(0, 0, 0, 1) !important;
+      }
+    </mj-style>
+    <mj-style>
+      .feedback-btn:hover {
+        opacity: 0.8 !important;
+        transform: scale(1.1) !important;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f9f8f9">
+    <mj-raw>
+      <div style="display: none; max-height: 0px; overflow: hidden">
+
+      Plus Dubai’s Central Park</div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden
+      preview text --> <div style="display: none; max-height: 0px; overflow:
+      hidden"> &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj;
+      &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp;
+      &#8199; &shy; </div>
+    </mj-raw>
+    <mj-spacer height="15px"></mj-spacer>
+    <mj-section padding="0px" css-class="blue-header">
+      <mj-column>
+        <mj-text padding="0px">
+          <div
+            style="
+              border-top-left-radius: 3px;
+              border-top-right-radius: 3px;
+              height: 7px;
+              background-color: #eeca66;
+            "
+          ></div>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#102341" padding="0px">
+      <mj-column>
+        <mj-text
+          align="center"
+          padding="14px 15px 0px 15px"
+          color="#FFFFFFCC"
+          font-size="11px"
+          font-family="Arial"
+          font-weight="300"
+        >
+          <!-- view in browser || link to archive -->
+          <a
+            href="REPLACE_ME_WITH_ARCHIVE_LINK"
+            style="color: #ffffffcc; text-decoration: underline"
+            >View in browser</a
+          >
+          |
+          <a
+            href="https://www.dubaisummary.com/advertise"
+            style="color: #ffffffcc; text-decoration: underline"
+            >Advertise</a
+          >
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#102341" padding="30px 0">
+      <mj-column width="50%" vertical-align="middle">
+        <mj-raw>
+          <table align="center" role="presentation" border="0" cellpadding="0"
+          cellspacing="0"> <tr> <td align="center" style="padding: 0 10px 0
+          10px"> <img src="https://www.dubaisummary.com/email/images/ds-r-1.png"
+          width="50px" style="border-radius: 50%; display: block" /> </td> <td
+          align="center" style="padding: 0 10px 0 0"> <img
+          src="https://www.dubaisummary.com/email/images/ds-r-2.png"
+          width="50px" style="border-radius: 50%; display: block" /> </td> <td
+          align="center" style="padding: 0 10px 0 0"> <img
+          src="https://www.dubaisummary.com/email/images/ds-r-3.png"
+          width="50px" style="border-radius: 50%; display: block" /> </td> </tr>
+          </table>
+        </mj-raw>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#102341" padding="0px 12px 12px 12px">
+      <mj-column>
+        <mj-image
+          align="left"
+          padding="0"
+          css-class="light_img"
+          width="302px"
+          src="https://www.dubaisummary.com/email/images/ds-email-new-logo.png"
+          href="https://www.dubaisummary.com"
+          alt=""
+        />
+        <mj-image
+          width="1px"
+          src="https://www.dubaisummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+          alt=""
+        />
+        <mj-text
+          margin-top="0"
+          font-size="16px"
+          font-family="Arial"
+          font-weight="300"
+          color="#FFFFFF96"
+          padding="2px 0 0 0"
+        >
+          Thursday • Apr 16 • 25°C
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 1px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column
+        background-color="#fff"
+        border-radius="0px 0px 5px 5px"
+        padding="0px"
+      >
+        <mj-spacer height="10px" />
+
+        <mj-text
+          padding="10px 12px 0px 12px"
+          font-family="Arial"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5">
+            <strong>In this edition:</strong>
+          </p>
+        </mj-text>
+        <mj-table
+  font-family="Arial"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 18px 0px 18px"
+  style="width: 100%"
+>
+  <tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+    line-height: 1.6;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6">Wasl’s green landmark</td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+    line-height: 1.6;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6">Government AI training drive</td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+    line-height: 1.6;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6">Hayat health initiative</td>
+</tr>
+</mj-table>
+
+        <mj-text
+          padding="10px 12px 18px 12px"
+          font-family="Arial"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5; margin-bottom: 0px">
+            Was this email forwarded to you?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #102341;
+                color: black;
+              "
+              href="https://link.dubaisummary.com/join-dubai-summary"
+              target="_blank"
+              >Join Dubai Summary</a
+            >.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section background-color="#eff1f4" padding="1px 0.5px 1px 1px" border-radius="5px">
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-table
+  css-class="new-heading-with-border"
+  cellpadding="0"
+  cellspacing="0"
+  width="100%"
+  padding="16px 0px 12px 0px"
+>
+  <tr>
+    <td valign="middle" style="width: 12%; font-size: 0; line-height: 0; padding: 0px; mso-line-height-rule: exactly;">
+      <div style="height: 0px; border-top: 4px solid #eeca66">&nbsp;</div>
+    </td>
+    <td valign="middle" style="padding: 0 8px; text-align: center; white-space: nowrap">
+      <span style="display: inline-block; font-weight: 900; font-size: 15px; line-height: 1.2; font-family: Arial, sans-serif; color: #000000; text-transform: uppercase;">
+        Spotlight
+      </span>
+    </td>
+    <td valign="middle" style="width: 100%; font-size: 0; line-height: 0; padding: 0px; mso-line-height-rule: exactly;">
+      <div style="height: 0px; border-top: 4px solid #eeca66">&nbsp;</div>
+    </td>
+  </tr>
+</mj-table>
+
+    <mj-text
+      padding="10px 12px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">
+        UAE-Azerbaijan CEPA
+      </h2>
+    </mj-text>
+    <mj-image
+          border-radius="10px"
+          padding="10px 12px"
+          width="600px"
+          src="https://www.dubaisummary.com/email/images/REPLACE_ME.jpg"
+          alt="REPLACE_ME"
+          href="https://www.dubaisummary.com/"
+          target="_blank"
+        />
+
+    <mj-text padding="10px 12px 16px 12px" font-family="Arial" color="#000000">
+      <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>What happened? </strong>The UAE has brought into force a new Comprehensive Economic Partnership Agreement (CEPA) with Azerbaijan. This <a href="https://gulfnews.com/business/economy/uae-azerbaijan-cepa-enters-into-force-what-trade-deal-means-for-uae-businesses-1.500507485" target="_blank" style="text-decoration: none; border-bottom: 2px solid #102341; color: black;">opens the door</a> to lower tariffs, easier market access, and fresh investment opportunities for businesses in the Emirates. Non-oil trade between the two countries has grown 31.4% over the past two years, exceeding $2.2B in 2025.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Details: </strong>This CEPA is a key pillar of the UAE’s economic transformation, targeting $1T in non-oil trade and over $800B GDP by 2031. Azerbaijan’s position along emerging North-South corridors linking Central Asia, the Caucasus, and Europe enhances connectivity. The UAE is currently Azerbaijan’s largest Arab trading partner, accounting for about 40 percent of its trade with the Middle East and North Africa region.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong><em>Fact: </em></strong><em>The agreement is Azerbaijan’s first trade pact to include a dedicated services chapter, creating specific new openings for UAE professional services firms expanding overseas.</em></p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Bigger picture: </strong>Since launching the CEPA program in 2021, the UAE has signed agreements with India, Indonesia, Israel, Turkey, Cambodia, Georgia, Costa Rica, Colombia, Mauritius, South Korea, and the Republic of Congo. Several more negotiations are underway with key partners across Asia, Africa, and Latin America.</p>
+    </mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="10px" />
+<!--primary ad --><mj-section background-color="#EFF1F4" css-class="border-line" padding="1px 0.5px 1px 1px" border-radius="5px" > <mj-raw> <a href="https://link.dubaisummary.com/ds-1-apr-2026-p-ad-lt" target="_blank" style="color:black"> </mj-raw> <mj-column background-color="#fff" border-radius="5px" padding="0px"> <mj-spacer height="10px" /> <mj-text padding="2px 12px 8px 12px" font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;" color="#000000" > <h2 style=" font-size: 24px; line-height: 1.2; font-weight: 500; margin-top: 2px !important; margin: 0; " > What your credit report may be hiding </h2> </mj-text> <mj-spacer height="0px" /> <mj-image border-radius="10px" padding="10px 12px 4px 12px" width="600px" src="https://www.geopoliticalsummary.com/email/ad/1-apr-2026-p-ad-lt.jpg" alt="campaign - lt" /> <mj-text padding="10px 12px 0px 12px" font-family="Roboto+Serif" color="#000000" > <p style="font-size: 16px; line-height: 24px; margin: 0 0 10px 0"> <strong>Credit check:</strong> Your credit score does not always tell the full story. Errors, outdated information, or negative marks on your credit report can quietly affect borrowing costs, approvals, and financial options without you fully realizing it. </p> <p style="font-size: 16px; line-height: 24px; margin: 0 0 10px 0"> <strong>Why it matters:</strong> Lexington Law offers a free credit assessment designed to help people understand what may be affecting their credit. The idea is simple. Before making any big financial move, it helps to know what is actually on your report and what could be holding you back. </p> <p style="font-size: 16px; line-height: 24px; margin: 0"> <strong>What you get:</strong> For readers who want a clearer picture of their credit without jumping straight into a commitment, this is an easy first step. The positioning is practical and low-friction, with the added credibility of coming from a law firm rather than just another credit tool. </p> </mj-text> <mj-text padding="10px 12px 8px 12px" font-family="Roboto+Serif" color="#000000" > <p style="font-size: 16px; line-height: 24px; margin: 0"> <a style=" text-decoration: none; border-bottom: 2px solid #102341; color: black; " ><strong >Credit assessment from Lexington Law, on the house for Summary readers</strong ></a > </p> </mj-text> <mj-spacer height="12px" /> </mj-column> <mj-raw> </a> </mj-raw> </mj-section><!--primary ad -->
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-table
+          css-class="new-heading-with-border"
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+          padding="16px 0px 12px 0px"
+        >
+          <tr>
+            <!-- Left flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 14%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 4px solid #eeca66">
+                &nbsp;
+              </div>
+            </td>
+            <!-- Center text -->
+            <td
+              valign="middle"
+              style="padding: 0 8px; text-align: center; white-space: nowrap"
+            >
+              <span
+                style="
+                  display: inline-block;
+                  font-weight: 900;
+                  font-size: 15px;
+                  line-height: 1.2;
+                  font-family: Arial, sans-serif;
+                  color: #000000;
+                  text-transform: uppercase;
+                "
+              >
+                Where to eat?</span
+              >
+            </td>
+            <!-- Right flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 100%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 4px solid #eeca66">
+                &nbsp;
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+        <!-- <mj-text
+          padding="10px 12px"
+          font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+          color="#000000"
+        >
+          <h2 style="font-size: 24px; line-height: 1.5; font-weight: 400">
+            Events
+          </h2>
+        </mj-text> -->
+        <!--  -->
+
+        <!-- <mj-text
+          padding="0px 12px 0px 12px"
+          font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+          color="#000000"
+        >
+          <h2
+            style="
+              font-size: 24px;
+              line-height: 1.5;
+              font-weight: 400;
+              margin-top: 2px !important;
+            "
+          >
+            Where to eat?
+          </h2>
+        </mj-text> -->
+        <mj-image
+          border-radius="10px"
+          padding="6px 12px 10px 12px"
+          width="600px"
+          href=""
+          src="https://www.dubaisummary.com/email/images/REPLACE_ME.jpg"
+          alt="REPLACE_ME"
+          target="_blank"
+        />
+        <mj-text padding="10px 12px" font-family="Arial" color="#000000">
+          <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong><a href="https://kinoya.com/" target="_blank" style="text-decoration: none; border-bottom: 2px solid #102341; color: black;">Kinoya</a></strong> is a Dubai-born ramen house, celebrated for its deeply flavorful broths and izakaya-style comfort food. The restaurant is known for its focus on process, quality, and authentic flavors, with signature dishes like ramen, donabe, omurice, dashi, and onsen tamago. It offers a thoughtful, mid-range take on Japanese comfort food.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong><em>Pro tip: </em></strong><em>Try the signature shoyu ramen paired with wagyu gyoza.</em></p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px"></mj-spacer>
+    <mj-section background-color="#eff1f4" padding="1px" border-radius="5px">
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <!-- Heading with Lines -->
+        <mj-table
+          css-class="new-heading-with-border"
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+          padding="16px 0px 12px 0px"
+        >
+          <tr>
+            <!-- Left flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 10%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 4px solid #eeca66">
+                &nbsp;
+              </div>
+            </td>
+            <!-- Center text -->
+            <td
+              valign="middle"
+              style="padding: 0 8px; text-align: center; white-space: nowrap"
+            >
+              <span
+                style="
+                  display: inline-block;
+                  font-weight: 900;
+                  font-size: 15px;
+                  line-height: 1.2;
+                  font-family: Arial, sans-serif;
+                  color: #000000;
+                  text-transform: uppercase;
+                "
+              >
+                Career</span
+              >
+            </td>
+            <!-- Right flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 100%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 4px solid #eeca66">
+                &nbsp;
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+        <!-- Job Title -->
+<mj-text
+  padding="10px 12px"
+  font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+  color="#000000"
+>
+  <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">
+    Senior Specialist - Drivers &amp; Institutes Licensing Regulation
+  </h2>
+</mj-text>
+
+<!-- Tags -->
+<mj-text padding="20px 12px" font-family="Arial, regular">
+  <span
+  style="
+    display: inline-block;
+    background-color: #eef2f9;
+    padding: 6px 9px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+  "
+>On-site</span>
+<span
+  style="
+    display: inline-block;
+    background-color: #eef2f9;
+    padding: 6px 9px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+  "
+>Full-time</span>
+<span
+  style="
+    display: inline-block;
+    background-color: #eef2f9;
+    padding: 6px 9px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+  "
+>Salary: Unspecified</span>
+</mj-text>
+
+<!-- Summary / CTA -->
+<mj-text padding="0px 12px 10px 12px" font-family="Arial" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">The Roads and Transport Authority is looking for a Senior Specialist - Drivers &amp; Institutes Licensing Regulation to oversee policy, legislation, and regulatory frameworks governing driver licensing and training institutes. The role involves drafting laws, managing agreements, conducting compliance audits, and developing performance standards. Candidates should have 6-8 years of relevant experience, strong knowledge of traffic laws, stakeholder management, and expertise in regulatory policy and research. UAE nationals only.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><a href="https://jobs.dubaicareers.ae/careersection/dubaicareers/jobdetail.ftl" target="_blank" style="text-decoration: none; border-bottom: 2px solid #102341; color: black;"><strong>Register here</strong></a><strong>  </strong></p>
+</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-table
+          css-class="new-heading-with-border"
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+          padding="16px 0px 12px 0px"
+        >
+          <tr>
+            <!-- Left flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 11%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 4px solid #eeca66">
+                &nbsp;
+              </div>
+            </td>
+            <!-- Center text -->
+            <td
+              valign="middle"
+              style="padding: 0 8px; text-align: center; white-space: nowrap"
+            >
+              <span
+                style="
+                  display: inline-block;
+                  font-weight: 900;
+                  font-size: 15px;
+                  line-height: 1.2;
+                  font-family: Arial, sans-serif;
+                  color: #000000;
+                  text-transform: uppercase;
+                "
+              >
+                Meanwhile</span
+              >
+            </td>
+            <!-- Right flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 100%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 4px solid #eeca66">
+                &nbsp;
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+        <mj-image border-radius="10px" padding="10px 12px" width="600px" src="https://www.dubaisummary.com/email/images/REPLACE_ME.jpg" alt="REPLACE_ME" href="https://www.dubaisummary.com/" target="_blank" />
+      
+<mj-text
+  padding="10px 12px"
+  font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+  color="#000000"
+>
+  <h2 style="font-size: 24px; line-height: 1.5; font-weight: 400; margin: 0;">
+    Jebel Ali green space
+  </h2>
+</mj-text>
+
+<mj-text padding="10px 12px" font-family="Arial" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">Dubai has unveiled its own “<a href="https://gulfnews.com/business/property/dubai-unveils-its-own-central-park-heres-where-it-is-located-1.500508762" target="_blank" style="text-decoration: none; border-bottom: 2px solid #102341; color: black;">Central Park</a>,” with Wasl Group opening an 82,700-sq-m green space in Jebel Ali. The park is open to residents and the public. It features tracks, sports courts, and leisure zones, reflecting a push toward community-centric, sustainable urban living. The project underlines Dubai’s push toward more liveable, community-focused neighborhoods.</p>
+</mj-text>
+
+<mj-divider
+  border-style="dashed"
+  border-width="1px"
+  border-color="lightgrey"
+  padding="0px 12px 4px 12px"
+/>
+
+<mj-text
+  padding="10px 12px"
+  font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+  color="#000000"
+>
+  <h2 style="font-size: 24px; line-height: 1.5; font-weight: 400; margin: 0;">
+    AI skills drive
+  </h2>
+</mj-text>
+
+<mj-text padding="10px 12px" font-family="Arial" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">Dubai has launched a major <a href="https://gulfnews.com/uae/government/dubai-launches-major-ai-training-drive-for-government-staff-1.500508521" target="_blank" style="text-decoration: none; border-bottom: 2px solid #102341; color: black;">AI training drive to upskill</a> 50,000 government employees under the AI Workforce Transformation Program. Led by Digital Dubai and partner entities, the initiative will teach staff how to use AI in daily work, improve productivity, and deliver faster services. Training will be tailored by role, from senior leaders to frontline teams, to make AI part of government operations.</p>
+</mj-text>
+
+<mj-divider
+  border-style="dashed"
+  border-width="1px"
+  border-color="lightgrey"
+  padding="0px 12px 4px 12px"
+/>
+
+<mj-text
+  padding="10px 12px"
+  font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+  color="#000000"
+>
+  <h2 style="font-size: 24px; line-height: 1.5; font-weight: 400; margin: 0;">
+    Structured care campaign
+  </h2>
+</mj-text>
+
+<mj-text padding="10px 12px" font-family="Arial" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">Dubai has launched “Hayat,” a three-month <a href="https://gulfnews.com/business/corporate-news/dubai-launches-hayat-initiative-to-advance-public-understanding-of-obesity-through-structured-medical-collaboration-1.500508672" target="_blank" style="text-decoration: none; border-bottom: 2px solid #102341; color: black;">public health initiative</a> aimed at improving understanding of obesity through structured medical collaboration. Backed by Eli Lilly, True Body USA, and Elegant Hoopoe, the program focuses on education rather than promotion and will cover the biology of obesity, metabolism, and long-term care. Officials say the effort promotes responsible, evidence-based management under clinical supervision</p>
+</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <!-- <mj-text align="center" padding="0px">
+          <div style="display: flex; align-items: center; text-align: center;">
+            <div style="flex: 1; height: 3px; background-color: #EECA66;"></div>
+            <span style="padding: 20px 10px; font-weight: 700; font-size: 15px; font-family: Arial, sans-serif; color: #000; text-transform: uppercase;"> DID YOU KNOW? </span>
+            <div style="flex: 6; height: 3px; background-color: #EECA66;"></div>
+          </div>
+        </mj-text> -->
+        <mj-table
+          css-class="new-heading-with-border"
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+          padding="16px 0px 12px 0px"
+        >
+          <tr>
+            <!-- Left flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 11%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 4px solid #eeca66">
+                &nbsp;
+              </div>
+            </td>
+            <!-- Center text -->
+            <td
+              valign="middle"
+              style="padding: 0 8px; text-align: center; white-space: nowrap"
+            >
+              <span
+                style="
+                  display: inline-block;
+                  font-weight: 900;
+                  font-size: 15px;
+                  line-height: 1.2;
+                  font-family: Arial, sans-serif;
+                  color: #000000;
+                  text-transform: uppercase;
+                "
+              >
+                DID YOU KNOW?</span
+              >
+            </td>
+            <!-- Right flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 100%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 4px solid #eeca66">
+                &nbsp;
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+        <mj-text padding="10px 12px" font-family="Arial" color="#000000">
+          <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">In the UAE and other Gulf nations, falcons are highly revered symbols of heritage and are frequently issued official, government-recognized <a href="https://timesofindia.indiatimes.com/life-style/travel/news/which-country-issues-passports-to-falcons-and-why/articleshow/127777346.cms" target="_blank" style="text-decoration: none; border-bottom: 2px solid #102341; color: black;">passports to travel</a> in aircraft cabins.</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section padding="0px" border-radius="4px" background-color="#102341">
+      <mj-column padding="0px">
+        <!-- Yellow curved top bar -->
+        <mj-text padding="0px">
+          <div
+            style="
+              border-top-left-radius: 3px;
+              border-top-right-radius: 3px;
+              height: 7px;
+              background-color: #eeca66;
+            "
+          ></div>
+        </mj-text>
+        <!-- Logo and intro text -->
+        <mj-image
+          align="left"
+          padding="40px 12px 35px 12px"
+          css-class="light_img"
+          width="206px"
+          src="https://www.dubaisummary.com/email/images/ds-email-new-logo.png"
+          href="https://www.dubaisummary.com"
+          alt=""
+        />
+        <mj-text
+          padding="0px 12px 0px 12px"
+          font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+          color="#ffffff"
+        >
+          <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400">
+            The pulse of Dubai.
+          </h2>
+        </mj-text>
+        <mj-text
+          padding="0px 12px 0px 12px"
+          font-family="Arial"
+          font-weight="400"
+          color="#ffffff"
+        >
+          <!-- <p style="font-size: 15px; line-height: 1.5; padding-top: 10px">
+            This edition of <strong>Dubai Summary</strong> was produced by our
+            editorial team. Our mission is to bring you clear, engaging updates
+            on Dubai’s news, business, culture, and daily living. Quick, clear,
+            and always relevant, we make sure you see Dubai the way it really
+            is: dynamic, ambitious, and full of surprises.
+          </p> -->
+          <p style="font-size: 15px; line-height: 1.5; padding-top: 10px">
+            This edition of <strong>Dubai Summary</strong> was produced by our
+            editorial team. Our mission is to bring you clear, engaging updates
+            on Dubai’s news, business, culture, and daily living. Quick, clear,
+            and always relevant, we make sure you see Dubai the way it really
+            is: dynamic, ambitious, and full of surprises.
+          </p>
+        </mj-text>
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="#FFFFFF80"
+          padding="15px 12px 35px 12px"
+        />
+        <!-- Footer content -->
+        <mj-text
+          padding="0px 12px 0px 12px"
+          font-family="Arial"
+          color="#ffffff"
+          font-weight="400"
+        >
+          <p style="font-size: 10px; line-height: 2">
+            <strong>Image credits:</strong> Gulf Time, Michelin Guide, Time Out Dubai
+          </p>
+          <p style="font-size: 12px; line-height: 2">
+            Send us your feedback at
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #fff;
+                color: #fff !important;
+              "
+              href="mailto:readers@dubaisummary.com"
+              target="_blank"
+              >readers@dubaisummary.com</a
+            >.
+          </p>
+          <p style="font-size: 12px; line-height: 2">
+            Interested in connecting with curious, informed readers?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #fff;
+                color: #fff !important;
+              "
+              href="https://www.dubaisummary.com/advertise"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+          <p style="font-size: 12px; line-height: 2">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #fff;
+                color: #fff !important;
+              "
+              href="https://www.dubaisummary.com/unsubscribewithfeedback?unique_id=%unique_id%&campaign_id=%campaign_id%"
+              target="_blank"
+              >Unsubscribe</a
+            >
+            from this email.
+          </p>
+        </mj-text>
+
+        <mj-text
+          padding="10px 12px 40px 12px"
+          font-family="Arial"
+          font-weight="400"
+        >
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #ffffffc9;
+              line-height: 1.5;
+              margin: 0;
+            "
+          >
+            S8, Level 2, Building 3, Dubai Design District, Dubai
+          </p>
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #ffffffc9;
+              line-height: 1.5;
+              margin: 0;
+            "
+          >
+            Copyright © 2026 Summary Media FZ-LLC, All rights reserved.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="15px" />
+  </mj-body>
+</mjml>

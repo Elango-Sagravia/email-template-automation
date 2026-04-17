@@ -1,0 +1,1338 @@
+<mjml>
+  <mj-head>
+    <mj-font
+      name="Austin News Text Web"
+      href="https://www.londonsummary.com/fonts/AustinNewsTextWeb.woff2"
+    />
+  </mj-head>
+  <mj-body background-color="#f9f8f9">
+    <mj-raw>
+  <div style="display: none; max-height: 0px; overflow: hidden">Plus things to do this weekend</div>
+  <div style="display: none; max-height: 0px; overflow: hidden">
+    &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+    &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+  </div>
+</mj-raw>
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="15px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+
+    <!-- header -->
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 1px 1px 1px"
+      border-radius="10px"
+    >
+      <mj-column background-color="#ffffff" border-radius="10px" padding="0">
+        <!-- Top red strip -->
+        <mj-text padding="0">
+          <div
+            style="
+              height: 6px;
+              border-top-left-radius: 8px;
+              border-top-right-radius: 8px;
+              background-color: #80011f;
+            "
+          ></div>
+        </mj-text>
+
+        <!-- Logo and Date -->
+        <mj-section background-color="#ffffff" padding="0px 10px 0px 10px">
+          <mj-group width="100%" padding="0px">
+            <mj-column width="50%" vertical-align="bottom">
+              <mj-spacer height="10px" />
+              <mj-image
+                align="left"
+                width="226px"
+                src="https://www.londonsummary.com/logo-grey.png"
+                href="https://www.londonsummary.com/"
+                alt="London Summary newsletter logo"
+                padding="0px"
+              />
+              <mj-image
+                width="1px"
+                src="https://www.londonsummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+                alt=""
+              />
+            </mj-column>
+            <!-- <mj-column width="50%" vertical-align="bottom">
+              <mj-text
+                align="right"
+                font-size="16px"
+                font-family="Arial"
+                font-weight="300"
+                color="#00000096"
+                padding="0"
+                >Wed, Mar 18 • AQI 50
+              </mj-text>
+            </mj-column> -->
+          </mj-group>
+        </mj-section>
+
+        <!-- Divider line -->
+        <mj-divider
+          border-color="#EBEBEB"
+          border-width="1px"
+          width="100%"
+          padding="7px 20px 0 20px"
+        />
+
+        <!-- In this edition -->
+        <mj-text
+          padding="20px 20px 0px 20px"
+          font-family="Arial"
+          color="#000000"
+          font-size="16px"
+          font-weight="600"
+        >
+          In this edition:
+        </mj-text>
+
+        <mj-table
+          font-family="Arial"
+          cellpadding="0"
+          cellspacing="0"
+          padding="19px 30px 0px 30px"
+        >
+          <tr>
+  <td
+    style="
+      font-size: 18px;
+      width: 20px;
+      vertical-align: top;
+      padding-right: 8px;
+      padding-bottom: 11px;
+    "
+  >
+    →
+  </td>
+  <td
+    style="
+      font-size: 16px;
+      line-height: 24px;
+      padding-bottom: 11px;
+    "
+  >
+    Crown in couture
+  </td>
+</tr>
+<tr>
+  <td
+    style="
+      font-size: 18px;
+      width: 20px;
+      vertical-align: top;
+      padding-right: 8px;
+      padding-bottom: 11px;
+    "
+  >
+    →
+  </td>
+  <td
+    style="
+      font-size: 16px;
+      line-height: 24px;
+      padding-bottom: 11px;
+    "
+  >
+    Avenue Q
+  </td>
+</tr>
+<tr>
+  <td
+    style="
+      font-size: 18px;
+      width: 20px;
+      vertical-align: top;
+      padding-right: 8px;
+      
+    "
+  >
+    →
+  </td>
+  <td
+    style="
+      font-size: 16px;
+      line-height: 24px;
+      line-height: 1.6;
+    "
+  >
+    Camden Market Food Tour
+  </td>
+</tr>
+        </mj-table>
+
+        <!-- Join link -->
+        <mj-text
+          padding="17px 20px 20px 20px"
+          font-family="Arial"
+          color="#000000"
+          font-size="16px"
+          line-height="1.5"
+        >
+          Was this email forwarded to you?
+          <a
+            href="https://www.londonsummary.com/"
+            target="_blank"
+            style="
+              text-decoration: none;
+              border-bottom: 2px solid #80011f;
+              color: black;
+            "
+          >
+            Join London Summary</a
+          >.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+
+    <mj-section
+  background-color="#eff1f4"
+  padding="1px 1px 1px 1px"
+  border-radius="10px"
+>
+  <mj-column background-color="#fff" border-radius="10px" padding="0px">
+    <mj-image
+      border-radius="10px 10px 0 0"
+      padding="0"
+      width="600px"
+      src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+      alt="REPLACE_ME"
+      href="https://www.londonsummary.com/"
+    />
+    <mj-text
+      padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2
+        style="
+          font-size: 24px;
+          line-height: 1.2;
+          font-weight: 400;
+          margin: 0;
+        "
+      >
+        Art meets Earth
+      </h2>
+    </mj-text>
+    <mj-text
+      padding="0px 20px 0px 20px"
+      font-family="Arial"
+      color="#000000"
+    >
+      <p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    margin: 0;
+  "
+>
+  Somerset House hosts a three-day Earth Day Weekender, offering a lively mix of art, ideas, and interactive experiences focused on our relationship with the planet. Across talks, workshops, and immersive installations, visitors can explore themes that stretch from the depths of the ocean to the richness of the soil beneath us.
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    margin: 0;
+  "
+>
+  Highlights include a free drop-in screen-printing workshop with Jealous Print Studio, centered on sustainable making. Visitors can also join Dr. Masharu, founder of the Museum of Edible Earth, for a distinctive geophagy session that challenges people to think differently about the earth they inhabit.
+</p>
+      <p
+  style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    margin: 0;
+  "
+>
+  🔗 <strong>Link:</strong>
+<a
+  style="
+    text-decoration: none;
+    border-bottom: 2px solid #80011f;
+    color: black;
+  "
+  href="https://www.somersethouse.org.uk/whats-on/earth-day-2026"
+  target="_blank"
+>Earth Day Weekender</a><br />📅 <strong>When:</strong> April 16 to April 18<br />💸 <strong>Cost:</strong> Open entry<br />📍 <strong>Where:</strong>
+<a
+  style="
+    text-decoration: none;
+    border-bottom: 2px solid #80011f;
+    color: black;
+  "
+  href="https://www.somersethouse.org.uk/whats-on/earth-day-2026"
+  target="_blank"
+>Somerset House</a>
+</p>
+    </mj-text>
+  </mj-column>
+</mj-section>
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+
+    <!--primary ad -->
+    <mj-section
+      background-color="#EFF1F4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="10px"
+    >
+      <mj-raw>
+        <a href="https://link.londonsummary.com/REPLACE_ME" target="_blank"
+        style="color:black">
+      </mj-raw>
+      <mj-column background-color="#fff" border-radius="10px" padding="0px">
+        <mj-image
+          border-radius="10px 10px 0 0"
+          padding="0px 0px 10px 0px"
+          width="600px"
+          src="https://www.londonsummary.com/email/ad/REPLACE_ME.jpg"
+          alt="campaign - gf"
+        />
+        <mj-text
+          padding="2px 12px 8px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="#000000"
+        >
+          <h2
+            style="
+              font-size: 24px;
+              line-height: 1.2;
+              font-weight: 500;
+              margin-top: 2px !important;
+              margin: 0;
+            "
+          >
+            REPLACE_ME
+          </h2>
+        </mj-text>
+        <mj-spacer height="0px" />
+
+        <mj-text
+          padding="10px 12px 0px 12px"
+          font-family="Arial"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 24px; margin: 0 0 10px 0">
+            <strong>What’s happening?</strong>REPLACE_ME
+          </p>
+
+          <p style="font-size: 16px; line-height: 24px; margin: 0 0 10px 0">
+            <strong>For foreign investors:</strong> REPLACE_ME
+          </p>
+          <p style="font-size: 16px; line-height: 24px; margin: 0">
+            <strong>Track record:</strong> REPLACE_ME
+          </p>
+        </mj-text>
+        <mj-text
+          padding="10px 12px 8px 12px"
+          font-family="Roboto+Serif"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 24px; margin: 0">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #80011f;
+                color: black;
+              "
+              ><strong>REPLACE_ME →</strong></a
+            >
+          </p>
+        </mj-text>
+        <mj-spacer height="12px" />
+      </mj-column>
+      <mj-raw> </a> </mj-raw> </mj-section
+    ><!--primary ad -->
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+
+    <mj-section
+  background-color="#eff1f4"
+  padding="1px 1px 1px 1px"
+  border-radius="10px"
+>
+  <mj-column background-color="#fff" border-radius="10px" padding="0px">
+    <mj-image
+      border-radius="10px 10px 0 0"
+      padding="0"
+      width="600px"
+      src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+      alt="REPLACE_ME"
+      href="https://www.londonsummary.com/"
+    />
+    <mj-text
+      padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2
+        style="
+          font-size: 24px;
+          line-height: 1.2;
+          font-weight: 400;
+          margin: 0;
+        "
+      >
+        Crown in couture
+      </h2>
+    </mj-text>
+    <mj-text
+      padding="0px 20px 0px 20px"
+      font-family="Arial"
+      color="#000000"
+    >
+      <p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    margin: 0;
+  "
+>
+  Queen Elizabeth II: Her Life in Style at The King’s Gallery celebrates the centenary of Britain’s longest-reigning monarch with the most extensive exhibition ever devoted to her fashion legacy. Featuring more than 200 items, many of which are displayed publicly for the first time, the show traces her style from early princess years to her role as a sovereign icon.
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    margin: 0;
+  "
+>
+  Visitors can see couture evening gowns, elegant daywear, and historic royal garments that shaped the public memory of her reign. Highlights include her wedding dress, coronation gown, and the retired royal christening robe.
+</p>
+      <p
+  style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    margin: 0;
+  "
+>
+  🔗 <strong>Link:</strong>
+<a
+  style="
+    text-decoration: none;
+    border-bottom: 2px solid #80011f;
+    color: black;
+  "
+  href="https://www.visitlondon.com/things-to-do/place/448996-kings-gallery"
+  target="_blank"
+>Queen Elizabeth II: Her Life in Style</a><br />📅 <strong>When:</strong> April 10 to October 18<br />💸 <strong>Cost:</strong> Starts from £22<br />📍 <strong>Where:</strong>
+<a
+  style="
+    text-decoration: none;
+    border-bottom: 2px solid #80011f;
+    color: black;
+  "
+  href="https://www.visitlondon.com/things-to-do/place/448996-kings-gallery"
+  target="_blank"
+>The King&#39;s Gallery</a>
+</p>
+    </mj-text>
+  </mj-column>
+</mj-section>
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+
+    <mj-section
+  background-color="#eff1f4"
+  padding="1px 1px 1px 1px"
+  border-radius="10px"
+>
+  <mj-column
+    background-color="#fff"
+    border-radius="10px"
+    padding-bottom="7px"
+  >
+    <mj-text
+      padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2
+        style="
+          font-size: 24px;
+          line-height: 1.2;
+          font-weight: 400;
+          margin: 0;
+        "
+      >
+        Live events
+      </h2>
+    </mj-text>
+    <mj-divider
+      border-width="4.8px"
+      border-color="#80011F"
+      width="35px"
+      align="left"
+      padding="0 20px 0px 20px"
+    />
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="10px" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="5px 10px 0px 10px">
+  <mj-group width="100%">
+    <mj-column width="30%" vertical-align="top" padding="0">
+      <mj-image
+        align="left"
+        src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+        alt="REPLACE_ME"
+        padding="0px"
+        border-radius="8px"
+        fluid-on-mobile="true"
+        css-class="event-image"
+        href="https://www.londonsummary.com/"
+      />
+    </mj-column>
+    <mj-column width="70%" vertical-align="top">
+      <mj-text
+        padding="0px 15px 0px 15px"
+        font-family="Arial"
+        color="#000000"
+        font-size="16px"
+      >
+        <p
+          style="
+            margin-bottom: 7px !important;
+            margin-top: 6px !important;
+            line-height: 16px;
+          "
+        >
+          <strong>Sip local on Saturday</strong>
+        </p>
+        <p style="line-height: 24px">Hackney Bridge’s Pour Choices Wine Fair brings together UK-grown wines, low-intervention pours, artisan food, workshops, talks, and DJs for a relaxed day of tasting, discovery, and easy-going energy.</p>
+        <p style="margin-bottom: 0px; line-height: 24px">
+          📅 <strong>When:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://workshops.pourchoices.wine/events/pourchoiceswinefair/1963877"
+          target="_blank"
+        >April 18 | Tickets start at £22</a><br />
+          📍 <strong>Where:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://workshops.pourchoices.wine/events/pourchoiceswinefair/1963877"
+          target="_blank"
+        >Hackney Bridge</a>
+        </p>
+      </mj-text>
+    </mj-column>
+  </mj-group>
+</mj-section>
+<mj-divider
+         border-style="dashed"
+         border-width="1px"
+         border-color="lightgrey"
+         padding="20px 22px 8px 22px"
+       />
+<mj-section padding="5px 10px 0px 10px">
+  <mj-group width="100%">
+    <mj-column width="30%" vertical-align="top" padding="0">
+      <mj-image
+        align="left"
+        src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+        alt="REPLACE_ME"
+        padding="0px"
+        border-radius="8px"
+        fluid-on-mobile="true"
+        css-class="event-image"
+        href="https://www.londonsummary.com/"
+      />
+    </mj-column>
+    <mj-column width="70%" vertical-align="top">
+      <mj-text
+        padding="0px 15px 0px 15px"
+        font-family="Arial"
+        color="#000000"
+        font-size="16px"
+      >
+        <p
+          style="
+            margin-bottom: 7px !important;
+            margin-top: 6px !important;
+            line-height: 16px;
+          "
+        >
+          <strong>Avenue Q</strong>
+        </p>
+        <p style="line-height: 24px">Avenue Q returns to London’s West End in 2026, bringing riotous puppetry, sharp songs and adult humour to Shaftesbury Theatre, where lovable misfits tackle jobs, purpose and messy city life.</p>
+        <p style="margin-bottom: 0px; line-height: 24px">
+          📅 <strong>When:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://londonist.tixculture.com/london/shows/45419-marie-and-rosetta"
+          target="_blank"
+        >Multiple dates | Tickets start at £31.25</a><br />
+          📍 <strong>Where:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://londonist.tixculture.com/london/shows/45419-marie-and-rosetta"
+          target="_blank"
+        >Shaftesbury Theatre</a>
+        </p>
+      </mj-text>
+    </mj-column>
+  </mj-group>
+</mj-section>
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px" />
+      </mj-column>
+    </mj-section>
+  </mj-column>
+</mj-section>
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+
+    <mj-section
+  background-color="#eff1f4"
+  padding="1px 1px 1px 1px"
+  border-radius="10px"
+>
+  <mj-column
+    background-color="#fff"
+    border-radius="10px"
+    padding-bottom="7px"
+  >
+    <mj-text
+      padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2
+        style="
+          font-size: 24px;
+          line-height: 1.2;
+          font-weight: 400;
+          margin: 0;
+        "
+      >
+        Shopping
+      </h2>
+    </mj-text>
+    <mj-divider
+      border-width="4.8px"
+      border-color="#80011F"
+      width="35px"
+      align="left"
+      padding="0 20px 0px 20px"
+    />
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="10px" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="5px 10px 0px 10px">
+  <mj-group width="100%">
+    <mj-column width="30%" vertical-align="top" padding="0">
+      <mj-image
+        align="left"
+        src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+        alt="REPLACE_ME"
+        padding="0px"
+        border-radius="8px"
+        fluid-on-mobile="true"
+        css-class="event-image"
+        href="https://www.londonsummary.com/"
+      />
+    </mj-column>
+    <mj-column width="70%" vertical-align="top">
+      <mj-text
+        padding="0px 15px 0px 15px"
+        font-family="Arial"
+        color="#000000"
+        font-size="16px"
+      >
+        <p
+          style="
+            margin-bottom: 7px !important;
+            margin-top: 6px !important;
+            line-height: 16px;
+          "
+        >
+          <strong>Antique &amp; Art Shopping Experience</strong>
+        </p>
+        <p style="line-height: 24px">This private antique and art experience offers a bespoke four-hour journey through London’s top markets, galleries, and specialist dealers, with expert guidance, rare finds, and optional luxury transport for a seamless day.</p>
+        <p style="margin-bottom: 0px; line-height: 24px">
+          📅 <strong>When:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.getyourguide.com/en-gb/london-l57/antique-art-shopping-experience-in-london-t1256387?ranking_uuid=c7795eaa-cf7f-4044-b9d1-de1782e5543c&amp;date_from=2026-04-19&amp;date_to=2026-04-19&amp;adults=1"
+          target="_blank"
+        >Multiple dates, Tickets start from £1,550</a>
+          
+        </p>
+      </mj-text>
+    </mj-column>
+  </mj-group>
+</mj-section>
+<mj-divider
+         border-style="dashed"
+         border-width="1px"
+         border-color="lightgrey"
+         padding="20px 22px 8px 22px"
+       />
+<mj-section padding="5px 10px 0px 10px">
+  <mj-group width="100%">
+    <mj-column width="30%" vertical-align="top" padding="0">
+      <mj-image
+        align="left"
+        src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+        alt="REPLACE_ME"
+        padding="0px"
+        border-radius="8px"
+        fluid-on-mobile="true"
+        css-class="event-image"
+        href="https://www.londonsummary.com/"
+      />
+    </mj-column>
+    <mj-column width="70%" vertical-align="top">
+      <mj-text
+        padding="0px 15px 0px 15px"
+        font-family="Arial"
+        color="#000000"
+        font-size="16px"
+      >
+        <p
+          style="
+            margin-bottom: 7px !important;
+            margin-top: 6px !important;
+            line-height: 16px;
+          "
+        >
+          <strong>Camden Market Food Tour</strong>
+        </p>
+        <p style="line-height: 24px">This Camden Market food tour serves up bold street food, artisanal drinks, and local stories, blending birria tacos, British cheese, and gin tastings with the market’s famously rebellious creative energy.</p>
+        <p style="margin-bottom: 0px; line-height: 24px">
+          📅 <strong>When:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.getyourguide.com/en-gb/london-l57/london-camden-market-food-tour-with-7-street-food-tastings-t504469/?ranking_uuid=c7795eaa-cf7f-4044-b9d1-de1782e5543c&amp;date_from=2026-04-16&amp;date_to=2026-04-19&amp;adults=1"
+          target="_blank"
+        >Multiple dates, Tickets start from £92</a>
+          
+        </p>
+      </mj-text>
+    </mj-column>
+  </mj-group>
+</mj-section>
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px" />
+      </mj-column>
+    </mj-section>
+  </mj-column>
+</mj-section>
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+
+    <mj-section
+  background-color="#eff1f4"
+  padding="1px 1px 1px 1px"
+  border-radius="10px"
+>
+  <mj-column
+    background-color="#fff"
+    border-radius="10px"
+    padding-bottom="7px"
+  >
+    <mj-text
+      padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2
+        style="
+          font-size: 24px;
+          line-height: 1.2;
+          font-weight: 400;
+          margin: 0;
+        "
+      >
+        Nightlife
+      </h2>
+    </mj-text>
+    <mj-divider
+      border-width="4.8px"
+      border-color="#80011F"
+      width="35px"
+      align="left"
+      padding="0 20px 0px 20px"
+    />
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="10px" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="5px 10px 0px 10px">
+  <mj-group width="100%">
+    <mj-column width="30%" vertical-align="top" padding="0">
+      <mj-image
+        align="left"
+        src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+        alt="REPLACE_ME"
+        padding="0px"
+        border-radius="8px"
+        fluid-on-mobile="true"
+        css-class="event-image"
+        href="https://www.londonsummary.com/"
+      />
+    </mj-column>
+    <mj-column width="70%" vertical-align="top">
+      <mj-text
+        padding="0px 15px 0px 15px"
+        font-family="Arial"
+        color="#000000"
+        font-size="16px"
+      >
+        <p
+          style="
+            margin-bottom: 7px !important;
+            margin-top: 6px !important;
+            line-height: 16px;
+          "
+        >
+          <strong>River Thames Party Boat Cruise</strong>
+        </p>
+        <p style="line-height: 24px">This four-hour Thames party cruise combines skyline views, a live DJ, buffet bites, and a lively dancefloor, offering an upbeat adults-only night out.</p>
+        <p style="margin-bottom: 0px; line-height: 24px">
+          📅 <strong>When:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.getyourguide.com/en-gb/london-l57/river-thames-party-boat-cruise-t1243268/?ranking_uuid=c03cb116-8035-4cfb-92aa-60c8da12e725&amp;date_from=2026-04-16&amp;date_to=2026-04-19&amp;adults=1"
+          target="_blank"
+        >April 18 @ River Thames | Tickets start from £29</a>
+          
+        </p>
+      </mj-text>
+    </mj-column>
+  </mj-group>
+</mj-section>
+<mj-divider
+         border-style="dashed"
+         border-width="1px"
+         border-color="lightgrey"
+         padding="20px 22px 8px 22px"
+       />
+<mj-section padding="5px 10px 0px 10px">
+  <mj-group width="100%">
+    <mj-column width="30%" vertical-align="top" padding="0">
+      <mj-image
+        align="left"
+        src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+        alt="REPLACE_ME"
+        padding="0px"
+        border-radius="8px"
+        fluid-on-mobile="true"
+        css-class="event-image"
+        href="https://www.londonsummary.com/"
+      />
+    </mj-column>
+    <mj-column width="70%" vertical-align="top">
+      <mj-text
+        padding="0px 15px 0px 15px"
+        font-family="Arial"
+        color="#000000"
+        font-size="16px"
+      >
+        <p
+          style="
+            margin-bottom: 7px !important;
+            margin-top: 6px !important;
+            line-height: 16px;
+          "
+        >
+          <strong>Magic Mike Live!</strong>
+        </p>
+        <p style="line-height: 24px">Magic Mike Live! delivers a bold, high-energy West End night with immersive choreography, acrobatics, and audience interaction.</p>
+        <p style="margin-bottom: 0px; line-height: 24px">
+          📅 <strong>When:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.getyourguide.com/en-gb/london-l57/london-ticket-to-magic-mike-live-t1000916/?ranking_uuid=c03cb116-8035-4cfb-92aa-60c8da12e725&amp;date_from=2026-04-16&amp;date_to=2026-04-19&amp;adults=1"
+          target="_blank"
+        >Multiple dates @ The Hippodrome Casino | Tickets start from £70</a>
+          
+        </p>
+      </mj-text>
+    </mj-column>
+  </mj-group>
+</mj-section>
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px" />
+      </mj-column>
+    </mj-section>
+  </mj-column>
+</mj-section>
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+
+    <mj-section
+  background-color="#eff1f4"
+  padding="1px 1px 1px 1px"
+  border-radius="10px"
+>
+  <mj-column
+    background-color="#fff"
+    border-radius="10px"
+    padding-bottom="7px"
+  >
+    <mj-text
+      padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2
+        style="
+          font-size: 24px;
+          line-height: 1.2;
+          font-weight: 400;
+          margin: 0;
+        "
+      >
+        Everything else
+      </h2>
+    </mj-text>
+    <mj-divider
+      border-width="4.8px"
+      border-color="#80011F"
+      width="35px"
+      align="left"
+      padding="0 20px 0px 20px"
+    />
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="10px" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="5px 10px 0px 10px">
+  <mj-group width="100%">
+    <mj-column width="30%" vertical-align="top" padding="0">
+      <mj-image
+        align="left"
+        src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+        alt="REPLACE_ME"
+        padding="0px"
+        border-radius="8px"
+        fluid-on-mobile="true"
+        css-class="event-image"
+        href="https://www.londonsummary.com/"
+      />
+    </mj-column>
+    <mj-column width="70%" vertical-align="top">
+      <mj-text
+        padding="0px 15px 0px 15px"
+        font-family="Arial"
+        color="#000000"
+        font-size="16px"
+      >
+        <p
+          style="
+            margin-bottom: 7px !important;
+            margin-top: 6px !important;
+            line-height: 16px;
+          "
+        >
+          <strong>Vaisakhi on the Square 2026</strong>
+        </p>
+        <p style="line-height: 24px">Vaisakhi on the Square brings Trafalgar Square alive with Sikh music, dance, free food, and family-friendly activities, celebrating heritage, community, and the founding spirit of the Khalsa.</p>
+        <p style="margin-bottom: 0px; line-height: 24px">
+          📅 <strong>When:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.london.gov.uk/events/vaisakhi-square-2026"
+          target="_blank"
+        >April 18 | Open entry</a>
+          
+        </p>
+      </mj-text>
+    </mj-column>
+  </mj-group>
+</mj-section>
+<mj-divider
+         border-style="dashed"
+         border-width="1px"
+         border-color="lightgrey"
+         padding="20px 22px 8px 22px"
+       />
+<mj-section padding="5px 10px 0px 10px">
+  <mj-group width="100%">
+    <mj-column width="30%" vertical-align="top" padding="0">
+      <mj-image
+        align="left"
+        src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+        alt="REPLACE_ME"
+        padding="0px"
+        border-radius="8px"
+        fluid-on-mobile="true"
+        css-class="event-image"
+        href="https://www.londonsummary.com/"
+      />
+    </mj-column>
+    <mj-column width="70%" vertical-align="top">
+      <mj-text
+        padding="0px 15px 0px 15px"
+        font-family="Arial"
+        color="#000000"
+        font-size="16px"
+      >
+        <p
+          style="
+            margin-bottom: 7px !important;
+            margin-top: 6px !important;
+            line-height: 16px;
+          "
+        >
+          <strong>Paradox Museum</strong>
+        </p>
+        <p style="line-height: 24px">Paradox Museum delivers a playful, mind-bending adventure through illusion-filled rooms, from gravity-defying spaces to dizzying tunnels, turning perception into the main attraction and every corner into a photo-worthy surprise.</p>
+        <p style="margin-bottom: 0px; line-height: 24px">
+          📅 <strong>When:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.visitlondon.com/things-to-do/place/51067555-paradox-museum-london"
+          target="_blank"
+        >Multiple dates | Tickets start from £29</a>
+          
+        </p>
+      </mj-text>
+    </mj-column>
+  </mj-group>
+</mj-section>
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px" />
+      </mj-column>
+    </mj-section>
+  </mj-column>
+</mj-section>
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 1px 1px 1px"
+      border-radius="10px"
+    >
+      <mj-column background-color="#ffffff" border-radius="10px" padding="0">
+        <!-- Top red strip -->
+        <mj-text padding="0">
+          <div
+            style="
+              height: 6px;
+              border-top-left-radius: 8px;
+              border-top-right-radius: 8px;
+              background-color: #80011f;
+            "
+          ></div>
+        </mj-text>
+
+        <!-- Logo and Date -->
+        <mj-spacer height="40px" />
+        <mj-image
+          align="left"
+          width="159px"
+          src="https://www.londonsummary.com/logo-grey.png"
+          href="https://www.londonsummary.com/"
+          alt="London Summary newsletter logo"
+          padding="0px 20px"
+        />
+        <mj-text
+          padding="18px 20px 0px 20px"
+          font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+          color="#000000"
+        >
+          <h2
+            style="
+              font-size: 24px;
+              line-height: 1.2;
+              font-weight: 400;
+              margin: 0;
+            "
+          >
+            The pulse of London.
+          </h2>
+        </mj-text>
+        <mj-text
+          padding="10px 20px 0px 20px"
+          font-family="Arial"
+          font-weight="400"
+          color="#000"
+        >
+          <p style="font-size: 15px; line-height: 1.4; margin: 0 !important">
+            This edition was produced by our editorial team and meets the
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #80011f;
+                color: black;
+              "
+              href="https://www.houseofsummary.com/"
+              target="_blank"
+              >House of Summary standards</a
+            >: accuracy, consistency, high quality, readers first, respect for
+            time, and objectivity.
+          </p>
+        </mj-text>
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="#00000080"
+          padding="20px 20px 35px 20px"
+          width="100%"
+        />
+
+        <!-- Footer content -->
+        <mj-text
+          padding="0px 20px 0px 20px"
+          font-family="Arial"
+          color="#00000099"
+          font-weight="400"
+        >
+          <p
+            style="
+              font-size: 10px;
+              line-height: normal;
+              margin-top: 0 !important;
+              margin-bottom: 0px !important;
+            "
+          >
+            <strong>Images credits:</strong> Somerset House, The Conversation, Beastmag, Playbill, Secret London, Things to do in London, Thames Luxury Charters, London Theatre Tickets, Mayor of London, Paradox Museum
+          </p>
+        </mj-text>
+
+        <mj-text
+          padding="20px 20px 0px 20px"
+          font-family="Arial"
+          color="#000"
+          font-weight="400"
+        >
+          <p
+            style="
+              font-size: 12px;
+              line-height: normal;
+              margin-top: 0;
+              margin-bottom: 5px !important;
+            "
+          >
+            Send us your feedback at
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #80011f;
+                color: #000 !important;
+              "
+              href="mailto:readers@londonsummary.com"
+              target="_blank"
+              >readers@londonsummary.com</a
+            >.
+          </p>
+          <p
+            style="
+              font-size: 12px;
+              line-height: normal;
+              margin-top: 0;
+              margin-bottom: 5px !important;
+            "
+          >
+            Interested in connecting with curious, informed readers?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #80011f;
+                color: #000 !important;
+              "
+              href="https://www.londonsummary.com/advertise"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+          <p
+            style="
+              font-size: 12px;
+              line-height: normal;
+              margin-top: 0;
+              margin-bottom: 0 !important;
+            "
+          >
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #80011f;
+                color: #000 !important;
+              "
+              href="https://www.londonsummary.com/unsubscribewithfeedback?unique_id=%unique_id%&campaign_id=%campaign_id%"
+              target="_blank"
+              >Unsubscribe</a
+            >
+            from this email.
+          </p>
+        </mj-text>
+
+        <!-- old icons -->
+        <mj-social
+          font-size="15px"
+          mode="horizontal"
+          padding="30px 0"
+          margin="0"
+        >
+          <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://www.facebook.com/Londonsummary/ "
+            src="https://www.londonsummary.com/email/images/fb.png"
+          />
+          <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://x.com/TheLondonSum"
+            src="https://www.londonsummary.com/email/images/x.png"
+          />
+          <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://www.instagram.com/londonsummary/"
+            src="https://www.londonsummary.com/email/images/insta.png"
+          />
+          <!-- <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://www.linkedin.com/showcase/london-summary"
+            src="https://www.londonsummary.com/email/images/ln.png"
+          /> -->
+          <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://www.threads.com/@londonsummary"
+            src="https://www.londonsummary.com/email/images/threads.png"
+          />
+        </mj-social>
+
+        <mj-text
+          padding="0px 12px 0px 12px"
+          font-family="Arial"
+          font-weight="400"
+        >
+          <p
+            class="address-block"
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #000000cc !important;
+              line-height: normal;
+              margin-top: 0 !important;
+              margin-bottom: 5px !important;
+            "
+          >
+            <span style="color: inherit !important">
+              30 N Gould St, Ste N, Sheridan, WY 82801, United States
+            </span>
+          </p>
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #000000cc;
+              line-height: normal;
+              margin-top: 0 !important;
+              margin-bottom: 0 !important;
+            "
+          >
+            Copyright © 2026 House of Summary LLC, All rights reserved.
+          </p>
+        </mj-text>
+
+        <mj-spacer height="32px" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
