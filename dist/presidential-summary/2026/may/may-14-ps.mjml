@@ -1,0 +1,623 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      h2,
+      img,
+      p {
+        margin: 0;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+    </mj-style>
+    <!-- <mj-font name="Roboto+Serif" href="https://fonts.googleapis.com/css?family=Roboto+Serif" /> -->
+    <mj-font
+      name="Roboto+Serif"
+      href="https://fonts.googleapis.com/css2?faily=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+    />
+    <mj-style>
+      .button-style:hover {
+        background-color: #dcedff !important;
+        color: rgba(0, 0, 0, 1) !important; /* instead of #000 */
+        border: 1px solid #dcedff !important;
+        cursor: pointer;
+      }
+      .button-style:hover .dot {
+        background-color: #4d3060 !important;
+        color: rgba(0, 0, 0, 1) !important;
+      }
+    </mj-style>
+    <mj-style>
+      .feedback-btn:hover {
+        opacity: 0.8 !important;
+        transform: scale(1.1) !important;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f9f8f9">
+    <mj-raw>
+      <div style="display: none; max-height: 0px; overflow: hidden">
+      Plus the 17th chair of the Federal Reserve </div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden
+      preview text --> <div style="display: none; max-height: 0px; overflow:
+      hidden"> &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj;
+      &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp;
+      &#8199; &shy; </div>
+    </mj-raw>
+    <mj-spacer height="15px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-spacer height="16px" />
+        <mj-image
+          padding="10px 12px 6px 12px"
+          css-class="light_img"
+          width="150px"
+          src="https://www.presidentialsummary.com/logo.png"
+          href="https://www.presidentialsummary.com"
+          alt=""
+        />
+        <mj-image
+          width="1px"
+          src="https://www.presidentialsummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+          alt=""
+        />
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="0px 12px 10px 12px"
+        />
+        <mj-text
+          padding="0px 12px 0px 12px "
+          font-family="Roboto+Serif"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5">
+            <strong>In this edition:</strong>
+          </p>
+        </mj-text>
+        <mj-table
+  font-family="Roboto+Serif"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 18px 0px 18px"
+  style="width: 100%"
+>
+  <tr>
+    <td style="
+                font-size: 18px;
+                width: 20px;
+                vertical-align: top;
+                padding-right: 8px;
+                line-height: 1.6;
+              "> → </td>
+    <td style="font-size: 16px; line-height: 1.6">Warsh takes charge</td>
+  </tr>
+<tr>
+    <td style="
+                font-size: 18px;
+                width: 20px;
+                vertical-align: top;
+                padding-right: 8px;
+                line-height: 1.6;
+              "> → </td>
+    <td style="font-size: 16px; line-height: 1.6">Cuba runs dry</td>
+  </tr>
+<tr>
+    <td style="
+                font-size: 18px;
+                width: 20px;
+                vertical-align: top;
+                padding-right: 8px;
+                line-height: 1.6;
+              "> → </td>
+    <td style="font-size: 16px; line-height: 1.6">China renews US beef license</td>
+  </tr>
+</mj-table>
+
+        <mj-text
+          padding="10px 12px 17px 12px"
+          font-family="Roboto+Serif"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5; margin-bottom: 0px">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="https://link.presidentialsummary.com/ps-advertise"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+        </mj-text>
+        <!-- <mj-divider border-width="1px" border-style="solid" border-color="lightgrey" padding="10px 12px" /> -->
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-text
+  padding="16px 12px 10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="white"
+>
+  <h2
+    style="
+      padding-bottom: 8px;
+      color: #4d3060;
+      text-align: left;
+      border-bottom: 2px solid #4d3060;
+
+      font-size: 26px;
+      line-height: 1.2;
+      font-weight: 400;
+    "
+  >
+    Spotlight
+  </h2>
+</mj-text>
+    <mj-text padding="10px 12px" font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;" color="#000000">
+  <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin-top: 2px !important;">
+    Murdaugh gets a retrial
+  </h2>
+</mj-text>
+<mj-image
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.presidentialsummary.com/email/images/REPLACE_ME.jpg"
+  alt="Murdaugh gets a retrial"
+  href="https://www.presidentialsummary.com/"
+/>
+<mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5"><strong>What happened?</strong> Alex Murdaugh’s murder convictions and sentence for killing his wife, Maggie, and son, Paul, were overturned by the South Carolina Supreme Court. Justices found that court clerk <a href="https://apnews.com/article/murdaugh-killings-appeal-overturned-65a2ea0610bdb80763b39838ab4fcdb6" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Becky Hill improperly influenced jurors</a>. The court said Hill suggested Murdaugh was guilty, attacked his credibility, and denied him a fair hearing. Prosecutors said they plan to retry Murdaugh, possibly in 2026.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>Details:</strong> Jurors said Hill told them to watch Murdaugh’s body language and not be fooled or confused by his defense. The justices ruled that her comments pushed jurors toward finding him guilty and damaged his right to a fair hearing. The court also said Hill appeared motivated by a book trade linked to her hearing memoir. Hill has since pleaded guilty to lying about her conduct during the case.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>Monetary crime:</strong> Prosecutors may use minimal evidence to explain why Murdaugh may have sought to divert attention from his collapsing monetary and theft schemes. However, the justices warned that graphic or emotional details about the victims he stole from could unfairly influence jurors. Some of those victims were disabled, vulnerable, or in hardship, which could make jurors dislike Murdaugh for reasons unrelated to the murder charges.</p>
+</mj-text>
+  </mj-column>
+</mj-section>
+
+<mj-spacer height="10px" />
+<mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-raw>
+    <a href=""
+    target="_blank" style="color:black">
+  </mj-raw>
+
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-spacer height="14px" />
+
+    <mj-text
+      padding="2px 12px 0px 12px"
+      font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+      color="white"
+    >
+      <h2
+        style="
+          padding-bottom: 8px;
+          color: #4d3060;
+          text-align: left;
+          letter-spacing: 1px;
+          border-bottom: 2px solid #4d3060;
+          font-size: 26px;
+          line-height: 1.2;
+          font-weight: 300;
+        "
+      >
+        This could be your business
+      </h2>
+    </mj-text>
+
+    <mj-spacer height="12px" />
+
+    <mj-image
+      border-radius="10px"
+      padding="10px 12px 14px 12px"
+      width="600px"
+      src="https://www.presidentialsummary.com/email/ad/REPLACE_ME.jpg"
+      alt="Advertise your business to an engaged, influential audience"
+    />
+
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px">
+        Reach a wide audience of engaged, loyal readers right where they’re
+        paying attention. Our audience is educated, influential, and ready
+        to respond.
+      </p>
+      <p style="font-size: 16px; line-height: 24px">
+        Whether you want to drive revenue, build awareness, or launch
+        something fresh, this is your spot. Secure your placement and get in
+        front of the right eyes.
+      </p>
+    </mj-text>
+
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px">
+        <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #4d3060;
+            color: black;
+          "
+        ><strong>Partner with us</strong></a>
+      </p>
+    </mj-text>
+
+    <mj-spacer height="15px" />
+  </mj-column>
+
+  <mj-raw></a></mj-raw>
+</mj-section>
+
+<mj-spacer height="10px" />
+
+<mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-spacer height="10px" />
+    <mj-text padding="10px 12px" font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;" color="#000000">
+  <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin-top: 2px !important;">
+    Warsh takes charge
+  </h2>
+</mj-text>
+<mj-image
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.presidentialsummary.com/email/images/REPLACE_ME.jpg"
+  alt="Warsh takes charge"
+  href="https://www.presidentialsummary.com/"
+/>
+<mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5"><strong>What happened? </strong>Kevin Warsh was narrowly confirmed by the Senate as the <a href="https://edition.cnn.com/2026/05/13/economy/kevin-warsh-confirmation-trump-fed-chair" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">17th chair of the Federal Reserve</a>, replacing Jerome Powell after an eight-year tenure. Warsh triumphed by a 54-45 vote, mostly along party lines, making it the most partisan Fed chair confirmation in history. His appointment comes as inflation rises, partly due to the US-Israel war with Iran, complicating Trump’s push for cuts.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>What to expect? </strong>Warsh is likely to push for a leaner, less interventionist Federal Reserve. He has signaled plans to shrink the Fed’s $6.7T balance sheet. He may also coordinate more closely with the Treasury and could reduce policy meetings from eight a year to as few as four. Warsh is also expected to hold fewer press conferences, cut the Washington-based workforce, and give fewer hints about future interests.</p>
+<p style="font-size: 16px; line-height: 1.5"><strong>Background: </strong>Kevin Warsh is a former Wall Street banker, attorney, and Federal Reserve governor. He studied public policy at Stanford University and law at Harvard before working in investment banking at Morgan Stanley. He later served as an economic adviser in George W. Bush’s White House and joined the Fed’s Board of Governors in 2006, becoming the youngest person ever confirmed to the board at 35. Warsh served through the global monetary crisis until 2011, gaining a reputation as a market-focused policymaker and inflation hawk.</p>
+</mj-text>
+  </mj-column>
+</mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <!-- long stroy short content sections -->
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #4d3060;
+              text-align: left;
+              border-bottom: 2px solid #4d3060;
+
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 400;
+            "
+          >
+            Long story short
+          </h2>
+        </mj-text>
+        <mj-text
+  padding="14px 12px 0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 1px;
+    "
+  >
+    Global Affairs
+  </h3>
+</mj-text>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Cuba’s energy crisis has deepened after Energy Minister Vicente de la O Levy said the country has run out of diesel and fuel oil. </strong>A Russian oil donation from late March has already been exhausted, leaving the island’s weak electrical grid in a critical state. Parts of Havana are experiencing blackouts lasting 20-22 hours a day, forcing residents to cook, do laundry, and charge phones during brief periods of power (<a href="https://edition.cnn.com/2026/05/13/americas/cuba-russia-energy-crisis-intl-hnk" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">power panic</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Russian President Vladimir Putin said the Sarmat intercontinental ballistic missile, known by NATO as “Satan II,” </strong>will be ready for combat duty by the end of the year after a successful test. The missile can reportedly fly more than 10,000 km and carry up to 16 independently targeted nuclear warheads. Sarmat is meant to replace Russia’s Soviet-era SS-18 missile but has faced years of delays and failed tests (<a href="https://edition.cnn.com/2026/05/13/europe/putin-test-powerful-russian-nuclear-missile-intl" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Sarmat signal</a>).</p>
+</mj-text>
+<mj-divider
+  border-width="1px"
+  border-style="solid"
+  border-color="lightgrey"
+  padding="0px 12px"
+/>
+<mj-text
+  padding="0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 15px;
+    "
+  >
+    Business &amp; Markets
+  </h3>
+</mj-text>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>China renewed export licenses for US beef processing plants, allowing them to regain eligibility to sell beef to China.</strong> More than 400 plants had lost their gateway over the past year after permissions granted between 2020 and 2021 expired without renewal. The move came as President Trump and Chinese President Xi Jinping met in Beijing, suggesting a possible goodwill gesture ahead of trade talks (<a href="https://www.msn.com/en-us/money/other/china-renews-licences-for-hundreds-of-us-beef-exporters-amid-trump-xi-summit/ar-AA23a8rH?ocid=BingNewsSerp" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">trade thaw</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Nvidia CEO Jensen Huang and his wife, Lori, are using their foundation to acquire computing time from CoreWeave and donate it to universities and nonprofit institutes. </strong>A filing valued the donation at $108.3M so far, with the resources meant for science and AI research. Nvidia also plans to provide engineering support to some recipients. Nvidia invested $2B in the AI cloud company and signed a $6.3B capacity agreement (<a href="https://www.msn.com/en-ca/money/technology/nvidia-ceo-s-foundation-buys-108-million-of-ai-computing-from-coreweave-donates-it-to-researchers/ar-AA238dYz?ocid=BingNewsSerp" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">GPU grants</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Apple warned the EU that draft measures forcing Google to allow Android to rival AI services could create privacy, security, and safety risks.</strong> The proposals are intended to help Google comply with the Digital Markets bill and would allow competing AI tools to interact with Android apps to perform tasks such as sending emails, ordering food, or sharing photos. Apple said the risks are especially severe because AI systems are evolving quickly and remain unpredictable (<a href="https://www.newsbytesapp.com/news/science/apple-warns-eu-s-google-ai-access-proposal-risks-user-safety/story" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">Apple alarm</a>).</p>
+</mj-text>
+<mj-divider
+  border-width="1px"
+  border-style="solid"
+  border-color="lightgrey"
+  padding="0px 12px"
+/>
+<mj-text
+  padding="0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 15px;
+    "
+  >
+    Science &amp; Tech
+  </h3>
+</mj-text>
+<mj-image
+  border-radius="10px"
+  padding="0px 12px 10px 12px"
+  width="600px"
+  src="https://www.presidentialsummary.com/email/images/REPLACE_ME.jpg"
+  alt="Science &amp; Tech"
+  href="https://www.presidentialsummary.com/"
+/>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Notion launched a Developer Platform to move beyond note-taking and become a hub for AI agents, workflows, and live business data. </strong>The platform introduces Workers, a cloud-based environment where teams can run custom code, sync external databases, trigger workflows, and build agent tools without managing their own infrastructure. Notion will also let users connect external AI agents such as Claude Code, Cursor, Codex, and Decagon, assign them work, and track their progress within Notion (<a href="https://techcrunch.com/2026/05/13/notion-just-turned-its-workspace-into-a-hub-for-ai-agents/" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">workflow hub</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;"><strong>Macquarie Island, a remote UNESCO World Heritage site between Tasmania and Antarctica, is getting much wetter as Southern Ocean storms intensify. </strong>A study found annual rainfall on the island has risen 28% since 1979, adding about 260mm of rain each year. Scientists say the increase is not mainly due to more storms, but to storms releasing more rain when they arrive. The change is making parts of the island wetter and boggier, damaging native megaherbs and reshaping ecosystems (<a href="https://www.sciencedaily.com/releases/2026/05/260512202337.htm" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">ocean sweats</a>).</p>
+</mj-text>
+<mj-divider
+  border-width="1px"
+  border-style="solid"
+  border-color="lightgrey"
+  padding="0px 12px"
+/>
+<mj-text
+  padding="0px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h3
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 15px;
+    "
+  >
+    Whatnot
+  </h3>
+</mj-text>
+<mj-text padding="0px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">OpenAI says no user data was stolen after the employee's device hack (<a href="https://www.livemint.com/news/world/openai-says-no-user-data-stolen-after-supply-chain-hackers-accessed-employee-devices-11778735895589.html" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">data safe</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">The US House allows year-round trade of E15 gasoline (<a href="https://www.msn.com/en-us/money/general/us-house-passes-bill-allowing-year-round-sales-of-e15-gasoline/ar-AA238AXv?ocid=BingNewsSerp" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">fuel flex</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">Honda just had its worst year ever (<a href="https://www.msn.com/en-us/money/companies/honda-just-had-its-worst-year-ever/ar-AA239SDz?ocid=BingNewsSerp&amp;cvid=6a05ca84bdb34c69b27d0d55d816060e&amp;cvpid=6a05cae1cc39430bb5b5c1e852163664&amp;ei=23" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">record slump</a>).</p>
+<p style="font-size: 16px;
+              line-height: 1.5;
+              border-left: 3px solid #4d3060;
+              padding-left: 14px;
+              margin-bottom: 15px;">Trump issued a visa change for foreign World Cup fans (<a href="https://www.msn.com/en-us/news/world/trump-just-issued-a-major-visa-change-for-foreign-world-cup-fans/ar-AA237UtD?ocid=BingNewsSerp&amp;cvid=6a05ca84bdb34c69b27d0d55d816060e&amp;cvpid=6a05cae1cc39430bb5b5c1e852163664&amp;ei=31" target="_blank" style="text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;">ease of entry</a>).</p>
+</mj-text>
+
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="10px 12px"
+        />
+        <mj-spacer height="10px" />
+        <mj-text
+          padding="2px 12px 0px 12px"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          <p style="color: #000; font-size: 10px; line-height: 2">
+            <strong>Image credits:</strong> The Times, AP Photo, Notion
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Send us your feedback at
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="mailto:readers@presidentialsummary.com"
+              target="_blank"
+              >readers@presidentialsummary.com</a
+            >.
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Interested in connecting with curious, informed readers?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="https://www.presidentialsummary.com/advertise#advertise-form"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #4d3060;
+                color: black;
+              "
+              href="https://www.presidentialsummary.com/unsubscribewithfeedback?unique_id=%unique_id%&campaign_id=%campaign_id%"
+              target="_blank"
+              >Unsubscribe</a
+            >
+            from this email.
+          </p>
+        </mj-text>
+
+        <mj-text padding="10px 12px" font-family="Arial, Helvetica, sans-serif">
+          <p
+            style="
+              margin-top: 0px;
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 1.5;
+            "
+          >
+            30 <span>N</span> <span>Gould</span>
+            <span>St, Ste N, Sheridan, WY 82801, United States</span>
+          </p>
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 0;
+              margin-bottom: 14px;
+            "
+          >
+            Copyright © 2026 House of Summary, All rights reserved.
+          </p>
+        </mj-text>
+        <mj-spacer height="10px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="15px"></mj-spacer>
+  </mj-body>
+</mjml>

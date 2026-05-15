@@ -1,0 +1,1336 @@
+<mjml>
+  <mj-head>
+    <mj-font
+      name="Austin News Text Web"
+      href="https://www.londonsummary.com/fonts/AustinNewsTextWeb.woff2"
+    />
+  </mj-head>
+  <mj-body background-color="#f9f8f9">
+    <mj-raw>
+  <div style="display: none; max-height: 0px; overflow: hidden">Plus things to do this weekend</div>
+  <div style="display: none; max-height: 0px; overflow: hidden">
+    &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+    &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+  </div>
+</mj-raw>
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="15px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+
+    <!-- header -->
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 1px 1px 1px"
+      border-radius="10px"
+    >
+      <mj-column background-color="#ffffff" border-radius="10px" padding="0">
+        <!-- Top red strip -->
+        <mj-text padding="0">
+          <div
+            style="
+              height: 6px;
+              border-top-left-radius: 8px;
+              border-top-right-radius: 8px;
+              background-color: #80011f;
+            "
+          ></div>
+        </mj-text>
+
+        <!-- Logo and Date -->
+        <mj-section background-color="#ffffff" padding="0px 10px 0px 10px">
+          <mj-group width="100%" padding="0px">
+            <mj-column width="50%" vertical-align="bottom">
+              <mj-spacer height="10px" />
+              <mj-image
+                align="left"
+                width="226px"
+                src="https://www.londonsummary.com/logo-grey.png"
+                href="https://www.londonsummary.com/"
+                alt="London Summary newsletter logo"
+                padding="0px"
+              />
+              <mj-image
+                width="1px"
+                src="https://www.londonsummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+                alt=""
+              />
+            </mj-column>
+            <!-- <mj-column width="50%" vertical-align="bottom">
+              <mj-text
+                align="right"
+                font-size="16px"
+                font-family="Arial"
+                font-weight="300"
+                color="#00000096"
+                padding="0"
+                >Wed, Mar 18 • AQI 50
+              </mj-text>
+            </mj-column> -->
+          </mj-group>
+        </mj-section>
+
+        <!-- Divider line -->
+        <mj-divider
+          border-color="#EBEBEB"
+          border-width="1px"
+          width="100%"
+          padding="7px 20px 0 20px"
+        />
+
+        <!-- In this edition -->
+        <mj-text
+          padding="20px 20px 0px 20px"
+          font-family="Arial"
+          color="#000000"
+          font-size="16px"
+          font-weight="600"
+        >
+          In this edition:
+        </mj-text>
+
+        <mj-table
+          font-family="Arial"
+          cellpadding="0"
+          cellspacing="0"
+          padding="19px 30px 0px 30px"
+        >
+          <tr>
+  <td
+    style="
+      font-size: 18px;
+      width: 20px;
+      vertical-align: top;
+      padding-right: 8px;
+      padding-bottom: 11px;
+    "
+  >
+    →
+  </td>
+  <td
+    style="
+      font-size: 16px;
+      line-height: 24px;
+      padding-bottom: 11px;
+    "
+  >
+    Brick Lane brews
+  </td>
+</tr>
+<tr>
+  <td
+    style="
+      font-size: 18px;
+      width: 20px;
+      vertical-align: top;
+      padding-right: 8px;
+      padding-bottom: 11px;
+    "
+  >
+    →
+  </td>
+  <td
+    style="
+      font-size: 16px;
+      line-height: 24px;
+      padding-bottom: 11px;
+    "
+  >
+    An Ideal Husband
+  </td>
+</tr>
+<tr>
+  <td
+    style="
+      font-size: 18px;
+      width: 20px;
+      vertical-align: top;
+      padding-right: 8px;
+      
+    "
+  >
+    →
+  </td>
+  <td
+    style="
+      font-size: 16px;
+      line-height: 24px;
+      line-height: 1.6;
+    "
+  >
+    Future food feast
+  </td>
+</tr>
+        </mj-table>
+
+        <!-- Join link -->
+        <mj-text
+          padding="17px 20px 20px 20px"
+          font-family="Arial"
+          color="#000000"
+          font-size="16px"
+          line-height="1.5"
+        >
+          Was this email forwarded to you?
+          <a
+            href="https://www.londonsummary.com/"
+            target="_blank"
+            style="
+              text-decoration: none;
+              border-bottom: 2px solid #80011f;
+              color: black;
+            "
+          >
+            Join London Summary</a
+          >.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+
+    <mj-section
+  background-color="#eff1f4"
+  padding="1px 1px 1px 1px"
+  border-radius="10px"
+>
+  <mj-column background-color="#fff" border-radius="10px" padding="0px">
+    <mj-image
+      border-radius="10px 10px 0 0"
+      padding="0"
+      width="600px"
+      src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+      alt="REPLACE_ME"
+      href="https://www.londonsummary.com/"
+    />
+    <mj-text
+      padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2
+        style="
+          font-size: 24px;
+          line-height: 1.2;
+          font-weight: 400;
+          margin: 0;
+        "
+      >
+        Piazza goes Nordic
+      </h2>
+    </mj-text>
+    <mj-text
+      padding="0px 20px 0px 20px"
+      font-family="Arial"
+      color="#000000"
+    >
+      <p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    margin: 0;
+  "
+>
+  Covent Garden is hosting Passport to Norway, bringing Scandinavian culture to the famous Piazza. The event features Nordic music, Norwegian-inspired food pop-ups, cultural experiences, and live entertainment across the weekend. It also marks Syttende Mai on 17 May, Norway’s Constitution Day, which celebrates independence, heritage, and community.
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    margin: 0;
+  "
+>
+  Visitors can explore the spirit of Norway through curated performances and immersive moments, including a Saturday set from alternative-pop duo amilost, known for mixing electronic sounds with live instrumentation.
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    margin: 0;
+  "
+>
+  The anniversary tour recreates memorable moments from the first film, with house banners, floating hats, and magical details across the studios. A newer feature, Secrets of Sound, also shows how sound effects helped bring spells, creatures, and key scenes on screen.
+</p>
+      <p
+  style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    margin: 0;
+  "
+>
+  🔗 <strong>Link:</strong>
+<a
+  style="
+    text-decoration: none;
+    border-bottom: 2px solid #80011f;
+    color: black;
+  "
+  href="https://www.coventgarden.london/event/norway-day-in-covent-garden"
+  target="_blank"
+>Passport to Norway</a><br />📅 <strong>When:</strong> May 14 - May 17<br />💸 <strong>Cost:</strong> Open entry<br />📍 <strong>Where:</strong>
+<a
+  style="
+    text-decoration: none;
+    border-bottom: 2px solid #80011f;
+    color: black;
+  "
+  href="https://www.coventgarden.london/event/norway-day-in-covent-garden"
+  target="_blank"
+>Covent Garden</a>
+</p>
+    </mj-text>
+  </mj-column>
+</mj-section>
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+
+    <!--primary ad -->
+    <mj-section
+      background-color="#EFF1F4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="10px"
+    >
+      <mj-raw>
+        <a href="https://link.londonsummary.com/REPLACE_ME" target="_blank"
+        style="color:black">
+      </mj-raw>
+      <mj-column background-color="#fff" border-radius="10px" padding="0px">
+        <mj-image
+          border-radius="10px 10px 0 0"
+          padding="0px 0px 10px 0px"
+          width="600px"
+          src="https://www.londonsummary.com/email/ad/REPLACE_ME.jpg"
+          alt="campaign - gf"
+        />
+        <mj-text
+          padding="2px 12px 8px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="#000000"
+        >
+          <h2
+            style="
+              font-size: 24px;
+              line-height: 1.2;
+              font-weight: 500;
+              margin-top: 2px !important;
+              margin: 0;
+            "
+          >
+            REPLACE_ME
+          </h2>
+        </mj-text>
+        <mj-spacer height="0px" />
+
+        <mj-text
+          padding="10px 12px 0px 12px"
+          font-family="Arial"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 24px; margin: 0 0 10px 0">
+            <strong>What’s happening?</strong>REPLACE_ME
+          </p>
+
+          <p style="font-size: 16px; line-height: 24px; margin: 0 0 10px 0">
+            <strong>For foreign investors:</strong> REPLACE_ME
+          </p>
+          <p style="font-size: 16px; line-height: 24px; margin: 0">
+            <strong>Track record:</strong> REPLACE_ME
+          </p>
+        </mj-text>
+        <mj-text
+          padding="10px 12px 8px 12px"
+          font-family="Roboto+Serif"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 24px; margin: 0">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #80011f;
+                color: black;
+              "
+              ><strong>REPLACE_ME →</strong></a
+            >
+          </p>
+        </mj-text>
+        <mj-spacer height="12px" />
+      </mj-column>
+      <mj-raw> </a> </mj-raw> </mj-section
+    ><!--primary ad -->
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+
+    <mj-section
+  background-color="#eff1f4"
+  padding="1px 1px 1px 1px"
+  border-radius="10px"
+>
+  <mj-column background-color="#fff" border-radius="10px" padding="0px">
+    <mj-image
+      border-radius="10px 10px 0 0"
+      padding="0"
+      width="600px"
+      src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+      alt="REPLACE_ME"
+      href="https://www.londonsummary.com/"
+    />
+    <mj-text
+      padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2
+        style="
+          font-size: 24px;
+          line-height: 1.2;
+          font-weight: 400;
+          margin: 0;
+        "
+      >
+        Brick Lane brews
+      </h2>
+    </mj-text>
+    <mj-text
+      padding="0px 20px 0px 20px"
+      font-family="Arial"
+      color="#000000"
+    >
+      <p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    margin: 0;
+  "
+>
+  The London Coffee Festival returns this weekend to The Truman Brewery on Brick Lane, celebrating the capital’s specialty coffee scene and creative culture. The event brings together more than 275 artisan coffee and gourmet food brands, offering tastings, barista demonstrations, hands-on workshops, street food, music, and expert-led masterclasses.
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    margin: 0;
+  "
+>
+  Highlights include the global Coffee Masters competition, where top baristas showcase their skills, as well as immersive experiences such as Latte Art Live, The Roasters Village, Brew School, and The Lab. Designed for both coffee professionals and casual drinkers, the festival offers a lively deep dive into London’s coffee culture.
+</p>
+      <p
+  style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    margin: 0;
+  "
+>
+  🔗 <strong>Link:</strong>
+<a
+  style="
+    text-decoration: none;
+    border-bottom: 2px solid #80011f;
+    color: black;
+  "
+  href="https://www.londoncoffeefestival.com/"
+  target="_blank"
+>London Coffee Festival</a><br />📅 <strong>When:</strong> May 14 - May 17<br />💸 <strong>Cost:</strong> Tickets start from £39.90<br />📍 <strong>Where:</strong>
+<a
+  style="
+    text-decoration: none;
+    border-bottom: 2px solid #80011f;
+    color: black;
+  "
+  href="https://www.londoncoffeefestival.com/"
+  target="_blank"
+>The Truman Brewery</a>
+</p>
+    </mj-text>
+  </mj-column>
+</mj-section>
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+
+    <mj-section
+  background-color="#eff1f4"
+  padding="1px 1px 1px 1px"
+  border-radius="10px"
+>
+  <mj-column
+    background-color="#fff"
+    border-radius="10px"
+    padding-bottom="7px"
+  >
+    <mj-text
+      padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2
+        style="
+          font-size: 24px;
+          line-height: 1.2;
+          font-weight: 400;
+          margin: 0;
+        "
+      >
+        Live events
+      </h2>
+    </mj-text>
+    <mj-divider
+      border-width="4.8px"
+      border-color="#80011F"
+      width="35px"
+      align="left"
+      padding="0 20px 0px 20px"
+    />
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="10px" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="5px 10px 0px 10px">
+  <mj-group width="100%">
+    <mj-column width="30%" vertical-align="top" padding="0">
+      <mj-image
+        align="left"
+        src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+        alt="REPLACE_ME"
+        padding="0px"
+        border-radius="8px"
+        fluid-on-mobile="true"
+        css-class="event-image"
+        href="https://www.londonsummary.com/"
+      />
+    </mj-column>
+    <mj-column width="70%" vertical-align="top">
+      <mj-text
+        padding="0px 15px 0px 15px"
+        font-family="Arial"
+        color="#000000"
+        font-size="16px"
+      >
+        <p
+          style="
+            margin-bottom: 7px !important;
+            margin-top: 6px !important;
+            line-height: 16px;
+          "
+        >
+          <strong>Kit Kat Cabaret</strong>
+        </p>
+        <p style="line-height: 24px">Cabaret at the Kit Kat Club brings 1930s Berlin to London’s Playhouse Theatre with immersive staging, daring performances, Matt Willis as Emcee, acrobats, contortionists, and striking costumes.</p>
+        <p style="margin-bottom: 0px; line-height: 24px">
+          📅 <strong>When:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.visitlondon.com/things-to-do/event/49258098-cabaret-at-the-kit-kat-club"
+          target="_blank"
+        >Multiple dates | Tickets start at £122</a><br />
+          📍 <strong>Where:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.visitlondon.com/things-to-do/event/49258098-cabaret-at-the-kit-kat-club"
+          target="_blank"
+        >Playhouse Theatre</a>
+        </p>
+      </mj-text>
+    </mj-column>
+  </mj-group>
+</mj-section>
+<mj-divider
+         border-style="dashed"
+         border-width="1px"
+         border-color="lightgrey"
+         padding="20px 22px 8px 22px"
+       />
+<mj-section padding="5px 10px 0px 10px">
+  <mj-group width="100%">
+    <mj-column width="30%" vertical-align="top" padding="0">
+      <mj-image
+        align="left"
+        src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+        alt="REPLACE_ME"
+        padding="0px"
+        border-radius="8px"
+        fluid-on-mobile="true"
+        css-class="event-image"
+        href="https://www.londonsummary.com/"
+      />
+    </mj-column>
+    <mj-column width="70%" vertical-align="top">
+      <mj-text
+        padding="0px 15px 0px 15px"
+        font-family="Arial"
+        color="#000000"
+        font-size="16px"
+      >
+        <p
+          style="
+            margin-bottom: 7px !important;
+            margin-top: 6px !important;
+            line-height: 16px;
+          "
+        >
+          <strong>An Ideal Husband</strong>
+        </p>
+        <p style="line-height: 24px">An Ideal Husband is playing at the Lyric Hammersmith, reviving Oscar Wilde’s comedy with political scandal, blackmail, tangled romance, sharp wit, vibrant characters, and modern energy.</p>
+        <p style="margin-bottom: 0px; line-height: 24px">
+          📅 <strong>When:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.londontheatredirect.com/play/an-ideal-husband-tickets"
+          target="_blank"
+        >Multiple dates | Tickets start at £19</a><br />
+          📍 <strong>Where:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.londontheatredirect.com/play/an-ideal-husband-tickets"
+          target="_blank"
+        >Lyric Hammersmith</a>
+        </p>
+      </mj-text>
+    </mj-column>
+  </mj-group>
+</mj-section>
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px" />
+      </mj-column>
+    </mj-section>
+  </mj-column>
+</mj-section>
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+
+    <mj-section
+  background-color="#eff1f4"
+  padding="1px 1px 1px 1px"
+  border-radius="10px"
+>
+  <mj-column
+    background-color="#fff"
+    border-radius="10px"
+    padding-bottom="7px"
+  >
+    <mj-text
+      padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2
+        style="
+          font-size: 24px;
+          line-height: 1.2;
+          font-weight: 400;
+          margin: 0;
+        "
+      >
+        Shopping
+      </h2>
+    </mj-text>
+    <mj-divider
+      border-width="4.8px"
+      border-color="#80011F"
+      width="35px"
+      align="left"
+      padding="0 20px 0px 20px"
+    />
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="10px" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="5px 10px 0px 10px">
+  <mj-group width="100%">
+    <mj-column width="30%" vertical-align="top" padding="0">
+      <mj-image
+        align="left"
+        src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+        alt="REPLACE_ME"
+        padding="0px"
+        border-radius="8px"
+        fluid-on-mobile="true"
+        css-class="event-image"
+        href="https://www.londonsummary.com/"
+      />
+    </mj-column>
+    <mj-column width="70%" vertical-align="top">
+      <mj-text
+        padding="0px 15px 0px 15px"
+        font-family="Arial"
+        color="#000000"
+        font-size="16px"
+      >
+        <p
+          style="
+            margin-bottom: 7px !important;
+            margin-top: 6px !important;
+            line-height: 16px;
+          "
+        >
+          <strong>Future food feast</strong>
+        </p>
+        <p style="line-height: 24px">St James’s Food Fair turns St James’s Market into an open-air food celebration with local producers, sustainable suppliers, restaurant stalls, BBQ dishes, tastings, workshops, and masterclasses.</p>
+        <p style="margin-bottom: 0px; line-height: 24px">
+          📅 <strong>When:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.stjameslondon.co.uk/sjm-food-fair"
+          target="_blank"
+        >May 16, Open entry</a><br />
+          📍 <strong>Where:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.stjameslondon.co.uk/sjm-food-fair"
+          target="_blank"
+        >St James Market</a>
+        </p>
+      </mj-text>
+    </mj-column>
+  </mj-group>
+</mj-section>
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px" />
+      </mj-column>
+    </mj-section>
+  </mj-column>
+</mj-section>
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+
+    <mj-section
+  background-color="#eff1f4"
+  padding="1px 1px 1px 1px"
+  border-radius="10px"
+>
+  <mj-column
+    background-color="#fff"
+    border-radius="10px"
+    padding-bottom="7px"
+  >
+    <mj-text
+      padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2
+        style="
+          font-size: 24px;
+          line-height: 1.2;
+          font-weight: 400;
+          margin: 0;
+        "
+      >
+        Nightlife
+      </h2>
+    </mj-text>
+    <mj-divider
+      border-width="4.8px"
+      border-color="#80011F"
+      width="35px"
+      align="left"
+      padding="0 20px 0px 20px"
+    />
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="10px" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="5px 10px 0px 10px">
+  <mj-group width="100%">
+    <mj-column width="30%" vertical-align="top" padding="0">
+      <mj-image
+        align="left"
+        src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+        alt="REPLACE_ME"
+        padding="0px"
+        border-radius="8px"
+        fluid-on-mobile="true"
+        css-class="event-image"
+        href="https://www.londonsummary.com/"
+      />
+    </mj-column>
+    <mj-column width="70%" vertical-align="top">
+      <mj-text
+        padding="0px 15px 0px 15px"
+        font-family="Arial"
+        color="#000000"
+        font-size="16px"
+      >
+        <p
+          style="
+            margin-bottom: 7px !important;
+            margin-top: 6px !important;
+            line-height: 16px;
+          "
+        >
+          <strong>Thames party cruise</strong>
+        </p>
+        <p style="line-height: 24px">A 4-hour Thames party cruise departs from Festival Pier, offering a live DJ, dancefloor, light buffet, onboard bars, indoor decks, and skyline views for adults only.</p>
+        <p style="margin-bottom: 0px; line-height: 24px">
+          📅 <strong>When:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.getyourguide.com/london-l57/river-thames-party-boat-cruise-t1243268/?ranking_uuid=f402f176-6d9f-4c25-b4e9-b5ef5519d9f7"
+          target="_blank"
+        >Multiple dates | Tickets start from £29</a><br />
+          📍 <strong>Where:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.getyourguide.com/london-l57/river-thames-party-boat-cruise-t1243268/?ranking_uuid=f402f176-6d9f-4c25-b4e9-b5ef5519d9f7"
+          target="_blank"
+        >Festival Pier</a>
+        </p>
+      </mj-text>
+    </mj-column>
+  </mj-group>
+</mj-section>
+<mj-divider
+         border-style="dashed"
+         border-width="1px"
+         border-color="lightgrey"
+         padding="20px 22px 8px 22px"
+       />
+<mj-section padding="5px 10px 0px 10px">
+  <mj-group width="100%">
+    <mj-column width="30%" vertical-align="top" padding="0">
+      <mj-image
+        align="left"
+        src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+        alt="REPLACE_ME"
+        padding="0px"
+        border-radius="8px"
+        fluid-on-mobile="true"
+        css-class="event-image"
+        href="https://www.londonsummary.com/"
+      />
+    </mj-column>
+    <mj-column width="70%" vertical-align="top">
+      <mj-text
+        padding="0px 15px 0px 15px"
+        font-family="Arial"
+        color="#000000"
+        font-size="16px"
+      >
+        <p
+          style="
+            margin-bottom: 7px !important;
+            margin-top: 6px !important;
+            line-height: 16px;
+          "
+        >
+          <strong>Mamma Mia magic</strong>
+        </p>
+        <p style="line-height: 24px">Mamma Mia! The Party at The O2 offers a four-hour immersive Greek taverna experience with a four-course meal, live performance, ABBA music, dancing, and disco.</p>
+        <p style="margin-bottom: 0px; line-height: 24px">
+          📅 <strong>When:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.getyourguide.com/london-l57/london-mamma-mia-the-party-dinner-show-ticket-t1064445/?ranking_uuid=f402f176-6d9f-4c25-b4e9-b5ef5519d9f7"
+          target="_blank"
+        >Multiple dates | Tickets start from £120</a><br />
+          📍 <strong>Where:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.getyourguide.com/london-l57/london-mamma-mia-the-party-dinner-show-ticket-t1064445/?ranking_uuid=f402f176-6d9f-4c25-b4e9-b5ef5519d9f7"
+          target="_blank"
+        >The 02</a>
+        </p>
+      </mj-text>
+    </mj-column>
+  </mj-group>
+</mj-section>
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px" />
+      </mj-column>
+    </mj-section>
+  </mj-column>
+</mj-section>
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+
+    <mj-section
+  background-color="#eff1f4"
+  padding="1px 1px 1px 1px"
+  border-radius="10px"
+>
+  <mj-column
+    background-color="#fff"
+    border-radius="10px"
+    padding-bottom="7px"
+  >
+    <mj-text
+      padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2
+        style="
+          font-size: 24px;
+          line-height: 1.2;
+          font-weight: 400;
+          margin: 0;
+        "
+      >
+        Everything else
+      </h2>
+    </mj-text>
+    <mj-divider
+      border-width="4.8px"
+      border-color="#80011F"
+      width="35px"
+      align="left"
+      padding="0 20px 0px 20px"
+    />
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="10px" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="5px 10px 0px 10px">
+  <mj-group width="100%">
+    <mj-column width="30%" vertical-align="top" padding="0">
+      <mj-image
+        align="left"
+        src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+        alt="REPLACE_ME"
+        padding="0px"
+        border-radius="8px"
+        fluid-on-mobile="true"
+        css-class="event-image"
+        href="https://www.londonsummary.com/"
+      />
+    </mj-column>
+    <mj-column width="70%" vertical-align="top">
+      <mj-text
+        padding="0px 15px 0px 15px"
+        font-family="Arial"
+        color="#000000"
+        font-size="16px"
+      >
+        <p
+          style="
+            margin-bottom: 7px !important;
+            margin-top: 6px !important;
+            line-height: 16px;
+          "
+        >
+          <strong>Borough bites tour</strong>
+        </p>
+        <p style="line-height: 24px">Borough Market Food Tour takes visitors through London’s oldest market with a guide, stall stories, British bites, artisan cheeses, fish and chips, tea, dessert, and a secret dish.</p>
+        <p style="margin-bottom: 0px; line-height: 24px">
+          📅 <strong>When:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.visitlondon.com/things-to-do/place/49236784-borough-market-food-tour"
+          target="_blank"
+        >Multiple dates | Tickets start from £97.50</a><br />
+          📍 <strong>Where:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.visitlondon.com/things-to-do/place/49236784-borough-market-food-tour"
+          target="_blank"
+        >Borough Market</a>
+        </p>
+      </mj-text>
+    </mj-column>
+  </mj-group>
+</mj-section>
+<mj-divider
+         border-style="dashed"
+         border-width="1px"
+         border-color="lightgrey"
+         padding="20px 22px 8px 22px"
+       />
+<mj-section padding="5px 10px 0px 10px">
+  <mj-group width="100%">
+    <mj-column width="30%" vertical-align="top" padding="0">
+      <mj-image
+        align="left"
+        src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+        alt="REPLACE_ME"
+        padding="0px"
+        border-radius="8px"
+        fluid-on-mobile="true"
+        css-class="event-image"
+        href="https://www.londonsummary.com/"
+      />
+    </mj-column>
+    <mj-column width="70%" vertical-align="top">
+      <mj-text
+        padding="0px 15px 0px 15px"
+        font-family="Arial"
+        color="#000000"
+        font-size="16px"
+      >
+        <p
+          style="
+            margin-bottom: 7px !important;
+            margin-top: 6px !important;
+            line-height: 16px;
+          "
+        >
+          <strong>Wimbledon art walk</strong>
+        </p>
+        <p style="line-height: 24px">Wimbledon Art Fair opens more than 180 artist studios, offering original, affordable artworks, studio visits, artist conversations, and direct sales from creators.</p>
+        <p style="margin-bottom: 0px; line-height: 24px">
+          📅 <strong>When:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.wimbledonartfair.com/"
+          target="_blank"
+        >May 14 - May 17 | Open entry</a><br />
+          📍 <strong>Where:</strong> <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #80011f;
+            color: black;
+          "
+          href="https://www.wimbledonartfair.com/"
+          target="_blank"
+        >Wimbledon Art Studios</a>
+        </p>
+      </mj-text>
+    </mj-column>
+  </mj-group>
+</mj-section>
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px" />
+      </mj-column>
+    </mj-section>
+  </mj-column>
+</mj-section>
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 1px 1px 1px"
+      border-radius="10px"
+    >
+      <mj-column background-color="#ffffff" border-radius="10px" padding="0">
+        <!-- Top red strip -->
+        <mj-text padding="0">
+          <div
+            style="
+              height: 6px;
+              border-top-left-radius: 8px;
+              border-top-right-radius: 8px;
+              background-color: #80011f;
+            "
+          ></div>
+        </mj-text>
+
+        <!-- Logo and Date -->
+        <mj-spacer height="40px" />
+        <mj-image
+          align="left"
+          width="159px"
+          src="https://www.londonsummary.com/logo-grey.png"
+          href="https://www.londonsummary.com/"
+          alt="London Summary newsletter logo"
+          padding="0px 20px"
+        />
+        <mj-text
+          padding="18px 20px 0px 20px"
+          font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+          color="#000000"
+        >
+          <h2
+            style="
+              font-size: 24px;
+              line-height: 1.2;
+              font-weight: 400;
+              margin: 0;
+            "
+          >
+            The pulse of London.
+          </h2>
+        </mj-text>
+        <mj-text
+          padding="10px 20px 0px 20px"
+          font-family="Arial"
+          font-weight="400"
+          color="#000"
+        >
+          <p style="font-size: 15px; line-height: 1.4; margin: 0 !important">
+            This edition was produced by our editorial team and meets the
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #80011f;
+                color: black;
+              "
+              href="https://www.houseofsummary.com/"
+              target="_blank"
+              >House of Summary standards</a
+            >: accuracy, consistency, high quality, readers first, respect for
+            time, and objectivity.
+          </p>
+        </mj-text>
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="#00000080"
+          padding="20px 20px 35px 20px"
+          width="100%"
+        />
+
+        <!-- Footer content -->
+        <mj-text
+          padding="0px 20px 0px 20px"
+          font-family="Arial"
+          color="#00000099"
+          font-weight="400"
+        >
+          <p
+            style="
+              font-size: 10px;
+              line-height: normal;
+              margin-top: 0 !important;
+              margin-bottom: 0px !important;
+            "
+          >
+            <strong>Images credits:</strong> Time Out, Evening Standard, Broadway Direct, Official London Theatre, St James’s London, Bottomless Brunch, Visit Greenwich, Borough Market, Wimbledon Art Fair
+          </p>
+        </mj-text>
+
+        <mj-text
+          padding="20px 20px 0px 20px"
+          font-family="Arial"
+          color="#000"
+          font-weight="400"
+        >
+          <p
+            style="
+              font-size: 12px;
+              line-height: normal;
+              margin-top: 0;
+              margin-bottom: 5px !important;
+            "
+          >
+            Send us your feedback at
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #80011f;
+                color: #000 !important;
+              "
+              href="mailto:readers@londonsummary.com"
+              target="_blank"
+              >readers@londonsummary.com</a
+            >.
+          </p>
+          <p
+            style="
+              font-size: 12px;
+              line-height: normal;
+              margin-top: 0;
+              margin-bottom: 5px !important;
+            "
+          >
+            Interested in connecting with curious, informed readers?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #80011f;
+                color: #000 !important;
+              "
+              href="https://www.londonsummary.com/advertise"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+          <p
+            style="
+              font-size: 12px;
+              line-height: normal;
+              margin-top: 0;
+              margin-bottom: 0 !important;
+            "
+          >
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #80011f;
+                color: #000 !important;
+              "
+              href="https://www.londonsummary.com/unsubscribewithfeedback?unique_id=%unique_id%&campaign_id=%campaign_id%"
+              target="_blank"
+              >Unsubscribe</a
+            >
+            from this email.
+          </p>
+        </mj-text>
+
+        <!-- old icons -->
+        <mj-social
+          font-size="15px"
+          mode="horizontal"
+          padding="30px 0"
+          margin="0"
+        >
+          <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://www.facebook.com/Londonsummary/ "
+            src="https://www.londonsummary.com/email/images/fb.png"
+          />
+          <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://x.com/TheLondonSum"
+            src="https://www.londonsummary.com/email/images/x.png"
+          />
+          <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://www.instagram.com/londonsummary/"
+            src="https://www.londonsummary.com/email/images/insta.png"
+          />
+          <!-- <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://www.linkedin.com/showcase/london-summary"
+            src="https://www.londonsummary.com/email/images/ln.png"
+          /> -->
+          <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://www.threads.com/@londonsummary"
+            src="https://www.londonsummary.com/email/images/threads.png"
+          />
+        </mj-social>
+
+        <mj-text
+          padding="0px 12px 0px 12px"
+          font-family="Arial"
+          font-weight="400"
+        >
+          <p
+            class="address-block"
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #000000cc !important;
+              line-height: normal;
+              margin-top: 0 !important;
+              margin-bottom: 5px !important;
+            "
+          >
+            <span style="color: inherit !important">
+              30 N Gould St, Ste N, Sheridan, WY 82801, United States
+            </span>
+          </p>
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #000000cc;
+              line-height: normal;
+              margin-top: 0 !important;
+              margin-bottom: 0 !important;
+            "
+          >
+            Copyright © 2026 House of Summary LLC, All rights reserved.
+          </p>
+        </mj-text>
+
+        <mj-spacer height="32px" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-spacer height="20px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

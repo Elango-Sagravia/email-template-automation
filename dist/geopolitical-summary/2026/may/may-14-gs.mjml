@@ -1,0 +1,627 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      h2,
+      img,
+      p {
+        margin: 0;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+    </mj-style>
+    <mj-font
+      name="Roboto+Serif"
+      href="https://fonts.googleapis.com/css2?family=Roboto  +Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+    />
+    <mj-style>
+      .button-style:hover {
+        background-color: #dcedff !important;
+        color: rgba(0, 0, 0, 1) !important; /* instead of #000 */
+        border: 1px solid #dcedff !important;
+        cursor: pointer;
+      }
+      .button-style:hover .dot {
+        background-color: #06266d !important;
+        color: rgba(0, 0, 0, 1) !important;
+      }
+    </mj-style>
+    <mj-style>
+      .feedback-btn:hover {
+        opacity: 0.8 !important;
+        transform: scale(1.1) !important;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f9f8f9">
+    <mj-raw>
+      <div style="display: none; max-height: 0px; overflow: hidden">Plus Cuba runs out of fuel
+      </div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden preview text -->
+      <div style="display: none; max-height: 0px; overflow: hidden"> &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847;
+      &zwnj; &nbsp; &#8199; &shy; </div>
+    </mj-raw>
+    <mj-spacer height="15px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-spacer height="16px" />
+        <mj-image
+          padding="10px 12px 0px 12px"
+          css-class="light_img"
+          width="150px"
+          src="https://www.geopoliticalsummary.com/gp-logo-grey.png"
+          href="https://www.geopoliticalsummary.com"
+          alt=""
+        />
+        <mj-image
+          width="1px"
+          src="https://www.geopoliticalsummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+          alt=""
+        />
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="4px 12px 10px 12px"
+        />
+        <mj-text
+          padding="0px 12px 0px 12px "
+          font-family="Roboto+Serif"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 1.5">
+            <strong>In this edition:</strong>
+          </p>
+        </mj-text>
+        <mj-table
+          font-family="Roboto+Serif"
+          cellpadding="0"
+          cellspacing="0"
+          padding="0px 18px 0px 18px"
+          style="width: 100%"
+        >
+          <mj-table
+  font-family="Roboto+Serif"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 18px 0px 18px"
+  style="width: 100%"
+>
+  <tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+    line-height: 1.6;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6">Cuba goes dark</td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+    line-height: 1.6;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6">Ramaphosa under fire</td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+    line-height: 1.6;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6">What is the Velvet Revolution?</td>
+</tr>
+</mj-table>
+
+        </mj-table>
+        <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+          <p style="font-size: 16px; line-height: 1.5">
+            Was this email forwarded to you?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="https://link.geopoliticalsummary.com/gs-stay-informed"
+              target="_blank"
+            >
+              Stay informed</a
+            >.
+          </p>
+        </mj-text>
+        <!-- <mj-divider border-width="1px" border-style="solid" border-color="lightgrey" padding="10px 12px" /> -->
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px"></mj-spacer>
+    <!-- <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    > -->
+    <mj-section background-color="#eff1f4" padding="1px 0.5px 1px 1px" border-radius="5px">
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-text
+  padding="16px 12px 10px 12px "
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="white"
+>
+  <h2
+    style="
+      padding-bottom: 8px;
+      color: #06266d;
+      text-align: left;
+      border-bottom: 2px solid #06266d;
+      font-size: 26px;
+      line-height: 1.2;
+      font-weight: 300;
+      margin: 0;
+    "
+  >
+    Spotlight
+  </h2>
+</mj-text>
+    <mj-text
+  padding="10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h2
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 500;
+      margin-top: 2px !important;
+      margin: 0;
+    "
+  >
+    BRICS rift widens
+  </h2>
+</mj-text>
+    <mj-image
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+  alt="REPLACE_ME"
+  target="_blank"
+  href="https://www.geopoliticalsummary.com/"
+/>
+    
+    <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>What happened?</strong> India’s FM Subrahmanyam Jaishankar urged BRICS nations to protect “safe, unimpeded maritime flows” through international waters, especially the Strait of Hormuz, as foreign ministers met in New Delhi. The meeting comes amid <a href="https://www.dw.com/en/iran-war-tensions-oil-shocks-dominate-brics-talks-in-india/a-77158355" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">deep divisions inside the expanded BRICS bloc</a>, particularly over the US-Israel war with Iran and tensions between Iran and the UAE. Talks are expected to focus on energy security, trade in local currencies, sanctions, and keeping critical oil and gas routes open.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Why?</strong> The BRICS foreign ministers’ meeting matters because it tests whether the expanded bloc can come together as a global force during a major geopolitical crisis. With Iran, the UAE, Saudi Arabia, Russia, China, India, Brazil, South Africa, Egypt, Ethiopia, and Indonesia under one umbrella, the group epresents competing interests as much as shared goals. The meeting provides a possibility for stability.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Iran’s appeal:</strong> FM Abbas Araghchi urged BRICS members to clearly and unanimously condemn the US and Israel for attacks on Iran. He framed the strikes as illegal aggression and a violation of international law, pushing the bloc to show solidarity with Tehran. But the demand exposed BRICS’ internal divisions, especially because members such as the UAE and Saudi Arabia are unlikely to back strong anti-Israel or anti-US language.</p>
+</mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="10px" />
+<mj-section
+  background-color="#eff1f4"
+  css-class="border-line"
+  padding="1px 0.5px 1px 1px"
+  border-radius="5px"
+>
+  <mj-raw>
+    <a href="REPLACE_ME"
+    target="_blank" style="color:black">
+  </mj-raw>
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    <mj-spacer height="14px" />
+    <mj-text
+      padding="2px 12px 0px 12px"
+      font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+      color="white"
+    >
+      <h2
+        style="
+          padding-bottom: 8px;
+          color: #06266d;
+          text-align: left;
+          letter-spacing: 1px;
+          border-bottom: 2px solid #06266d;
+          font-size: 26px;
+          line-height: 1.2;
+          font-weight: 300;
+          margin: 0;
+        "
+      >
+        This could be your business
+      </h2>
+    </mj-text>
+    <mj-spacer height="12px" />
+    <mj-image
+      border-radius="10px"
+      padding="10px 12px 14px 12px"
+      width="600px"
+      src="https://www.geopoliticalsummary.com/email/ad/REPLACE_ME.jpg"
+      alt="campaign-x-2"
+    />
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px; margin: 0 0 10px 0;">
+        Reach a wide audience of engaged, loyal readers right where they’re
+        paying attention. Our audience is educated, influential, and ready to
+        respond.
+      </p>
+      <p style="font-size: 16px; line-height: 24px; margin: 0;">
+        Whether you want to drive revenue, build awareness, or launch
+        something fresh, this is your spot. Secure your placement and get in
+        front of the right eyes.
+      </p>
+    </mj-text>
+    <mj-text
+      padding="10px 12px 0px 12px"
+      font-family="Roboto+Serif"
+      color="#000000"
+    >
+      <p style="font-size: 16px; line-height: 24px; margin: 0;">
+        <a
+          style="
+            text-decoration: none;
+            border-bottom: 2px solid #06266d;
+            color: black;
+          "
+        ><strong>Partner with us</strong></a>
+      </p>
+    </mj-text>
+    <mj-spacer height="15px" />
+  </mj-column>
+  <mj-raw> </a> </mj-raw>
+</mj-section>
+<mj-spacer height="10px" />
+
+<mj-section background-color="#eff1f4" padding="1px 0.5px 1px 1px" border-radius="5px">
+  <mj-column background-color="#fff" border-radius="5px" padding="0px">
+    
+    <mj-text
+  padding="10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h2
+    style="
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 500;
+      margin-top: 2px !important;
+      margin: 0;
+    "
+  >
+    Cuba goes dark
+  </h2>
+</mj-text>
+    <mj-image
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+  alt="REPLACE_ME"
+  target="_blank"
+  href="https://www.geopoliticalsummary.com/"
+/>
+    
+    <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>What happened?</strong> Cuba’s energy crisis has deepened after Energy Minister Vicente de la O Levy said the country has <a href="https://www.bbc.com/news/articles/cd7pyrj0vx7o" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">completely run out of diesel and fuel oil</a>. Minimal gas from domestic wells remains, leaving the national grid in a “critical” state. Parts of Havana are facing blackouts lasting up to 20-22 hours, while hospitals, schools, government offices, and tourism have been disrupted.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Why? </strong>Cuba’s fuel crisis has worsened because the island depends heavily on imported oil, especially from allies such as Venezuela and Mexico. Those goods have fallen after US pressure and tariff threats against countries sending fuel to Cuba. Without enough diesel and fuel oil, power plants cannot run normally, pushing the electricity grid into severe shortage. Cuba’s aging energy infrastructure, weak economy, and minimal foreign currency have made the crisis harder to manage.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>US response: </strong>The US says Cuba’s government is responsible for worsening hardship by refusing outside support and blocking reform. Secretary of State Marco Rubio said Havana rejected a $100M humanitarian aid, though Cuba denied this. The State Department repeated the proposal, saying aid could be delivered through the Catholic Church and trusted humanitarian groups. Washington also linked assistance to “meaningful reforms” in Cuba’s communist system.</p>
+</mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="10px" />
+    <!-- </mj-section> -->
+    <!-- <mj-spacer height="10px" /> -->
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #06266d;
+              text-align: left;
+              border-bottom: 2px solid #06266d;
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 300;
+            "
+          >
+            Analysis
+          </h2>
+        </mj-text>
+        <!-- <mj-text
+          padding="10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="#000000"
+        > -->
+        <mj-text padding="10px 12px" font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;" color="#000000">
+<h2 style="font-size: 24px; line-height: 1.2; font-weight: 500; margin: 0;">
+  Ramaphosa under fire
+</h2></mj-text><mj-image
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+  alt="REPLACE_ME"
+  target="_blank"
+  href="https://www.geopoliticalsummary.com/"
+/>
+<mj-text padding="0px 12px 20px 12px" font-family="Roboto+Serif" color="#000000"><p style="font-size: 16px; line-height: 1.5; margin: 10px 0 0 0;"><strong>What happened? </strong>South African President Cyril Ramaphosa is facing renewed pressure over the Phala Phala scandal, with Parliament set to <a href="https://www.dw.com/en/can-south-africas-president-ramaphosa-avoid-impeachment-again/a-77132788" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">restart an impeachment process</a> against him. Ramaphosa has said he will not resign and plans to challenge the proceedings through judicial review. A Constitutional Court ruling has revived the issue, forcing Parliament to set up a Section 89 committee.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 10px 0 0 0;"><strong>Will he be impeached? </strong>South Africa’s Parliament can oust a president under Section 89 of the Constitution if there is a violation of the Constitution, misconduct, or inability to perform duties. Ramaphosa can be removed if two-thirds of MPs vote to impeach him. That is a high threshold, especially because the political landscape is fragmented and his coalition partner, the Democratic Alliance, has not clearly backed impeachment.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 10px 0 0 0;"><strong>Background: </strong>The Phala Phala case began after assertions that a large amount of currency was stolen from Ramaphosa’s Phala Phala Wildlife farm in 2020. The scandal became public in June 2022 when former spy chief Arthur Fraser alleged that nearly $4M had been stolen and that the matter was handled through an unlawful investigation. Ramaphosa said the currency was $580,000 from the trade of buffalo to a Sudanese businessman.</p></mj-text>
+        <!-- </mj-text> -->
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px" />
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #06266d;
+              text-align: left;
+              border-bottom: 2px solid #06266d;
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 300;
+            "
+          >
+            Worldwide
+          </h2>
+        </mj-text>
+        <mj-image
+          border-radius="10px"
+          padding="10px 12px"
+          width="600px"
+          src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+          alt="REPLACE_ME"
+          href="https://www.geopoliticalsummary.com/"
+        />
+        <mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+          <p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇱🇻 Latvia - PM resigns. </strong>Latvian PM Evika Silina has announced her resignation after her coalition government lost its parliamentary majority. The crisis began when the left-wing Progressives withdrew support following Silina’s ousting of Defense Minister Andris Spruds over Latvia’s handling of stray Ukrainian drones entering from Russia. Silina accused political rivals of putting party interests above national responsibility, while the Progressives said Spruds was being used as a scapegoat for broader defense failures (<a href="https://www.dw.com/en/latvia-prime-minister-evika-silina-resigns-over-handling-of-drone-incidents-after-coalition-allys-withdrawal/a-77159518" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">drone drama</a>).
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇺🇦 Ukraine - Zelenskyy ally arrest.</strong> Ukraine’s anti-corruption court has ordered pretrial detention for Andriy Yermak, a close ally and former chief of staff to President Volodymyr Zelenskyy, over suspected currency laundering. The court set bail at 140M hryvnias, or about $3.19M, which would allow his release before a final ruling. Yermak denies the allegations and says his lawyers will appeal. Prosecutors accuse him of involvement in a 460M-hryvnia laundering scheme linked to housing development near Kyiv (<a href="https://www.independent.co.uk/news/world/europe/andriy-yermak-arrest-ukraine-zelensky-b2976329.html" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">bail bombshell</a>).
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇺🇲 USA - Senate confirms Fed Chair.</strong> Kevin Warsh has been confirmed by the US Senate as chair of the Federal Reserve, replacing Jerome Powell after a largely party-line 54-45 vote. President Trump nominated Warsh as inflation reached a three-year high and concerns grew over pressure on the Fed’s independence. Warsh told lawmakers he would take measures independently, but Democrats accused him of being too close to Trump (<a href="https://www.cbsnews.com/news/kevin-warsh-senate-confirmation-fed-chair/" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">Powell out</a>).
+</p>
+<p
+  style="
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin: 0 0 10px 0;
+  "
+>
+  <strong>🇷🇺 Russia - Aerial strike.</strong> Russia launched a massive aerial attack on Kyiv and other Ukrainian regions, killing at least five people and injuring dozens. Ukraine said Russia fired 675 drones and 56 missiles, with air defenses intercepting most of them. Kyiv suffered heavy damage, including residential buildings, a school, a vet clinic, and other civilian infrastructure. President Volodymyr Zelensky said the strike showed Moscow does not believe the war is ending and urged Ukraine’s partners not to stay silent (<a href="https://www.france24.com/en/europe/20260514-russia-pounds-kyiv-and-cities-across-ukraine-in-massive-air-attack-drones-missiles" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">drone barrage</a>).
+</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="10px"></mj-spacer>
+    <mj-section
+      background-color="#eff1f4"
+      css-class="border-line"
+      padding="1px 0.5px 1px 1px"
+      border-radius="5px"
+    >
+      <mj-column background-color="#fff" border-radius="5px" padding="0px">
+        <mj-text
+          padding="16px 12px 10px 12px"
+          font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+          color="white"
+        >
+          <h2
+            style="
+              padding-bottom: 8px;
+              color: #06266d;
+              text-align: left;
+              border-bottom: 2px solid #06266d;
+              font-size: 26px;
+              line-height: 1.2;
+              font-weight: 300;
+            "
+          >
+            Foundations
+          </h2>
+        </mj-text>
+        <mj-text
+  padding="10px 12px"
+  font-family="TNYAdobeCaslonPro, 'Times New Roman', serif;"
+  color="#000000"
+>
+  <h2 style="font-size: 24px; line-height: 1.2; font-weight: 500; margin: 0;">
+    What is the Velvet Revolution?
+  </h2>
+</mj-text>
+<mj-image
+  border="1px solid #00000013"
+  border-radius="10px"
+  padding="10px 12px"
+  width="600px"
+  src="https://www.geopoliticalsummary.com/email/images/REPLACE_ME.jpg"
+  alt="REPLACE_ME"
+  href="https://www.geopoliticalsummary.com/"
+/>
+
+<mj-text padding="10px 12px" font-family="Roboto+Serif" color="#000000">
+  <p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>What is it? </strong>The Velvet Revolution was a peaceful, <a href="https://www.nonviolent-conflict.org/czechoslovakias-velvet-revolution-1989/" target="_blank" style="text-decoration: none; border-bottom: 2px solid #06266d; color: black;">student-led uprising in Czechoslovakia</a> in 1989 that brought an end to more than 40 years of communist rule. It began on 17 November 1989, when riot police violently suppressed a student march in Prague commemorating a Czech student killed by the Nazis. The brutality sparked massive public outrage and quickly transformed a permitted memorial event into a nationwide anti-communist movement.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;">In the days that followed, many people filled Prague’s Wenceslas Square, ringing keys to symbolize the unlocking of liberty and the end of the regime. Dissident playwright Vaclav Havel and other activists formed Civic Forum, whose mass protests and a nationwide general strike forced the communist regime to concede power just eleven days after the initial protest. By 29 December 1989, Havel was elected as the interim president of a democratic Czechoslovakia.</p>
+<p style="font-size: 16px; line-height: 1.5; margin: 0 0 10px 0;"><strong>Legacy: </strong>The Velvet Revolution is a key event in European history. It showed that peaceful civic measures can bring down strong regimes. This movement restored democracy in Czechoslovakia, created political liberties, and inspired democratic movements across Eastern Europe. The revolution set the stage for the country’s future as an EU member.</p>
+</mj-text>
+        <!-- footer-->
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="lightgrey"
+          padding="10px 12px"
+        />
+        <mj-spacer height="10px" />
+        <mj-text
+          padding="3px 12px 0px 12px"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          <p style="color: #000; font-size: 10px; line-height: 2">
+            <strong>Image credits:</strong> CNBC TV 18, Norlys Perez, Reuters, Getty Images
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Send us your feedback at
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="mailto:readers@geopoliticalsummary.com"
+              target="_blank"
+              >readers@geopoliticalsummary.com</a
+            >.
+          </p>
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            Interested in connecting with curious, informed readers?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="https://www.geopoliticalsummary.com/advertise#advertise-form"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+          <!-- <p style="color: #000; font-size: 10px; line-height: 1.7">
+           "A note from Affirm Payment options through Affirm are subject to an eligibility check and are provided by these lending partners: <a style="text-decoration: none; border-bottom: 2px solid #06266D; color: black;"
+      href="https://www.affirm.com/lenders" target="_blank"
+      >affirm.com/lenders</a>. Options depend on your purchase amount, and a down payment may be required. CA residents: Loans by Affirm Loan Services, LLC are made or arranged pursuant to a California Financing Law license. For licenses and disclosures, see <a style="text-decoration: none; border-bottom: 2px solid #06266D; color: black;"
+      href="https://www.affirm.com/licenses" target="_blank"
+      >affirm.com/licenses</a>."
+                </p> -->
+          <p style="color: #000; font-size: 12px; line-height: 2">
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #06266d;
+                color: black;
+              "
+              href="https://www.geopoliticalsummary.com/unsubscribewithfeedback?unique_id=%unique_id%&campaign_id=%campaign_id%"
+              target="_blank"
+              >Unsubscribe</a
+            >
+            from this email.
+          </p>
+        </mj-text>
+
+        <mj-text
+          padding="10px 12px 4px 12px"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          <p
+            style="
+              margin-top: 0px;
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 1.5;
+            "
+          >
+            30 <span>N</span> <span>Gould</span>
+            <span>St, Ste N, Sheridan, WY 82801, United States</span>
+          </p>
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #667085;
+              line-height: 1.5;
+              margin-bottom: 14px;
+            "
+          >
+            Copyright © 2026 House of Summary, All rights reserved.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="15px"></mj-spacer>
+  </mj-body>
+</mjml>

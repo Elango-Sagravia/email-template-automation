@@ -1,0 +1,880 @@
+<mjml>
+  <mj-head>
+    <mj-font
+      name="Austin News Text Web"
+      href="https://www.londonsummary.com/fonts/AustinNewsTextWeb.woff2"
+    />
+    <mj-style>
+      .button-style:hover {
+        background-color: #d0dae2 !important;
+        color: rgba(0, 0, 0, 1) !important; /* instead of #000 */
+        border: 1px solid #d0dae2 !important;
+        cursor: pointer;
+      }
+      .button-style:hover .dot {
+        background-color: rgb(16, 35, 65) !important;
+        color: rgba(0, 0, 0, 1) !important;
+      } /* Apple Mail & iOS */
+      a[x-apple-data-detectors],
+      a[href^="http"],
+      a[href^="tel"],
+      a[href^="mailto"],
+      a[href^="maps"],
+      .address-block a {
+        color: #000000cc !important;
+        text-decoration: none !important;
+        font-weight: inherit !important;
+      } /* Gmail (removes underline wrapper) */
+      u + .address-block a {
+        color: #000000cc !important;
+        text-decoration: none !important;
+      }
+    </mj-style>
+    <mj-style inline="inline">
+      .event-image img {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 8px;
+        display: block;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f9f8f9">
+    <mj-raw>
+      <div style="display: none; max-height: 0px; overflow: hidden">
+      Plus the safest way home</div> <!-- Insert &#847;&zwnj;&nbsp; hack after hidden
+      preview text --> <div style="display: none; max-height: 0px; overflow:
+      hidden"> &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;
+      &shy;&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847;
+      &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj;
+      &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp;
+      &#8199; &shy; </div>
+    </mj-raw>
+    <mj-spacer height="15px"></mj-spacer>
+    <!-- header -->
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 1px 1px 1px"
+      border-radius="10px"
+    >
+      <mj-column background-color="#ffffff" border-radius="10px" padding="0">
+        <!-- Top red strip -->
+        <mj-text padding="0">
+          <div
+            style="
+              height: 6px;
+              border-top-left-radius: 8px;
+              border-top-right-radius: 8px;
+              background-color: #80011f;
+            "
+          ></div>
+        </mj-text>
+        <!-- View / Advertise Links -->
+        <mj-text
+          align="center"
+          padding="14px 0 28px 0px"
+          color="#000000CC"
+          font-size="11px"
+          font-family="Arial"
+          font-weight="300"
+        >
+          <a
+            href="https://www.londonsummary.com/archives/commute-chaos-culture-flex"
+            style="color: #000000cc; text-decoration: underline"
+            >View in browser</a
+          >
+          &nbsp;|&nbsp;
+          <a
+            href="https://www.londonsummary.com/advertise"
+            style="color: #000000cc; text-decoration: underline"
+            >Advertise</a
+          >
+        </mj-text>
+        <!-- Logo and Date -->
+        <mj-section background-color="#ffffff" padding="0px 10px 0px 10px">
+          <mj-group width="100%" padding="0px">
+            <mj-column width="50%" vertical-align="bottom">
+              <mj-image
+                align="left"
+                width="226px"
+                src="https://www.londonsummary.com/logo-grey.png"
+                href="https://www.londonsummary.com/"
+                alt="London Summary newsletter logo"
+                padding="0px"
+              />
+              <mj-image
+                width="1px"
+                src="https://www.londonsummary.com/api/emails/open?user_id=%user_id%&campaign_id=%campaign_id%"
+                alt=""
+              />
+            </mj-column>
+            <mj-column width="50%" vertical-align="bottom">
+              <mj-text
+                align="right"
+                font-size="16px"
+                font-family="Arial"
+                font-weight="300"
+                color="#00000096"
+                padding="0"
+                >Thu, May 14 • AQI 24
+              </mj-text>
+            </mj-column>
+          </mj-group>
+        </mj-section>
+        <!-- Divider line -->
+        <mj-divider
+          border-color="#EBEBEB"
+          border-width="1px"
+          width="100%"
+          padding="7px 20px 0 20px"
+        />
+        <!-- In this edition -->
+        <mj-text
+          padding="20px 20px 0px 20px"
+          font-family="Arial"
+          color="#000000"
+          font-size="16px"
+          font-weight="600"
+        >
+          In this edition:
+        </mj-text>
+        <mj-table
+  font-family="Arial"
+  cellpadding="0"
+  cellspacing="0"
+  padding="19px 30px 0px 30px"
+  style="width: 100%"
+>
+  <tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px; padding-bottom: 5px;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 24px; padding-bottom: 11px;">
+    Safer streets app
+  </td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px; padding-bottom: 5px;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 24px; padding-bottom: 11px;">
+    JLR annual gains fall
+  </td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    width: 20px;
+    vertical-align: top;
+    padding-right: 8px;
+  "> → </td>
+  <td style="font-size: 16px; line-height: 1.6;">
+    Intimate lithographs
+  </td>
+</tr>
+</mj-table>
+
+
+        <!-- Join link -->
+        <mj-text
+          padding="17px 20px 20px 20px"
+          font-family="Arial"
+          color="#000000"
+          font-size="16px"
+          line-height="1.5"
+        >
+          Was this email forwarded to you?
+          <a
+            href="https://www.londonsummary.com/"
+            target="_blank"
+            style="
+              text-decoration: none;
+              border-bottom: 2px solid #80011f;
+              color: black;
+            "
+          >
+            Join London Summary</a
+          >.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="20px" />
+    <mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
+  <mj-column background-color="#fff" border-radius="10px" padding="0px">
+    <mj-image
+      border-radius="10px 10px 0 0"
+      padding="0"
+      width="600px"
+      src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+      alt="Streeting sparks storm"
+      href="https://www.londonsummary.com/"
+    />
+    <mj-text
+      padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">
+        Streeting sparks storm
+      </h2>
+    </mj-text>
+    <mj-text padding="0px 20px 0px 20px" font-family="Arial" color="#000000">
+      <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+  <strong>What’s happening?</strong> Wes Streeting has <a href="https://www.bbc.com/news/articles/cgkpr6y3266o" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">resigned as health secretary</a> after saying he no longer has confidence in PM Keir Starmer’s leadership. He did not formally launch a leadership challenge, but allies said he has enough MP support to trigger one. Some MPs who are loyal to Starmer still believe he can survive, while Streeting’s allies say they are waiting to see whether Starmer resigns voluntarily or sets a timetable for leaving.
+</p>
+<p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+  <strong>Details:</strong> In his resignation letter, Streeting argued that Starmer would not lead Labour into the next general election and blamed the government’s unpopularity for Labour’s poor election results. Streeting criticised a lack of direction, saying the country needed bold vision and bigger solutions. He said the party needed a broad debate about its future, based on ideas rather than personalities or factional fights.
+</p>
+<p style="font-size: 16px; line-height: 24px; padding-top: 15px; padding-bottom: 20px; margin: 0;">
+  <strong>Big picture: </strong>Streeting’s resignation turns Labour’s internal doubts into an open leadership crisis. Starmer is no longer just facing criticism from opponents but also direct pressure from senior figures within his own party. The row shows Labour is struggling to explain its direction after poor election results, with MPs and unions debating whether Starmer can still lead them into the next general election. Streeting’s move also raises the possibility of a wider contest involving figures such as Angela Rayner or Andy Burnham.
+</p>
+    </mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="20px" />
+<mj-section background-color="#eff1f4" css-class="border-line" padding="1px 1px 1px 1px" border-radius="10px">
+  <mj-raw>
+    <a href="https://link.londonsummary.com/ls-4-feb-2026-p-ad-x-4" target="_blank" style="color:black">
+  </mj-raw>
+  <mj-column background-color="#fff" border-radius="10px" padding="0px">
+    <mj-image border-radius="10px 10px 0 0" padding="0px" width="600px"
+      src="https://www.londonsummary.com/email/ad/REPLACE_ME.jpg"
+      alt="Advertisement promoting newsletter sponsorship to reach engaged readers" />
+    <mj-text padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000">
+      <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">
+        This could be your business
+      </h2>
+    </mj-text>
+    <mj-text padding="0px 20px 0px 20px" font-family="Arial" color="#000000">
+      <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+        Reach a wide audience of engaged, loyal readers right where they’re paying attention.
+        Our audience is educated, influential, and ready to respond.
+      </p>
+      <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+        Whether you want to drive revenue, build awareness, or launch something fresh,
+        this is your spot. Secure your placement and get in front of the right eyes.
+      </p>
+      <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; padding-bottom: 20px; margin: 0;">
+        <a style="text-decoration: none; border-bottom: 2px solid #80011f; color: black;">
+          <strong>Partner with us</strong>
+        </a>
+      </p>
+    </mj-text>
+  </mj-column>
+  <mj-raw></a></mj-raw>
+</mj-section>
+<mj-spacer height="20px" />
+
+<mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
+  <mj-column background-color="#fff" border-radius="10px" padding="0px">
+    <mj-image
+      border-radius="10px 10px 0 0"
+      padding="0"
+      width="600px"
+      src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+      alt="Safer streets app"
+      href="https://www.londonsummary.com/"
+    />
+    <mj-text
+      padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000"
+    >
+      <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">
+        Safer streets app
+      </h2>
+    </mj-text>
+    <mj-text padding="0px 20px 0px 20px" font-family="Arial" color="#000000">
+      <p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+  <strong>What happened?</strong> An app called Safest Way has been launched to help people <a href="https://www.bbc.com/news/articles/cm2pndkmk0ko" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">find the “safest” walking route home</a>. It is currently available in York, London, and Northern Ireland, with plans to expand across the UK. Co-founder Alesja Gilvear said the idea came after she noticed normal navigation apps did not warn users about poorly lit streets. The app is aimed at anyone who wants more confidence while walking, though most users are currently women.
+</p>
+<p style="font-size: 16px; line-height: 1.5; padding-top: 15px; margin: 0;">
+  <strong>How?</strong> The Safest Way app works by combining public and location-based data to rank walking routes by perceived safety. Instead of simply choosing the fastest or shortest route, it considers factors such as street lighting, CCTV coverage, crime statistics, and areas that may feel isolated or risky at night. It requires no registration and is open for use.
+</p>
+<p style="font-size: 16px; line-height: 24px; padding-top: 15px; padding-bottom: 20px; margin: 0;">
+  <strong>Big picture: </strong>The Safest Way app reflects a growing push to treat public safety as part of everyday urban design. Earlier this year, a YouGov poll suggested 88% of women feel unsafe walking alone at night. The app may provide reassurance, but it also highlights the need for better-lit streets, safer public spaces, stronger reporting systems, and wider measures to make cities feel safe for everyone.
+</p>
+    </mj-text>
+  </mj-column>
+</mj-section>
+<mj-spacer height="20px" />
+    
+    <mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
+  <mj-column background-color="#fff" border-radius="10px" padding="0px">
+    <mj-text padding="20px 20px 0px 20px"
+      font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+      color="#000000">
+      <h2 style="font-size: 24px; line-height: 1.2; font-weight: 400; margin: 0;">Long story short</h2>
+    </mj-text>
+    <mj-divider border-width="4.8px" border-color="#80011F" width="35px" align="left" padding="0 20px 0px 20px" />
+    <mj-spacer height="30px" />
+
+    <mj-text padding="0px 20px 10px 20px" font-family="Arial" color="#000000">
+  <h3 style="font-size: 20px; line-height: 1.2; font-weight: 700; margin: 0;">Business</h3>
+</mj-text>
+<mj-table
+  font-family="Arial"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 32px 5px 32px"
+  style="width: 100%"
+>
+  <tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://www.theguardian.com/business/2026/may/14/jaguar-land-rover-annual-profit-falls-99-per-cent-us-tariffs-cyber-attack" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">Jaguar Land Rover’s annual gains have fallen by more than 99%, dropping from £2.5B to just £14M in the year to March</a>. The company blamed a difficult year shaped by US car tariffs, weaker demand, tougher competition in China, and a major cyber-attack that forced factories and systems to shut down for weeks. Revenue also fell to £22.9B, more than 20% lower than the previous year.
+  </td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://www.theguardian.com/business/2026/may/14/hedge-fund-proposes-1bn-buyout-of-spire-uk-biggest-private-hospital-operator" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">Spire Healthcare’s board has backed a possible £1B buyout proposal from Toscafund Asset Management, its second-largest shareholder</a>. It values Spire at 250p per share and sent the company’s shares up nearly 50%. Spire runs 38 private hospitals and more than 60 clinics across the UK, with nearly a third of revenue coming from NHS work. Toscafund must make a firm decision by 11 June.
+  </td>
+</tr>
+</mj-table>
+
+  </mj-column>
+</mj-section>
+<mj-spacer height="20px" />
+<mj-section background-color="#eff1f4" padding="1px 1px 1px 1px" border-radius="10px">
+  <mj-column background-color="#fff" border-radius="10px" padding-bottom="20px">
+    <mj-image border-radius="10px 10px 0 0" padding="0" width="600px"
+      src="https://www.londonsummary.com/email/images/REPLACE_ME.jpg"
+      alt="REPLACE_ME"
+      href="https://www.londonsummary.com/" />
+    <mj-text padding="20px 20px 10px 20px" font-family="Arial" color="#000000">
+  <h3 style="font-size: 20px; line-height: 1.2; font-weight: 700; margin: 0;">Art &amp; culture</h3>
+</mj-text>
+<mj-table
+  font-family="Arial"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 32px 0px 32px"
+  style="width: 100%"
+>
+  <tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://www.msn.com/en-gb/news/world/tracey-emin-debuts-intimate-new-prints-at-london-art-fair/ar-AA23biSp?ocid=BingNewsVerp" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">Tracey Emin has unveiled a series of six intimate lithographs called “I Need Tomorrow” at the London Original Print Fair in Somerset House</a>. The prints show Emin in her raw, emotional style and are being displayed alongside her major Tate Modern retrospective, “A Second Life.” Emin said the series began almost accidentally while she was waiting to proof another print, and that it became a personal “gift” to herself.
+  </td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://www.hindustantimes.com/entertainment/documentary-film-on-odia-artist-prafulla-mohanti-wins-award-at-uk-asian-film-festival-101778748908230.html" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">Kolkata-born filmmaker Soumya Jyoti Pratihari’s documentary Shunya: Being Prafulla Mohanti has bagged the Tongues on Fire Flame Award for best LGBTQIA film</a> at the UK Asian Film Festival. The film had its world premiere at Riverside Studios in London on May 6. It follows 91-year-old Odia artist, writer, architect, and cultural thinker Prafulla Mohanti, tracing his journey from Odisha to Mumbai and later Britain. The documentary explores identity, migration, racism, spirituality, love, ageing, illness, and creativity.
+  </td>
+</tr>
+</mj-table>
+<mj-text padding="20px 20px 10px 20px" font-family="Arial" color="#000000">
+  <h3 style="font-size: 20px; line-height: 1.2; font-weight: 700; margin: 0;">Sports</h3>
+</mj-text>
+<mj-table
+  font-family="Arial"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 32px 0px 32px"
+  style="width: 100%"
+>
+  <tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://www.bbc.com/sport/tennis/articles/cj0pyg469djo" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">Jannik Sinner has reached the Italian Open semi-finals after beating Andrey Rublev 6-2, 6-4 and breaking Novak Djokovic’s record for successive ATP Masters 1000 match victories</a>. The triumph was Sinner’s 32nd straight at the Masters level, continuing a dominant run before the French Open. He has reached the semi-finals at each of the first five Masters 1000 events this season, joining Rafael Nadal in that achievement.
+  </td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://www.bbc.com/sport/football/articles/cyv2nl9vl72o" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">The Championship play-off final between Southampton and Hull City may not go ahead as planned on Saturday, 23 May</a>, due to an EFL investigation into a Spygate case involving Southampton. The club has been charged with breaking rules after allegedly observing Middlesbrough’s training session before their semi-final first leg. An Independent Disciplinary Commission hearing will take place by Tuesday, 19 May.
+  </td>
+</tr>
+</mj-table>
+<mj-text padding="20px 20px 10px 20px" font-family="Arial" color="#000000">
+  <h3 style="font-size: 20px; line-height: 1.2; font-weight: 700; margin: 0;">Misc</h3>
+</mj-text>
+<mj-table
+  font-family="Arial"
+  cellpadding="0"
+  cellspacing="0"
+  padding="0px 32px 5px 32px"
+  style="width: 100%"
+>
+  <tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://news.sky.com/story/china-issues-warning-over-governments-plan-to-nationalise-british-steel-13543877" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">China issues warning over the government's plan to nationalise British Steel</a>
+  </td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://news.sky.com/story/nigel-farage-bought-1-4m-property-after-receiving-5m-gift-from-british-crypto-billionaire-sky-news-learns-13543909" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">Nigel Farage bought a £1.4M property after receiving a £5M gift</a>
+  </td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://www.bbc.com/news/articles/crmp4pg0jdjo" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">King visits victims of the Golders Green stabbings</a>
+  </td>
+</tr>
+<tr>
+  <td style="
+    font-size: 18px;
+    vertical-align: top;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+  "> &#8226; </td>
+  <td style="
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  ">
+    <a href="https://www.bbc.com/news/articles/c794lj90jqpo" target="_blank" style="text-decoration: none; border-bottom: 2px solid #80011F; color: black;">Honda makes its first annual loss in 70 years</a>
+  </td>
+</tr>
+</mj-table>
+  </mj-column>
+</mj-section>
+<mj-spacer height="20px" />
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 1px 1px 1px"
+      border-radius="10px"
+    >
+      <mj-column background-color="#fff" border-radius="10px" padding="0px">
+        <mj-table
+          css-class="new-heading-with-border"
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+          padding="20px 30px 10px 30px"
+        >
+          <tr>
+            <!-- Left flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 50%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 2px solid #80011f">
+                &nbsp;
+              </div>
+            </td>
+            <!-- Center text -->
+            <td
+              valign="middle"
+              style="padding: 0 15px; text-align: center; white-space: nowrap"
+            >
+              <span
+                class="heading-font"
+                style="
+                  font-family:
+                    Austin News Text Web,
+                    TNYAdobeCaslonPro,
+                    &quot;Times New Roman&quot;,
+                    serif;
+                  display: inline-block;
+                  font-weight: 400;
+                  font-size: 24px;
+                  line-height: 1.2;
+                  color: #000000;
+                "
+              >
+                Did you know?</span
+              >
+            </td>
+            <!-- Right flexible line -->
+            <td
+              valign="middle"
+              style="
+                width: 50%;
+                font-size: 0;
+                line-height: 0;
+                padding: 0px;
+                mso-line-height-rule: exactly;
+              "
+            >
+              <div style="height: 0px; border-top: 2px solid #80011f">
+                &nbsp;
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+        <mj-text
+          align="center"
+          padding="10px 30px 20px 30px"
+          font-family="Arial"
+          color="#000000"
+        >
+          <p style="font-size: 16px; line-height: 24px; margin: 0 !important">
+    The Dominion Theatre is located on the site of the Great Beer Flood of 1814, where more than 570 tons of beer from Meux &amp; Co's Horse Shoe Brewery created a 15-foot high wave that flooded the area.
+  </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="20px" />
+    <mj-section
+      background-color="#eff1f4"
+      padding="1px 1px 1px 1px"
+      border-radius="10px"
+    >
+      <mj-column background-color="#ffffff" border-radius="10px" padding="0">
+        <!-- Top red strip -->
+        <mj-text padding="0">
+          <div
+            style="
+              height: 6px;
+              border-top-left-radius: 8px;
+              border-top-right-radius: 8px;
+              background-color: #80011f;
+            "
+          ></div>
+        </mj-text>
+        <!-- Logo and Date -->
+        <mj-spacer height="40px" />
+        <mj-image
+          align="left"
+          width="159px"
+          src="https://www.londonsummary.com/logo-grey.png"
+          href="https://www.londonsummary.com/"
+          alt="London Summary newsletter logo"
+          padding="0px 20px"
+        />
+        <mj-text
+          padding="18px 20px 0px 20px"
+          font-family="Austin News Text Web, TNYAdobeCaslonPro, 'Times New Roman', serif"
+          color="#000000"
+        >
+          <h2
+            style="
+              font-size: 24px;
+              line-height: 1.2;
+              font-weight: 400;
+              margin: 0;
+            "
+          >
+            The pulse of London.
+          </h2>
+        </mj-text>
+        <mj-text
+          padding="10px 20px 0px 20px"
+          font-family="Arial"
+          font-weight="400"
+          color="#000"
+        >
+          <p style="font-size: 15px; line-height: 1.4; margin: 0 !important">
+            This edition was produced by our editorial team and meets the
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #80011f;
+                color: black;
+              "
+              href="https://www.houseofsummary.com/"
+              target="_blank"
+              >House of Summary standards</a
+            >: accuracy, consistency, high quality, readers first, respect for
+            time, and objectivity.
+          </p>
+        </mj-text>
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="#00000080"
+          padding="20px 20px 35px 20px"
+          width="100%"
+        />
+        <!-- Footer content -->
+        <mj-text
+          padding="0px 20px 0px 20px"
+          font-family="Arial"
+          color="#00000099"
+          font-weight="400"
+        >
+          <p
+            style="
+              font-size: 10px;
+              line-height: normal;
+              margin-top: 0 !important;
+              margin-bottom: 0px !important;
+            "
+          >
+            <strong>Images credits:</strong> Euronews, Safest Way, Counter Editions
+          </p>
+        </mj-text>
+        <mj-text
+          padding="20px 20px 0px 20px"
+          font-family="Arial"
+          color="#000"
+          font-weight="400"
+        >
+          <p
+            style="
+              font-size: 12px;
+              line-height: normal;
+              margin-top: 0;
+              margin-bottom: 5px !important;
+            "
+          >
+            Send us your feedback at
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #80011f;
+                color: #000 !important;
+              "
+              href="mailto:readers@londonsummary.com"
+              target="_blank"
+              >readers@londonsummary.com</a
+            >.
+          </p>
+          <p
+            style="
+              font-size: 12px;
+              line-height: normal;
+              margin-top: 0;
+              margin-bottom: 5px !important;
+            "
+          >
+            Interested in connecting with curious, informed readers?
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #80011f;
+                color: #000 !important;
+              "
+              href="https://www.londonsummary.com/advertise"
+              target="_blank"
+              >Advertise with us</a
+            >.
+          </p>
+          <p
+            style="
+              font-size: 12px;
+              line-height: normal;
+              margin-top: 0;
+              margin-bottom: 0 !important;
+            "
+          >
+            <a
+              style="
+                text-decoration: none;
+                border-bottom: 2px solid #80011f;
+                color: #000 !important;
+              "
+              href="https://www.londonsummary.com/unsubscribewithfeedback?unique_id=%unique_id%&campaign_id=%campaign_id%"
+              target="_blank"
+              >Unsubscribe</a
+            >
+            from this email.
+          </p>
+        </mj-text>
+        <!-- old icons -->
+        <mj-social
+          font-size="15px"
+          mode="horizontal"
+          padding="30px 0"
+          margin="0"
+        >
+          <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://www.facebook.com/Londonsummary/ "
+            src="https://www.londonsummary.com/email/images/fb.png"
+          />
+          <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://x.com/TheLondonSum"
+            src="https://www.londonsummary.com/email/images/x.png"
+          />
+          <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://www.instagram.com/londonsummary/"
+            src="https://www.londonsummary.com/email/images/insta.png"
+          />
+          <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://www.linkedin.com/showcase/london-summary"
+            src="https://www.londonsummary.com/email/images/ln.png"
+          />
+          <mj-social-element
+            padding="0px 10px"
+            icon-size="24px"
+            href="https://www.threads.com/@londonsummary"
+            src="https://www.londonsummary.com/email/images/threads.png"
+          />
+        </mj-social>
+        <mj-text
+          padding="0px 12px 0px 12px"
+          font-family="Arial"
+          font-weight="400"
+        >
+          <p
+            class="address-block"
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #000000cc !important;
+              line-height: normal;
+              margin-top: 0 !important;
+              margin-bottom: 5px !important;
+            "
+          >
+            <span style="color: inherit !important">
+              30 N Gould St, Ste N, Sheridan, WY 82801, United States
+            </span>
+          </p>
+          <p
+            style="
+              text-align: center;
+              font-size: 10px;
+              color: #000000cc;
+              line-height: normal;
+              margin-top: 0 !important;
+              margin-bottom: 0 !important;
+            "
+          >
+            Copyright © 2026 House of Summary LLC, All rights reserved.
+          </p>
+        </mj-text>
+        <mj-spacer height="32px" />
+      </mj-column>
+    </mj-section>
+    <mj-spacer height="15px" /> </mj-body
+></mjml>
